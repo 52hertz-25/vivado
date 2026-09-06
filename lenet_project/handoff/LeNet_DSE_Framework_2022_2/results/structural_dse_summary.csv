@@ -1,0 +1,4 @@
+﻿"Config","CSim","Estimated_Fmax_MHz","Latency_cycles","Latency_ms","LUT","FF","BRAM_18K","DSP"
+"mac_unroll_2","PASS","120.77","1647854","16.479","17108","13452","70","5"
+"mac_unroll_5","PASS","120.77","1647854","16.479","17108","13452","70","5"
+"struct_baseline","PASS","120.77","1647854","16.479","17108","13452","70","5"

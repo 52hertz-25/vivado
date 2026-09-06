@@ -1,0 +1,6 @@
+===== 每层权重最大绝对值 (量化缩放参考) =====
+conv1.weight: max_abs = 0.456850
+conv2.weight: max_abs = 0.517019
+conv3.weight: max_abs = 0.499755
+fc1.weight: max_abs = 0.428247
+fc2.weight: max_abs = 0.372183
