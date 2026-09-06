@@ -1,0 +1,22 @@
+Using device: cuda
+Total parameters (no bias): 61470
+Epoch 1: Train Acc = 93.32%, Test Acc = 97.63%
+Best model saved with accuracy: 97.63%
+Epoch 2: Train Acc = 98.08%, Test Acc = 98.51%
+Best model saved with accuracy: 98.51%
+Epoch 3: Train Acc = 98.61%, Test Acc = 99.02%
+Best model saved with accuracy: 99.02%
+Epoch 4: Train Acc = 98.85%, Test Acc = 98.93%
+Epoch 5: Train Acc = 99.07%, Test Acc = 98.86%
+Epoch 6: Train Acc = 99.20%, Test Acc = 98.96%
+Epoch 7: Train Acc = 99.25%, Test Acc = 99.30%
+Best model saved with accuracy: 99.30%
+Epoch 8: Train Acc = 99.42%, Test Acc = 99.08%
+Epoch 9: Train Acc = 99.53%, Test Acc = 98.95%
+Epoch 10: Train Acc = 99.52%, Test Acc = 98.89%
+Epoch 11: Train Acc = 99.65%, Test Acc = 98.74%
+Epoch 12: Train Acc = 99.60%, Test Acc = 98.77%
+Epoch 13: Train Acc = 99.66%, Test Acc = 99.08%
+Epoch 14: Train Acc = 99.69%, Test Acc = 98.90%
+Epoch 15: Train Acc = 99.69%, Test Acc = 98.98%
+Training finished. Best test accuracy: 99.30%
