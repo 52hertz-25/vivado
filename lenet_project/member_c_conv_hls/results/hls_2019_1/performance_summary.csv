@@ -1,0 +1,7 @@
+module,top,csim,csynth,rtl_cosim,target_ns,estimated_ns,csynth_latency_cycles,csynth_latency_ms_at_100mhz,rtl_cosim_latency_cycles,rtl_cosim_latency_ms_at_100mhz,bram_18k,dsp48e,ff,lut
+Conv1,lenet_conv1_top,PASS,PASS,PASS,10.000,8.750,1699334,16.99334,1897574,18.97574,8,5,3117,3923
+Conv2,lenet_conv2_top,PASS,PASS,PASS,10.000,8.750,3405954,34.05954,3704194,37.04194,8,5,3159,4005
+Conv3,lenet_conv3_top,PASS,PASS,PASS,10.000,8.750,669252,6.69252,726856,7.26856,8,6,2998,3717
+FC1,lenet_fc1_top,PASS,PASS,PASS,10.000,8.750,101568,1.01568,102076,1.02076,8,5,2828,3491
+FC2,lenet_fc2_top,PASS,PASS,PASS,10.000,8.750,8492,0.08492,8556,0.08556,8,5,2759,3424
+Full,lenet_full_top,PASS,PASS,PASS,10.000,8.873,5472207,54.72207,5679805,56.79805,37,27,6762,11682

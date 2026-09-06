@@ -1,0 +1,112 @@
+../member_c_conv_hls/src/lenet_conv.cpp:13:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=generate_window_5x5_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INLINE
+        ^
+../member_c_conv_hls/src/lenet_conv.cpp:32:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=mac_5x5_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INLINE
+        ^
+../member_c_conv_hls/src/lenet_conv.cpp:187:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=lenet_conv1_top_XLX_SEP_ PragmaOptions=m_axi port=feature_in offset=direct bundle=gmem0 depth=1024_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port=feature_in offset=direct bundle=gmem0 depth=1024
+        ^
+../member_c_conv_hls/src/lenet_conv.cpp:188:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=lenet_conv1_top_XLX_SEP_ PragmaOptions=m_axi port=weight offset=direct bundle=gmem1 depth=150_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port=weight offset=direct bundle=gmem1 depth=150
+        ^
+../member_c_conv_hls/src/lenet_conv.cpp:189:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=lenet_conv1_top_XLX_SEP_ PragmaOptions=m_axi port=bias offset=direct bundle=gmem2 depth=6_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port=bias offset=direct bundle=gmem2 depth=6
+        ^
+../member_c_conv_hls/src/lenet_conv.cpp:190:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=lenet_conv1_top_XLX_SEP_ PragmaOptions=m_axi port=feature_out offset=direct bundle=gmem3 depth=4704_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port=feature_out offset=direct bundle=gmem3 depth=4704
+        ^
+../member_c_conv_hls/src/lenet_conv.cpp:191:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=lenet_conv1_top_XLX_SEP_ PragmaOptions=ap_ctrl_hs port=return_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE ap_ctrl_hs port=return
+        ^
+../member_c_conv_hls/src/lenet_conv.cpp:203:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=lenet_conv2_top_XLX_SEP_ PragmaOptions=m_axi port=feature_in offset=direct bundle=gmem0 depth=1176_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port=feature_in offset=direct bundle=gmem0 depth=1176
+        ^
+../member_c_conv_hls/src/lenet_conv.cpp:204:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=lenet_conv2_top_XLX_SEP_ PragmaOptions=m_axi port=weight offset=direct bundle=gmem1 depth=2400_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port=weight offset=direct bundle=gmem1 depth=2400
+        ^
+../member_c_conv_hls/src/lenet_conv.cpp:205:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=lenet_conv2_top_XLX_SEP_ PragmaOptions=m_axi port=bias offset=direct bundle=gmem2 depth=16_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port=bias offset=direct bundle=gmem2 depth=16
+        ^
+../member_c_conv_hls/src/lenet_conv.cpp:206:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=lenet_conv2_top_XLX_SEP_ PragmaOptions=m_axi port=feature_out offset=direct bundle=gmem3 depth=1600_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port=feature_out offset=direct bundle=gmem3 depth=1600
+        ^
+../member_c_conv_hls/src/lenet_conv.cpp:207:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=lenet_conv2_top_XLX_SEP_ PragmaOptions=ap_ctrl_hs port=return_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE ap_ctrl_hs port=return
+        ^
+../member_c_conv_hls/src/lenet_conv.cpp:221:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=lenet_conv3_top_XLX_SEP_ PragmaOptions=m_axi port=feature_in offset=direct bundle=gmem0 depth=400_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port=feature_in offset=direct bundle=gmem0 depth=400
+        ^
+../member_c_conv_hls/src/lenet_conv.cpp:222:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=lenet_conv3_top_XLX_SEP_ PragmaOptions=m_axi port=weight offset=direct bundle=gmem1 depth=48000_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port=weight offset=direct bundle=gmem1 depth=48000
+        ^
+../member_c_conv_hls/src/lenet_conv.cpp:223:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=lenet_conv3_top_XLX_SEP_ PragmaOptions=m_axi port=bias offset=direct bundle=gmem2 depth=120_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port=bias offset=direct bundle=gmem2 depth=120
+        ^
+../member_c_conv_hls/src/lenet_conv.cpp:224:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=lenet_conv3_top_XLX_SEP_ PragmaOptions=m_axi port=feature_out offset=direct bundle=gmem3 depth=120_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port=feature_out offset=direct bundle=gmem3 depth=120
+        ^
+../member_c_conv_hls/src/lenet_conv.cpp:225:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=lenet_conv3_top_XLX_SEP_ PragmaOptions=ap_ctrl_hs port=return_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE ap_ctrl_hs port=return
+        ^
+../member_c_conv_hls/src/lenet_conv.cpp:239:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=lenet_fc1_top_XLX_SEP_ PragmaOptions=m_axi port=feature_in offset=direct bundle=gmem0 depth=120_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port=feature_in offset=direct bundle=gmem0 depth=120
+        ^
+../member_c_conv_hls/src/lenet_conv.cpp:240:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=lenet_fc1_top_XLX_SEP_ PragmaOptions=m_axi port=weight offset=direct bundle=gmem1 depth=10080_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port=weight offset=direct bundle=gmem1 depth=10080
+        ^
+../member_c_conv_hls/src/lenet_conv.cpp:241:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=lenet_fc1_top_XLX_SEP_ PragmaOptions=m_axi port=bias offset=direct bundle=gmem2 depth=84_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port=bias offset=direct bundle=gmem2 depth=84
+        ^
+../member_c_conv_hls/src/lenet_conv.cpp:242:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=lenet_fc1_top_XLX_SEP_ PragmaOptions=m_axi port=feature_out offset=direct bundle=gmem3 depth=84_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port=feature_out offset=direct bundle=gmem3 depth=84
+        ^
+../member_c_conv_hls/src/lenet_conv.cpp:243:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=lenet_fc1_top_XLX_SEP_ PragmaOptions=ap_ctrl_hs port=return_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE ap_ctrl_hs port=return
+        ^
+../member_c_conv_hls/src/lenet_conv.cpp:254:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=lenet_fc2_top_XLX_SEP_ PragmaOptions=m_axi port=feature_in offset=direct bundle=gmem0 depth=84_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port=feature_in offset=direct bundle=gmem0 depth=84
+        ^
+../member_c_conv_hls/src/lenet_conv.cpp:255:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=lenet_fc2_top_XLX_SEP_ PragmaOptions=m_axi port=weight offset=direct bundle=gmem1 depth=840_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port=weight offset=direct bundle=gmem1 depth=840
+        ^
+../member_c_conv_hls/src/lenet_conv.cpp:256:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=lenet_fc2_top_XLX_SEP_ PragmaOptions=m_axi port=bias offset=direct bundle=gmem2 depth=10_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port=bias offset=direct bundle=gmem2 depth=10
+        ^
+../member_c_conv_hls/src/lenet_conv.cpp:257:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=lenet_fc2_top_XLX_SEP_ PragmaOptions=m_axi port=feature_out offset=direct bundle=gmem3 depth=10_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port=feature_out offset=direct bundle=gmem3 depth=10
+        ^
+../member_c_conv_hls/src/lenet_conv.cpp:258:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=lenet_fc2_top_XLX_SEP_ PragmaOptions=ap_ctrl_hs port=return_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE ap_ctrl_hs port=return
+        ^
+D:/lenet_project/hls/lenet_full_hls/solution1/csynth.tcl:16:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=lenet_full_top_XLX_SEP_ PragmaOptions=name=lenet_full_top_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE TOP name=lenet_full_top
+        ^
+../member_c_conv_hls/src/lenet_conv.cpp:270:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=lenet_full_top_XLX_SEP_ PragmaOptions=m_axi port=feature_in offset=slave bundle=gmem0 depth=1024_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port=feature_in offset=slave bundle=gmem0 depth=1024
+        ^
+../member_c_conv_hls/src/lenet_conv.cpp:271:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=lenet_full_top_XLX_SEP_ PragmaOptions=m_axi port=weight offset=slave bundle=gmem1 depth=61470_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port=weight offset=slave bundle=gmem1 depth=61470
+        ^
+../member_c_conv_hls/src/lenet_conv.cpp:272:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=lenet_full_top_XLX_SEP_ PragmaOptions=m_axi port=bias offset=slave bundle=gmem2 depth=236_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port=bias offset=slave bundle=gmem2 depth=236
+        ^
+../member_c_conv_hls/src/lenet_conv.cpp:273:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=lenet_full_top_XLX_SEP_ PragmaOptions=m_axi port=feature_out offset=slave bundle=gmem3 depth=10_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port=feature_out offset=slave bundle=gmem3 depth=10
+        ^
+../member_c_conv_hls/src/lenet_conv.cpp:275:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=lenet_full_top_XLX_SEP_ PragmaOptions=s_axilite port=feature_in bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=feature_in bundle=control
+        ^
+../member_c_conv_hls/src/lenet_conv.cpp:276:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=lenet_full_top_XLX_SEP_ PragmaOptions=s_axilite port=weight bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=weight bundle=control
+        ^
+../member_c_conv_hls/src/lenet_conv.cpp:277:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=lenet_full_top_XLX_SEP_ PragmaOptions=s_axilite port=bias bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=bias bundle=control
+        ^
+../member_c_conv_hls/src/lenet_conv.cpp:278:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=lenet_full_top_XLX_SEP_ PragmaOptions=s_axilite port=feature_out bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=feature_out bundle=control
+        ^
+../member_c_conv_hls/src/lenet_conv.cpp:279:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=lenet_full_top_XLX_SEP_ PragmaOptions=s_axilite port=return bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=return bundle=control
+        ^
+37 warnings generated.

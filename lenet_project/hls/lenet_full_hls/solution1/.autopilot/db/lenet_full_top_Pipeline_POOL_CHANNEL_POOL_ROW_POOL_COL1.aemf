@@ -1,0 +1,2321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1788624266382">
+  <ports id="1" name="conv2_output" type="PortType" coreName="RAM_1WnR" coreId="1684104743" bitwidth="32" iftype="IfTypeRegister" arraysize="1600">
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <ports id="2" name="pool2_output" type="PortType" coreName="RAM_1WnR" coreId="1953394531" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="400">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <edges id="201" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.5"/>
+  <edges id="204" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.6"/>
+  <edges id="207" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="210" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.8"/>
+  <edges id="212" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.9"/>
+  <edges id="213" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.0/@node_objs.10"/>
+  <edges id="214" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="215" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="216" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="217" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="220" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
+  <edges id="222" source_obj="//@regions.0/@basic_blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.5"/>
+  <edges id="223" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.6"/>
+  <edges id="226" source_obj="//@regions.0/@basic_blocks.0/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.7"/>
+  <edges id="229" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.8"/>
+  <edges id="232" source_obj="//@regions.0/@basic_blocks.0/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.9"/>
+  <edges id="233" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.10"/>
+  <edges id="236" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.11"/>
+  <edges id="239" source_obj="//@regions.0/@basic_blocks.0/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="240" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.13"/>
+  <edges id="241" source_obj="//@regions.0/@basic_blocks.0/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.13"/>
+  <edges id="242" source_obj="//@regions.0/@basic_blocks.0/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="243" source_obj="//@regions.0/@basic_blocks.0/@node_objs.14" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="244" source_obj="//@regions.0/@basic_blocks.0/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="245" source_obj="//@regions.0/@basic_blocks.0/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.16"/>
+  <edges id="246" source_obj="//@regions.0/@basic_blocks.0/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.16"/>
+  <edges id="247" source_obj="//@regions.0/@basic_blocks.0/@node_objs.16" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.17"/>
+  <edges id="248" source_obj="//@regions.0/@basic_blocks.0/@node_objs.17" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.18"/>
+  <edges id="249" source_obj="//@regions.0/@basic_blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.18"/>
+  <edges id="250" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.19"/>
+  <edges id="252" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.20"/>
+  <edges id="255" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.21"/>
+  <edges id="258" source_obj="//@regions.0/@basic_blocks.0/@node_objs.20" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.22"/>
+  <edges id="259" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.22"/>
+  <edges id="260" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.22"/>
+  <edges id="261" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="262" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="263" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="266" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="268" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="269" source_obj="//@regions.0/@basic_blocks.0/@node_objs.19" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="270" source_obj="//@regions.0/@basic_blocks.0/@node_objs.19" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="272" source_obj="//@regions.0/@basic_blocks.1/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <edges id="274" source_obj="//@regions.0/@basic_blocks.1/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.7"/>
+  <edges id="275" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
+  <edges id="276" source_obj="//@regions.0/@basic_blocks.1/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
+  <edges id="277" source_obj="//@regions.0/@basic_blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
+  <edges id="278" source_obj="//@regions.0/@basic_blocks.1/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.9"/>
+  <edges id="279" source_obj="//@regions.0/@basic_blocks.0/@node_objs.19" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
+  <edges id="281" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="282" source_obj="//@regions.0/@basic_blocks.1/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="283" source_obj="//@regions.0/@basic_blocks.0/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="284" source_obj="//@regions.0/@basic_blocks.1/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.12"/>
+  <edges id="286" source_obj="//@regions.0/@basic_blocks.1/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.13"/>
+  <edges id="288" source_obj="//@regions.0/@basic_blocks.1/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.14"/>
+  <edges id="289" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.15"/>
+  <edges id="290" source_obj="//@regions.0/@basic_blocks.1/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.15"/>
+  <edges id="291" source_obj="//@regions.0/@basic_blocks.0/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.15"/>
+  <edges id="292" source_obj="//@regions.0/@basic_blocks.1/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.16"/>
+  <edges id="293" source_obj="//@regions.0/@basic_blocks.1/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.17"/>
+  <edges id="294" source_obj="//@regions.0/@basic_blocks.1/@node_objs.14" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.17"/>
+  <edges id="295" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.18"/>
+  <edges id="296" source_obj="//@regions.0/@basic_blocks.1/@node_objs.17" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.18"/>
+  <edges id="297" source_obj="//@regions.0/@basic_blocks.0/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.18"/>
+  <edges id="298" source_obj="//@regions.0/@basic_blocks.1/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.19"/>
+  <edges id="299" source_obj="//@regions.0/@basic_blocks.1/@node_objs.19" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.20"/>
+  <edges id="300" source_obj="//@regions.0/@basic_blocks.1/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.20"/>
+  <edges id="301" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.21"/>
+  <edges id="302" source_obj="//@regions.0/@basic_blocks.1/@node_objs.20" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.21"/>
+  <edges id="303" source_obj="//@regions.0/@basic_blocks.0/@node_objs.18" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.21"/>
+  <edges id="304" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.22"/>
+  <edges id="307" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.23"/>
+  <edges id="310" source_obj="//@regions.0/@basic_blocks.1/@node_objs.23" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.24"/>
+  <edges id="311" source_obj="//@regions.0/@basic_blocks.1/@node_objs.22" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.24"/>
+  <edges id="312" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.25"/>
+  <edges id="313" source_obj="//@regions.0/@basic_blocks.0/@node_objs.19" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.25"/>
+  <edges id="314" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.25"/>
+  <edges id="315" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.26"/>
+  <edges id="318" source_obj="//@regions.0/@basic_blocks.1/@node_objs.24" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.27"/>
+  <edges id="319" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.27"/>
+  <edges id="320" source_obj="//@regions.0/@basic_blocks.1/@node_objs.27" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.28"/>
+  <edges id="322" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.28"/>
+  <edges id="323" source_obj="//@regions.0/@basic_blocks.1/@node_objs.26" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.29"/>
+  <edges id="325" source_obj="//@regions.0/@basic_blocks.1/@node_objs.26" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.30"/>
+  <edges id="327" source_obj="//@regions.0/@basic_blocks.1/@node_objs.30" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.31"/>
+  <edges id="328" source_obj="//@regions.0/@basic_blocks.1/@node_objs.25" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.32"/>
+  <edges id="329" source_obj="//@regions.0/@basic_blocks.1/@node_objs.29" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.32"/>
+  <edges id="330" source_obj="//@regions.0/@basic_blocks.1/@node_objs.32" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.33"/>
+  <edges id="331" source_obj="//@regions.0/@basic_blocks.1/@node_objs.33" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.34"/>
+  <edges id="332" source_obj="//@regions.0/@basic_blocks.1/@node_objs.16" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.34"/>
+  <edges id="333" source_obj="//@regions.0/@basic_blocks.1/@node_objs.24" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.35"/>
+  <edges id="334" source_obj="//@regions.0/@basic_blocks.1/@node_objs.34" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.35"/>
+  <edges id="335" source_obj="//@regions.0/@basic_blocks.1/@node_objs.18" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.35"/>
+  <edges id="338" source_obj="//@regions.0/@basic_blocks.1/@node_objs.35" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.36"/>
+  <edges id="340" source_obj="//@regions.0/@basic_blocks.1/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.37"/>
+  <edges id="341" source_obj="//@regions.0/@basic_blocks.1/@node_objs.31" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.37"/>
+  <edges id="342" source_obj="//@regions.0/@basic_blocks.1/@node_objs.37" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.38"/>
+  <edges id="343" source_obj="//@regions.0/@basic_blocks.1/@node_objs.38" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.39"/>
+  <edges id="344" source_obj="//@regions.0/@basic_blocks.1/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.39"/>
+  <edges id="345" source_obj="//@regions.0/@basic_blocks.1/@node_objs.24" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.40"/>
+  <edges id="346" source_obj="//@regions.0/@basic_blocks.1/@node_objs.39" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.40"/>
+  <edges id="347" source_obj="//@regions.0/@basic_blocks.1/@node_objs.21" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.40"/>
+  <edges id="350" source_obj="//@regions.0/@basic_blocks.1/@node_objs.40" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.41"/>
+  <edges id="354" source_obj="//@regions.0/@basic_blocks.1/@node_objs.40" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.42"/>
+  <edges id="356" source_obj="//@regions.0/@basic_blocks.1/@node_objs.40" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.43"/>
+  <edges id="360" source_obj="//@regions.0/@basic_blocks.1/@node_objs.43" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.44"/>
+  <edges id="363" source_obj="//@regions.0/@basic_blocks.1/@node_objs.43" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.45"/>
+  <edges id="365" source_obj="//@regions.0/@basic_blocks.1/@node_objs.45" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.46"/>
+  <edges id="366" source_obj="//@regions.0/@basic_blocks.1/@node_objs.24" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.47"/>
+  <edges id="367" source_obj="//@regions.0/@basic_blocks.1/@node_objs.26" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.47"/>
+  <edges id="368" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.47"/>
+  <edges id="369" source_obj="//@regions.0/@basic_blocks.1/@node_objs.28" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.48"/>
+  <edges id="371" source_obj="//@regions.0/@basic_blocks.1/@node_objs.28" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.49"/>
+  <edges id="373" source_obj="//@regions.0/@basic_blocks.1/@node_objs.49" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.50"/>
+  <edges id="374" source_obj="//@regions.0/@basic_blocks.1/@node_objs.49" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.51"/>
+  <edges id="375" source_obj="//@regions.0/@basic_blocks.1/@node_objs.42" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.52"/>
+  <edges id="376" source_obj="//@regions.0/@basic_blocks.1/@node_objs.51" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.52"/>
+  <edges id="377" source_obj="//@regions.0/@basic_blocks.1/@node_objs.52" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.53"/>
+  <edges id="378" source_obj="//@regions.0/@basic_blocks.1/@node_objs.53" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.54"/>
+  <edges id="379" source_obj="//@regions.0/@basic_blocks.1/@node_objs.41" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.54"/>
+  <edges id="380" source_obj="//@regions.0/@basic_blocks.1/@node_objs.54" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.55"/>
+  <edges id="381" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.56"/>
+  <edges id="384" source_obj="//@regions.0/@basic_blocks.1/@node_objs.55" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.56"/>
+  <edges id="385" source_obj="//@regions.0/@basic_blocks.1/@node_objs.56" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.57"/>
+  <edges id="386" source_obj="//@regions.0/@basic_blocks.1/@node_objs.57" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.58"/>
+  <edges id="389" source_obj="//@regions.0/@basic_blocks.1/@node_objs.58" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.59"/>
+  <edges id="394" source_obj="//@regions.0/@basic_blocks.1/@node_objs.58" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.60"/>
+  <edges id="395" source_obj="//@regions.0/@basic_blocks.1/@node_objs.59" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.61"/>
+  <edges id="398" source_obj="//@regions.0/@basic_blocks.1/@node_objs.60" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.62"/>
+  <edges id="401" source_obj="//@regions.0/@basic_blocks.1/@node_objs.62" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.63"/>
+  <edges id="402" source_obj="//@regions.0/@basic_blocks.1/@node_objs.61" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.63"/>
+  <edges id="403" source_obj="//@regions.0/@basic_blocks.1/@node_objs.57" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.64"/>
+  <edges id="406" source_obj="//@regions.0/@basic_blocks.1/@node_objs.63" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.65"/>
+  <edges id="407" source_obj="//@regions.0/@basic_blocks.1/@node_objs.64" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.65"/>
+  <edges id="408" source_obj="//@regions.0/@basic_blocks.1/@node_objs.65" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.66"/>
+  <edges id="409" source_obj="//@regions.0/@basic_blocks.1/@node_objs.57" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.66"/>
+  <edges id="411" source_obj="//@regions.0/@basic_blocks.1/@node_objs.54" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.67"/>
+  <edges id="414" source_obj="//@regions.0/@basic_blocks.1/@node_objs.67" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.68"/>
+  <edges id="415" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.69"/>
+  <edges id="417" source_obj="//@regions.0/@basic_blocks.1/@node_objs.68" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.69"/>
+  <edges id="418" source_obj="//@regions.0/@basic_blocks.1/@node_objs.69" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.70"/>
+  <edges id="419" source_obj="//@regions.0/@basic_blocks.1/@node_objs.70" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.71"/>
+  <edges id="421" source_obj="//@regions.0/@basic_blocks.1/@node_objs.71" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.72"/>
+  <edges id="424" source_obj="//@regions.0/@basic_blocks.1/@node_objs.71" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.73"/>
+  <edges id="425" source_obj="//@regions.0/@basic_blocks.1/@node_objs.66" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.74"/>
+  <edges id="427" source_obj="//@regions.0/@basic_blocks.1/@node_objs.74" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.75"/>
+  <edges id="430" source_obj="//@regions.0/@basic_blocks.1/@node_objs.74" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.76"/>
+  <edges id="431" source_obj="//@regions.0/@basic_blocks.1/@node_objs.72" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.77"/>
+  <edges id="433" source_obj="//@regions.0/@basic_blocks.1/@node_objs.73" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.78"/>
+  <edges id="435" source_obj="//@regions.0/@basic_blocks.1/@node_objs.78" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.79"/>
+  <edges id="436" source_obj="//@regions.0/@basic_blocks.1/@node_objs.77" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.79"/>
+  <edges id="437" source_obj="//@regions.0/@basic_blocks.1/@node_objs.75" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.80"/>
+  <edges id="439" source_obj="//@regions.0/@basic_blocks.1/@node_objs.76" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.81"/>
+  <edges id="441" source_obj="//@regions.0/@basic_blocks.1/@node_objs.81" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.82"/>
+  <edges id="442" source_obj="//@regions.0/@basic_blocks.1/@node_objs.80" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.82"/>
+  <edges id="443" source_obj="//@regions.0/@basic_blocks.1/@node_objs.79" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.83"/>
+  <edges id="444" source_obj="//@regions.0/@basic_blocks.1/@node_objs.82" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.83"/>
+  <edges id="445" source_obj="//@regions.0/@basic_blocks.1/@node_objs.70" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.84"/>
+  <edges id="446" source_obj="//@regions.0/@basic_blocks.1/@node_objs.66" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.84"/>
+  <edges id="447" source_obj="//@regions.0/@basic_blocks.1/@node_objs.83" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.85"/>
+  <edges id="448" source_obj="//@regions.0/@basic_blocks.1/@node_objs.84" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.85"/>
+  <edges id="449" source_obj="//@regions.0/@basic_blocks.1/@node_objs.85" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.86"/>
+  <edges id="450" source_obj="//@regions.0/@basic_blocks.1/@node_objs.70" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.86"/>
+  <edges id="451" source_obj="//@regions.0/@basic_blocks.1/@node_objs.66" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.86"/>
+  <edges id="452" source_obj="//@regions.0/@basic_blocks.1/@node_objs.46" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.87"/>
+  <edges id="453" source_obj="//@regions.0/@basic_blocks.1/@node_objs.50" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.87"/>
+  <edges id="454" source_obj="//@regions.0/@basic_blocks.1/@node_objs.87" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.88"/>
+  <edges id="455" source_obj="//@regions.0/@basic_blocks.1/@node_objs.88" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.89"/>
+  <edges id="456" source_obj="//@regions.0/@basic_blocks.1/@node_objs.44" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.89"/>
+  <edges id="457" source_obj="//@regions.0/@basic_blocks.1/@node_objs.89" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.90"/>
+  <edges id="458" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.91"/>
+  <edges id="460" source_obj="//@regions.0/@basic_blocks.1/@node_objs.90" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.91"/>
+  <edges id="461" source_obj="//@regions.0/@basic_blocks.1/@node_objs.91" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.92"/>
+  <edges id="462" source_obj="//@regions.0/@basic_blocks.1/@node_objs.92" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.93"/>
+  <edges id="464" source_obj="//@regions.0/@basic_blocks.1/@node_objs.93" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.94"/>
+  <edges id="467" source_obj="//@regions.0/@basic_blocks.1/@node_objs.93" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.95"/>
+  <edges id="468" source_obj="//@regions.0/@basic_blocks.1/@node_objs.86" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.96"/>
+  <edges id="470" source_obj="//@regions.0/@basic_blocks.1/@node_objs.96" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.97"/>
+  <edges id="473" source_obj="//@regions.0/@basic_blocks.1/@node_objs.96" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.98"/>
+  <edges id="474" source_obj="//@regions.0/@basic_blocks.1/@node_objs.94" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.99"/>
+  <edges id="476" source_obj="//@regions.0/@basic_blocks.1/@node_objs.95" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.100"/>
+  <edges id="478" source_obj="//@regions.0/@basic_blocks.1/@node_objs.100" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.101"/>
+  <edges id="479" source_obj="//@regions.0/@basic_blocks.1/@node_objs.99" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.101"/>
+  <edges id="480" source_obj="//@regions.0/@basic_blocks.1/@node_objs.97" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.102"/>
+  <edges id="482" source_obj="//@regions.0/@basic_blocks.1/@node_objs.98" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.103"/>
+  <edges id="484" source_obj="//@regions.0/@basic_blocks.1/@node_objs.103" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.104"/>
+  <edges id="485" source_obj="//@regions.0/@basic_blocks.1/@node_objs.102" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.104"/>
+  <edges id="486" source_obj="//@regions.0/@basic_blocks.1/@node_objs.101" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.105"/>
+  <edges id="487" source_obj="//@regions.0/@basic_blocks.1/@node_objs.104" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.105"/>
+  <edges id="488" source_obj="//@regions.0/@basic_blocks.1/@node_objs.92" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.106"/>
+  <edges id="489" source_obj="//@regions.0/@basic_blocks.1/@node_objs.86" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.106"/>
+  <edges id="490" source_obj="//@regions.0/@basic_blocks.1/@node_objs.105" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.107"/>
+  <edges id="491" source_obj="//@regions.0/@basic_blocks.1/@node_objs.106" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.107"/>
+  <edges id="492" source_obj="//@regions.0/@basic_blocks.1/@node_objs.107" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.108"/>
+  <edges id="493" source_obj="//@regions.0/@basic_blocks.1/@node_objs.92" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.108"/>
+  <edges id="494" source_obj="//@regions.0/@basic_blocks.1/@node_objs.86" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.108"/>
+  <edges id="495" source_obj="//@regions.0/@basic_blocks.1/@node_objs.89" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.109"/>
+  <edges id="497" source_obj="//@regions.0/@basic_blocks.1/@node_objs.109" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.110"/>
+  <edges id="498" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.111"/>
+  <edges id="500" source_obj="//@regions.0/@basic_blocks.1/@node_objs.110" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.111"/>
+  <edges id="501" source_obj="//@regions.0/@basic_blocks.1/@node_objs.111" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.112"/>
+  <edges id="502" source_obj="//@regions.0/@basic_blocks.1/@node_objs.112" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.113"/>
+  <edges id="504" source_obj="//@regions.0/@basic_blocks.1/@node_objs.113" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.114"/>
+  <edges id="507" source_obj="//@regions.0/@basic_blocks.1/@node_objs.113" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.115"/>
+  <edges id="508" source_obj="//@regions.0/@basic_blocks.1/@node_objs.108" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.116"/>
+  <edges id="510" source_obj="//@regions.0/@basic_blocks.1/@node_objs.116" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.117"/>
+  <edges id="513" source_obj="//@regions.0/@basic_blocks.1/@node_objs.116" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.118"/>
+  <edges id="514" source_obj="//@regions.0/@basic_blocks.1/@node_objs.114" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.119"/>
+  <edges id="516" source_obj="//@regions.0/@basic_blocks.1/@node_objs.115" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.120"/>
+  <edges id="518" source_obj="//@regions.0/@basic_blocks.1/@node_objs.120" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.121"/>
+  <edges id="519" source_obj="//@regions.0/@basic_blocks.1/@node_objs.119" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.121"/>
+  <edges id="520" source_obj="//@regions.0/@basic_blocks.1/@node_objs.117" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.122"/>
+  <edges id="522" source_obj="//@regions.0/@basic_blocks.1/@node_objs.118" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.123"/>
+  <edges id="524" source_obj="//@regions.0/@basic_blocks.1/@node_objs.123" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.124"/>
+  <edges id="525" source_obj="//@regions.0/@basic_blocks.1/@node_objs.122" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.124"/>
+  <edges id="526" source_obj="//@regions.0/@basic_blocks.1/@node_objs.121" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.125"/>
+  <edges id="527" source_obj="//@regions.0/@basic_blocks.1/@node_objs.124" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.125"/>
+  <edges id="528" source_obj="//@regions.0/@basic_blocks.1/@node_objs.112" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.126"/>
+  <edges id="529" source_obj="//@regions.0/@basic_blocks.1/@node_objs.108" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.126"/>
+  <edges id="530" source_obj="//@regions.0/@basic_blocks.1/@node_objs.125" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.127"/>
+  <edges id="531" source_obj="//@regions.0/@basic_blocks.1/@node_objs.126" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.127"/>
+  <edges id="532" source_obj="//@regions.0/@basic_blocks.1/@node_objs.127" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.128"/>
+  <edges id="533" source_obj="//@regions.0/@basic_blocks.1/@node_objs.112" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.128"/>
+  <edges id="534" source_obj="//@regions.0/@basic_blocks.1/@node_objs.108" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.128"/>
+  <edges id="535" source_obj="//@regions.0/@basic_blocks.1/@node_objs.35" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.129"/>
+  <edges id="536" source_obj="//@regions.0/@basic_blocks.1/@node_objs.48" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.129"/>
+  <edges id="537" source_obj="//@regions.0/@basic_blocks.1/@node_objs.129" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.130"/>
+  <edges id="538" source_obj="//@regions.0/@basic_blocks.1/@node_objs.130" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.131"/>
+  <edges id="539" source_obj="//@regions.0/@basic_blocks.1/@node_objs.36" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.131"/>
+  <edges id="540" source_obj="//@regions.0/@basic_blocks.1/@node_objs.131" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.132"/>
+  <edges id="541" source_obj="//@regions.0/@basic_blocks.1/@node_objs.133" sink_obj="//@ports.1"/>
+  <edges id="543" source_obj="//@regions.0/@basic_blocks.1/@node_objs.132" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.133"/>
+  <edges id="544" source_obj="//@regions.0/@basic_blocks.1/@node_objs.128" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.134"/>
+  <edges id="545" source_obj="//@regions.0/@basic_blocks.1/@node_objs.133" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.134"/>
+  <edges id="546" source_obj="//@regions.0/@basic_blocks.1/@node_objs.28" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.135"/>
+  <edges id="548" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.136"/>
+  <edges id="551" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.137"/>
+  <edges id="553" source_obj="//@regions.0/@basic_blocks.1/@node_objs.136" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.137"/>
+  <edges id="554" source_obj="//@regions.0/@basic_blocks.0/@node_objs.21" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.138"/>
+  <edges id="555" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.138"/>
+  <edges id="556" source_obj="//@regions.0/@basic_blocks.1/@node_objs.25" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.139"/>
+  <edges id="557" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.139"/>
+  <edges id="558" source_obj="//@regions.0/@basic_blocks.1/@node_objs.137" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.140"/>
+  <edges id="559" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.140"/>
+  <edges id="560" source_obj="//@regions.0/@basic_blocks.1/@node_objs.47" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.141"/>
+  <edges id="561" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.141"/>
+  <edges id="562" source_obj="//@regions.0/@basic_blocks.1/@node_objs.135" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.142"/>
+  <edges id="563" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.142"/>
+  <edges id="564" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.143"/>
+  <edges id="603" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0"/>
+  <edges id="604" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="605" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
+  <edges id="606" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="607" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.140"/>
+  <edges id="608" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.142"/>
+  <edges id="609" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="610" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="611" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="612" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.138"/>
+  <edges id="613" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.139"/>
+  <edges id="614" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="615" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.140"/>
+  <edges id="616" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.141"/>
+  <edges id="617" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="618" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.142"/>
+  <edges id="619" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.141"/>
+  <edges id="620" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.139"/>
+  <edges id="621" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.138"/>
+  <blocks id="14" name="newFuncRoot" type="BlockType">
+    <controlOutputObjs>POOL_KERNEL_ROW.i81</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="3" name="output_col" originalName="output_col" coreId="248" bitwidth="3" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="4" name="output_row" originalName="output_row" coreId="1646274865" bitwidth="3" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="5" name="indvar_flatten127" coreId="0" bitwidth="6" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="channel" originalName="channel" coreId="0" bitwidth="5" opcode="alloca" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="indvar_flatten183" coreId="313" bitwidth="9" opcode="alloca" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="indvar_flatten183_write_ln0" coreId="295" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="channel_write_ln0" coreId="0" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="indvar_flatten127_write_ln0" coreId="304" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="output_row_write_ln0" coreId="0" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="output_col_write_ln0" coreId="0" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="br_ln0" coreId="329" opcode="br" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <controlInputObjs>POOL_KERNEL_ROW.i81</controlInputObjs>
+    </node_objs>
+  </blocks>
+  <blocks id="192" name="_ZN5lenet12_GLOBAL__N_116relu_maxpool_2x2ILi16ELi10ELi10EEEvPKfPf.exit.exitStub" type="BlockType">
+    <controlInputObjs>POOL_KERNEL_ROW.i81</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="191" name="_ln0" coreId="0" opcode="ret" nodeLabel="11.0" m_display="0" m_topoIndex="175" m_clusterGroupNumber="-1"/>
+  </blocks>
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" iiViolation="" id="776" pipe_depth="13" RegionName="POOL_CHANNEL_POOL_ROW_POOL_COL">
+    <basic_blocks id="39" name="POOL_KERNEL_ROW.i81" type="BlockType">
+      <controlInputObjs>newFuncRoot</controlInputObjs>
+      <controlInputObjs>for.inc39.i113</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>_ZN5lenet12_GLOBAL__N_116relu_maxpool_2x2ILi16ELi10ELi10EEEvPKfPf.exit.exitStub</controlOutputObjs>
+      <controlOutputObjs>for.inc39.i113</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="15" name="output_row_1" lineNumber="93" originalName="output_row" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." coreId="317" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="3" opcode="load" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="93" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="16" name="channel_1" originalName="channel" coreId="0" bitwidth="5" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="35" m_clusterGroupNumber="-1">
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>trunc</dataOutputObjs>
+        <dataOutputObjs>shl</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="17" name="indvar_flatten183_load" lineNumber="91" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." coreId="0" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="9" opcode="load" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="91" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="18" name="empty" rtlName="empty_fu_335_p1" coreId="244" bitwidth="4" opcode="trunc" nodeLabel="1.0" m_display="0" m_topoIndex="36" m_clusterGroupNumber="-1">
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="19" name="p_shl" rtlName="p_shl_fu_339_p3" coreId="344" bitwidth="7" opcode="bitconcatenate" nodeLabel="1.0" m_display="0" m_topoIndex="37" m_clusterGroupNumber="-1">
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="20" name="p_shl25_cast" rtlName="p_shl25_cast_fu_347_p1" coreId="0" bitwidth="8" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="38" m_clusterGroupNumber="-1">
+        <dataInputObjs>bitconcatenate</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="21" name="empty_29" rtlName="empty_29_fu_351_p2" coreId="256" bitwidth="5" opcode="shl" nodeLabel="1.0" m_display="0" m_topoIndex="39" m_clusterGroupNumber="-1">
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="p_shl26_cast" rtlName="p_shl26_cast_fu_357_p1" coreId="1701733740" bitwidth="6" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="40" m_clusterGroupNumber="-1">
+        <dataInputObjs>shl</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="23" name="p_shl1" rtlName="p_shl1_fu_519_p3" coreId="544175136" bitwidth="6" opcode="bitconcatenate" nodeLabel="2.0" m_display="0" m_topoIndex="70" m_clusterGroupNumber="-1">
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="24" name="zext_ln93" lineNumber="93" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="zext_ln93_fu_526_p1" coreId="0" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="7" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="71" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="93" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>bitconcatenate</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="25" name="zext_ln93_1" lineNumber="93" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="zext_ln93_1_fu_361_p1" coreId="0" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="5" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="41" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="93" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="26" name="tmp_s" lineNumber="93" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="tmp_s_fu_364_p3" coreId="0" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="4" opcode="bitconcatenate" nodeLabel="1.0" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="93" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="27" name="p_cast38" lineNumber="93" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="p_cast38_fu_371_p1" coreId="808464928" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="6" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="43" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="93" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>bitconcatenate</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="tmp3" lineNumber="93" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="tmp3_fu_375_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="5" opcode="add" nodeLabel="1.0" m_display="0" m_delay="1.78" m_topoIndex="44" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="93" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="29" name="tmp3_cast" lineNumber="93" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="tmp3_cast_fu_530_p1" coreId="1701869940" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="7" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="72" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="93" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="30" name="empty_30" lineNumber="93" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="empty_30_fu_533_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="7" opcode="add" nodeLabel="2.0" m_display="0" m_delay="1.82" m_topoIndex="73" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="93" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="31" name="tmp4" lineNumber="93" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="tmp4_fu_381_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="6" opcode="add" nodeLabel="1.0" m_display="0" m_delay="1.78" m_topoIndex="45" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="93" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="32" name="tmp4_cast" lineNumber="93" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="tmp4_cast_fu_387_p1" coreId="1431326281" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="8" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="46" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="93" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="33" name="empty_31" lineNumber="93" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="empty_31_fu_391_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="8" opcode="add" nodeLabel="1.0" m_display="0" m_delay="1.87" m_topoIndex="47" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="93" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="35" name="add_ln91" lineNumber="91" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="add_ln91_fu_397_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="5" opcode="add" nodeLabel="1.0" m_display="0" m_delay="1.78" m_topoIndex="48" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="91" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <dataOutputObjs>trunc</dataOutputObjs>
+        <dataOutputObjs>shl</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="36" name="icmp_ln91" lineNumber="91" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="icmp_ln91_fu_214_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="1" opcode="icmp" m_display="0" m_delay="1.66" m_topoIndex="14" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="91" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="37" name="add_ln91_1" lineNumber="91" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="add_ln91_1_fu_220_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="9" opcode="add" m_display="0" m_delay="1.82" m_topoIndex="15" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="91" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="38" name="br_ln91" lineNumber="91" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." coreId="0" contextFuncName="relu_maxpool_2x2_16_10_10_s" opcode="br" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="91" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>for.inc39.i113</controlInputObjs>
+        <controlInputObjs>_ZN5lenet12_GLOBAL__N_116relu_maxpool_2x2ILi16ELi10ELi10EEEvPKfPf.exit.exitStub</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="../member_c_conv_hls/src/lenet_conv.cpp">
+        <validLinenumbers>93</validLinenumbers>
+        <validLinenumbers>91</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="190" name="for.inc39.i113" type="BlockType">
+      <controlInputObjs>POOL_KERNEL_ROW.i81</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>POOL_KERNEL_ROW.i81</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="40" name="output_col_load" lineNumber="95" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." coreId="0" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="3" opcode="load" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="95" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="41" name="indvar_flatten127_load" lineNumber="93" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." coreId="0" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="6" opcode="load" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="93" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="44" name="icmp_ln93" lineNumber="93" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="icmp_ln93_fu_232_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="1" opcode="icmp" m_display="0" m_delay="1.42" m_topoIndex="19" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="93" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <dataOutputObjs>xor</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <dataOutputObjs>or</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="45" name="select_ln91" lineNumber="91" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="select_ln91_fu_238_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="3" opcode="select" m_display="0" m_delay="0.98" m_topoIndex="20" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="91" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="46" name="zext_ln91" lineNumber="91" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="zext_ln91_fu_539_p1" coreId="795046515" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="7" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="74" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="91" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="47" name="empty_33" lineNumber="91" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="empty_33_fu_403_p1" coreId="0" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="4" opcode="trunc" nodeLabel="1.0" m_display="0" m_topoIndex="49" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="91" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="48" name="p_shl25_mid1" lineNumber="91" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="p_shl25_mid1_fu_407_p3" coreId="757935405" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="7" opcode="bitconcatenate" nodeLabel="1.0" m_display="0" m_topoIndex="50" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="91" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="49" name="p_shl25_cast_mid1" lineNumber="91" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="p_shl25_cast_mid1_fu_415_p1" coreId="1969516397" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="8" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="51" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="91" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>bitconcatenate</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="50" name="select_ln91_1" lineNumber="91" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="select_ln91_1_fu_419_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="7" opcode="select" nodeLabel="1.0" m_display="0" m_topoIndex="52" m_clusterGroupNumber="1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="91" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataInputObjs>bitconcatenate</dataInputObjs>
+        <dataInputObjs>bitconcatenate</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="51" name="zext_ln91_1" lineNumber="91" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="zext_ln91_1_fu_426_p1" coreId="1919246957" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="8" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="53" m_clusterGroupNumber="1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="91" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="52" name="empty_34" lineNumber="91" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="empty_34_fu_430_p2" coreId="1701998624" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="5" opcode="shl" nodeLabel="1.0" m_display="0" m_topoIndex="54" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="91" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="53" name="select_ln91_2" lineNumber="91" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="select_ln91_2_fu_436_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="5" opcode="select" nodeLabel="1.0" m_display="0" m_topoIndex="55" m_clusterGroupNumber="2">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="91" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataInputObjs>shl</dataInputObjs>
+        <dataInputObjs>shl</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="54" name="zext_ln91_2" lineNumber="91" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="zext_ln91_2_fu_443_p1" coreId="1920151411" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="6" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="56" m_clusterGroupNumber="2">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="91" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="55" name="p_shl24_mid1" lineNumber="91" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="p_shl24_mid1_fu_542_p3" coreId="0" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="6" opcode="bitconcatenate" nodeLabel="2.0" m_display="0" m_topoIndex="75" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="91" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="56" name="zext_ln93_2" lineNumber="93" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="zext_ln93_2_fu_549_p1" coreId="3401907328" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="7" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="76" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="93" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>bitconcatenate</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="57" name="select_ln91_3" lineNumber="91" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="select_ln91_3_fu_553_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="6" opcode="select" nodeLabel="2.0" m_display="0" m_topoIndex="77" m_clusterGroupNumber="3">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="91" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataInputObjs>bitconcatenate</dataInputObjs>
+        <dataInputObjs>bitconcatenate</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="58" name="zext_ln91_3" lineNumber="91" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="zext_ln91_3_fu_560_p1" coreId="0" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="7" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="78" m_clusterGroupNumber="3">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="91" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="59" name="p_mid1149" lineNumber="91" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="p_mid1149_fu_564_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="7" opcode="add" nodeLabel="2.0" m_display="0" m_delay="1.82" m_topoIndex="79" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="91" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="60" name="select_ln91_4" lineNumber="91" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="select_ln91_4_fu_570_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="7" opcode="select" nodeLabel="2.0" m_display="0" m_topoIndex="80" m_clusterGroupNumber="4">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="91" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="61" name="tmp4_cast_mid1157" lineNumber="91" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="tmp4_cast_mid1157_fu_447_p1" coreId="0" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="8" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="57" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="91" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>shl</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="62" name="p_mid1159" lineNumber="91" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="p_mid1159_fu_451_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="8" opcode="add" nodeLabel="1.0" m_display="0" m_delay="1.87" m_topoIndex="58" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="91" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="63" name="select_ln91_5" lineNumber="91" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="select_ln91_5_fu_457_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="8" opcode="select" nodeLabel="1.0" m_display="0" m_topoIndex="59" m_clusterGroupNumber="5">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="91" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="65" name="xor_ln91" lineNumber="91" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="xor_ln91_fu_246_p2" coreName="LogicGate" implIndex="auto" control="no" opType="xor" coreId="74" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="1" opcode="xor" m_display="0" m_topoIndex="21" m_clusterGroupNumber="6">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="91" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataOutputObjs>and</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="66" name="icmp_ln95" lineNumber="95" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="icmp_ln95_fu_252_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="1" opcode="icmp" m_display="0" m_delay="1.13" m_topoIndex="22" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="95" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>and</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="67" name="and_ln91" lineNumber="91" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="and_ln91_fu_258_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="1" opcode="and" m_display="0" m_delay="0.97" m_topoIndex="23" m_clusterGroupNumber="6">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="91" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataInputObjs>xor</dataInputObjs>
+        <dataOutputObjs>or</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="68" name="select_ln91_6" lineNumber="91" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="select_ln91_6_fu_464_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="5" opcode="select" nodeLabel="1.0" m_display="0" m_delay="1.21" m_topoIndex="60" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="91" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="69" name="add_ln93" lineNumber="93" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="add_ln93_fu_264_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="3" opcode="add" m_display="0" m_delay="1.65" m_topoIndex="24" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="93" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="71" name="or_ln93" lineNumber="93" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="or_ln93_fu_270_p2" coreName="LogicGate" implIndex="auto" control="no" opType="or" coreId="74" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="1" opcode="or" m_display="0" m_topoIndex="25" m_clusterGroupNumber="7">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="93" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>and</dataInputObjs>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="72" name="select_ln93" lineNumber="93" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="select_ln93_fu_276_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="3" opcode="select" m_display="0" m_delay="0.98" m_topoIndex="26" m_clusterGroupNumber="7">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="93" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>or</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="73" name="zext_ln93_3" lineNumber="93" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="zext_ln93_3_fu_471_p1" coreId="0" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="5" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="61" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="93" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="74" name="p_mid2" lineNumber="93" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="p_mid2_fu_474_p3" coreId="0" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="4" opcode="bitconcatenate" nodeLabel="1.0" m_display="0" m_topoIndex="62" m_clusterGroupNumber="2">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="93" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="75" name="p_cast38_mid1" lineNumber="93" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="p_cast38_mid1_fu_481_p1" coreId="0" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="6" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="63" m_clusterGroupNumber="2">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="93" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>bitconcatenate</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="76" name="tmp3_mid1" lineNumber="91" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="tmp3_mid1_fu_485_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="5" opcode="add" nodeLabel="1.0" m_display="0" m_delay="1.78" m_topoIndex="64" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="91" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="77" name="tmp3_cast_mid1" lineNumber="91" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="tmp3_cast_mid1_fu_577_p1" coreId="12" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="7" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="81" m_clusterGroupNumber="3">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="91" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="78" name="p_mid1121" lineNumber="91" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="p_mid1121_fu_580_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="7" opcode="add" nodeLabel="2.0" m_display="0" m_delay="1.82" m_topoIndex="82" m_clusterGroupNumber="3">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="91" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="79" name="select_ln93_1" lineNumber="93" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="select_ln93_1_fu_586_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="7" opcode="select" nodeLabel="2.0" m_display="0" m_delay="0.99" m_topoIndex="83" m_clusterGroupNumber="4">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="93" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>and</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="80" name="p_shl27_mid2" lineNumber="93" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="p_shl27_mid2_fu_593_p3" coreId="1750343726" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="9" opcode="bitconcatenate" nodeLabel="2.0" m_display="0" m_topoIndex="84" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="93" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="81" name="tmp4_mid1" lineNumber="91" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="tmp4_mid1_fu_491_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="6" opcode="add" nodeLabel="1.0" m_display="0" m_delay="1.78" m_topoIndex="65" m_clusterGroupNumber="2">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="91" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="82" name="tmp4_cast_mid1" lineNumber="91" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="tmp4_cast_mid1_fu_497_p1" coreId="773864307" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="8" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="66" m_clusterGroupNumber="1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="91" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="83" name="p_mid1123" lineNumber="91" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="p_mid1123_fu_501_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="8" opcode="add" nodeLabel="1.0" m_display="0" m_delay="1.87" m_topoIndex="67" m_clusterGroupNumber="1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="91" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="84" name="select_ln93_2" lineNumber="93" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="select_ln93_2_fu_507_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="8" opcode="select" nodeLabel="1.0" m_display="0" m_delay="1.24" m_topoIndex="68" m_clusterGroupNumber="5">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="93" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>and</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+        <dataOutputObjs>or</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="85" name="p_shl28_0_mid2" lineNumber="93" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="p_shl28_0_mid2_fu_601_p3" coreId="1886413614" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="11" opcode="bitconcatenate" nodeLabel="2.0" m_display="0" m_topoIndex="85" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="93" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="86" name="p_shl29_0_mid2" lineNumber="93" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="p_shl29_0_mid2_fu_608_p3" coreId="1126196325" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="9" opcode="bitconcatenate" nodeLabel="2.0" m_display="0" m_topoIndex="86" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="93" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="87" name="or_ln93_1" lineNumber="93" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="or_ln93_1_fu_615_p2" coreId="1179535650" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="8" opcode="or" nodeLabel="2.0" m_display="0" m_topoIndex="87" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="93" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="88" name="p_shl28_1_mid2" lineNumber="93" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="p_shl28_1_mid2_fu_620_p3" coreId="7630437" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="11" opcode="bitconcatenate" nodeLabel="2.0" m_display="0" m_topoIndex="88" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="93" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>or</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="89" name="zext_ln95_mid2_v" lineNumber="93" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="zext_ln95_mid2_v_fu_628_p3" coreId="1881145423" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="9" opcode="bitconcatenate" nodeLabel="2.0" m_display="0" m_topoIndex="89" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="93" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>or</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="90" name="zext_ln93_4" lineNumber="93" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="zext_ln93_4_fu_636_p1" coreId="539767347" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="10" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="90" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="93" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>bitconcatenate</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="92" name="select_ln93_3" lineNumber="93" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="select_ln93_3_fu_284_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="3" opcode="select" m_display="0" m_delay="0.98" m_topoIndex="27" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="93" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>and</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="93" name="output_col_2_cast51" lineNumber="93" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="output_col_2_cast51_fu_640_p1" coreId="1768318322" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="7" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="91" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="93" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="95" name="tmp_3" lineNumber="93" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="tmp_3_fu_643_p3" coreId="544106784" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="4" opcode="bitconcatenate" nodeLabel="2.0" m_display="0" m_topoIndex="92" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="93" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="96" name="zext_ln105" lineNumber="105" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="zext_ln105_fu_650_p1" coreId="779709548" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="10" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="93" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="105" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>bitconcatenate</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="97" name="zext_ln105_1" lineNumber="105" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="zext_ln105_1_fu_654_p1" coreId="1919246957" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="9" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="94" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="105" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>bitconcatenate</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="98" name="add_ln105" lineNumber="105" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="add_ln105_fu_658_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="9" opcode="add" nodeLabel="2.0" m_display="0" m_delay="1.82" m_topoIndex="95" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="105" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>bitconcatenate</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="99" name="zext_ln105_2" lineNumber="105" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="zext_ln105_2_fu_664_p1" coreId="1852795252" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="11" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="96" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="105" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="100" name="add_ln105_1" lineNumber="105" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="add_ln105_1_fu_668_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="11" opcode="add" nodeLabel="2.0" m_display="0" m_delay="1.63" m_topoIndex="97" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="105" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataInputObjs>bitconcatenate</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <dataOutputObjs>or</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="101" name="zext_ln106" lineNumber="106" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="zext_ln106_fu_674_p1" coreId="3401854048" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="64" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="98" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="106" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="102" name="conv2_output_addr" lineNumber="106" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." coreId="656436847" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="11" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="99" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="106" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>conv2_output</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="103" name="conv2_output_load" lineNumber="106" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." coreName="RAM_1WnR" implIndex="auto" control="no" opType="ram_1wnr" coreId="83" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="32" opcode="load" nodeLabel="2.0" nodeLatency="1" m_display="0" m_delay="3.25" m_topoIndex="100" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="106" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>bitcast</dataOutputObjs>
+        <dataOutputObjs>fcmp</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="104" name="bitcast_ln107" lineNumber="107" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="bitcast_ln107_fu_738_p1" coreId="1851073024" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="32" opcode="bitcast" nodeLabel="5.0" m_display="0" m_topoIndex="119" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="107" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+        <dataOutputObjs>trunc</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="105" name="tmp_4" lineNumber="107" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="tmp_4_fu_741_p4" coreId="1751086702" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="8" opcode="partselect" nodeLabel="5.0" m_display="0" m_topoIndex="120" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="107" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>bitcast</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="106" name="trunc_ln107" lineNumber="107" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="trunc_ln107_fu_751_p1" coreId="7237481" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="23" opcode="trunc" nodeLabel="5.0" m_display="0" m_topoIndex="121" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="107" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>bitcast</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="107" name="icmp_ln107" lineNumber="107" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="icmp_ln107_fu_755_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="1" opcode="icmp" nodeLabel="5.0" m_display="0" m_delay="1.55" m_topoIndex="122" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="107" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataOutputObjs>or</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="108" name="icmp_ln107_1" lineNumber="107" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="icmp_ln107_1_fu_761_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="1" opcode="icmp" nodeLabel="5.0" m_display="0" m_delay="2.44" m_topoIndex="123" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="107" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataOutputObjs>or</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="109" name="or_ln107" lineNumber="107" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="or_ln107_fu_767_p2" coreName="LogicGate" implIndex="auto" control="no" opType="or" coreId="74" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="1" opcode="or" nodeLabel="5.0" m_display="0" m_topoIndex="124" m_clusterGroupNumber="8">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="107" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataOutputObjs>and</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="110" name="tmp_5" lineNumber="107" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." coreName="FCompare" implIndex="auto" control="no" opType="fcmp" coreId="19" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="1" opcode="fcmp" nodeLabel="4.0" nodeLatency="1" m_display="0" m_delay="5.43" m_topoIndex="118" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="107" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>and</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="111" name="and_ln107" lineNumber="107" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="and_ln107_fu_773_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="1" opcode="and" nodeLabel="5.0" m_display="0" m_topoIndex="125" m_clusterGroupNumber="8">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="107" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>or</dataInputObjs>
+        <dataInputObjs>fcmp</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="112" name="select_ln107" lineNumber="107" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="select_ln107_fu_779_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="32" opcode="select" nodeLabel="5.0" m_display="0" m_delay="0.97" m_topoIndex="126" m_clusterGroupNumber="8">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="107" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>and</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>bitcast</dataOutputObjs>
+        <dataOutputObjs>fcmp</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="113" name="or_ln105" lineNumber="105" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="or_ln105_fu_679_p2" coreId="2036689696" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="11" opcode="or" nodeLabel="2.0" m_display="0" m_topoIndex="101" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="105" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="114" name="zext_ln106_1" lineNumber="106" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="zext_ln106_1_fu_685_p1" coreId="1702129263" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="64" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="102" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="106" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>or</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="115" name="conv2_output_addr_1" lineNumber="106" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." coreId="788537856" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="11" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="103" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="106" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>conv2_output</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="116" name="conv2_output_load_1" lineNumber="106" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." coreName="RAM_1WnR" implIndex="auto" control="no" opType="ram_1wnr" coreId="83" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="32" opcode="load" nodeLabel="2.0" nodeLatency="1" m_display="0" m_delay="3.25" m_topoIndex="104" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="106" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>bitcast</dataOutputObjs>
+        <dataOutputObjs>fcmp</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="117" name="bitcast_ln107_1" lineNumber="107" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="bitcast_ln107_1_fu_786_p1" coreId="1853187616" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="32" opcode="bitcast" nodeLabel="7.0" m_display="0" m_topoIndex="128" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="107" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+        <dataOutputObjs>trunc</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="118" name="tmp_6" lineNumber="107" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="tmp_6_fu_789_p4" coreId="795046515" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="8" opcode="partselect" nodeLabel="7.0" m_display="0" m_topoIndex="129" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="107" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>bitcast</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="119" name="trunc_ln107_1" lineNumber="107" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="trunc_ln107_1_fu_799_p1" coreId="1701212773" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="23" opcode="trunc" nodeLabel="7.0" m_display="0" m_topoIndex="130" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="107" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>bitcast</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="120" name="bitcast_ln107_2" lineNumber="107" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="bitcast_ln107_2_fu_803_p1" coreId="1651336557" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="32" opcode="bitcast" nodeLabel="7.0" m_display="0" m_topoIndex="131" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="107" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+        <dataOutputObjs>trunc</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="121" name="tmp_7" lineNumber="107" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="tmp_7_fu_806_p4" coreId="959262768" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="8" opcode="partselect" nodeLabel="7.0" m_display="0" m_topoIndex="132" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="107" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>bitcast</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="122" name="trunc_ln107_2" lineNumber="107" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="trunc_ln107_2_fu_816_p1" coreId="1663989358" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="23" opcode="trunc" nodeLabel="7.0" m_display="0" m_topoIndex="133" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="107" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>bitcast</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="123" name="icmp_ln107_2" lineNumber="107" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="icmp_ln107_2_fu_820_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="1" opcode="icmp" nodeLabel="7.0" m_display="0" m_delay="1.55" m_topoIndex="134" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="107" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataOutputObjs>or</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="124" name="icmp_ln107_3" lineNumber="107" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="icmp_ln107_3_fu_826_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="1" opcode="icmp" nodeLabel="7.0" m_display="0" m_delay="2.44" m_topoIndex="135" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="107" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataOutputObjs>or</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="125" name="or_ln107_1" lineNumber="107" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="or_ln107_1_fu_832_p2" coreName="LogicGate" implIndex="auto" control="no" opType="or" coreId="74" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="1" opcode="or" nodeLabel="7.0" m_display="0" m_topoIndex="136" m_clusterGroupNumber="9">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="107" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataOutputObjs>and</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="126" name="icmp_ln107_4" lineNumber="107" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="icmp_ln107_4_fu_838_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="1" opcode="icmp" nodeLabel="7.0" m_display="0" m_delay="1.55" m_topoIndex="137" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="107" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataOutputObjs>or</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="127" name="icmp_ln107_5" lineNumber="107" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="icmp_ln107_5_fu_844_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="1" opcode="icmp" nodeLabel="7.0" m_display="0" m_delay="2.44" m_topoIndex="138" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="107" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataOutputObjs>or</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="128" name="or_ln107_2" lineNumber="107" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="or_ln107_2_fu_850_p2" coreName="LogicGate" implIndex="auto" control="no" opType="or" coreId="74" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="1" opcode="or" nodeLabel="7.0" m_display="0" m_topoIndex="139" m_clusterGroupNumber="9">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="107" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataOutputObjs>and</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="129" name="and_ln107_1" lineNumber="107" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="and_ln107_1_fu_856_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="1" opcode="and" nodeLabel="7.0" m_display="0" m_topoIndex="140" m_clusterGroupNumber="9">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="107" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>or</dataInputObjs>
+        <dataInputObjs>or</dataInputObjs>
+        <dataOutputObjs>and</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="130" name="tmp_8" lineNumber="107" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." coreName="FCompare" implIndex="auto" control="no" opType="fcmp" coreId="19" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="1" opcode="fcmp" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="5.43" m_topoIndex="127" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="107" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>and</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="131" name="and_ln107_2" lineNumber="107" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="and_ln107_2_fu_862_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="1" opcode="and" nodeLabel="7.0" m_display="0" m_delay="0.97" m_topoIndex="141" m_clusterGroupNumber="9">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="107" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>and</dataInputObjs>
+        <dataInputObjs>fcmp</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="132" name="select_ln107_1" lineNumber="107" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="select_ln107_1_fu_868_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="32" opcode="select" nodeLabel="7.0" m_display="0" m_delay="0.69" m_topoIndex="142" m_clusterGroupNumber="10">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="107" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>and</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>bitcast</dataOutputObjs>
+        <dataOutputObjs>fcmp</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="133" name="add_ln105_2" lineNumber="105" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="add_ln105_2_fu_690_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="10" opcode="add" nodeLabel="2.0" m_display="0" m_delay="1.82" m_topoIndex="105" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="105" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="134" name="zext_ln105_3" lineNumber="105" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="zext_ln105_3_fu_696_p1" coreId="539915108" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="11" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="106" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="105" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="135" name="add_ln105_3" lineNumber="105" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="add_ln105_3_fu_700_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="11" opcode="add" nodeLabel="2.0" m_display="0" m_delay="1.63" m_topoIndex="107" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="105" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataInputObjs>bitconcatenate</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <dataOutputObjs>or</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="136" name="zext_ln106_2" lineNumber="106" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="zext_ln106_2_fu_706_p1" coreId="1428175401" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="64" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="108" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="106" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="137" name="conv2_output_addr_2" lineNumber="106" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." coreId="1818851374" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="11" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="109" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="106" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>conv2_output</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="138" name="conv2_output_load_2" lineNumber="106" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." coreName="RAM_1WnR" implIndex="auto" control="no" opType="ram_1wnr" coreId="83" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="32" opcode="load" nodeLabel="2.0" nodeLatency="1" m_display="0" m_delay="3.25" m_topoIndex="110" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="106" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>bitcast</dataOutputObjs>
+        <dataOutputObjs>fcmp</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="139" name="bitcast_ln107_3" lineNumber="107" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="bitcast_ln107_3_fu_874_p1" coreId="1769104758" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="32" opcode="bitcast" nodeLabel="9.0" m_display="0" m_topoIndex="144" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="107" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+        <dataOutputObjs>trunc</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="140" name="tmp_9" lineNumber="107" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="tmp_9_fu_877_p4" coreId="1953720676" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="8" opcode="partselect" nodeLabel="9.0" m_display="0" m_topoIndex="145" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="107" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>bitcast</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="141" name="trunc_ln107_3" lineNumber="107" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="trunc_ln107_3_fu_887_p1" coreId="743460687" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="23" opcode="trunc" nodeLabel="9.0" m_display="0" m_topoIndex="146" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="107" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>bitcast</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="142" name="bitcast_ln107_4" lineNumber="107" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="bitcast_ln107_4_fu_891_p1" coreId="1600348018" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="32" opcode="bitcast" nodeLabel="9.0" m_display="0" m_topoIndex="147" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="107" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+        <dataOutputObjs>trunc</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="143" name="tmp_10" lineNumber="107" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="tmp_10_fu_894_p4" coreId="1830839397" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="8" opcode="partselect" nodeLabel="9.0" m_display="0" m_topoIndex="148" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="107" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>bitcast</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="144" name="trunc_ln107_4" lineNumber="107" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="trunc_ln107_4_fu_904_p1" coreId="1852795252" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="23" opcode="trunc" nodeLabel="9.0" m_display="0" m_topoIndex="149" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="107" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>bitcast</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="145" name="icmp_ln107_6" lineNumber="107" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="icmp_ln107_6_fu_908_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="1" opcode="icmp" nodeLabel="9.0" m_display="0" m_delay="1.55" m_topoIndex="150" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="107" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataOutputObjs>or</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="146" name="icmp_ln107_7" lineNumber="107" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="icmp_ln107_7_fu_914_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="1" opcode="icmp" nodeLabel="9.0" m_display="0" m_delay="2.44" m_topoIndex="151" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="107" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataOutputObjs>or</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="147" name="or_ln107_3" lineNumber="107" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="or_ln107_3_fu_920_p2" coreName="LogicGate" implIndex="auto" control="no" opType="or" coreId="74" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="1" opcode="or" nodeLabel="9.0" m_display="0" m_topoIndex="152" m_clusterGroupNumber="11">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="107" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataOutputObjs>and</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="148" name="icmp_ln107_8" lineNumber="107" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="icmp_ln107_8_fu_926_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="1" opcode="icmp" nodeLabel="9.0" m_display="0" m_delay="1.55" m_topoIndex="153" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="107" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataOutputObjs>or</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="149" name="icmp_ln107_9" lineNumber="107" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="icmp_ln107_9_fu_932_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="1" opcode="icmp" nodeLabel="9.0" m_display="0" m_delay="2.44" m_topoIndex="154" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="107" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataOutputObjs>or</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="150" name="or_ln107_4" lineNumber="107" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="or_ln107_4_fu_938_p2" coreName="LogicGate" implIndex="auto" control="no" opType="or" coreId="74" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="1" opcode="or" nodeLabel="9.0" m_display="0" m_topoIndex="155" m_clusterGroupNumber="11">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="107" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataOutputObjs>and</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="151" name="and_ln107_3" lineNumber="107" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="and_ln107_3_fu_944_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="1" opcode="and" nodeLabel="9.0" m_display="0" m_topoIndex="156" m_clusterGroupNumber="11">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="107" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>or</dataInputObjs>
+        <dataInputObjs>or</dataInputObjs>
+        <dataOutputObjs>and</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="152" name="tmp_11" lineNumber="107" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." coreName="FCompare" implIndex="auto" control="no" opType="fcmp" coreId="19" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="1" opcode="fcmp" nodeLabel="8.0" nodeLatency="1" m_display="0" m_delay="5.43" m_topoIndex="143" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="107" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>and</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="153" name="and_ln107_4" lineNumber="107" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="and_ln107_4_fu_950_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="1" opcode="and" nodeLabel="9.0" m_display="0" m_delay="0.97" m_topoIndex="157" m_clusterGroupNumber="11">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="107" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>and</dataInputObjs>
+        <dataInputObjs>fcmp</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="154" name="select_ln107_2" lineNumber="107" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="select_ln107_2_fu_956_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="32" opcode="select" nodeLabel="9.0" m_display="0" m_delay="0.69" m_topoIndex="158" m_clusterGroupNumber="12">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="107" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>and</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>bitcast</dataOutputObjs>
+        <dataOutputObjs>fcmp</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="155" name="or_ln105_1" lineNumber="105" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="or_ln105_1_fu_711_p2" coreId="0" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="11" opcode="or" nodeLabel="2.0" m_display="0" m_topoIndex="111" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="105" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="156" name="zext_ln106_3" lineNumber="106" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="zext_ln106_3_fu_717_p1" coreId="0" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="64" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="112" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="106" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>or</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="157" name="conv2_output_addr_3" lineNumber="106" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." coreId="0" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="11" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="113" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="106" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>conv2_output</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="158" name="conv2_output_load_3" lineNumber="106" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." coreName="RAM_1WnR" implIndex="auto" control="no" opType="ram_1wnr" coreId="83" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="32" opcode="load" nodeLabel="2.0" nodeLatency="1" m_display="0" m_delay="3.25" m_topoIndex="114" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="106" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>bitcast</dataOutputObjs>
+        <dataOutputObjs>fcmp</dataOutputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="159" name="bitcast_ln107_5" lineNumber="107" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="bitcast_ln107_5_fu_962_p1" coreId="0" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="32" opcode="bitcast" nodeLabel="11.0" m_display="0" m_topoIndex="160" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="107" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+        <dataOutputObjs>trunc</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="160" name="tmp_12" lineNumber="107" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="tmp_12_fu_965_p4" coreId="0" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="8" opcode="partselect" nodeLabel="11.0" m_display="0" m_topoIndex="161" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="107" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>bitcast</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="161" name="trunc_ln107_5" lineNumber="107" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="trunc_ln107_5_fu_975_p1" coreId="0" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="23" opcode="trunc" nodeLabel="11.0" m_display="0" m_topoIndex="162" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="107" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>bitcast</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="162" name="bitcast_ln107_6" lineNumber="107" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="bitcast_ln107_6_fu_979_p1" coreId="0" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="32" opcode="bitcast" nodeLabel="11.0" m_display="0" m_topoIndex="163" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="107" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+        <dataOutputObjs>trunc</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="163" name="tmp_13" lineNumber="107" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="tmp_13_fu_982_p4" coreId="0" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="8" opcode="partselect" nodeLabel="11.0" m_display="0" m_topoIndex="164" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="107" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>bitcast</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="164" name="trunc_ln107_6" lineNumber="107" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="trunc_ln107_6_fu_992_p1" coreId="0" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="23" opcode="trunc" nodeLabel="11.0" m_display="0" m_topoIndex="165" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="107" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>bitcast</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="165" name="icmp_ln107_10" lineNumber="107" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="icmp_ln107_10_fu_996_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="1" opcode="icmp" nodeLabel="11.0" m_display="0" m_delay="1.55" m_topoIndex="166" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="107" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataOutputObjs>or</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="166" name="icmp_ln107_11" lineNumber="107" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="icmp_ln107_11_fu_1002_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="1" opcode="icmp" nodeLabel="11.0" m_display="0" m_delay="2.44" m_topoIndex="167" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="107" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataOutputObjs>or</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="167" name="or_ln107_5" lineNumber="107" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="or_ln107_5_fu_1008_p2" coreName="LogicGate" implIndex="auto" control="no" opType="or" coreId="74" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="1" opcode="or" nodeLabel="11.0" m_display="0" m_topoIndex="168" m_clusterGroupNumber="13">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="107" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataOutputObjs>and</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="168" name="icmp_ln107_12" lineNumber="107" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="icmp_ln107_12_fu_1014_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="1" opcode="icmp" nodeLabel="11.0" m_display="0" m_delay="1.55" m_topoIndex="169" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="107" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataOutputObjs>or</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="169" name="icmp_ln107_13" lineNumber="107" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="icmp_ln107_13_fu_1020_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="1" opcode="icmp" nodeLabel="11.0" m_display="0" m_delay="2.44" m_topoIndex="170" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="107" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataOutputObjs>or</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="170" name="or_ln107_6" lineNumber="107" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="or_ln107_6_fu_1026_p2" coreName="LogicGate" implIndex="auto" control="no" opType="or" coreId="74" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="1" opcode="or" nodeLabel="11.0" m_display="0" m_topoIndex="171" m_clusterGroupNumber="13">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="107" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataOutputObjs>and</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="171" name="and_ln107_5" lineNumber="107" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="and_ln107_5_fu_1032_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="1" opcode="and" nodeLabel="11.0" m_display="0" m_topoIndex="172" m_clusterGroupNumber="13">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="107" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>or</dataInputObjs>
+        <dataInputObjs>or</dataInputObjs>
+        <dataOutputObjs>and</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="172" name="tmp_14" lineNumber="107" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." coreName="FCompare" implIndex="auto" control="no" opType="fcmp" coreId="19" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="1" opcode="fcmp" nodeLabel="10.0" nodeLatency="1" m_display="0" m_delay="5.43" m_topoIndex="159" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="107" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>and</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="173" name="and_ln107_6" lineNumber="107" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="and_ln107_6_fu_1038_p2" coreName="LogicGate" implIndex="auto" control="no" opType="and" coreId="74" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="1" opcode="and" nodeLabel="11.0" m_display="0" m_delay="0.97" m_topoIndex="173" m_clusterGroupNumber="13">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="107" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>and</dataInputObjs>
+        <dataInputObjs>fcmp</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="174" name="select_ln107_3" lineNumber="107" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="select_ln107_3_fu_1044_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="32" opcode="select" nodeLabel="11.0" m_display="0" m_delay="0.69" m_topoIndex="174" m_clusterGroupNumber="14">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="107" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>and</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="175" name="add_ln114" lineNumber="114" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="add_ln114_fu_722_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="7" opcode="add" nodeLabel="2.0" m_display="0" m_delay="1.87" m_topoIndex="115" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="114" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="176" name="zext_ln114" lineNumber="114" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="zext_ln114_fu_728_p1" coreId="0" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="9" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="116" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="114" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="177" name="add_ln114_1" lineNumber="114" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="add_ln114_1_fu_732_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="9" opcode="add" nodeLabel="2.0" m_display="0" m_delay="1.82" m_topoIndex="117" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="114" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataInputObjs>bitconcatenate</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="178" name="zext_ln115" lineNumber="115" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="zext_ln115_fu_1050_p1" coreId="0" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="64" opcode="zext" nodeLabel="12.0" m_display="0" m_topoIndex="176" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="115" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="179" name="pool2_output_addr" lineNumber="115" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." coreId="0" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="9" opcode="getelementptr" nodeLabel="12.0" m_display="0" m_topoIndex="177" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="115" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>pool2_output</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="180" name="pool2_output_addr_write_ln115" lineNumber="115" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." coreName="RAM_1WnR" implIndex="auto" control="no" opType="ram_1wnr" coreId="83" contextFuncName="relu_maxpool_2x2_16_10_10_s" opcode="store" nodeLabel="12.0" m_display="0" m_delay="3.25" m_topoIndex="178" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="115" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="181" name="add_ln95" lineNumber="95" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="add_ln95_fu_292_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="3" opcode="add" m_display="0" m_delay="1.65" m_topoIndex="28" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="95" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="182" name="add_ln93_1" lineNumber="93" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="add_ln93_1_fu_298_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="6" opcode="add" m_display="0" m_delay="1.82" m_topoIndex="29" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="93" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="183" name="select_ln93_4" lineNumber="93" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." rtlName="select_ln93_4_fu_304_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="relu_maxpool_2x2_16_10_10_s" bitwidth="6" opcode="select" m_display="0" m_delay="1.18" m_topoIndex="30" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="93" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="184" name="indvar_flatten183_write_ln95" lineNumber="95" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." coreId="0" contextFuncName="relu_maxpool_2x2_16_10_10_s" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="31" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="95" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="185" name="channel_write_ln95" lineNumber="95" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." coreId="0" contextFuncName="relu_maxpool_2x2_16_10_10_s" opcode="store" nodeLabel="1.0" m_display="0" m_delay="1.58" m_topoIndex="69" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="95" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="186" name="indvar_flatten127_write_ln95" lineNumber="95" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." coreId="0" contextFuncName="relu_maxpool_2x2_16_10_10_s" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="32" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="95" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="187" name="output_row_write_ln95" lineNumber="95" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." coreId="0" contextFuncName="relu_maxpool_2x2_16_10_10_s" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="33" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="95" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="188" name="output_col_write_ln95" lineNumber="95" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." coreId="0" contextFuncName="relu_maxpool_2x2_16_10_10_s" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="34" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="95" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="189" name="br_ln95" lineNumber="95" fileName="../member_c_conv_hls/src/lenet_conv.cpp" fileDirectory=".." coreId="0" contextFuncName="relu_maxpool_2x2_16_10_10_s" opcode="br" nodeLabel="12.0" m_display="0" m_topoIndex="179" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../member_c_conv_hls/src/lenet_conv.cpp" linenumber="95" fileDirectory="D:\lenet_project\hls" functionName="relu_maxpool_2x2&amp;lt;16, 10, 10&amp;gt;"/>
+        <controlInputObjs>POOL_KERNEL_ROW.i81</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="../member_c_conv_hls/src/lenet_conv.cpp">
+        <validLinenumbers>95</validLinenumbers>
+        <validLinenumbers>93</validLinenumbers>
+        <validLinenumbers>91</validLinenumbers>
+        <validLinenumbers>105</validLinenumbers>
+        <validLinenumbers>106</validLinenumbers>
+        <validLinenumbers>107</validLinenumbers>
+        <validLinenumbers>114</validLinenumbers>
+        <validLinenumbers>115</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <ScheduleInfo time="7"/>
+  <ScheduleInfo time="8"/>
+  <ScheduleInfo time="9"/>
+  <ScheduleInfo time="10"/>
+  <ScheduleInfo time="11"/>
+  <ScheduleInfo time="12"/>
+  <regnodes realName="conv2_output_addr_3_reg_1174">
+    <nodeIds>157</nodeIds>
+  </regnodes>
+  <regnodes realName="conv2_output_load_1_reg_1191">
+    <nodeIds>116</nodeIds>
+  </regnodes>
+  <regnodes realName="channel_reg_1075">
+    <nodeIds>6</nodeIds>
+  </regnodes>
+  <regnodes realName="empty_33_reg_1142">
+    <nodeIds>47</nodeIds>
+  </regnodes>
+  <regnodes realName="select_ln107_reg_1212">
+    <nodeIds>112</nodeIds>
+  </regnodes>
+  <regnodes realName="output_col_reg_1054">
+    <nodeIds>3</nodeIds>
+  </regnodes>
+  <regnodes realName="empty_reg_1127">
+    <nodeIds>18</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln114_1_reg_1179">
+    <nodeIds>177</nodeIds>
+  </regnodes>
+  <regnodes realName="output_row_reg_1061">
+    <nodeIds>4</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln91_reg_1095">
+    <nodeIds>36</nodeIds>
+  </regnodes>
+  <regnodes realName="indvar_flatten183_reg_1082">
+    <nodeIds>7</nodeIds>
+  </regnodes>
+  <regnodes realName="select_ln107_2_reg_1226">
+    <nodeIds>154</nodeIds>
+  </regnodes>
+  <regnodes realName="indvar_flatten127_reg_1068">
+    <nodeIds>5</nodeIds>
+  </regnodes>
+  <regnodes realName="select_ln107_1_reg_1219">
+    <nodeIds>132</nodeIds>
+  </regnodes>
+  <regnodes realName="conv2_output_addr_1_reg_1164">
+    <nodeIds>115</nodeIds>
+  </regnodes>
+  <regnodes realName="output_row_1_reg_1089">
+    <nodeIds>15</nodeIds>
+  </regnodes>
+  <regnodes realName="select_ln93_2_reg_1152">
+    <nodeIds>84</nodeIds>
+  </regnodes>
+  <regnodes realName="conv2_output_load_2_reg_1198">
+    <nodeIds>138</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp3_mid1_reg_1147">
+    <nodeIds>76</nodeIds>
+  </regnodes>
+  <regnodes realName="conv2_output_load_3_reg_1205">
+    <nodeIds>158</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln93_reg_1099">
+    <nodeIds>44</nodeIds>
+  </regnodes>
+  <regnodes realName="and_ln91_reg_1109">
+    <nodeIds>67</nodeIds>
+  </regnodes>
+  <regnodes realName="conv2_output_addr_reg_1159">
+    <nodeIds>102</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp3_reg_1132">
+    <nodeIds>28</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln93_reg_1115">
+    <nodeIds>69</nodeIds>
+  </regnodes>
+  <regnodes realName="select_ln107_3_reg_1233">
+    <nodeIds>174</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln91_reg_1137">
+    <nodeIds>35</nodeIds>
+  </regnodes>
+  <regnodes realName="conv2_output_addr_2_reg_1169">
+    <nodeIds>137</nodeIds>
+  </regnodes>
+  <regnodes realName="select_ln93_reg_1121">
+    <nodeIds>72</nodeIds>
+  </regnodes>
+  <regnodes realName="conv2_output_load_reg_1184">
+    <nodeIds>103</nodeIds>
+  </regnodes>
+  <expressionNodes realName="bitcast_ln107_4_fu_891">
+    <nodeIds>142</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln107_2_fu_820">
+    <nodeIds>123</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln107_3_fu_826">
+    <nodeIds>124</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln107_fu_738">
+    <nodeIds>104</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln107_1_fu_799">
+    <nodeIds>119</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_shl1_fu_519">
+    <nodeIds>23</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="conv2_output_addr_1_gep_fu_129">
+    <nodeIds>115</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln91_fu_539">
+    <nodeIds>46</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="channel_fu_96">
+    <nodeIds>6</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln106_1_fu_685">
+    <nodeIds>114</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln107_fu_773">
+    <nodeIds>111</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln93_1_fu_361">
+    <nodeIds>25</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_shl25_cast_mid1_fu_415">
+    <nodeIds>49</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln91_fu_397">
+    <nodeIds>35</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln93_fu_276">
+    <nodeIds>72</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_shl28_1_mid2_fu_620">
+    <nodeIds>88</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp3_mid1_fu_485">
+    <nodeIds>76</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln107_11_fu_1002">
+    <nodeIds>166</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln91_6_fu_464">
+    <nodeIds>68</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_shl24_mid1_fu_542">
+    <nodeIds>55</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln114_fu_728">
+    <nodeIds>176</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln95_fu_292">
+    <nodeIds>181</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln107_10_fu_996">
+    <nodeIds>165</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_7_fu_806">
+    <nodeIds>121</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln105_fu_658">
+    <nodeIds>98</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln106_3_fu_717">
+    <nodeIds>156</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_3_fu_643">
+    <nodeIds>95</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln115_fu_1050">
+    <nodeIds>178</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln91_2_fu_443">
+    <nodeIds>54</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_4_fu_741">
+    <nodeIds>105</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln107_fu_755">
+    <nodeIds>107</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln107_2_fu_862">
+    <nodeIds>131</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_9_fu_877">
+    <nodeIds>140</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln105_fu_679">
+    <nodeIds>113</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp4_mid1_fu_491">
+    <nodeIds>81</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln93_4_fu_304">
+    <nodeIds>183</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="conv2_output_addr_gep_fu_104">
+    <nodeIds>102</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="indvar_flatten183_fu_100">
+    <nodeIds>7</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln91_4_fu_570">
+    <nodeIds>60</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln93_3_fu_471">
+    <nodeIds>73</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln91_1_fu_220">
+    <nodeIds>37</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln107_5_fu_1032">
+    <nodeIds>171</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln107_5_fu_844">
+    <nodeIds>127</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_cast38_fu_371">
+    <nodeIds>27</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln95_fu_252">
+    <nodeIds>66</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln105_1_fu_654">
+    <nodeIds>97</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln107_1_fu_856">
+    <nodeIds>129</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln91_fu_258">
+    <nodeIds>67</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_shl26_cast_fu_357">
+    <nodeIds>22</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln105_3_fu_696">
+    <nodeIds>134</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln107_1_fu_761">
+    <nodeIds>108</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln105_1_fu_668">
+    <nodeIds>100</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp3_fu_375">
+    <nodeIds>28</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_mid1149_fu_564">
+    <nodeIds>59</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln107_2_fu_956">
+    <nodeIds>154</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln91_1_fu_426">
+    <nodeIds>51</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_6_fu_789">
+    <nodeIds>118</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_shl_fu_339">
+    <nodeIds>19</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="conv2_output_addr_2_gep_fu_137">
+    <nodeIds>137</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln107_4_fu_838">
+    <nodeIds>126</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln91_5_fu_457">
+    <nodeIds>63</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="xor_ln91_fu_246">
+    <nodeIds>65</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln105_2_fu_664">
+    <nodeIds>99</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln105_2_fu_690">
+    <nodeIds>133</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_10_fu_894">
+    <nodeIds>143</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln107_3_fu_944">
+    <nodeIds>151</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln105_fu_650">
+    <nodeIds>96</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln106_fu_674">
+    <nodeIds>101</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="output_row_fu_88">
+    <nodeIds>4</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln93_1_fu_586">
+    <nodeIds>79</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="conv2_output_addr_3_gep_fu_145">
+    <nodeIds>157</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_mid1123_fu_501">
+    <nodeIds>83</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln107_12_fu_1014">
+    <nodeIds>168</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln107_2_fu_803">
+    <nodeIds>120</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_13_fu_982">
+    <nodeIds>163</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_12_fu_965">
+    <nodeIds>160</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln107_6_fu_908">
+    <nodeIds>145</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_shl27_mid2_fu_593">
+    <nodeIds>80</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln107_4_fu_950">
+    <nodeIds>153</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_s_fu_364">
+    <nodeIds>26</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln107_1_fu_832">
+    <nodeIds>125</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln107_6_fu_979">
+    <nodeIds>162</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln107_7_fu_914">
+    <nodeIds>146</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln93_1_fu_615">
+    <nodeIds>87</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln91_fu_238">
+    <nodeIds>45</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp3_cast_mid1_fu_577">
+    <nodeIds>77</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln107_6_fu_992">
+    <nodeIds>164</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln91_3_fu_553">
+    <nodeIds>57</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_shl25_cast_fu_347">
+    <nodeIds>20</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="indvar_flatten127_fu_92">
+    <nodeIds>5</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln95_mid2_v_fu_628">
+    <nodeIds>89</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp4_cast_mid1157_fu_447">
+    <nodeIds>61</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp3_cast_fu_530">
+    <nodeIds>29</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln107_fu_779">
+    <nodeIds>112</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln93_3_fu_284">
+    <nodeIds>92</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="empty_31_fu_391">
+    <nodeIds>33</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln107_5_fu_962">
+    <nodeIds>159</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp4_cast_mid1_fu_497">
+    <nodeIds>82</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln107_4_fu_904">
+    <nodeIds>144</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_mid1159_fu_451">
+    <nodeIds>62</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln107_5_fu_1008">
+    <nodeIds>167</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln107_1_fu_868">
+    <nodeIds>132</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="empty_fu_335">
+    <nodeIds>18</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="output_col_2_cast51_fu_640">
+    <nodeIds>93</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="empty_30_fu_533">
+    <nodeIds>30</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln107_3_fu_887">
+    <nodeIds>141</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="output_col_fu_84">
+    <nodeIds>3</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln93_fu_232">
+    <nodeIds>44</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln107_6_fu_1026">
+    <nodeIds>170</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln93_2_fu_507">
+    <nodeIds>84</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln114_fu_722">
+    <nodeIds>175</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_shl29_0_mid2_fu_608">
+    <nodeIds>86</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln106_2_fu_706">
+    <nodeIds>136</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln107_2_fu_816">
+    <nodeIds>122</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln105_3_fu_700">
+    <nodeIds>135</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_mid2_fu_474">
+    <nodeIds>74</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln107_3_fu_874">
+    <nodeIds>139</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln93_1_fu_298">
+    <nodeIds>182</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="pool2_output_addr_gep_fu_153">
+    <nodeIds>179</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln107_3_fu_1044">
+    <nodeIds>174</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="empty_33_fu_403">
+    <nodeIds>47</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp4_fu_381">
+    <nodeIds>31</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln107_9_fu_932">
+    <nodeIds>149</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln107_fu_767">
+    <nodeIds>109</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_cast38_mid1_fu_481">
+    <nodeIds>75</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_shl25_mid1_fu_407">
+    <nodeIds>48</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln107_4_fu_938">
+    <nodeIds>150</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln107_5_fu_975">
+    <nodeIds>161</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln107_fu_751">
+    <nodeIds>106</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln107_13_fu_1020">
+    <nodeIds>169</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_shl28_0_mid2_fu_601">
+    <nodeIds>85</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln107_2_fu_850">
+    <nodeIds>128</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln93_fu_526">
+    <nodeIds>24</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="empty_29_fu_351">
+    <nodeIds>21</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="empty_34_fu_430">
+    <nodeIds>52</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln105_1_fu_711">
+    <nodeIds>155</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln93_2_fu_549">
+    <nodeIds>56</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="and_ln107_6_fu_1038">
+    <nodeIds>173</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln114_1_fu_732">
+    <nodeIds>177</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln107_1_fu_786">
+    <nodeIds>117</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln91_3_fu_560">
+    <nodeIds>58</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln93_fu_270">
+    <nodeIds>71</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="p_mid1121_fu_580">
+    <nodeIds>78</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln91_1_fu_419">
+    <nodeIds>50</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="or_ln107_3_fu_920">
+    <nodeIds>147</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln93_4_fu_636">
+    <nodeIds>90</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln107_8_fu_926">
+    <nodeIds>148</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln91_2_fu_436">
+    <nodeIds>53</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln93_fu_264">
+    <nodeIds>69</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp4_cast_fu_387">
+    <nodeIds>32</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln91_fu_214">
+    <nodeIds>36</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_fu_171">
+    <nodeIds>130</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_179">
+    <nodeIds>172</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_175">
+    <nodeIds>152</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_166">
+    <nodeIds>110</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="indvar_flatten183_load_load_fu_211">
+    <nodeIds>17</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln95_store_fu_327">
+    <nodeIds>188</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln95_store_fu_514">
+    <nodeIds>185</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln95_store_fu_317">
+    <nodeIds>186</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln95_store_fu_312">
+    <nodeIds>184</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln95_store_fu_322">
+    <nodeIds>187</nodeIds>
+  </ioNodes>
+  <ioNodes realName="channel_1_load_fu_332">
+    <nodeIds>16</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln0_store_fu_203">
+    <nodeIds>12</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln0_store_fu_198">
+    <nodeIds>11</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln0_store_fu_188">
+    <nodeIds>9</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln0_store_fu_183">
+    <nodeIds>8</nodeIds>
+  </ioNodes>
+  <ioNodes realName="indvar_flatten127_load_load_fu_229">
+    <nodeIds>41</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln0_store_fu_193">
+    <nodeIds>10</nodeIds>
+  </ioNodes>
+  <ioNodes realName="output_col_load_load_fu_226">
+    <nodeIds>40</nodeIds>
+  </ioNodes>
+  <ioNodes realName="output_row_1_load_fu_208">
+    <nodeIds>15</nodeIds>
+  </ioNodes>
+  <memoryPorts dataString="conv2_output">
+    <nodeIds>158</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="conv2_output" portID="1">
+    <nodeIds>138</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="conv2_output" portID="2">
+    <nodeIds>116</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="conv2_output" portID="3">
+    <nodeIds>103</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="pool2_output">
+    <nodeIds>180</nodeIds>
+  </memoryPorts>
+  <ioPorts name="conv2_output(p0)">
+    <contents name="load">
+      <nodeIds>158</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="conv2_output(p1)">
+    <contents name="load">
+      <nodeIds>138</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="conv2_output(p2)">
+    <contents name="load">
+      <nodeIds>116</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="conv2_output(p3)">
+    <contents name="load">
+      <nodeIds>103</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="pool2_output(p0)">
+    <contents name="store">
+      <nodeIds>180</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="3" stage="1" latency="1"/>
+      <operations id="4" stage="1" latency="1"/>
+      <operations id="5" stage="1" latency="1"/>
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="1"/>
+      <operations id="65" stage="1" latency="1"/>
+      <operations id="66" stage="1" latency="1"/>
+      <operations id="67" stage="1" latency="1"/>
+      <operations id="69" stage="1" latency="1"/>
+      <operations id="71" stage="1" latency="1"/>
+      <operations id="72" stage="1" latency="1"/>
+      <operations id="92" stage="1" latency="1"/>
+      <operations id="181" stage="1" latency="1"/>
+      <operations id="182" stage="1" latency="1"/>
+      <operations id="183" stage="1" latency="1"/>
+      <operations id="184" stage="1" latency="1"/>
+      <operations id="186" stage="1" latency="1"/>
+      <operations id="187" stage="1" latency="1"/>
+      <operations id="188" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="47" stage="1" latency="1"/>
+      <operations id="48" stage="1" latency="1"/>
+      <operations id="49" stage="1" latency="1"/>
+      <operations id="50" stage="1" latency="1"/>
+      <operations id="51" stage="1" latency="1"/>
+      <operations id="52" stage="1" latency="1"/>
+      <operations id="53" stage="1" latency="1"/>
+      <operations id="54" stage="1" latency="1"/>
+      <operations id="61" stage="1" latency="1"/>
+      <operations id="62" stage="1" latency="1"/>
+      <operations id="63" stage="1" latency="1"/>
+      <operations id="68" stage="1" latency="1"/>
+      <operations id="73" stage="1" latency="1"/>
+      <operations id="74" stage="1" latency="1"/>
+      <operations id="75" stage="1" latency="1"/>
+      <operations id="76" stage="1" latency="1"/>
+      <operations id="81" stage="1" latency="1"/>
+      <operations id="82" stage="1" latency="1"/>
+      <operations id="83" stage="1" latency="1"/>
+      <operations id="84" stage="1" latency="1"/>
+      <operations id="185" stage="1" latency="1"/>
+    </states>
+    <states id="3">
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="46" stage="1" latency="1"/>
+      <operations id="55" stage="1" latency="1"/>
+      <operations id="56" stage="1" latency="1"/>
+      <operations id="57" stage="1" latency="1"/>
+      <operations id="58" stage="1" latency="1"/>
+      <operations id="59" stage="1" latency="1"/>
+      <operations id="60" stage="1" latency="1"/>
+      <operations id="77" stage="1" latency="1"/>
+      <operations id="78" stage="1" latency="1"/>
+      <operations id="79" stage="1" latency="1"/>
+      <operations id="80" stage="1" latency="1"/>
+      <operations id="85" stage="1" latency="1"/>
+      <operations id="86" stage="1" latency="1"/>
+      <operations id="87" stage="1" latency="1"/>
+      <operations id="88" stage="1" latency="1"/>
+      <operations id="89" stage="1" latency="1"/>
+      <operations id="90" stage="1" latency="1"/>
+      <operations id="93" stage="1" latency="1"/>
+      <operations id="95" stage="1" latency="1"/>
+      <operations id="96" stage="1" latency="1"/>
+      <operations id="97" stage="1" latency="1"/>
+      <operations id="98" stage="1" latency="1"/>
+      <operations id="99" stage="1" latency="1"/>
+      <operations id="100" stage="1" latency="1"/>
+      <operations id="101" stage="1" latency="1"/>
+      <operations id="102" stage="1" latency="1"/>
+      <operations id="103" stage="2" latency="2"/>
+      <operations id="113" stage="1" latency="1"/>
+      <operations id="114" stage="1" latency="1"/>
+      <operations id="115" stage="1" latency="1"/>
+      <operations id="116" stage="2" latency="2"/>
+      <operations id="133" stage="1" latency="1"/>
+      <operations id="134" stage="1" latency="1"/>
+      <operations id="135" stage="1" latency="1"/>
+      <operations id="136" stage="1" latency="1"/>
+      <operations id="137" stage="1" latency="1"/>
+      <operations id="138" stage="2" latency="2"/>
+      <operations id="155" stage="1" latency="1"/>
+      <operations id="156" stage="1" latency="1"/>
+      <operations id="157" stage="1" latency="1"/>
+      <operations id="158" stage="2" latency="2"/>
+      <operations id="175" stage="1" latency="1"/>
+      <operations id="176" stage="1" latency="1"/>
+      <operations id="177" stage="1" latency="1"/>
+    </states>
+    <states id="4">
+      <operations id="103" stage="1" latency="2"/>
+      <operations id="116" stage="1" latency="2"/>
+      <operations id="138" stage="1" latency="2"/>
+      <operations id="158" stage="1" latency="2"/>
+    </states>
+    <states id="5">
+      <operations id="110" stage="2" latency="2"/>
+    </states>
+    <states id="6">
+      <operations id="104" stage="1" latency="1"/>
+      <operations id="105" stage="1" latency="1"/>
+      <operations id="106" stage="1" latency="1"/>
+      <operations id="107" stage="1" latency="1"/>
+      <operations id="108" stage="1" latency="1"/>
+      <operations id="109" stage="1" latency="1"/>
+      <operations id="110" stage="1" latency="2"/>
+      <operations id="111" stage="1" latency="1"/>
+      <operations id="112" stage="1" latency="1"/>
+    </states>
+    <states id="7">
+      <operations id="130" stage="2" latency="2"/>
+    </states>
+    <states id="8">
+      <operations id="117" stage="1" latency="1"/>
+      <operations id="118" stage="1" latency="1"/>
+      <operations id="119" stage="1" latency="1"/>
+      <operations id="120" stage="1" latency="1"/>
+      <operations id="121" stage="1" latency="1"/>
+      <operations id="122" stage="1" latency="1"/>
+      <operations id="123" stage="1" latency="1"/>
+      <operations id="124" stage="1" latency="1"/>
+      <operations id="125" stage="1" latency="1"/>
+      <operations id="126" stage="1" latency="1"/>
+      <operations id="127" stage="1" latency="1"/>
+      <operations id="128" stage="1" latency="1"/>
+      <operations id="129" stage="1" latency="1"/>
+      <operations id="130" stage="1" latency="2"/>
+      <operations id="131" stage="1" latency="1"/>
+      <operations id="132" stage="1" latency="1"/>
+    </states>
+    <states id="9">
+      <operations id="152" stage="2" latency="2"/>
+    </states>
+    <states id="10">
+      <operations id="139" stage="1" latency="1"/>
+      <operations id="140" stage="1" latency="1"/>
+      <operations id="141" stage="1" latency="1"/>
+      <operations id="142" stage="1" latency="1"/>
+      <operations id="143" stage="1" latency="1"/>
+      <operations id="144" stage="1" latency="1"/>
+      <operations id="145" stage="1" latency="1"/>
+      <operations id="146" stage="1" latency="1"/>
+      <operations id="147" stage="1" latency="1"/>
+      <operations id="148" stage="1" latency="1"/>
+      <operations id="149" stage="1" latency="1"/>
+      <operations id="150" stage="1" latency="1"/>
+      <operations id="151" stage="1" latency="1"/>
+      <operations id="152" stage="1" latency="2"/>
+      <operations id="153" stage="1" latency="1"/>
+      <operations id="154" stage="1" latency="1"/>
+    </states>
+    <states id="11">
+      <operations id="172" stage="2" latency="2"/>
+    </states>
+    <states id="12">
+      <operations id="159" stage="1" latency="1"/>
+      <operations id="160" stage="1" latency="1"/>
+      <operations id="161" stage="1" latency="1"/>
+      <operations id="162" stage="1" latency="1"/>
+      <operations id="163" stage="1" latency="1"/>
+      <operations id="164" stage="1" latency="1"/>
+      <operations id="165" stage="1" latency="1"/>
+      <operations id="166" stage="1" latency="1"/>
+      <operations id="167" stage="1" latency="1"/>
+      <operations id="168" stage="1" latency="1"/>
+      <operations id="169" stage="1" latency="1"/>
+      <operations id="170" stage="1" latency="1"/>
+      <operations id="171" stage="1" latency="1"/>
+      <operations id="172" stage="1" latency="2"/>
+      <operations id="173" stage="1" latency="1"/>
+      <operations id="174" stage="1" latency="1"/>
+      <operations id="191" stage="1" latency="1"/>
+    </states>
+    <states id="13">
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="43" stage="1" latency="1"/>
+      <operations id="64" stage="1" latency="1"/>
+      <operations id="70" stage="1" latency="1"/>
+      <operations id="91" stage="1" latency="1"/>
+      <operations id="94" stage="1" latency="1"/>
+      <operations id="178" stage="1" latency="1"/>
+      <operations id="179" stage="1" latency="1"/>
+      <operations id="180" stage="1" latency="1"/>
+      <operations id="189" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="7" outState="8">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="8" outState="9">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="9" outState="10">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="10" outState="11">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="11" outState="12">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="12" outState="13">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="lenet_full_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL1" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="413" mMaxLatency="413">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>4</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>14</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="POOL_CHANNEL_POOL_ROW_POOL_COL" mII="1" mDepth="13" mMinTripCount="400" mMaxTripCount="400" mMinLatency="411" mMaxLatency="411" mType="1">
+      <basicBlocks>39</basicBlocks>
+      <basicBlocks>190</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>192</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

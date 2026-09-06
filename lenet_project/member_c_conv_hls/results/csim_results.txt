@@ -1,0 +1,42 @@
+LeNet-5 model-V2 HLS verification
+Data layout: CHW feature maps, OIHW weights
+Input preprocessing: (pixel/255 - 0.1307) / 0.3081
+Golden Conv/FC maps are before ReLU; all biases are zero.
+
+Conv1 raw                max_abs=7.15255737e-07 mean_abs=4.50400518e-08 rmse=8.69312614e-08 tolerance=2.00000000e-05 max_index=1223 [PASS]
+ReLU+Pool1               max_abs=7.15255737e-07 mean_abs=3.15350892e-08 rmse=7.54770092e-08 tolerance=2.00000000e-05 max_index=303 [PASS]
+Conv2 isolated           max_abs=2.77566910e-03 mean_abs=4.07110520e-04 rmse=5.51732040e-04 tolerance=5.00000000e-03 max_index=1103 [PASS]
+Conv2 chained            max_abs=2.77566910e-03 mean_abs=4.07089818e-04 rmse=5.51703876e-04 tolerance=5.00000000e-03 max_index=1103 [PASS]
+ReLU+Pool2               max_abs=1.70207024e-03 mean_abs=1.49590014e-04 rmse=3.22357588e-04 tolerance=5.00000000e-03 max_index=153 [PASS]
+Conv3 isolated           max_abs=2.64120102e-03 mean_abs=6.35402603e-04 rmse=8.11162963e-04 tolerance=1.00000000e-02 max_index=41 [PASS]
+Conv3 chained            max_abs=3.23581696e-03 mean_abs=7.51582021e-04 rmse=9.85175179e-04 tolerance=1.00000000e-02 max_index=92 [PASS]
+FC1 isolated             max_abs=2.86102295e-06 mean_abs=4.43132151e-07 rmse=6.93039413e-07 tolerance=1.00000000e-02 max_index=24 [PASS]
+FC1 chained              max_abs=1.62982941e-03 mean_abs=4.71418103e-04 rmse=6.11613821e-04 tolerance=1.00000000e-02 max_index=6 [PASS]
+FC2 isolated             max_abs=1.90734863e-06 mean_abs=5.06639481e-07 rmse=8.81060690e-07 tolerance=1.00000000e-02 max_index=6 [PASS]
+FC2 chained              max_abs=9.63211060e-04 mean_abs=3.57413292e-04 rmse=4.58086413e-04 tolerance=1.00000000e-02 max_index=9 [PASS]
+Full single sample       max_abs=9.63211060e-04 mean_abs=3.57413292e-04 rmse=4.58086413e-04 tolerance=1.00000000e-02 max_index=9 [PASS]
+  predicted=7 expected=7 [PASS]
+
+Ten-sample end-to-end regression
+Full sample 00           max_abs=9.63568687e-04 mean_abs=3.57341766e-04 rmse=4.58152902e-04 tolerance=1.00000000e-02 max_index=9 [PASS]
+  predicted=7 expected=7 [PASS]
+Full sample 01           max_abs=1.55854225e-03 mean_abs=6.33668900e-04 rmse=7.83273078e-04 tolerance=1.00000000e-02 max_index=0 [PASS]
+  predicted=2 expected=2 [PASS]
+Full sample 02           max_abs=1.80053711e-03 mean_abs=7.07045197e-04 rmse=8.48709025e-04 tolerance=1.00000000e-02 max_index=3 [PASS]
+  predicted=1 expected=1 [PASS]
+Full sample 03           max_abs=7.46488571e-04 mean_abs=3.51017714e-04 rmse=4.18874733e-04 tolerance=1.00000000e-02 max_index=6 [PASS]
+  predicted=0 expected=0 [PASS]
+Full sample 04           max_abs=9.04560089e-04 mean_abs=5.04291058e-04 rmse=5.65392895e-04 tolerance=1.00000000e-02 max_index=5 [PASS]
+  predicted=4 expected=4 [PASS]
+Full sample 05           max_abs=1.61266327e-03 mean_abs=7.64322281e-04 rmse=9.22201313e-04 tolerance=1.00000000e-02 max_index=1 [PASS]
+  predicted=1 expected=1 [PASS]
+Full sample 06           max_abs=3.93199921e-03 mean_abs=2.02292204e-03 rmse=2.30628628e-03 tolerance=1.00000000e-02 max_index=0 [PASS]
+  predicted=4 expected=4 [PASS]
+Full sample 07           max_abs=4.29098681e-03 mean_abs=1.46437772e-03 rmse=1.92095466e-03 tolerance=1.00000000e-02 max_index=3 [PASS]
+  predicted=9 expected=9 [PASS]
+Full sample 08           max_abs=3.46755981e-03 mean_abs=1.21174976e-03 rmse=1.58692300e-03 tolerance=1.00000000e-02 max_index=5 [PASS]
+  predicted=5 expected=5 [PASS]
+Full sample 09           max_abs=8.38279724e-04 mean_abs=3.71098518e-04 rmse=4.34791792e-04 tolerance=1.00000000e-02 max_index=2 [PASS]
+  predicted=9 expected=9 [PASS]
+
+Overall result: PASS

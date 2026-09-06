@@ -1,0 +1,60 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'lenet_full_top'" level="0">
+<item name = "Date">Sun Sep  6 21:32:28 2026
+</item>
+<item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
+<item name = "Project">struct_baseline</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 8.280 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">1647854, 1647854, 16.479 ms, 16.479 ms, 1647855, 1647855, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_lenet_full_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL_fu_419">lenet_full_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL, 1188, 1188, 11.880 us, 11.880 us, 1188, 1188, no</column>
+<column name="grp_lenet_full_top_Pipeline_OUTPUT_ROW_OUTPUT_COL_fu_425">lenet_full_top_Pipeline_OUTPUT_ROW_OUTPUT_COL, 19719, 19719, 0.197 ms, 0.197 ms, 19719, 19719, no</column>
+<column name="grp_lenet_full_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL1_fu_438">lenet_full_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL1, 413, 413, 4.130 us, 4.130 us, 413, 413, no</column>
+<column name="grp_lenet_full_top_Pipeline_INPUT_CHANNEL_fu_444">lenet_full_top_Pipeline_INPUT_CHANNEL, 759, 759, 7.590 us, 7.590 us, 759, 759, no</column>
+<column name="grp_lenet_full_top_Pipeline_RELU_LOOP_fu_457">lenet_full_top_Pipeline_RELU_LOOP, 125, 125, 1.250 us, 1.250 us, 125, 125, no</column>
+<column name="grp_lenet_full_top_Pipeline_INPUT_CHANNEL2_fu_463">lenet_full_top_Pipeline_INPUT_CHANNEL2, 2008, 2008, 20.080 us, 20.080 us, 2008, 2008, no</column>
+<column name="grp_lenet_full_top_Pipeline_RELU_LOOP3_fu_474">lenet_full_top_Pipeline_RELU_LOOP3, 89, 89, 0.890 us, 0.890 us, 89, 89, no</column>
+<column name="grp_lenet_full_top_Pipeline_DENSE_INPUT_fu_480">lenet_full_top_Pipeline_DENSE_INPUT, 608, 608, 6.080 us, 6.080 us, 608, 608, no</column>
+<column name="grp_lenet_full_top_Pipeline_DENSE_INPUT4_fu_491">lenet_full_top_Pipeline_DENSE_INPUT4, 432, 432, 4.320 us, 4.320 us, 432, 432, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- OUTPUT_CHANNEL">118338, 118338, 19723, -, -, 6, no</column>
+<column name="- OUTPUT_CHANNEL">1230448, 1230448, 76903, -, -, 16, no</column>
+<column name=" + OUTPUT_ROW_OUTPUT_COL">76900, 76900, 769, -, -, 100, no</column>
+<column name="- OUTPUT_CHANNEL">241440, 241440, 2012, -, -, 120, no</column>
+<column name="- DENSE_OUTPUT">51408, 51408, 612, -, -, 84, no</column>
+<column name="- DENSE_OUTPUT">4360, 4360, 436, -, -, 10, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

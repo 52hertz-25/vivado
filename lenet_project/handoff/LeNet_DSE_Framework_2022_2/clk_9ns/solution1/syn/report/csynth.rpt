@@ -1,0 +1,407 @@
+
+
+================================================================
+== Synthesis Summary Report of 'lenet_full_top'
+================================================================
++ General Information: 
+    * Date:           Sun Sep  6 21:23:41 2026
+    * Version:        2022.2 (Build 3670227 on Oct 13 2022)
+    * Project:        clk_9ns
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +------------------------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+----------+--------+-------------+-------------+-----+
+    |                           Modules                          |  Issue |       | Latency |  Latency  | Iteration|         | Trip |          |          |        |             |             |     |
+    |                           & Loops                          |  Type  | Slack | (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|   BRAM   |   DSP  |      FF     |     LUT     | URAM|
+    +------------------------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+----------+--------+-------------+-------------+-----+
+    |+ lenet_full_top                                            |  Timing|  -0.90|  2247712|  2.023e+07|         -|  2247713|     -|        no|  70 (25%)|  5 (2%)|  13916 (13%)|  17789 (33%)|    -|
+    | + lenet_full_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL   |       -|   0.16|     1189|  1.070e+04|         -|     1189|     -|        no|         -|       -|    814 (~0%)|    1143 (2%)|    -|
+    |  o POOL_CHANNEL_POOL_ROW_POOL_COL                          |       -|   6.57|     1187|  1.068e+04|        13|        1|  1176|       yes|         -|       -|            -|            -|    -|
+    | + lenet_full_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL1  |       -|   0.06|      414|  3.726e+03|         -|      414|     -|        no|         -|       -|    840 (~0%)|    1029 (1%)|    -|
+    |  o POOL_CHANNEL_POOL_ROW_POOL_COL                          |       -|   6.57|      412|  3.708e+03|        14|        1|   400|       yes|         -|       -|            -|            -|    -|
+    | + lenet_full_top_Pipeline_RELU_LOOP                        |       -|   0.16|      125|  1.125e+03|         -|      125|     -|        no|         -|       -|    183 (~0%)|    156 (~0%)|    -|
+    |  o RELU_LOOP                                               |       -|   6.57|      123|  1.107e+03|         5|        1|   120|       yes|         -|       -|            -|            -|    -|
+    | + lenet_full_top_Pipeline_RELU_LOOP3                       |       -|   0.16|       89|    801.000|         -|       89|     -|        no|         -|       -|    183 (~0%)|    156 (~0%)|    -|
+    |  o RELU_LOOP                                               |       -|   6.57|       87|    783.000|         5|        1|    84|       yes|         -|       -|            -|            -|    -|
+    | o OUTPUT_CHANNEL                                           |       -|   6.57|   118614|  1.068e+06|     19769|        -|     6|        no|         -|       -|            -|            -|    -|
+    |  + lenet_full_top_Pipeline_OUTPUT_ROW_OUTPUT_COL           |  Timing|  -0.90|    19765|  1.779e+05|         -|    19765|     -|        no|         -|       -|    3060 (2%)|    1938 (3%)|    -|
+    |   o OUTPUT_ROW_OUTPUT_COL                                  |      II|   6.57|    19763|  1.779e+05|       189|       25|   784|       yes|         -|       -|            -|            -|    -|
+    | o OUTPUT_CHANNEL                                           |       -|   6.57|  1712048|  1.541e+07|    107003|        -|    16|        no|         -|       -|            -|            -|    -|
+    |  o OUTPUT_ROW_OUTPUT_COL                                   |       -|   6.57|   107000|  9.630e+05|      1070|        -|   100|        no|         -|       -|            -|            -|    -|
+    |   + lenet_full_top_Pipeline_INPUT_CHANNEL                  |  Timing|  -0.90|     1060|  9.540e+03|         -|     1060|     -|        no|         -|       -|    1659 (1%)|    1978 (3%)|    -|
+    |    o INPUT_CHANNEL                                         |      II|   6.57|     1058|  9.522e+03|       184|      175|     6|       yes|         -|       -|            -|            -|    -|
+    | o OUTPUT_CHANNEL                                           |       -|   6.57|   337560|  3.038e+06|      2813|        -|   120|        no|         -|       -|            -|            -|    -|
+    |  + lenet_full_top_Pipeline_INPUT_CHANNEL2                  |  Timing|  -0.90|     2809|  2.528e+04|         -|     2809|     -|        no|         -|       -|    1615 (1%)|    1978 (3%)|    -|
+    |   o INPUT_CHANNEL                                          |      II|   6.57|     2807|  2.526e+04|       183|      175|    16|       yes|         -|       -|            -|            -|    -|
+    | o DENSE_OUTPUT                                             |       -|   6.57|    71568|  6.441e+05|       852|        -|    84|        no|         -|       -|            -|            -|    -|
+    |  + lenet_full_top_Pipeline_DENSE_INPUT                     |  Timing|  -0.00|      848|  7.632e+03|         -|      848|     -|        no|         -|       -|    208 (~0%)|    154 (~0%)|    -|
+    |   o DENSE_INPUT                                            |      II|   6.57|      846|  7.614e+03|        14|        7|   120|       yes|         -|       -|            -|            -|    -|
+    | o DENSE_OUTPUT                                             |       -|   6.57|     6060|  5.454e+04|       606|        -|    10|        no|         -|       -|            -|            -|    -|
+    |  + lenet_full_top_Pipeline_DENSE_INPUT4                    |  Timing|  -0.00|      602|  5.418e+03|         -|      602|     -|        no|         -|       -|    189 (~0%)|    178 (~0%)|    -|
+    |   o DENSE_INPUT                                            |      II|   6.57|      600|  5.400e+03|        14|        7|    84|       yes|         -|       -|            -|            -|    -|
+    +------------------------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+----------+--------+-------------+-------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| Interface   | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   |
+|             | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| m_axi_gmem0 | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          |
+| m_axi_gmem1 | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          |
+| m_axi_gmem2 | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          |
+| m_axi_gmem3 | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          |
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 6             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+---------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register      | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+---------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL          | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER          | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER        | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR        | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control | feature_in_1  | 0x10   | 32    | W      | Data signal of feature_in        |                                                                      |
+| s_axi_control | feature_in_2  | 0x14   | 32    | W      | Data signal of feature_in        |                                                                      |
+| s_axi_control | weight_1      | 0x1c   | 32    | W      | Data signal of weight            |                                                                      |
+| s_axi_control | weight_2      | 0x20   | 32    | W      | Data signal of weight            |                                                                      |
+| s_axi_control | bias_1        | 0x28   | 32    | W      | Data signal of bias              |                                                                      |
+| s_axi_control | bias_2        | 0x2c   | 32    | W      | Data signal of bias              |                                                                      |
+| s_axi_control | feature_out_1 | 0x34   | 32    | W      | Data signal of feature_out       |                                                                      |
+| s_axi_control | feature_out_2 | 0x38   | 32    | W      | Data signal of feature_out       |                                                                      |
++---------------+---------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++-------------+-----------+---------------+
+| Argument    | Direction | Datatype      |
++-------------+-----------+---------------+
+| feature_in  | in        | float const * |
+| weight      | in        | float const * |
+| bias        | in        | float const * |
+| feature_out | out       | float*        |
++-------------+-----------+---------------+
+
+* SW-to-HW Mapping
++-------------+---------------+-----------+----------+-----------------------------------------+
+| Argument    | HW Interface  | HW Type   | HW Usage | HW Info                                 |
++-------------+---------------+-----------+----------+-----------------------------------------+
+| feature_in  | m_axi_gmem0   | interface |          |                                         |
+| feature_in  | s_axi_control | register  | offset   | name=feature_in_1 offset=0x10 range=32  |
+| feature_in  | s_axi_control | register  | offset   | name=feature_in_2 offset=0x14 range=32  |
+| weight      | m_axi_gmem1   | interface |          |                                         |
+| weight      | s_axi_control | register  | offset   | name=weight_1 offset=0x1c range=32      |
+| weight      | s_axi_control | register  | offset   | name=weight_2 offset=0x20 range=32      |
+| bias        | m_axi_gmem2   | interface |          |                                         |
+| bias        | s_axi_control | register  | offset   | name=bias_1 offset=0x28 range=32        |
+| bias        | s_axi_control | register  | offset   | name=bias_2 offset=0x2c range=32        |
+| feature_out | m_axi_gmem3   | interface |          |                                         |
+| feature_out | s_axi_control | register  | offset   | name=feature_out_1 offset=0x34 range=32 |
+| feature_out | s_axi_control | register  | offset   | name=feature_out_2 offset=0x38 range=32 |
++-------------+---------------+-----------+----------+-----------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* Inferred Burst Summary
++--------------+----------------+-----------+--------+-------+---------------------------------------------------------------------------------------------------------+
+| HW Interface | Loop           | Direction | Length | Width | Location                                                                                                |
++--------------+----------------+-----------+--------+-------+---------------------------------------------------------------------------------------------------------+
+| m_axi_gmem2  | OUTPUT_CHANNEL | read      | 6      | 32    | D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51:5  |
+| m_axi_gmem0  | WINDOW_COL     | read      | 5      | 32    | D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:18:9  |
+| m_axi_gmem1  | MAC_LOOP       | read      | 25     | 32    | D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:35:5  |
+| m_axi_gmem2  | OUTPUT_CHANNEL | read      | 16     | 32    | D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51:5  |
+| m_axi_gmem1  | INPUT_CHANNEL  | read      | 150    | 32    | D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:59:17 |
+| m_axi_gmem1  | OUTPUT_CHANNEL | read      | 48000  | 32    | D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51:5  |
+| m_axi_gmem2  | OUTPUT_CHANNEL | read      | 120    | 32    | D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51:5  |
+| m_axi_gmem1  | DENSE_OUTPUT   | read      | 10080  | 32    | D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139:5 |
+| m_axi_gmem2  | DENSE_OUTPUT   | read      | 84     | 32    | D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139:5 |
+| m_axi_gmem1  | DENSE_OUTPUT   | read      | 840    | 32    | D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139:5 |
+| m_axi_gmem2  | DENSE_OUTPUT   | read      | 10     | 32    | D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139:5 |
+| m_axi_gmem3  | DENSE_OUTPUT   | write     | 10     | 32    | D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139:5 |
++--------------+----------------+-----------+--------+-------+---------------------------------------------------------------------------------------------------------+
+
+* Inferred Bursts and Widening Missed
++--------------+-------------+----------------+---------------------------------------------------------------------------------------------------------+------------+---------------------------------------------------------------------------------------------------------+
+| HW Interface | Variable    | Loop           | Problem                                                                                                 | Resolution | Location                                                                                                |
++--------------+-------------+----------------+---------------------------------------------------------------------------------------------------------+------------+---------------------------------------------------------------------------------------------------------+
+| m_axi_gmem0  | feature_in  | WINDOW_ROW     | Stride is incompatible                                                                                  | 214-230    | D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:16:5  |
+| m_axi_gmem1  | weight      | OUTPUT_COL     | Stride is incompatible                                                                                  | 214-230    | D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:55:13 |
+| m_axi_gmem1  | weight      | OUTPUT_COL     | Stride is incompatible                                                                                  | 214-230    | D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:55:13 |
+| m_axi_gmem3  | feature_out | DENSE_OUTPUT   | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139:5 |
+| m_axi_gmem1  | weight      | DENSE_INPUT    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:143:9 |
+| m_axi_gmem2  | bias        | DENSE_OUTPUT   | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139:5 |
+| m_axi_gmem1  | weight      | DENSE_INPUT    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:143:9 |
+| m_axi_gmem2  | bias        | DENSE_OUTPUT   | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139:5 |
+| m_axi_gmem1  | weight      | MAC_LOOP       | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:35:5  |
+| m_axi_gmem2  | bias        | OUTPUT_CHANNEL | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51:5  |
+| m_axi_gmem1  | weight      | MAC_LOOP       | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:35:5  |
+| m_axi_gmem2  | bias        | OUTPUT_CHANNEL | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51:5  |
+| m_axi_gmem1  | weight      | MAC_LOOP       | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:35:5  |
+| m_axi_gmem0  | feature_in  | WINDOW_COL     | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:18:9  |
+| m_axi_gmem2  | bias        | OUTPUT_CHANNEL | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51:5  |
++--------------+-------------+----------------+---------------------------------------------------------------------------------------------------------+------------+---------------------------------------------------------------------------------------------------------+
+
+    * Resolution URL: www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=XXX-YYY.html (replace XXX-YYY with column value)
+
+================================================================
+== Bind Op Report
+================================================================
++------------------------------------------------------------+-----+--------+---------------+-----+--------+---------+
+| Name                                                       | DSP | Pragma | Variable      | Op  | Impl   | Latency |
++------------------------------------------------------------+-----+--------+---------------+-----+--------+---------+
+| + lenet_full_top                                           | 5   |        |               |     |        |         |
+|   add_ln51_6_fu_542_p2                                     | -   |        | add_ln51_6    | add | fabric | 0       |
+|   add_ln51_1_fu_554_p2                                     | -   |        | add_ln51_1    | add | fabric | 0       |
+|   empty_94_fu_608_p2                                       | -   |        | empty_94      | add | fabric | 0       |
+|   empty_95_fu_645_p2                                       | -   |        | empty_95      | sub | fabric | 0       |
+|   add_ln51_fu_570_p2                                       | -   |        | add_ln51      | add | fabric | 0       |
+|   add_ln51_4_fu_665_p2                                     | -   |        | add_ln51_4    | add | fabric | 0       |
+|   empty_99_fu_720_p2                                       | -   |        | empty_99      | add | fabric | 0       |
+|   add_ln53_fu_779_p2                                       | -   |        | add_ln53      | add | fabric | 0       |
+|   add_ln53_4_fu_799_p2                                     | -   |        | add_ln53_4    | add | fabric | 0       |
+|   add_ln53_5_fu_817_p2                                     | -   |        | add_ln53_5    | add | fabric | 0       |
+|   add_ln53_6_fu_826_p2                                     | -   |        | add_ln53_6    | add | fabric | 0       |
+|   add_ln76_fu_869_p2                                       | -   |        | add_ln76      | add | fabric | 0       |
+|   add_ln76_1_fu_879_p2                                     | -   |        | add_ln76_1    | add | fabric | 0       |
+|   add_ln55_fu_831_p2                                       | -   |        | add_ln55      | add | fabric | 0       |
+|   add_ln51_7_fu_837_p2                                     | -   |        | add_ln51_7    | add | fabric | 0       |
+|   add_ln51_2_fu_671_p2                                     | -   |        | add_ln51_2    | add | fabric | 0       |
+|   add_ln51_3_fu_686_p2                                     | -   |        | add_ln51_3    | add | fabric | 0       |
+|   fmul_32ns_32ns_32_4_max_dsp_1_U63                        | -   |        | add_ln51_5    | add | fabric | 0       |
+|   fcmp_32ns_32ns_1_2_no_dsp_1_U67                          | -   |        | add_ln139     | add | fabric | 0       |
+|   fadd_32ns_32ns_32_7_full_dsp_1_U62                       | -   |        | add_ln139_1   | add | fabric | 0       |
+|   fmul_32ns_32ns_32_4_max_dsp_1_U63                        | -   |        | add_ln139_4   | add | fabric | 0       |
+|   fmul_32ns_32ns_32_4_max_dsp_1_U63                        | -   |        | add_ln139_2   | add | fabric | 0       |
+|   fadd_32ns_32ns_32_7_full_dsp_1_U62                       | -   |        | add_ln139_3   | add | fabric | 0       |
+|   fmul_32ns_32ns_32_4_max_dsp_1_U63                        | -   |        | add_ln139_5   | add | fabric | 0       |
+|  + lenet_full_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL  | 0   |        |               |     |        |         |
+|    empty_fu_311_p2                                         | -   |        | empty         | sub | fabric | 0       |
+|    empty_35_fu_339_p2                                      | -   |        | empty_35      | sub | fabric | 0       |
+|    empty_36_fu_361_p2                                      | -   |        | empty_36      | add | fabric | 0       |
+|    empty_38_fu_391_p2                                      | -   |        | empty_38      | sub | fabric | 0       |
+|    empty_39_fu_397_p2                                      | -   |        | empty_39      | add | fabric | 0       |
+|    empty_41_fu_427_p2                                      | -   |        | empty_41      | sub | fabric | 0       |
+|    empty_44_fu_463_p2                                      | -   |        | empty_44      | sub | fabric | 0       |
+|    add_ln91_1_fu_228_p2                                    | -   |        | add_ln91_1    | add | fabric | 0       |
+|    add_ln91_fu_243_p2                                      | -   |        | add_ln91      | add | fabric | 0       |
+|    p_mid142_fu_501_p2                                      | -   |        | p_mid142      | sub | fabric | 0       |
+|    p_mid144_fu_536_p2                                      | -   |        | p_mid144      | sub | fabric | 0       |
+|    p_mid166_fu_573_p2                                      | -   |        | p_mid166      | sub | fabric | 0       |
+|    p_mid180_fu_603_p2                                      | -   |        | p_mid180      | sub | fabric | 0       |
+|    p_mid194_fu_639_p2                                      | -   |        | p_mid194      | sub | fabric | 0       |
+|    add_ln93_fu_662_p2                                      | -   |        | add_ln93      | add | fabric | 0       |
+|    p_mid118_fu_697_p2                                      | -   |        | p_mid118      | add | fabric | 0       |
+|    p_mid120_fu_727_p2                                      | -   |        | p_mid120      | sub | fabric | 0       |
+|    p_mid122_fu_733_p2                                      | -   |        | p_mid122      | add | fabric | 0       |
+|    p_mid124_fu_763_p2                                      | -   |        | p_mid124      | sub | fabric | 0       |
+|    p_mid128_fu_799_p2                                      | -   |        | p_mid128      | sub | fabric | 0       |
+|    add_ln105_fu_871_p2                                     | -   |        | add_ln105     | add | fabric | 0       |
+|    add_ln105_1_fu_893_p2                                   | -   |        | add_ln105_1   | add | fabric | 0       |
+|    add_ln114_fu_915_p2                                     | -   |        | add_ln114     | add | fabric | 0       |
+|    add_ln95_fu_813_p2                                      | -   |        | add_ln95      | add | fabric | 0       |
+|    add_ln93_2_fu_257_p2                                    | -   |        | add_ln93_2    | add | fabric | 0       |
+|  + lenet_full_top_Pipeline_OUTPUT_ROW_OUTPUT_COL           | 0   |        |               |     |        |         |
+|    empty_52_fu_875_p2                                      | -   |        | empty_52      | add | fabric | 0       |
+|    empty_54_fu_904_p2                                      | -   |        | empty_54      | sub | fabric | 0       |
+|    add_ln53_3_fu_762_p2                                    | -   |        | add_ln53_3    | add | fabric | 0       |
+|    tmp5_178199_fu_348_p2                                   | -   |        | tmp5_178199   | add | fabric | 0       |
+|    p_mid1_fu_913_p2                                        | -   |        | p_mid1        | add | fabric | 0       |
+|    p_mid13_fu_942_p2                                       | -   |        | p_mid13       | sub | fabric | 0       |
+|    tmp5_178_mid1_fu_413_p2                                 | -   |        | tmp5_178_mid1 | add | fabric | 0       |
+|    add_ln53_fu_479_p2                                      | -   |        | add_ln53      | add | fabric | 0       |
+|    add_ln53_1_fu_579_p2                                    | -   |        | add_ln53_1    | add | fabric | 0       |
+|    add_ln53_2_fu_679_p2                                    | -   |        | add_ln53_2    | add | fabric | 0       |
+|    empty_57_fu_376_p2                                      | -   |        | empty_57      | add | fabric | 0       |
+|    empty_59_fu_437_p2                                      | -   |        | empty_59      | add | fabric | 0       |
+|    empty_61_fu_502_p2                                      | -   |        | empty_61      | add | fabric | 0       |
+|    empty_63_fu_602_p2                                      | -   |        | empty_63      | add | fabric | 0       |
+|    empty_65_fu_702_p2                                      | -   |        | empty_65      | add | fabric | 0       |
+|    add_ln76_fu_968_p2                                      | -   |        | add_ln76      | add | fabric | 0       |
+|    add_ln55_fu_777_p2                                      | -   |        | add_ln55      | add | fabric | 0       |
+|  + lenet_full_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL1 | 0   |        |               |     |        |         |
+|    tmp3_fu_304_p2                                          | -   |        | tmp3          | add | fabric | 0       |
+|    empty_30_fu_520_p2                                      | -   |        | empty_30      | add | fabric | 0       |
+|    tmp4_fu_310_p2                                          | -   |        | tmp4          | add | fabric | 0       |
+|    empty_31_fu_320_p2                                      | -   |        | empty_31      | add | fabric | 0       |
+|    add_ln91_fu_326_p2                                      | -   |        | add_ln91      | add | fabric | 0       |
+|    add_ln91_1_fu_217_p2                                    | -   |        | add_ln91_1    | add | fabric | 0       |
+|    p_mid1149_fu_551_p2                                     | -   |        | p_mid1149     | add | fabric | 0       |
+|    p_mid1159_fu_390_p2                                     | -   |        | p_mid1159     | add | fabric | 0       |
+|    add_ln93_fu_420_p2                                      | -   |        | add_ln93      | add | fabric | 0       |
+|    tmp3_mid1_fu_455_p2                                     | -   |        | tmp3_mid1     | add | fabric | 0       |
+|    p_mid1121_fu_572_p2                                     | -   |        | p_mid1121     | add | fabric | 0       |
+|    tmp4_mid1_fu_461_p2                                     | -   |        | tmp4_mid1     | add | fabric | 0       |
+|    p_mid1123_fu_471_p2                                     | -   |        | p_mid1123     | add | fabric | 0       |
+|    add_ln105_fu_659_p2                                     | -   |        | add_ln105     | add | fabric | 0       |
+|    add_ln105_1_fu_669_p2                                   | -   |        | add_ln105_1   | add | fabric | 0       |
+|    add_ln105_2_fu_675_p2                                   | -   |        | add_ln105_2   | add | fabric | 0       |
+|    add_ln105_3_fu_685_p2                                   | -   |        | add_ln105_3   | add | fabric | 0       |
+|    add_ln114_fu_691_p2                                     | -   |        | add_ln114     | add | fabric | 0       |
+|    add_ln114_1_fu_701_p2                                   | -   |        | add_ln114_1   | add | fabric | 0       |
+|    add_ln95_fu_485_p2                                      | -   |        | add_ln95      | add | fabric | 0       |
+|    add_ln93_1_fu_232_p2                                    | -   |        | add_ln93_1    | add | fabric | 0       |
+|  + lenet_full_top_Pipeline_INPUT_CHANNEL                   | 0   |        |               |     |        |         |
+|    add_ln60_fu_488_p2                                      | -   |        | add_ln60      | add | fabric | 0       |
+|    add_ln21_fu_573_p2                                      | -   |        | add_ln21      | add | fabric | 0       |
+|    add_ln21_20_fu_583_p2                                   | -   |        | add_ln21_20   | add | fabric | 0       |
+|    add_ln21_21_fu_593_p2                                   | -   |        | add_ln21_21   | add | fabric | 0       |
+|    add_ln21_22_fu_643_p2                                   | -   |        | add_ln21_22   | add | fabric | 0       |
+|    empty_80_fu_603_p2                                      | -   |        | empty_80      | add | fabric | 0       |
+|    add_ln21_24_fu_662_p2                                   | -   |        | add_ln21_24   | add | fabric | 0       |
+|    add_ln21_25_fu_672_p2                                   | -   |        | add_ln21_25   | add | fabric | 0       |
+|    add_ln21_26_fu_687_p2                                   | -   |        | add_ln21_26   | add | fabric | 0       |
+|    add_ln21_27_fu_697_p2                                   | -   |        | add_ln21_27   | add | fabric | 0       |
+|    empty_83_fu_707_p2                                      | -   |        | empty_83      | add | fabric | 0       |
+|    add_ln21_29_fu_756_p2                                   | -   |        | add_ln21_29   | add | fabric | 0       |
+|    add_ln21_30_fu_775_p2                                   | -   |        | add_ln21_30   | add | fabric | 0       |
+|    add_ln21_31_fu_785_p2                                   | -   |        | add_ln21_31   | add | fabric | 0       |
+|    add_ln21_32_fu_880_p2                                   | -   |        | add_ln21_32   | add | fabric | 0       |
+|    empty_86_fu_795_p2                                      | -   |        | empty_86      | add | fabric | 0       |
+|    add_ln21_34_fu_899_p2                                   | -   |        | add_ln21_34   | add | fabric | 0       |
+|    add_ln21_35_fu_909_p2                                   | -   |        | add_ln21_35   | add | fabric | 0       |
+|    add_ln21_36_fu_924_p2                                   | -   |        | add_ln21_36   | add | fabric | 0       |
+|    add_ln21_37_fu_934_p2                                   | -   |        | add_ln21_37   | add | fabric | 0       |
+|    empty_89_fu_835_p2                                      | -   |        | empty_89      | add | fabric | 0       |
+|    add_ln21_39_fu_953_p2                                   | -   |        | add_ln21_39   | add | fabric | 0       |
+|    add_ln21_40_fu_968_p2                                   | -   |        | add_ln21_40   | add | fabric | 0       |
+|    add_ln21_41_fu_978_p2                                   | -   |        | add_ln21_41   | add | fabric | 0       |
+|    add_ln21_42_fu_993_p2                                   | -   |        | add_ln21_42   | add | fabric | 0       |
+|  + lenet_full_top_Pipeline_RELU_LOOP                       | 0   |        |               |     |        |         |
+|    add_ln126_fu_91_p2                                      | -   |        | add_ln126     | add | fabric | 0       |
+|  + lenet_full_top_Pipeline_INPUT_CHANNEL2                  | 0   |        |               |     |        |         |
+|    add_ln60_fu_452_p2                                      | -   |        | add_ln60      | add | fabric | 0       |
+|    empty_69_fu_478_p2                                      | -   |        | empty_69      | add | fabric | 0       |
+|    empty_70_fu_496_p2                                      | -   |        | empty_70      | add | fabric | 0       |
+|    add_ln21_fu_512_p2                                      | -   |        | add_ln21      | add | fabric | 0       |
+|    add_ln21_1_fu_522_p2                                    | -   |        | add_ln21_1    | add | fabric | 0       |
+|    add_ln21_2_fu_532_p2                                    | -   |        | add_ln21_2    | add | fabric | 0       |
+|    add_ln21_3_fu_547_p2                                    | -   |        | add_ln21_3    | add | fabric | 0       |
+|    empty_71_fu_542_p2                                      | -   |        | empty_71      | add | fabric | 0       |
+|    empty_72_fu_567_p2                                      | -   |        | empty_72      | add | fabric | 0       |
+|    add_ln21_4_fu_583_p2                                    | -   |        | add_ln21_4    | add | fabric | 0       |
+|    add_ln21_5_fu_593_p2                                    | -   |        | add_ln21_5    | add | fabric | 0       |
+|    add_ln21_6_fu_608_p2                                    | -   |        | add_ln21_6    | add | fabric | 0       |
+|    add_ln21_7_fu_618_p2                                    | -   |        | add_ln21_7    | add | fabric | 0       |
+|    empty_73_fu_628_p2                                      | -   |        | empty_73      | add | fabric | 0       |
+|    empty_74_fu_645_p2                                      | -   |        | empty_74      | add | fabric | 0       |
+|    add_ln21_8_fu_660_p2                                    | -   |        | add_ln21_8    | add | fabric | 0       |
+|    add_ln21_9_fu_679_p2                                    | -   |        | add_ln21_9    | add | fabric | 0       |
+|    add_ln21_10_fu_689_p2                                   | -   |        | add_ln21_10   | add | fabric | 0       |
+|    add_ln21_11_fu_709_p2                                   | -   |        | add_ln21_11   | add | fabric | 0       |
+|    empty_75_fu_699_p2                                      | -   |        | empty_75      | add | fabric | 0       |
+|    empty_76_fu_729_p2                                      | -   |        | empty_76      | add | fabric | 0       |
+|    add_ln21_12_fu_745_p2                                   | -   |        | add_ln21_12   | add | fabric | 0       |
+|    add_ln21_13_fu_755_p2                                   | -   |        | add_ln21_13   | add | fabric | 0       |
+|    add_ln21_14_fu_770_p2                                   | -   |        | add_ln21_14   | add | fabric | 0       |
+|    add_ln21_15_fu_780_p2                                   | -   |        | add_ln21_15   | add | fabric | 0       |
+|    empty_77_fu_790_p2                                      | -   |        | empty_77      | add | fabric | 0       |
+|    empty_78_fu_807_p2                                      | -   |        | empty_78      | add | fabric | 0       |
+|    add_ln21_16_fu_822_p2                                   | -   |        | add_ln21_16   | add | fabric | 0       |
+|    add_ln21_17_fu_837_p2                                   | -   |        | add_ln21_17   | add | fabric | 0       |
+|    add_ln21_18_fu_847_p2                                   | -   |        | add_ln21_18   | add | fabric | 0       |
+|    add_ln21_19_fu_862_p2                                   | -   |        | add_ln21_19   | add | fabric | 0       |
+|  + lenet_full_top_Pipeline_RELU_LOOP3                      | 0   |        |               |     |        |         |
+|    add_ln126_fu_91_p2                                      | -   |        | add_ln126     | add | fabric | 0       |
+|  + lenet_full_top_Pipeline_DENSE_INPUT                     | 0   |        |               |     |        |         |
+|    add_ln143_fu_165_p2                                     | -   |        | add_ln143     | add | fabric | 0       |
+|  + lenet_full_top_Pipeline_DENSE_INPUT4                    | 0   |        |               |     |        |         |
+|    add_ln143_fu_155_p2                                     | -   |        | add_ln143     | add | fabric | 0       |
++------------------------------------------------------------+-----+--------+---------------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++--------------------------------------+------+------+--------+--------------+---------+------+---------+
+| Name                                 | BRAM | URAM | Pragma | Variable     | Storage | Impl | Latency |
++--------------------------------------+------+------+--------+--------------+---------+------+---------+
+| + lenet_full_top                     | 70   | 0    |        |              |         |      |         |
+|   conv1_output_U                     | 48   | -    |        | conv1_output | rom_np  | auto | 1       |
+|   pool1_output_U                     | 4    | -    |        | pool1_output | rom_np  | auto | 1       |
+|   conv2_output_U                     | 12   | -    |        | conv2_output | rom_np  | auto | 1       |
+|   fmul_32ns_32ns_32_4_max_dsp_1_U63  | 2    | -    |        | pool2_output | rom_np  | auto | 1       |
+|   fadd_32ns_32ns_32_7_full_dsp_1_U62 | 1    | -    |        | conv3_output | ram_1p  | auto | 1       |
+|   fmul_32ns_32ns_32_4_max_dsp_1_U63  | 2    | -    |        | conv3_relu   | ram_1p  | auto | 1       |
+|   fadd_32ns_32ns_32_7_full_dsp_1_U62 | 1    | -    |        | fc1_output   | ram_1p  | auto | 1       |
+|   fc1_relu_U                         | 2    | -    |        | fc1_relu     | ram_1p  | auto | 1       |
++--------------------------------------+------+------+--------+--------------+---------+------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+--------------------------------------------------------------+--------------------------------------------------------+
+| Type      | Options                                                      | Location                                               |
++-----------+--------------------------------------------------------------+--------------------------------------------------------+
+| inline    |                                                              | src/lenet_conv.cpp:13 in generate_window_5x5           |
+| inline    |                                                              | src/lenet_conv.cpp:32 in mac_5x5                       |
+| interface | m_axi port=feature_in offset=direct bundle=gmem0 depth=1024  | src/lenet_conv.cpp:187 in lenet_conv1_top, feature_in  |
+| interface | m_axi port=weight offset=direct bundle=gmem1 depth=150       | src/lenet_conv.cpp:188 in lenet_conv1_top, weight      |
+| interface | m_axi port=bias offset=direct bundle=gmem2 depth=6           | src/lenet_conv.cpp:189 in lenet_conv1_top, bias        |
+| interface | m_axi port=feature_out offset=direct bundle=gmem3 depth=4704 | src/lenet_conv.cpp:190 in lenet_conv1_top, feature_out |
+| interface | ap_ctrl_hs port=return                                       | src/lenet_conv.cpp:191 in lenet_conv1_top, return      |
+| interface | m_axi port=feature_in offset=direct bundle=gmem0 depth=1176  | src/lenet_conv.cpp:203 in lenet_conv2_top, feature_in  |
+| interface | m_axi port=weight offset=direct bundle=gmem1 depth=2400      | src/lenet_conv.cpp:204 in lenet_conv2_top, weight      |
+| interface | m_axi port=bias offset=direct bundle=gmem2 depth=16          | src/lenet_conv.cpp:205 in lenet_conv2_top, bias        |
+| interface | m_axi port=feature_out offset=direct bundle=gmem3 depth=1600 | src/lenet_conv.cpp:206 in lenet_conv2_top, feature_out |
+| interface | ap_ctrl_hs port=return                                       | src/lenet_conv.cpp:207 in lenet_conv2_top, return      |
+| interface | m_axi port=feature_in offset=direct bundle=gmem0 depth=400   | src/lenet_conv.cpp:221 in lenet_conv3_top, feature_in  |
+| interface | m_axi port=weight offset=direct bundle=gmem1 depth=48000     | src/lenet_conv.cpp:222 in lenet_conv3_top, weight      |
+| interface | m_axi port=bias offset=direct bundle=gmem2 depth=120         | src/lenet_conv.cpp:223 in lenet_conv3_top, bias        |
+| interface | m_axi port=feature_out offset=direct bundle=gmem3 depth=120  | src/lenet_conv.cpp:224 in lenet_conv3_top, feature_out |
+| interface | ap_ctrl_hs port=return                                       | src/lenet_conv.cpp:225 in lenet_conv3_top, return      |
+| interface | m_axi port=feature_in offset=direct bundle=gmem0 depth=120   | src/lenet_conv.cpp:239 in lenet_fc1_top, feature_in    |
+| interface | m_axi port=weight offset=direct bundle=gmem1 depth=10080     | src/lenet_conv.cpp:240 in lenet_fc1_top, weight        |
+| interface | m_axi port=bias offset=direct bundle=gmem2 depth=84          | src/lenet_conv.cpp:241 in lenet_fc1_top, bias          |
+| interface | m_axi port=feature_out offset=direct bundle=gmem3 depth=84   | src/lenet_conv.cpp:242 in lenet_fc1_top, feature_out   |
+| interface | ap_ctrl_hs port=return                                       | src/lenet_conv.cpp:243 in lenet_fc1_top, return        |
+| interface | m_axi port=feature_in offset=direct bundle=gmem0 depth=84    | src/lenet_conv.cpp:254 in lenet_fc2_top, feature_in    |
+| interface | m_axi port=weight offset=direct bundle=gmem1 depth=840       | src/lenet_conv.cpp:255 in lenet_fc2_top, weight        |
+| interface | m_axi port=bias offset=direct bundle=gmem2 depth=10          | src/lenet_conv.cpp:256 in lenet_fc2_top, bias          |
+| interface | m_axi port=feature_out offset=direct bundle=gmem3 depth=10   | src/lenet_conv.cpp:257 in lenet_fc2_top, feature_out   |
+| interface | ap_ctrl_hs port=return                                       | src/lenet_conv.cpp:258 in lenet_fc2_top, return        |
+| interface | m_axi port=feature_in offset=slave bundle=gmem0 depth=1024   | src/lenet_conv.cpp:269 in lenet_full_top, feature_in   |
+| interface | m_axi port=weight offset=slave bundle=gmem1 depth=61470      | src/lenet_conv.cpp:270 in lenet_full_top, weight       |
+| interface | m_axi port=bias offset=slave bundle=gmem2 depth=236          | src/lenet_conv.cpp:271 in lenet_full_top, bias         |
+| interface | m_axi port=feature_out offset=slave bundle=gmem3 depth=10    | src/lenet_conv.cpp:272 in lenet_full_top, feature_out  |
+| interface | s_axilite port=feature_in bundle=control                     | src/lenet_conv.cpp:273 in lenet_full_top, feature_in   |
+| interface | s_axilite port=weight bundle=control                         | src/lenet_conv.cpp:274 in lenet_full_top, weight       |
+| interface | s_axilite port=bias bundle=control                           | src/lenet_conv.cpp:275 in lenet_full_top, bias         |
+| interface | s_axilite port=feature_out bundle=control                    | src/lenet_conv.cpp:276 in lenet_full_top, feature_out  |
+| interface | s_axilite port=return bundle=control                         | src/lenet_conv.cpp:277 in lenet_full_top, return       |
++-----------+--------------------------------------------------------------+--------------------------------------------------------+
+
+

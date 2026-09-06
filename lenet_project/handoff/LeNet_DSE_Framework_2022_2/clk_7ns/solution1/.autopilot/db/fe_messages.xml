@@ -1,0 +1,159 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:13:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="generate_window_5x5" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:32:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mac_5x5" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:187:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="lenet_conv1_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=feature_in offset=direct bundle=gmem0 depth=1024" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:188:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="lenet_conv1_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=weight offset=direct bundle=gmem1 depth=150" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:189:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="lenet_conv1_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=bias offset=direct bundle=gmem2 depth=6" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:190:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="lenet_conv1_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=feature_out offset=direct bundle=gmem3 depth=4704" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:191:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="lenet_conv1_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_ctrl_hs port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:203:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="lenet_conv2_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=feature_in offset=direct bundle=gmem0 depth=1176" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:204:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="lenet_conv2_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=weight offset=direct bundle=gmem1 depth=2400" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:205:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="lenet_conv2_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=bias offset=direct bundle=gmem2 depth=16" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:206:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="lenet_conv2_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=feature_out offset=direct bundle=gmem3 depth=1600" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:207:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="lenet_conv2_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_ctrl_hs port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:221:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="lenet_conv3_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=feature_in offset=direct bundle=gmem0 depth=400" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:222:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="lenet_conv3_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=weight offset=direct bundle=gmem1 depth=48000" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:223:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="lenet_conv3_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=bias offset=direct bundle=gmem2 depth=120" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:224:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="lenet_conv3_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=feature_out offset=direct bundle=gmem3 depth=120" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:225:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="lenet_conv3_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_ctrl_hs port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:239:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="lenet_fc1_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=feature_in offset=direct bundle=gmem0 depth=120" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:240:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="lenet_fc1_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=weight offset=direct bundle=gmem1 depth=10080" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:241:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="lenet_fc1_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=bias offset=direct bundle=gmem2 depth=84" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:242:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="lenet_fc1_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=feature_out offset=direct bundle=gmem3 depth=84" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:243:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="lenet_fc1_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_ctrl_hs port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:254:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="lenet_fc2_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=feature_in offset=direct bundle=gmem0 depth=84" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:255:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="lenet_fc2_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=weight offset=direct bundle=gmem1 depth=840" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:256:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="lenet_fc2_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=bias offset=direct bundle=gmem2 depth=10" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:257:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="lenet_fc2_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=feature_out offset=direct bundle=gmem3 depth=10" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:258:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="lenet_fc2_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_ctrl_hs port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/scripts/run_dse.tcl:11:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="lenet_full_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=lenet_full_top" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:269:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="lenet_full_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=feature_in offset=slave bundle=gmem0 depth=1024" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:270:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="lenet_full_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=weight offset=slave bundle=gmem1 depth=61470" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:271:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="lenet_full_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=bias offset=slave bundle=gmem2 depth=236" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:272:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="lenet_full_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=feature_out offset=slave bundle=gmem3 depth=10" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:273:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="lenet_full_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=feature_in bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:274:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="lenet_full_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=weight bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:275:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="lenet_full_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=bias bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:276:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="lenet_full_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=feature_out bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:277:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="lenet_full_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:62:21" msg_body="Inlining function 'void lenet::(anonymous namespace)::generate_window_5x5&lt;32, 32&gt;(float const*, int, int, int, float*)' into 'void lenet::(anonymous namespace)::conv5x5_valid&lt;1, 32, 32, 6&gt;(float const*, float const*, float const*, float*)'">
+        <args Callee="void lenet::(anonymous namespace)::generate_window_5x5&lt;32, 32&gt;(float const*, int, int, int, float*)" Caller="void lenet::(anonymous namespace)::conv5x5_valid&lt;1, 32, 32, 6&gt;(float const*, float const*, float const*, float*)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:72:25" msg_body="Inlining function 'lenet::(anonymous namespace)::mac_5x5(float const*, float const*, float)' into 'void lenet::(anonymous namespace)::conv5x5_valid&lt;1, 32, 32, 6&gt;(float const*, float const*, float const*, float*)'">
+        <args Callee="lenet::(anonymous namespace)::mac_5x5(float const*, float const*, float)" Caller="void lenet::(anonymous namespace)::conv5x5_valid&lt;1, 32, 32, 6&gt;(float const*, float const*, float const*, float*)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:62:21" msg_body="Inlining function 'void lenet::(anonymous namespace)::generate_window_5x5&lt;14, 14&gt;(float const*, int, int, int, float*)' into 'void lenet::(anonymous namespace)::conv5x5_valid&lt;6, 14, 14, 16&gt;(float const*, float const*, float const*, float*)'">
+        <args Callee="void lenet::(anonymous namespace)::generate_window_5x5&lt;14, 14&gt;(float const*, int, int, int, float*)" Caller="void lenet::(anonymous namespace)::conv5x5_valid&lt;6, 14, 14, 16&gt;(float const*, float const*, float const*, float*)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:72:25" msg_body="Inlining function 'lenet::(anonymous namespace)::mac_5x5(float const*, float const*, float)' into 'void lenet::(anonymous namespace)::conv5x5_valid&lt;6, 14, 14, 16&gt;(float const*, float const*, float const*, float*)'">
+        <args Callee="lenet::(anonymous namespace)::mac_5x5(float const*, float const*, float)" Caller="void lenet::(anonymous namespace)::conv5x5_valid&lt;6, 14, 14, 16&gt;(float const*, float const*, float const*, float*)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:62:21" msg_body="Inlining function 'void lenet::(anonymous namespace)::generate_window_5x5&lt;5, 5&gt;(float const*, int, int, int, float*)' into 'void lenet::(anonymous namespace)::conv5x5_valid&lt;16, 5, 5, 120&gt;(float const*, float const*, float const*, float*)'">
+        <args Callee="void lenet::(anonymous namespace)::generate_window_5x5&lt;5, 5&gt;(float const*, int, int, int, float*)" Caller="void lenet::(anonymous namespace)::conv5x5_valid&lt;16, 5, 5, 120&gt;(float const*, float const*, float const*, float*)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:72:25" msg_body="Inlining function 'lenet::(anonymous namespace)::mac_5x5(float const*, float const*, float)' into 'void lenet::(anonymous namespace)::conv5x5_valid&lt;16, 5, 5, 120&gt;(float const*, float const*, float const*, float*)'">
+        <args Callee="lenet::(anonymous namespace)::mac_5x5(float const*, float const*, float)" Caller="void lenet::(anonymous namespace)::conv5x5_valid&lt;16, 5, 5, 120&gt;(float const*, float const*, float const*, float*)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:268:0" msg_body="Inlining function 'void lenet::(anonymous namespace)::conv5x5_valid&lt;1, 32, 32, 6&gt;(float const*, float const*, float const*, float*)' into 'lenet_full_top'">
+        <args Callee="void lenet::(anonymous namespace)::conv5x5_valid&lt;1, 32, 32, 6&gt;(float const*, float const*, float const*, float*)" Caller="lenet_full_top"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:268:0" msg_body="Inlining function 'void lenet::(anonymous namespace)::relu_maxpool_2x2&lt;6, 28, 28&gt;(float const*, float*)' into 'lenet_full_top'">
+        <args Callee="void lenet::(anonymous namespace)::relu_maxpool_2x2&lt;6, 28, 28&gt;(float const*, float*)" Caller="lenet_full_top"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:268:0" msg_body="Inlining function 'void lenet::(anonymous namespace)::conv5x5_valid&lt;6, 14, 14, 16&gt;(float const*, float const*, float const*, float*)' into 'lenet_full_top'">
+        <args Callee="void lenet::(anonymous namespace)::conv5x5_valid&lt;6, 14, 14, 16&gt;(float const*, float const*, float const*, float*)" Caller="lenet_full_top"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:268:0" msg_body="Inlining function 'void lenet::(anonymous namespace)::relu_maxpool_2x2&lt;16, 10, 10&gt;(float const*, float*)' into 'lenet_full_top'">
+        <args Callee="void lenet::(anonymous namespace)::relu_maxpool_2x2&lt;16, 10, 10&gt;(float const*, float*)" Caller="lenet_full_top"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:268:0" msg_body="Inlining function 'void lenet::(anonymous namespace)::conv5x5_valid&lt;16, 5, 5, 120&gt;(float const*, float const*, float const*, float*)' into 'lenet_full_top'">
+        <args Callee="void lenet::(anonymous namespace)::conv5x5_valid&lt;16, 5, 5, 120&gt;(float const*, float const*, float const*, float*)" Caller="lenet_full_top"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:268:0" msg_body="Inlining function 'void lenet::(anonymous namespace)::relu_vector&lt;120&gt;(float const*, float*)' into 'lenet_full_top'">
+        <args Callee="void lenet::(anonymous namespace)::relu_vector&lt;120&gt;(float const*, float*)" Caller="lenet_full_top"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:268:0" msg_body="Inlining function 'void lenet::(anonymous namespace)::dense&lt;120, 84&gt;(float const*, float const*, float const*, float*)' into 'lenet_full_top'">
+        <args Callee="void lenet::(anonymous namespace)::dense&lt;120, 84&gt;(float const*, float const*, float const*, float*)" Caller="lenet_full_top"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:268:0" msg_body="Inlining function 'void lenet::(anonymous namespace)::relu_vector&lt;84&gt;(float const*, float*)' into 'lenet_full_top'">
+        <args Callee="void lenet::(anonymous namespace)::relu_vector&lt;84&gt;(float const*, float*)" Caller="lenet_full_top"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:268:0" msg_body="Inlining function 'void lenet::(anonymous namespace)::dense&lt;84, 10&gt;(float const*, float const*, float const*, float*)' into 'lenet_full_top'">
+        <args Callee="void lenet::(anonymous namespace)::dense&lt;84, 10&gt;(float const*, float const*, float const*, float*)" Caller="lenet_full_top"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

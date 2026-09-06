@@ -1,0 +1,69 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Sun Sep  6 15:24:20 2026
+# Process ID: 42196
+# Current directory: D:/lenet_project/vivado/LeNet_Zynq_System
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11748 D:\lenet_project\vivado\LeNet_Zynq_System\LeNet_Zynq_System.xpr
+# Log file: D:/lenet_project/vivado/LeNet_Zynq_System/vivado.log
+# Journal file: D:/lenet_project/vivado/LeNet_Zynq_System\vivado.jou
+# Running On: Ê±³Î, OS: Windows, CPU Frequency: 2495 MHz, CPU Physical cores: 32, Host memory: 34142 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.xpr
+update_compile_order -fileset sources_1
+open_bd_design {D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.srcs/sources_1/bd/lenet_system/lenet_system.bd}
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (50 MHz)} Clk_slave {/processing_system7_0/FCLK_CLK0 (50 MHz)} Clk_xbar {/processing_system7_0/FCLK_CLK0 (50 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/lenet_full_top_0/s_axi_control} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins lenet_full_top_0/s_axi_control]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:smartconnect:1.0 smartconnect_0
+endgroup
+set_property location {2 577 -593} [get_bd_cells smartconnect_0]
+set_property CONFIG.NUM_SI {4} [get_bd_cells smartconnect_0]
+connect_bd_intf_net [get_bd_intf_pins lenet_full_top_0/m_axi_gmem0] [get_bd_intf_pins smartconnect_0/S00_AXI]
+connect_bd_intf_net [get_bd_intf_pins lenet_full_top_0/m_axi_gmem1] [get_bd_intf_pins smartconnect_0/S01_AXI]
+connect_bd_intf_net [get_bd_intf_pins lenet_full_top_0/m_axi_gmem2] [get_bd_intf_pins smartconnect_0/S02_AXI]
+connect_bd_intf_net [get_bd_intf_pins lenet_full_top_0/m_axi_gmem3] [get_bd_intf_pins smartconnect_0/S03_AXI]
+connect_bd_intf_net [get_bd_intf_pins smartconnect_0/M00_AXI] [get_bd_intf_pins processing_system7_0/S_AXI_HP0]
+connect_bd_net [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins smartconnect_0/aclk]
+connect_bd_net [get_bd_pins proc_sys_reset_0/interconnect_aresetn] [get_bd_pins smartconnect_0/aresetn]
+save_bd_design
+assign_bd_address
+save_bd_design
+startgroup
+set_property CONFIG.PCW_FPGA0_PERIPHERAL_FREQMHZ {100} [get_bd_cells processing_system7_0]
+endgroup
+save_bd_design
+validate_bd_design
+delete_bd_objs [get_bd_nets proc_sys_reset_0_bus_struct_reset]
+connect_bd_net [get_bd_pins proc_sys_reset_0/interconnect_aresetn] [get_bd_pins lenet_full_top_0/ap_rst_n]
+validate_bd_design
+save_bd_design
+validate_bd_design -force
+make_wrapper -files [get_files D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.srcs/sources_1/bd/lenet_system/lenet_system.bd] -top
+add_files -norecurse d:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/hdl/lenet_system_wrapper.v
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+reset_run lenet_system_processing_system7_0_0_synth_1
+reset_run lenet_system_util_vector_logic_0_0_synth_1
+reset_run lenet_system_proc_sys_reset_0_0_synth_1
+reset_run lenet_system_smartconnect_0_0_synth_1
+reset_run lenet_system_auto_pc_0_synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+reset_run lenet_system_processing_system7_0_0_synth_1
+reset_run lenet_system_util_vector_logic_0_0_synth_1
+reset_run lenet_system_proc_sys_reset_0_0_synth_1
+reset_run lenet_system_lenet_full_top_0_0_synth_1
+reset_run lenet_system_smartconnect_0_0_synth_1
+reset_run lenet_system_auto_pc_0_synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+reset_run lenet_system_processing_system7_0_0_synth_1
+reset_run lenet_system_util_vector_logic_0_0_synth_1
+reset_run lenet_system_proc_sys_reset_0_0_synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1

@@ -1,0 +1,1671 @@
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 62, 
+                   Column: 21 }
+Function:        _ZN5lenet12_GLOBAL__N_113conv5x5_validILi1ELi32ELi32ELi6EEEvPKfS3_S3_Pf
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void lenet::(anonymous namespace)::generate_window_5x5<32, 32>(float const*, int, int, int, float*)'
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 12, 
+                       Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'void lenet::(anonymous namespace)::conv5x5_valid<1, 32, 32, 6>(float const*, float const*, float const*, float*)'
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 46, 
+                       Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 72, 
+                   Column: 25 }
+Function:        _ZN5lenet12_GLOBAL__N_113conv5x5_validILi1ELi32ELi32ELi6EEEvPKfS3_S3_Pf
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'lenet::(anonymous namespace)::mac_5x5(float const*, float const*, float)'
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 31, 
+                       Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'void lenet::(anonymous namespace)::conv5x5_valid<1, 32, 32, 6>(float const*, float const*, float const*, float*)'
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 46, 
+                       Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 62, 
+                   Column: 21 }
+Function:        _ZN5lenet12_GLOBAL__N_113conv5x5_validILi6ELi14ELi14ELi16EEEvPKfS3_S3_Pf
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void lenet::(anonymous namespace)::generate_window_5x5<14, 14>(float const*, int, int, int, float*)'
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 12, 
+                       Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'void lenet::(anonymous namespace)::conv5x5_valid<6, 14, 14, 16>(float const*, float const*, float const*, float*)'
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 46, 
+                       Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 72, 
+                   Column: 25 }
+Function:        _ZN5lenet12_GLOBAL__N_113conv5x5_validILi6ELi14ELi14ELi16EEEvPKfS3_S3_Pf
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'lenet::(anonymous namespace)::mac_5x5(float const*, float const*, float)'
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 31, 
+                       Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'void lenet::(anonymous namespace)::conv5x5_valid<6, 14, 14, 16>(float const*, float const*, float const*, float*)'
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 46, 
+                       Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 62, 
+                   Column: 21 }
+Function:        _ZN5lenet12_GLOBAL__N_113conv5x5_validILi16ELi5ELi5ELi120EEEvPKfS3_S3_Pf
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void lenet::(anonymous namespace)::generate_window_5x5<5, 5>(float const*, int, int, int, float*)'
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 12, 
+                       Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'void lenet::(anonymous namespace)::conv5x5_valid<16, 5, 5, 120>(float const*, float const*, float const*, float*)'
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 46, 
+                       Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 72, 
+                   Column: 25 }
+Function:        _ZN5lenet12_GLOBAL__N_113conv5x5_validILi16ELi5ELi5ELi120EEEvPKfS3_S3_Pf
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'lenet::(anonymous namespace)::mac_5x5(float const*, float const*, float)'
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 31, 
+                       Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'void lenet::(anonymous namespace)::conv5x5_valid<16, 5, 5, 120>(float const*, float const*, float const*, float*)'
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 46, 
+                       Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 268, 
+                   Column: 0 }
+Function:        lenet_full_top
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void lenet::(anonymous namespace)::conv5x5_valid<1, 32, 32, 6>(float const*, float const*, float const*, float*)'
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 46, 
+                       Column: 0 }
+  - String:          ''' into '''
+  - Caller:          lenet_full_top
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 268, 
+                       Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 268, 
+                   Column: 0 }
+Function:        lenet_full_top
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void lenet::(anonymous namespace)::relu_maxpool_2x2<6, 28, 28>(float const*, float*)'
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 86, 
+                       Column: 0 }
+  - String:          ''' into '''
+  - Caller:          lenet_full_top
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 268, 
+                       Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 268, 
+                   Column: 0 }
+Function:        lenet_full_top
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void lenet::(anonymous namespace)::conv5x5_valid<6, 14, 14, 16>(float const*, float const*, float const*, float*)'
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 46, 
+                       Column: 0 }
+  - String:          ''' into '''
+  - Caller:          lenet_full_top
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 268, 
+                       Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 268, 
+                   Column: 0 }
+Function:        lenet_full_top
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void lenet::(anonymous namespace)::relu_maxpool_2x2<16, 10, 10>(float const*, float*)'
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 86, 
+                       Column: 0 }
+  - String:          ''' into '''
+  - Caller:          lenet_full_top
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 268, 
+                       Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 268, 
+                   Column: 0 }
+Function:        lenet_full_top
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void lenet::(anonymous namespace)::conv5x5_valid<16, 5, 5, 120>(float const*, float const*, float const*, float*)'
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 46, 
+                       Column: 0 }
+  - String:          ''' into '''
+  - Caller:          lenet_full_top
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 268, 
+                       Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 268, 
+                   Column: 0 }
+Function:        lenet_full_top
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void lenet::(anonymous namespace)::relu_vector<120>(float const*, float*)'
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 124, 
+                       Column: 0 }
+  - String:          ''' into '''
+  - Caller:          lenet_full_top
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 268, 
+                       Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 268, 
+                   Column: 0 }
+Function:        lenet_full_top
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void lenet::(anonymous namespace)::dense<120, 84>(float const*, float const*, float const*, float*)'
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 137, 
+                       Column: 0 }
+  - String:          ''' into '''
+  - Caller:          lenet_full_top
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 268, 
+                       Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 268, 
+                   Column: 0 }
+Function:        lenet_full_top
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void lenet::(anonymous namespace)::relu_vector<84>(float const*, float*)'
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 124, 
+                       Column: 0 }
+  - String:          ''' into '''
+  - Caller:          lenet_full_top
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 268, 
+                       Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 268, 
+                   Column: 0 }
+Function:        lenet_full_top
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void lenet::(anonymous namespace)::dense<84, 10>(float const*, float const*, float const*, float*)'
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 137, 
+                       Column: 0 }
+  - String:          ''' into '''
+  - Caller:          lenet_full_top
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 268, 
+                       Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 18, 
+                   Column: 9 }
+Function:        lenet_full_top
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '5'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.body4.i.i.load.5
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - String:          ' '
+  - ArrayName:       feature_in
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        WINDOW_COL
+  - String:          ' '
+  - LoopLoc:         '../member_c_conv_hls/src/lenet_conv.cpp:18:9'
+  - String:          ' '
+  - Function:        lenet_full_top
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 268, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 35, 
+                   Column: 5 }
+Function:        lenet_full_top
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '25'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.body.i7.i.load.9
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep391seq
+  - String:          ' '
+  - ArrayName:       weight
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        MAC_LOOP
+  - String:          ' '
+  - LoopLoc:         '../member_c_conv_hls/src/lenet_conv.cpp:35:5'
+  - String:          ' '
+  - Function:        lenet_full_top
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 268, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 51, 
+                   Column: 5 }
+Function:        lenet_full_top
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '6'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          OUTPUT_ROW.i.load.9
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        biasseq
+  - String:          ' '
+  - ArrayName:       bias
+  - String:          ' '
+  - BundleName:      gmem2
+  - String:          ' '
+  - LoopName:        OUTPUT_CHANNEL
+  - String:          ' '
+  - LoopLoc:         '../member_c_conv_hls/src/lenet_conv.cpp:51:5'
+  - String:          ' '
+  - Function:        lenet_full_top
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 268, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 59, 
+                   Column: 17 }
+Function:        lenet_full_top
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '150'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.body.i7.i55.load.11
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep392seq
+  - String:          ' '
+  - ArrayName:       weight
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        INPUT_CHANNEL
+  - String:          ' '
+  - LoopLoc:         '../member_c_conv_hls/src/lenet_conv.cpp:59:17'
+  - String:          ' '
+  - Function:        lenet_full_top
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 268, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 51, 
+                   Column: 5 }
+Function:        lenet_full_top
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '16'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          OUTPUT_ROW.i16.load.12
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep393seq
+  - String:          ' '
+  - ArrayName:       bias
+  - String:          ' '
+  - BundleName:      gmem2
+  - String:          ' '
+  - LoopName:        OUTPUT_CHANNEL
+  - String:          ' '
+  - LoopLoc:         '../member_c_conv_hls/src/lenet_conv.cpp:51:5'
+  - String:          ' '
+  - Function:        lenet_full_top
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 268, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 51, 
+                   Column: 5 }
+Function:        lenet_full_top
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '48000'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.body.i7.i155.load.11
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep394seq
+  - String:          ' '
+  - ArrayName:       weight
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        OUTPUT_CHANNEL
+  - String:          ' '
+  - LoopLoc:         '../member_c_conv_hls/src/lenet_conv.cpp:51:5'
+  - String:          ' '
+  - Function:        lenet_full_top
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 268, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 51, 
+                   Column: 5 }
+Function:        lenet_full_top
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '120'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          OUTPUT_ROW.i119.load.9
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep395seq
+  - String:          ' '
+  - ArrayName:       bias
+  - String:          ' '
+  - BundleName:      gmem2
+  - String:          ' '
+  - LoopName:        OUTPUT_CHANNEL
+  - String:          ' '
+  - LoopLoc:         '../member_c_conv_hls/src/lenet_conv.cpp:51:5'
+  - String:          ' '
+  - Function:        lenet_full_top
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 268, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 139, 
+                   Column: 5 }
+Function:        lenet_full_top
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '10080'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.inc.i173.load.11
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep396seq
+  - String:          ' '
+  - ArrayName:       weight
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        DENSE_OUTPUT
+  - String:          ' '
+  - LoopLoc:         '../member_c_conv_hls/src/lenet_conv.cpp:139:5'
+  - String:          ' '
+  - Function:        lenet_full_top
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 268, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 139, 
+                   Column: 5 }
+Function:        lenet_full_top
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '84'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          DENSE_INPUT.i.load.6
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep397seq
+  - String:          ' '
+  - ArrayName:       bias
+  - String:          ' '
+  - BundleName:      gmem2
+  - String:          ' '
+  - LoopName:        DENSE_OUTPUT
+  - String:          ' '
+  - LoopLoc:         '../member_c_conv_hls/src/lenet_conv.cpp:139:5'
+  - String:          ' '
+  - Function:        lenet_full_top
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 268, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 139, 
+                   Column: 5 }
+Function:        lenet_full_top
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '840'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.inc.i200.load.11
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep398seq
+  - String:          ' '
+  - ArrayName:       weight
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        DENSE_OUTPUT
+  - String:          ' '
+  - LoopLoc:         '../member_c_conv_hls/src/lenet_conv.cpp:139:5'
+  - String:          ' '
+  - Function:        lenet_full_top
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 268, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 139, 
+                   Column: 5 }
+Function:        lenet_full_top
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '10'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          DENSE_INPUT.i188.load.6
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep399seq
+  - String:          ' '
+  - ArrayName:       bias
+  - String:          ' '
+  - BundleName:      gmem2
+  - String:          ' '
+  - LoopName:        DENSE_OUTPUT
+  - String:          ' '
+  - LoopLoc:         '../member_c_conv_hls/src/lenet_conv.cpp:139:5'
+  - String:          ' '
+  - Function:        lenet_full_top
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 268, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 139, 
+                   Column: 5 }
+Function:        lenet_full_top
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of length '
+  - Length:          '10'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.inc13.i204.store.3
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        feature_outseq
+  - String:          ' '
+  - ArrayName:       feature_out
+  - String:          ' '
+  - BundleName:      gmem3
+  - String:          ' '
+  - LoopName:        DENSE_OUTPUT
+  - String:          ' '
+  - LoopLoc:         '../member_c_conv_hls/src/lenet_conv.cpp:139:5'
+  - String:          ' '
+  - Function:        lenet_full_top
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 268, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 18, 
+                   Column: 9 }
+Function:        lenet_full_top
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - String:          ' '
+  - ArrayName:       feature_in
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        WINDOW_ROW
+  - String:          ' '
+  - LoopLoc:         '../member_c_conv_hls/src/lenet_conv.cpp:16:5'
+  - String:          ' '
+  - Function:        lenet_full_top
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 268, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 35, 
+                   Column: 5 }
+Function:        lenet_full_top
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep391seq
+  - String:          ' '
+  - ArrayName:       weight
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        OUTPUT_COL
+  - String:          ' '
+  - LoopLoc:         '../member_c_conv_hls/src/lenet_conv.cpp:55:13'
+  - String:          ' '
+  - Function:        lenet_full_top
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 268, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 59, 
+                   Column: 17 }
+Function:        lenet_full_top
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep392seq
+  - String:          ' '
+  - ArrayName:       weight
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        OUTPUT_COL
+  - String:          ' '
+  - LoopLoc:         '../member_c_conv_hls/src/lenet_conv.cpp:55:13'
+  - String:          ' '
+  - Function:        lenet_full_top
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 268, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 139, 
+                   Column: 5 }
+Function:        lenet_full_top
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        feature_outseq
+  - String:          ' '
+  - ArrayName:       feature_out
+  - String:          ' '
+  - BundleName:      gmem3
+  - String:          ' '
+  - LoopName:        DENSE_OUTPUT
+  - String:          ' '
+  - LoopLoc:         '../member_c_conv_hls/src/lenet_conv.cpp:139:5'
+  - String:          ' '
+  - Function:        lenet_full_top
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 268, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 139, 
+                   Column: 5 }
+Function:        lenet_full_top
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep398seq
+  - String:          ' '
+  - ArrayName:       weight
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        DENSE_INPUT
+  - String:          ' '
+  - LoopLoc:         '../member_c_conv_hls/src/lenet_conv.cpp:143:9'
+  - String:          ' '
+  - Function:        lenet_full_top
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 268, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 139, 
+                   Column: 5 }
+Function:        lenet_full_top
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep399seq
+  - String:          ' '
+  - ArrayName:       bias
+  - String:          ' '
+  - BundleName:      gmem2
+  - String:          ' '
+  - LoopName:        DENSE_OUTPUT
+  - String:          ' '
+  - LoopLoc:         '../member_c_conv_hls/src/lenet_conv.cpp:139:5'
+  - String:          ' '
+  - Function:        lenet_full_top
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 268, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 139, 
+                   Column: 5 }
+Function:        lenet_full_top
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep396seq
+  - String:          ' '
+  - ArrayName:       weight
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        DENSE_INPUT
+  - String:          ' '
+  - LoopLoc:         '../member_c_conv_hls/src/lenet_conv.cpp:143:9'
+  - String:          ' '
+  - Function:        lenet_full_top
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 268, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 139, 
+                   Column: 5 }
+Function:        lenet_full_top
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep397seq
+  - String:          ' '
+  - ArrayName:       bias
+  - String:          ' '
+  - BundleName:      gmem2
+  - String:          ' '
+  - LoopName:        DENSE_OUTPUT
+  - String:          ' '
+  - LoopLoc:         '../member_c_conv_hls/src/lenet_conv.cpp:139:5'
+  - String:          ' '
+  - Function:        lenet_full_top
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 268, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 51, 
+                   Column: 5 }
+Function:        lenet_full_top
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep394seq
+  - String:          ' '
+  - ArrayName:       weight
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        MAC_LOOP
+  - String:          ' '
+  - LoopLoc:         '../member_c_conv_hls/src/lenet_conv.cpp:35:5'
+  - String:          ' '
+  - Function:        lenet_full_top
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 268, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 51, 
+                   Column: 5 }
+Function:        lenet_full_top
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep395seq
+  - String:          ' '
+  - ArrayName:       bias
+  - String:          ' '
+  - BundleName:      gmem2
+  - String:          ' '
+  - LoopName:        OUTPUT_CHANNEL
+  - String:          ' '
+  - LoopLoc:         '../member_c_conv_hls/src/lenet_conv.cpp:51:5'
+  - String:          ' '
+  - Function:        lenet_full_top
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 268, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 59, 
+                   Column: 17 }
+Function:        lenet_full_top
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep392seq
+  - String:          ' '
+  - ArrayName:       weight
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        MAC_LOOP
+  - String:          ' '
+  - LoopLoc:         '../member_c_conv_hls/src/lenet_conv.cpp:35:5'
+  - String:          ' '
+  - Function:        lenet_full_top
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 268, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 51, 
+                   Column: 5 }
+Function:        lenet_full_top
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep393seq
+  - String:          ' '
+  - ArrayName:       bias
+  - String:          ' '
+  - BundleName:      gmem2
+  - String:          ' '
+  - LoopName:        OUTPUT_CHANNEL
+  - String:          ' '
+  - LoopLoc:         '../member_c_conv_hls/src/lenet_conv.cpp:51:5'
+  - String:          ' '
+  - Function:        lenet_full_top
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 268, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 35, 
+                   Column: 5 }
+Function:        lenet_full_top
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep391seq
+  - String:          ' '
+  - ArrayName:       weight
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        MAC_LOOP
+  - String:          ' '
+  - LoopLoc:         '../member_c_conv_hls/src/lenet_conv.cpp:35:5'
+  - String:          ' '
+  - Function:        lenet_full_top
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 268, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 18, 
+                   Column: 9 }
+Function:        lenet_full_top
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - String:          ' '
+  - ArrayName:       feature_in
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        WINDOW_COL
+  - String:          ' '
+  - LoopLoc:         '../member_c_conv_hls/src/lenet_conv.cpp:18:9'
+  - String:          ' '
+  - Function:        lenet_full_top
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 268, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 51, 
+                   Column: 5 }
+Function:        lenet_full_top
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        biasseq
+  - String:          ' '
+  - ArrayName:       bias
+  - String:          ' '
+  - BundleName:      gmem2
+  - String:          ' '
+  - LoopName:        OUTPUT_CHANNEL
+  - String:          ' '
+  - LoopLoc:         '../member_c_conv_hls/src/lenet_conv.cpp:51:5'
+  - String:          ' '
+  - Function:        lenet_full_top
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 268, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 51, 
+                   Column: 5 }
+Function:        lenet_full_top
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '6'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem2
+  - String:          ' '
+  - LoopName:        OUTPUT_CHANNEL
+  - String:          ' '
+  - LoopLoc:         '../member_c_conv_hls/src/lenet_conv.cpp:51:5'
+  - String:          ' '
+  - Function:        lenet_full_top
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 268, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 51, 
+                   Column: 5 }
+Function:        lenet_full_top
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '6'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        OUTPUT_CHANNEL
+  - String:          '''('
+  - LoopLoc:         '../member_c_conv_hls/src/lenet_conv.cpp:51:5'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem2
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 18, 
+                   Column: 9 }
+Function:        lenet_full_top
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '5'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq1
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        WINDOW_COL
+  - String:          ' '
+  - LoopLoc:         '../member_c_conv_hls/src/lenet_conv.cpp:18:9'
+  - String:          ' '
+  - Function:        lenet_full_top
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 268, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 18, 
+                   Column: 9 }
+Function:        lenet_full_top
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '5'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        WINDOW_COL
+  - String:          '''('
+  - LoopLoc:         '../member_c_conv_hls/src/lenet_conv.cpp:18:9'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem0
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 35, 
+                   Column: 5 }
+Function:        lenet_full_top
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '25'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq2
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        MAC_LOOP
+  - String:          ' '
+  - LoopLoc:         '../member_c_conv_hls/src/lenet_conv.cpp:35:5'
+  - String:          ' '
+  - Function:        lenet_full_top
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 268, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 35, 
+                   Column: 5 }
+Function:        lenet_full_top
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '25'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        MAC_LOOP
+  - String:          '''('
+  - LoopLoc:         '../member_c_conv_hls/src/lenet_conv.cpp:35:5'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem1
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 51, 
+                   Column: 5 }
+Function:        lenet_full_top
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '16'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq3
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem2
+  - String:          ' '
+  - LoopName:        OUTPUT_CHANNEL
+  - String:          ' '
+  - LoopLoc:         '../member_c_conv_hls/src/lenet_conv.cpp:51:5'
+  - String:          ' '
+  - Function:        lenet_full_top
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 268, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 51, 
+                   Column: 5 }
+Function:        lenet_full_top
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '16'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        OUTPUT_CHANNEL
+  - String:          '''('
+  - LoopLoc:         '../member_c_conv_hls/src/lenet_conv.cpp:51:5'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem2
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 59, 
+                   Column: 17 }
+Function:        lenet_full_top
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '150'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq4
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        INPUT_CHANNEL
+  - String:          ' '
+  - LoopLoc:         '../member_c_conv_hls/src/lenet_conv.cpp:59:17'
+  - String:          ' '
+  - Function:        lenet_full_top
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 268, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 59, 
+                   Column: 17 }
+Function:        lenet_full_top
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '150'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        INPUT_CHANNEL
+  - String:          '''('
+  - LoopLoc:         '../member_c_conv_hls/src/lenet_conv.cpp:59:17'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem1
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 51, 
+                   Column: 5 }
+Function:        lenet_full_top
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '48000'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq5
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        OUTPUT_CHANNEL
+  - String:          ' '
+  - LoopLoc:         '../member_c_conv_hls/src/lenet_conv.cpp:51:5'
+  - String:          ' '
+  - Function:        lenet_full_top
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 268, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 51, 
+                   Column: 5 }
+Function:        lenet_full_top
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '48000'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        OUTPUT_CHANNEL
+  - String:          '''('
+  - LoopLoc:         '../member_c_conv_hls/src/lenet_conv.cpp:51:5'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem1
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 51, 
+                   Column: 5 }
+Function:        lenet_full_top
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '120'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq6
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem2
+  - String:          ' '
+  - LoopName:        OUTPUT_CHANNEL
+  - String:          ' '
+  - LoopLoc:         '../member_c_conv_hls/src/lenet_conv.cpp:51:5'
+  - String:          ' '
+  - Function:        lenet_full_top
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 268, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 51, 
+                   Column: 5 }
+Function:        lenet_full_top
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '120'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        OUTPUT_CHANNEL
+  - String:          '''('
+  - LoopLoc:         '../member_c_conv_hls/src/lenet_conv.cpp:51:5'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem2
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 139, 
+                   Column: 5 }
+Function:        lenet_full_top
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '10080'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq7
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        DENSE_OUTPUT
+  - String:          ' '
+  - LoopLoc:         '../member_c_conv_hls/src/lenet_conv.cpp:139:5'
+  - String:          ' '
+  - Function:        lenet_full_top
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 268, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 139, 
+                   Column: 5 }
+Function:        lenet_full_top
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '10080'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        DENSE_OUTPUT
+  - String:          '''('
+  - LoopLoc:         '../member_c_conv_hls/src/lenet_conv.cpp:139:5'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem1
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 139, 
+                   Column: 5 }
+Function:        lenet_full_top
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '84'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq8
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem2
+  - String:          ' '
+  - LoopName:        DENSE_OUTPUT
+  - String:          ' '
+  - LoopLoc:         '../member_c_conv_hls/src/lenet_conv.cpp:139:5'
+  - String:          ' '
+  - Function:        lenet_full_top
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 268, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 139, 
+                   Column: 5 }
+Function:        lenet_full_top
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '84'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        DENSE_OUTPUT
+  - String:          '''('
+  - LoopLoc:         '../member_c_conv_hls/src/lenet_conv.cpp:139:5'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem2
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 139, 
+                   Column: 5 }
+Function:        lenet_full_top
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '840'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq9
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        DENSE_OUTPUT
+  - String:          ' '
+  - LoopLoc:         '../member_c_conv_hls/src/lenet_conv.cpp:139:5'
+  - String:          ' '
+  - Function:        lenet_full_top
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 268, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 139, 
+                   Column: 5 }
+Function:        lenet_full_top
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '840'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        DENSE_OUTPUT
+  - String:          '''('
+  - LoopLoc:         '../member_c_conv_hls/src/lenet_conv.cpp:139:5'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem1
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 139, 
+                   Column: 5 }
+Function:        lenet_full_top
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '10'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq10
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem2
+  - String:          ' '
+  - LoopName:        DENSE_OUTPUT
+  - String:          ' '
+  - LoopLoc:         '../member_c_conv_hls/src/lenet_conv.cpp:139:5'
+  - String:          ' '
+  - Function:        lenet_full_top
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 268, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 139, 
+                   Column: 5 }
+Function:        lenet_full_top
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '10'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        DENSE_OUTPUT
+  - String:          '''('
+  - LoopLoc:         '../member_c_conv_hls/src/lenet_conv.cpp:139:5'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem2
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 139, 
+                   Column: 5 }
+Function:        lenet_full_top
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '10'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq11
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem3
+  - String:          ' '
+  - LoopName:        DENSE_OUTPUT
+  - String:          ' '
+  - LoopLoc:         '../member_c_conv_hls/src/lenet_conv.cpp:139:5'
+  - String:          ' '
+  - Function:        lenet_full_top
+    DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 268, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ../member_c_conv_hls/src/lenet_conv.cpp, Line: 139, 
+                   Column: 5 }
+Function:        lenet_full_top
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '10'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        DENSE_OUTPUT
+  - String:          '''('
+  - LoopLoc:         '../member_c_conv_hls/src/lenet_conv.cpp:139:5'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem3
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...

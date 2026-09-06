@@ -1,0 +1,296 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Sun Sep  6 16:54:19 2026
+# Process ID: 33948
+# Current directory: D:/lenet_project/vivado/LeNet_Zynq_System
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent36820 D:\lenet_project\vivado\LeNet_Zynq_System\LeNet_Zynq_System.xpr
+# Log file: D:/lenet_project/vivado/LeNet_Zynq_System/vivado.log
+# Journal file: D:/lenet_project/vivado/LeNet_Zynq_System\vivado.jou
+# Running On: Benedicta, OS: Windows, CPU Frequency: 2495 MHz, CPU Physical cores: 32, Host memory: 34142 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.xpr
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at D:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at D:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at D:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at D:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.0 available at D:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at D:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at D:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at D:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at D:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/lenet_project/hls/lenet_full_hls/solution1/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2022.2/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_processing_system7_0_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_processing_system7_0_0/lenet_system_processing_system7_0_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_processing_system7_0_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_processing_system7_0_0/lenet_system_processing_system7_0_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_processing_system7_0_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_processing_system7_0_0/lenet_system_processing_system7_0_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_processing_system7_0_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_processing_system7_0_0/lenet_system_processing_system7_0_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_processing_system7_0_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_processing_system7_0_0/lenet_system_processing_system7_0_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_proc_sys_reset_0_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_proc_sys_reset_0_0/lenet_system_proc_sys_reset_0_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_proc_sys_reset_0_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_proc_sys_reset_0_0/lenet_system_proc_sys_reset_0_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_proc_sys_reset_0_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_proc_sys_reset_0_0/lenet_system_proc_sys_reset_0_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_proc_sys_reset_0_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_proc_sys_reset_0_0/lenet_system_proc_sys_reset_0_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_proc_sys_reset_0_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_proc_sys_reset_0_0/lenet_system_proc_sys_reset_0_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_util_vector_logic_0_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_util_vector_logic_0_0/lenet_system_util_vector_logic_0_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_util_vector_logic_0_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_util_vector_logic_0_0/lenet_system_util_vector_logic_0_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_util_vector_logic_0_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_util_vector_logic_0_0/lenet_system_util_vector_logic_0_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_util_vector_logic_0_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_util_vector_logic_0_0/lenet_system_util_vector_logic_0_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_util_vector_logic_0_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_util_vector_logic_0_0/lenet_system_util_vector_logic_0_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_lenet_full_top_0_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_lenet_full_top_0_0/lenet_system_lenet_full_top_0_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_lenet_full_top_0_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_lenet_full_top_0_0/lenet_system_lenet_full_top_0_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_lenet_full_top_0_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_lenet_full_top_0_0/lenet_system_lenet_full_top_0_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_lenet_full_top_0_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_lenet_full_top_0_0/lenet_system_lenet_full_top_0_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_lenet_full_top_0_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_lenet_full_top_0_0/lenet_system_lenet_full_top_0_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_auto_pc_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_auto_pc_0/lenet_system_auto_pc_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_auto_pc_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_auto_pc_0/lenet_system_auto_pc_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_auto_pc_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_auto_pc_0/lenet_system_auto_pc_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_auto_pc_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_auto_pc_0/lenet_system_auto_pc_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_auto_pc_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_auto_pc_0/lenet_system_auto_pc_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_smartconnect_0_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_smartconnect_0_0/lenet_system_smartconnect_0_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_smartconnect_0_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_smartconnect_0_0/lenet_system_smartconnect_0_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_smartconnect_0_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_smartconnect_0_0/lenet_system_smartconnect_0_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_smartconnect_0_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_smartconnect_0_0/lenet_system_smartconnect_0_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_smartconnect_0_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_smartconnect_0_0/lenet_system_smartconnect_0_0_sim_netlist.vhdl'. Please regenerate to continue.
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:10 . Memory (MB): peak = 1903.703 ; gain = 245.980
+update_compile_order -fileset sources_1
+reset_run synth_1
+reset_run lenet_system_processing_system7_0_0_synth_1
+reset_run lenet_system_util_vector_logic_0_0_synth_1
+reset_run lenet_system_proc_sys_reset_0_0_synth_1
+reset_run lenet_system_lenet_full_top_0_0_synth_1
+reset_run lenet_system_smartconnect_0_0_synth_1
+reset_run lenet_system_auto_pc_0_synth_1
+launch_runs synth_1
+INFO: [IP_Flow 19-6930] IPCACHE: runCacheChecks() number of threads = 8
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP lenet_system_auto_pc_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP lenet_system_lenet_full_top_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP lenet_system_proc_sys_reset_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP lenet_system_smartconnect_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP lenet_system_util_vector_logic_0_0
+INFO: [IP_Flow 19-8020] IPCACHE: runCacheChecks() calling threadPool finishWork()
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: lenet_system_auto_pc_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: lenet_system_lenet_full_top_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: lenet_system_proc_sys_reset_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: lenet_system_util_vector_logic_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: lenet_system_smartconnect_0_0
+WARNING: [Vivado 12-7122] Auto Incremental Compile:: No reference checkpoint was found in run synth_1. Auto-incremental flow will not be run, the standard flow will be run instead.
+[Sun Sep  6 16:55:59 2026] Launched lenet_system_processing_system7_0_0_synth_1, lenet_system_util_vector_logic_0_0_synth_1, lenet_system_proc_sys_reset_0_0_synth_1, lenet_system_lenet_full_top_0_0_synth_1, lenet_system_smartconnect_0_0_synth_1, lenet_system_auto_pc_0_synth_1...
+Run output will be captured here:
+lenet_system_processing_system7_0_0_synth_1: D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.runs/lenet_system_processing_system7_0_0_synth_1/runme.log
+lenet_system_util_vector_logic_0_0_synth_1: D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.runs/lenet_system_util_vector_logic_0_0_synth_1/runme.log
+lenet_system_proc_sys_reset_0_0_synth_1: D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.runs/lenet_system_proc_sys_reset_0_0_synth_1/runme.log
+lenet_system_lenet_full_top_0_0_synth_1: D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.runs/lenet_system_lenet_full_top_0_0_synth_1/runme.log
+lenet_system_smartconnect_0_0_synth_1: D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.runs/lenet_system_smartconnect_0_0_synth_1/runme.log
+lenet_system_auto_pc_0_synth_1: D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.runs/lenet_system_auto_pc_0_synth_1/runme.log
+[Sun Sep  6 16:55:59 2026] Launched synth_1...
+Run output will be captured here: D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.runs/synth_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg400-1
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-454] Reading design checkpoint 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_lenet_full_top_0_0/lenet_system_lenet_full_top_0_0.dcp' for cell 'lenet_system_i/lenet_full_top_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_proc_sys_reset_0_0/lenet_system_proc_sys_reset_0_0.dcp' for cell 'lenet_system_i/proc_sys_reset_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_processing_system7_0_0/lenet_system_processing_system7_0_0.dcp' for cell 'lenet_system_i/processing_system7_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_smartconnect_0_0/lenet_system_smartconnect_0_0.dcp' for cell 'lenet_system_i/smartconnect_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_util_vector_logic_0_0/lenet_system_util_vector_logic_0_0.dcp' for cell 'lenet_system_i/util_vector_logic_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_auto_pc_0/lenet_system_auto_pc_0.dcp' for cell 'lenet_system_i/ps7_0_axi_periph/s00_couplers/auto_pc'
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.480 . Memory (MB): peak = 2371.219 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 858 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [d:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_processing_system7_0_0/lenet_system_processing_system7_0_0.xdc] for cell 'lenet_system_i/processing_system7_0/inst'
+Finished Parsing XDC File [d:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_processing_system7_0_0/lenet_system_processing_system7_0_0.xdc] for cell 'lenet_system_i/processing_system7_0/inst'
+Parsing XDC File [d:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_proc_sys_reset_0_0/lenet_system_proc_sys_reset_0_0_board.xdc] for cell 'lenet_system_i/proc_sys_reset_0/U0'
+Finished Parsing XDC File [d:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_proc_sys_reset_0_0/lenet_system_proc_sys_reset_0_0_board.xdc] for cell 'lenet_system_i/proc_sys_reset_0/U0'
+Parsing XDC File [d:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_proc_sys_reset_0_0/lenet_system_proc_sys_reset_0_0.xdc] for cell 'lenet_system_i/proc_sys_reset_0/U0'
+Finished Parsing XDC File [d:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_proc_sys_reset_0_0/lenet_system_proc_sys_reset_0_0.xdc] for cell 'lenet_system_i/proc_sys_reset_0/U0'
+Parsing XDC File [d:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_smartconnect_0_0/bd_0/ip/ip_1/bd_659c_psr_aclk_0_board.xdc] for cell 'lenet_system_i/smartconnect_0/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [d:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_smartconnect_0_0/bd_0/ip/ip_1/bd_659c_psr_aclk_0_board.xdc] for cell 'lenet_system_i/smartconnect_0/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [d:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_smartconnect_0_0/bd_0/ip/ip_1/bd_659c_psr_aclk_0.xdc] for cell 'lenet_system_i/smartconnect_0/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [d:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_smartconnect_0_0/bd_0/ip/ip_1/bd_659c_psr_aclk_0.xdc] for cell 'lenet_system_i/smartconnect_0/inst/clk_map/psr_aclk/U0'
+INFO: [Project 1-1714] 59 XPM XDC files have been applied to the design.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2580.699 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 167 instances were transformed.
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 1 instance 
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 166 instances
+
+open_run: Time (s): cpu = 00:00:19 ; elapsed = 00:00:13 . Memory (MB): peak = 2767.637 ; gain = 823.535
+report_utilization -name utilization_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+launch_runs impl_1
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.092 . Memory (MB): peak = 3430.336 ; gain = 0.000
+WARNING: [Common 17-210] 'write_hwdef' is deprecated.
+[Sun Sep  6 17:19:01 2026] Launched impl_1...
+Run output will be captured here: D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.runs/impl_1/runme.log
+close_design
+open_run impl_1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.437 . Memory (MB): peak = 3488.789 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 848 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF Files: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 3488.789 ; gain = 0.000
+Restored from archive | CPU: 2.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 3488.789 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 3488.789 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 165 instances were transformed.
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 1 instance 
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 164 instances
+
+open_run: Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 3488.789 ; gain = 0.000
+open_report: Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 3585.359 ; gain = 96.570
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg400-1
+INFO: [Project 1-454] Reading design checkpoint 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_lenet_full_top_0_0/lenet_system_lenet_full_top_0_0.dcp' for cell 'lenet_system_i/lenet_full_top_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_proc_sys_reset_0_0/lenet_system_proc_sys_reset_0_0.dcp' for cell 'lenet_system_i/proc_sys_reset_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_processing_system7_0_0/lenet_system_processing_system7_0_0.dcp' for cell 'lenet_system_i/processing_system7_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_smartconnect_0_0/lenet_system_smartconnect_0_0.dcp' for cell 'lenet_system_i/smartconnect_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_util_vector_logic_0_0/lenet_system_util_vector_logic_0_0.dcp' for cell 'lenet_system_i/util_vector_logic_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_auto_pc_0/lenet_system_auto_pc_0.dcp' for cell 'lenet_system_i/ps7_0_axi_periph/s00_couplers/auto_pc'
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.455 . Memory (MB): peak = 3726.203 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 858 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [d:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_processing_system7_0_0/lenet_system_processing_system7_0_0.xdc] for cell 'lenet_system_i/processing_system7_0/inst'
+Finished Parsing XDC File [d:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_processing_system7_0_0/lenet_system_processing_system7_0_0.xdc] for cell 'lenet_system_i/processing_system7_0/inst'
+Parsing XDC File [d:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_proc_sys_reset_0_0/lenet_system_proc_sys_reset_0_0_board.xdc] for cell 'lenet_system_i/proc_sys_reset_0/U0'
+Finished Parsing XDC File [d:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_proc_sys_reset_0_0/lenet_system_proc_sys_reset_0_0_board.xdc] for cell 'lenet_system_i/proc_sys_reset_0/U0'
+Parsing XDC File [d:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_proc_sys_reset_0_0/lenet_system_proc_sys_reset_0_0.xdc] for cell 'lenet_system_i/proc_sys_reset_0/U0'
+Finished Parsing XDC File [d:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_proc_sys_reset_0_0/lenet_system_proc_sys_reset_0_0.xdc] for cell 'lenet_system_i/proc_sys_reset_0/U0'
+Parsing XDC File [d:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_smartconnect_0_0/bd_0/ip/ip_1/bd_659c_psr_aclk_0_board.xdc] for cell 'lenet_system_i/smartconnect_0/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [d:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_smartconnect_0_0/bd_0/ip/ip_1/bd_659c_psr_aclk_0_board.xdc] for cell 'lenet_system_i/smartconnect_0/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [d:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_smartconnect_0_0/bd_0/ip/ip_1/bd_659c_psr_aclk_0.xdc] for cell 'lenet_system_i/smartconnect_0/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [d:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_smartconnect_0_0/bd_0/ip/ip_1/bd_659c_psr_aclk_0.xdc] for cell 'lenet_system_i/smartconnect_0/inst/clk_map/psr_aclk/U0'
+INFO: [Project 1-1714] 59 XPM XDC files have been applied to the design.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 3913.629 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 167 instances were transformed.
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 1 instance 
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 166 instances
+
+open_run: Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 3997.805 ; gain = 322.441
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+current_design impl_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_2
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+report_utilization -name utilization_1
+report_power -name {power_1}
+Command: report_power -name power_1
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+0 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_power: Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 4345.312 ; gain = 39.902
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+report_drc -name drc_1 -ruledecks {default}
+Command: report_drc -name drc_1 -ruledecks default
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+report_drc completed successfully
+archive_project D:/lenet_project/handoff/LeNet_Zynq_System_A_Baseline_2022_2.xpr.zip -temp_dir D:/lenet_project/vivado/LeNet_Zynq_System/.Xil/Vivado-33948-Benedicta -force -include_local_ip_cache -include_config_settings
+INFO: [Coretcl 2-137] starting archive...
+INFO: [Coretcl 2-1499] Saving project copy to temporary location 'D:/lenet_project/vivado/LeNet_Zynq_System/.Xil/Vivado-33948-Benedicta' for archiving project
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/lenet_project/hls/lenet_full_hls/solution1/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2022.2/data/ip'.
+INFO: [Coretcl 2-1211] Creating project copy for archival...
+INFO: [Coretcl 2-1213] Including run results for 'synth_1'
+INFO: [Coretcl 2-1213] Including run results for 'lenet_system_processing_system7_0_0_synth_1'
+INFO: [Coretcl 2-1213] Including run results for 'lenet_system_util_vector_logic_0_0_synth_1'
+INFO: [Coretcl 2-1213] Including run results for 'lenet_system_proc_sys_reset_0_0_synth_1'
+INFO: [Coretcl 2-1213] Including run results for 'lenet_system_lenet_full_top_0_0_synth_1'
+INFO: [Coretcl 2-1213] Including run results for 'lenet_system_smartconnect_0_0_synth_1'
+INFO: [Coretcl 2-1213] Including run results for 'lenet_system_auto_pc_0_synth_1'
+INFO: [Coretcl 2-1213] Including run results for 'impl_1'
+INFO: [Coretcl 2-133] re-setting run 'lenet_system_processing_system7_0_0_impl_1'...
+INFO: [Coretcl 2-133] re-setting run 'lenet_system_util_vector_logic_0_0_impl_1'...
+INFO: [Coretcl 2-133] re-setting run 'lenet_system_proc_sys_reset_0_0_impl_1'...
+INFO: [Coretcl 2-133] re-setting run 'lenet_system_lenet_full_top_0_0_impl_1'...
+INFO: [Coretcl 2-133] re-setting run 'lenet_system_smartconnect_0_0_impl_1'...
+INFO: [Coretcl 2-133] re-setting run 'lenet_system_auto_pc_0_impl_1'...
+INFO: [Coretcl 2-1212] Importing remotely added design sources and verilog include files (if any)...
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'lenet_system_auto_pc_0'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'lenet_system_auto_pc_0'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'lenet_system_lenet_full_top_0_0'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'lenet_system_lenet_full_top_0_0'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'lenet_system_proc_sys_reset_0_0'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'lenet_system_proc_sys_reset_0_0'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'lenet_system_processing_system7_0_0'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'lenet_system_processing_system7_0_0'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'lenet_system_smartconnect_0_0'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'lenet_system_smartconnect_0_0'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'lenet_system_util_vector_logic_0_0'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'lenet_system_util_vector_logic_0_0'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'sources_1'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'sources_1'
+INFO: [Coretcl 2-1209] Adding archive summary file to the project...
+INFO: [Coretcl 2-1214] Preparing project files for archive...
+INFO: [Coretcl 2-1210] Compressing project files and data...
+INFO: [Coretcl 2-1215] Project archived (D:/lenet_project/handoff/LeNet_Zynq_System_A_Baseline_2022_2.xpr.zip)
+INFO: [Coretcl 2-1216] To view the archive summary log in GUI, double click on 'Design Sources->Text->archive_project_summary.txt', or open this file from the archived project directory.
+archive_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:23 . Memory (MB): peak = 4504.098 ; gain = 24.504
+open_bd_design {D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.srcs/sources_1/bd/lenet_system/lenet_system.bd}
+Reading block design file <D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.srcs/sources_1/bd/lenet_system/lenet_system.bd>...
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_0
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_0
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_0
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_1
+Adding component instance block -- user.org:hls:lenet_full_top:1.0 - lenet_full_top_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:smartconnect:1.0 - smartconnect_0
+Successfully read diagram <lenet_system> from block design file <D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.srcs/sources_1/bd/lenet_system/lenet_system.bd>

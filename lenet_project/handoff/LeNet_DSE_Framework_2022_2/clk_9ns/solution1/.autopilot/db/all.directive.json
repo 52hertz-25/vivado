@@ -1,0 +1,18 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [{
+          "functionName": "lenet_full_top",
+          "label": "",
+          "functionLabel": "",
+          "id": "1",
+          "sourceFile": "D:\/lenet_project\/handoff\/LeNet_DSE_Framework_2022_2\/LeNet_DSE_Framework_2022_2\/scripts\/run_dse.tcl",
+          "sourceLine": "11",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "lenet_full_top"
+              }]
+          }
+        }]
+    }]}

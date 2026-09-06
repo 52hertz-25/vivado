@@ -1,0 +1,4 @@
+D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/variants/mac_unroll_5/lenet_conv.cpp:35:9: warning: Only for/while loops support the 'Unroll ' [-Wignored-hls-attributes]
+#pragma HLS UNROLL factor=5
+        ^~~~~~~~~~~~~~~~~~~
+1 warning generated.

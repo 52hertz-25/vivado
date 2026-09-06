@@ -1,0 +1,5 @@
+D:\lenet_project\handoff\LeNet_DSE_Framework_2022_2\LeNet_DSE_Framework_2022_2\mac_unroll_2\solution1\.autopilot\db\lenet_conv.pp.0.cpp:324:2: warning: Added loop label VITIS_LOOP_36_1:   [xilinx-label-all-loops]
+ for (int index = 0; index < KERNEL_ELEMS; ++index) {
+ ^~~
+ VITIS_LOOP_36_1: 
+D:\lenet_project\handoff\LeNet_DSE_Framework_2022_2\LeNet_DSE_Framework_2022_2\mac_unroll_2\solution1\.autopilot\db\lenet_conv.pp.0.cpp:324:2: note: FIX-IT applied suggested code changes

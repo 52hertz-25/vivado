@@ -1,0 +1,248 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Sun Sep  6 15:24:20 2026
+# Process ID: 42196
+# Current directory: D:/lenet_project/vivado/LeNet_Zynq_System
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11748 D:\lenet_project\vivado\LeNet_Zynq_System\LeNet_Zynq_System.xpr
+# Log file: D:/lenet_project/vivado/LeNet_Zynq_System/vivado.log
+# Journal file: D:/lenet_project/vivado/LeNet_Zynq_System\vivado.jou
+# Running On: Ê±³Î, OS: Windows, CPU Frequency: 2495 MHz, CPU Physical cores: 32, Host memory: 34142 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.xpr
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at D:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at D:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at D:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at D:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.0 available at D:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at D:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at D:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at D:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at D:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/lenet_project/hls/lenet_full_hls/solution1/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2022.2/data/ip'.
+open_project: Time (s): cpu = 00:00:21 ; elapsed = 00:00:10 . Memory (MB): peak = 1954.117 ; gain = 458.230
+update_compile_order -fileset sources_1
+open_bd_design {D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.srcs/sources_1/bd/lenet_system/lenet_system.bd}
+Reading block design file <D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.srcs/sources_1/bd/lenet_system/lenet_system.bd>...
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_0
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_0
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_0
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_1
+Adding component instance block -- user.org:hls:lenet_full_top:1.0 - lenet_full_top_0
+Successfully read diagram <lenet_system> from block design file <D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.srcs/sources_1/bd/lenet_system/lenet_system.bd>
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (50 MHz)} Clk_slave {/processing_system7_0/FCLK_CLK0 (50 MHz)} Clk_xbar {/processing_system7_0/FCLK_CLK0 (50 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/lenet_full_top_0/s_axi_control} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins lenet_full_top_0/s_axi_control]
+Slave segment '/lenet_full_top_0/s_axi_control/Reg' is being assigned into address space '/processing_system7_0/Data' at <0x4000_0000 [ 64K ]>.
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:smartconnect:1.0 smartconnect_0
+endgroup
+set_property location {2 577 -593} [get_bd_cells smartconnect_0]
+set_property CONFIG.NUM_SI {4} [get_bd_cells smartconnect_0]
+connect_bd_intf_net [get_bd_intf_pins lenet_full_top_0/m_axi_gmem0] [get_bd_intf_pins smartconnect_0/S00_AXI]
+connect_bd_intf_net [get_bd_intf_pins lenet_full_top_0/m_axi_gmem1] [get_bd_intf_pins smartconnect_0/S01_AXI]
+connect_bd_intf_net [get_bd_intf_pins lenet_full_top_0/m_axi_gmem2] [get_bd_intf_pins smartconnect_0/S02_AXI]
+connect_bd_intf_net [get_bd_intf_pins lenet_full_top_0/m_axi_gmem3] [get_bd_intf_pins smartconnect_0/S03_AXI]
+connect_bd_intf_net [get_bd_intf_pins smartconnect_0/M00_AXI] [get_bd_intf_pins processing_system7_0/S_AXI_HP0]
+connect_bd_net [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins smartconnect_0/aclk]
+connect_bd_net [get_bd_pins proc_sys_reset_0/interconnect_aresetn] [get_bd_pins smartconnect_0/aresetn]
+save_bd_design
+Wrote  : <D:\lenet_project\vivado\LeNet_Zynq_System\LeNet_Zynq_System.srcs\sources_1\bd\lenet_system\lenet_system.bd> 
+Wrote  : <D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.srcs/sources_1/bd/lenet_system/ui/bd_9716496a.ui> 
+assign_bd_address
+Slave segment '/processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM' is being assigned into address space '/lenet_full_top_0/Data_m_axi_gmem0' at <0x0000_0000 [ 512M ]>.
+Slave segment '/processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM' is being assigned into address space '/lenet_full_top_0/Data_m_axi_gmem1' at <0x0000_0000 [ 512M ]>.
+Slave segment '/processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM' is being assigned into address space '/lenet_full_top_0/Data_m_axi_gmem2' at <0x0000_0000 [ 512M ]>.
+Slave segment '/processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM' is being assigned into address space '/lenet_full_top_0/Data_m_axi_gmem3' at <0x0000_0000 [ 512M ]>.
+save_bd_design
+Wrote  : <D:\lenet_project\vivado\LeNet_Zynq_System\LeNet_Zynq_System.srcs\sources_1\bd\lenet_system\lenet_system.bd> 
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+startgroup
+set_property CONFIG.PCW_FPGA0_PERIPHERAL_FREQMHZ {100} [get_bd_cells processing_system7_0]
+endgroup
+save_bd_design
+Wrote  : <D:\lenet_project\vivado\LeNet_Zynq_System\LeNet_Zynq_System.srcs\sources_1\bd\lenet_system\lenet_system.bd> 
+validate_bd_design
+INFO: [xilinx.com:ip:smartconnect:1.0-1] lenet_system_smartconnect_0_0: SmartConnect lenet_system_smartconnect_0_0 is in High-performance Mode.
+ERROR: [BD 41-238] Port/Pin property POLARITY does not match between /lenet_full_top_0/ap_rst_n(ACTIVE_LOW) and /proc_sys_reset_0/bus_struct_reset(ACTIVE_HIGH)
+validate_bd_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 2318.594 ; gain = 88.105
+ERROR: [Common 17-39] 'validate_bd_design' failed due to earlier errors.
+delete_bd_objs [get_bd_nets proc_sys_reset_0_bus_struct_reset]
+connect_bd_net [get_bd_pins proc_sys_reset_0/interconnect_aresetn] [get_bd_pins lenet_full_top_0/ap_rst_n]
+validate_bd_design
+INFO: [xilinx.com:ip:smartconnect:1.0-1] lenet_system_smartconnect_0_0: SmartConnect lenet_system_smartconnect_0_0 is in High-performance Mode.
+INFO: [Common 17-365] Interrupt caught but 'validate_bd_design' cannot be canceled. Please wait for command to finish.
+validate_bd_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 2372.484 ; gain = 22.133
+INFO: [Common 17-681] Processing pending cancel.
+save_bd_design
+Wrote  : <D:\lenet_project\vivado\LeNet_Zynq_System\LeNet_Zynq_System.srcs\sources_1\bd\lenet_system\lenet_system.bd> 
+Wrote  : <D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.srcs/sources_1/bd/lenet_system/ui/bd_9716496a.ui> 
+validate_bd_design -force
+INFO: [xilinx.com:ip:smartconnect:1.0-1] lenet_system_smartconnect_0_0: SmartConnect lenet_system_smartconnect_0_0 is in High-performance Mode.
+validate_bd_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 2406.887 ; gain = 34.402
+make_wrapper -files [get_files D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.srcs/sources_1/bd/lenet_system/lenet_system.bd] -top
+INFO: [BD 41-1662] The design 'lenet_system.bd' is already validated. Therefore parameter propagation will not be re-run.
+Wrote  : <D:\lenet_project\vivado\LeNet_Zynq_System\LeNet_Zynq_System.srcs\sources_1\bd\lenet_system\lenet_system.bd> 
+Wrote  : <D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.srcs/sources_1/bd/lenet_system/ui/bd_9716496a.ui> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/smartconnect_0/S00_AXI_arlock'(1) to pin: '/lenet_full_top_0/m_axi_gmem0_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/smartconnect_0/S01_AXI_arlock'(1) to pin: '/lenet_full_top_0/m_axi_gmem1_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/smartconnect_0/S02_AXI_arlock'(1) to pin: '/lenet_full_top_0/m_axi_gmem2_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/smartconnect_0/S03_AXI_awlock'(1) to pin: '/lenet_full_top_0/m_axi_gmem3_AWLOCK'(2) - Only lower order bits will be connected.
+Verilog Output written to : d:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/synth/lenet_system.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/smartconnect_0/S00_AXI_arlock'(1) to pin: '/lenet_full_top_0/m_axi_gmem0_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/smartconnect_0/S01_AXI_arlock'(1) to pin: '/lenet_full_top_0/m_axi_gmem1_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/smartconnect_0/S02_AXI_arlock'(1) to pin: '/lenet_full_top_0/m_axi_gmem2_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/smartconnect_0/S03_AXI_awlock'(1) to pin: '/lenet_full_top_0/m_axi_gmem3_AWLOCK'(2) - Only lower order bits will be connected.
+Verilog Output written to : d:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/sim/lenet_system.v
+Verilog Output written to : d:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/hdl/lenet_system_wrapper.v
+make_wrapper: Time (s): cpu = 00:00:06 ; elapsed = 00:00:19 . Memory (MB): peak = 2651.496 ; gain = 190.098
+add_files -norecurse d:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/hdl/lenet_system_wrapper.v
+launch_runs synth_1 -jobs 8
+INFO: [BD 41-1662] The design 'lenet_system.bd' is already validated. Therefore parameter propagation will not be re-run.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/smartconnect_0/S00_AXI_arlock'(1) to pin: '/lenet_full_top_0/m_axi_gmem0_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/smartconnect_0/S01_AXI_arlock'(1) to pin: '/lenet_full_top_0/m_axi_gmem1_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/smartconnect_0/S02_AXI_arlock'(1) to pin: '/lenet_full_top_0/m_axi_gmem2_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/smartconnect_0/S03_AXI_awlock'(1) to pin: '/lenet_full_top_0/m_axi_gmem3_AWLOCK'(2) - Only lower order bits will be connected.
+Verilog Output written to : d:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/synth/lenet_system.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/smartconnect_0/S00_AXI_arlock'(1) to pin: '/lenet_full_top_0/m_axi_gmem0_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/smartconnect_0/S01_AXI_arlock'(1) to pin: '/lenet_full_top_0/m_axi_gmem1_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/smartconnect_0/S02_AXI_arlock'(1) to pin: '/lenet_full_top_0/m_axi_gmem2_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/smartconnect_0/S03_AXI_awlock'(1) to pin: '/lenet_full_top_0/m_axi_gmem3_AWLOCK'(2) - Only lower order bits will be connected.
+Verilog Output written to : d:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/sim/lenet_system.v
+Verilog Output written to : d:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/hdl/lenet_system_wrapper.v
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_GP0'. A default connection has been created.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI_HP0'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block proc_sys_reset_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_vector_logic_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block lenet_full_top_0 .
+Exporting to file d:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_smartconnect_0_0/bd_0/hw_handoff/lenet_system_smartconnect_0_0.hwh
+Generated Hardware Definition File d:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_smartconnect_0_0/bd_0/synth/lenet_system_smartconnect_0_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block smartconnect_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_auto_pc_0/lenet_system_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file d:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/hw_handoff/lenet_system.hwh
+Generated Hardware Definition File d:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/synth/lenet_system.hwdef
+INFO: [IP_Flow 19-6930] IPCACHE: runCacheChecks() number of threads = 8
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP lenet_system_auto_pc_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP lenet_system_lenet_full_top_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP lenet_system_proc_sys_reset_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP lenet_system_smartconnect_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP lenet_system_util_vector_logic_0_0
+INFO: [IP_Flow 19-8020] IPCACHE: runCacheChecks() calling threadPool finishWork()
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: lenet_system_auto_pc_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: lenet_system_lenet_full_top_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: lenet_system_proc_sys_reset_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: lenet_system_smartconnect_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: lenet_system_util_vector_logic_0_0
+WARNING: [Vivado 12-7122] Auto Incremental Compile:: No reference checkpoint was found in run synth_1. Auto-incremental flow will not be run, the standard flow will be run instead.
+[Sun Sep  6 16:19:50 2026] Launched lenet_system_processing_system7_0_0_synth_1, lenet_system_util_vector_logic_0_0_synth_1, lenet_system_proc_sys_reset_0_0_synth_1, lenet_system_lenet_full_top_0_0_synth_1, lenet_system_smartconnect_0_0_synth_1, lenet_system_auto_pc_0_synth_1...
+Run output will be captured here:
+lenet_system_processing_system7_0_0_synth_1: D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.runs/lenet_system_processing_system7_0_0_synth_1/runme.log
+lenet_system_util_vector_logic_0_0_synth_1: D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.runs/lenet_system_util_vector_logic_0_0_synth_1/runme.log
+lenet_system_proc_sys_reset_0_0_synth_1: D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.runs/lenet_system_proc_sys_reset_0_0_synth_1/runme.log
+lenet_system_lenet_full_top_0_0_synth_1: D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.runs/lenet_system_lenet_full_top_0_0_synth_1/runme.log
+lenet_system_smartconnect_0_0_synth_1: D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.runs/lenet_system_smartconnect_0_0_synth_1/runme.log
+lenet_system_auto_pc_0_synth_1: D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.runs/lenet_system_auto_pc_0_synth_1/runme.log
+[Sun Sep  6 16:19:51 2026] Launched synth_1...
+Run output will be captured here: D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:32 ; elapsed = 00:00:45 . Memory (MB): peak = 2734.973 ; gain = 83.477
+reset_run lenet_system_processing_system7_0_0_synth_1
+reset_run lenet_system_util_vector_logic_0_0_synth_1
+reset_run lenet_system_proc_sys_reset_0_0_synth_1
+reset_run lenet_system_smartconnect_0_0_synth_1
+reset_run lenet_system_auto_pc_0_synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+INFO: [IP_Flow 19-6930] IPCACHE: runCacheChecks() number of threads = 8
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP lenet_system_auto_pc_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP lenet_system_lenet_full_top_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP lenet_system_proc_sys_reset_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP lenet_system_smartconnect_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP lenet_system_util_vector_logic_0_0
+INFO: [IP_Flow 19-8020] IPCACHE: runCacheChecks() calling threadPool finishWork()
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: lenet_system_auto_pc_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: lenet_system_lenet_full_top_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: lenet_system_proc_sys_reset_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: lenet_system_smartconnect_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: lenet_system_util_vector_logic_0_0
+WARNING: [Vivado 12-7122] Auto Incremental Compile:: No reference checkpoint was found in run synth_1. Auto-incremental flow will not be run, the standard flow will be run instead.
+[Sun Sep  6 16:21:18 2026] Launched lenet_system_processing_system7_0_0_synth_1, lenet_system_util_vector_logic_0_0_synth_1, lenet_system_proc_sys_reset_0_0_synth_1, lenet_system_lenet_full_top_0_0_synth_1, lenet_system_smartconnect_0_0_synth_1, lenet_system_auto_pc_0_synth_1...
+Run output will be captured here:
+lenet_system_processing_system7_0_0_synth_1: D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.runs/lenet_system_processing_system7_0_0_synth_1/runme.log
+lenet_system_util_vector_logic_0_0_synth_1: D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.runs/lenet_system_util_vector_logic_0_0_synth_1/runme.log
+lenet_system_proc_sys_reset_0_0_synth_1: D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.runs/lenet_system_proc_sys_reset_0_0_synth_1/runme.log
+lenet_system_lenet_full_top_0_0_synth_1: D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.runs/lenet_system_lenet_full_top_0_0_synth_1/runme.log
+lenet_system_smartconnect_0_0_synth_1: D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.runs/lenet_system_smartconnect_0_0_synth_1/runme.log
+lenet_system_auto_pc_0_synth_1: D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.runs/lenet_system_auto_pc_0_synth_1/runme.log
+[Sun Sep  6 16:21:19 2026] Launched synth_1...
+Run output will be captured here: D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.runs/synth_1/runme.log
+reset_run lenet_system_processing_system7_0_0_synth_1
+reset_run lenet_system_util_vector_logic_0_0_synth_1
+reset_run lenet_system_proc_sys_reset_0_0_synth_1
+reset_run lenet_system_lenet_full_top_0_0_synth_1
+reset_run lenet_system_smartconnect_0_0_synth_1
+reset_run lenet_system_auto_pc_0_synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+INFO: [IP_Flow 19-6930] IPCACHE: runCacheChecks() number of threads = 8
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP lenet_system_auto_pc_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP lenet_system_lenet_full_top_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP lenet_system_proc_sys_reset_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP lenet_system_smartconnect_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP lenet_system_util_vector_logic_0_0
+INFO: [IP_Flow 19-8020] IPCACHE: runCacheChecks() calling threadPool finishWork()
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: lenet_system_auto_pc_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: lenet_system_lenet_full_top_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: lenet_system_proc_sys_reset_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: lenet_system_smartconnect_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: lenet_system_util_vector_logic_0_0
+WARNING: [Vivado 12-7122] Auto Incremental Compile:: No reference checkpoint was found in run synth_1. Auto-incremental flow will not be run, the standard flow will be run instead.
+[Sun Sep  6 16:22:52 2026] Launched lenet_system_processing_system7_0_0_synth_1, lenet_system_util_vector_logic_0_0_synth_1, lenet_system_proc_sys_reset_0_0_synth_1, lenet_system_lenet_full_top_0_0_synth_1, lenet_system_smartconnect_0_0_synth_1, lenet_system_auto_pc_0_synth_1...
+Run output will be captured here:
+lenet_system_processing_system7_0_0_synth_1: D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.runs/lenet_system_processing_system7_0_0_synth_1/runme.log
+lenet_system_util_vector_logic_0_0_synth_1: D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.runs/lenet_system_util_vector_logic_0_0_synth_1/runme.log
+lenet_system_proc_sys_reset_0_0_synth_1: D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.runs/lenet_system_proc_sys_reset_0_0_synth_1/runme.log
+lenet_system_lenet_full_top_0_0_synth_1: D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.runs/lenet_system_lenet_full_top_0_0_synth_1/runme.log
+lenet_system_smartconnect_0_0_synth_1: D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.runs/lenet_system_smartconnect_0_0_synth_1/runme.log
+lenet_system_auto_pc_0_synth_1: D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.runs/lenet_system_auto_pc_0_synth_1/runme.log
+[Sun Sep  6 16:22:52 2026] Launched synth_1...
+Run output will be captured here: D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.runs/synth_1/runme.log
+reset_run lenet_system_processing_system7_0_0_synth_1
+reset_run lenet_system_util_vector_logic_0_0_synth_1
+reset_run lenet_system_proc_sys_reset_0_0_synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+INFO: [IP_Flow 19-6930] IPCACHE: runCacheChecks() number of threads = 8
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP lenet_system_auto_pc_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP lenet_system_lenet_full_top_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP lenet_system_proc_sys_reset_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP lenet_system_smartconnect_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP lenet_system_util_vector_logic_0_0
+INFO: [IP_Flow 19-8020] IPCACHE: runCacheChecks() calling threadPool finishWork()
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: lenet_system_auto_pc_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: lenet_system_lenet_full_top_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: lenet_system_proc_sys_reset_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: lenet_system_smartconnect_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: lenet_system_util_vector_logic_0_0
+WARNING: [Vivado 12-7122] Auto Incremental Compile:: No reference checkpoint was found in run synth_1. Auto-incremental flow will not be run, the standard flow will be run instead.
+[Sun Sep  6 16:23:59 2026] Launched lenet_system_processing_system7_0_0_synth_1, lenet_system_util_vector_logic_0_0_synth_1, lenet_system_proc_sys_reset_0_0_synth_1, lenet_system_lenet_full_top_0_0_synth_1, lenet_system_smartconnect_0_0_synth_1, lenet_system_auto_pc_0_synth_1...
+Run output will be captured here:
+lenet_system_processing_system7_0_0_synth_1: D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.runs/lenet_system_processing_system7_0_0_synth_1/runme.log
+lenet_system_util_vector_logic_0_0_synth_1: D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.runs/lenet_system_util_vector_logic_0_0_synth_1/runme.log
+lenet_system_proc_sys_reset_0_0_synth_1: D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.runs/lenet_system_proc_sys_reset_0_0_synth_1/runme.log
+lenet_system_lenet_full_top_0_0_synth_1: D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.runs/lenet_system_lenet_full_top_0_0_synth_1/runme.log
+lenet_system_smartconnect_0_0_synth_1: D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.runs/lenet_system_smartconnect_0_0_synth_1/runme.log
+lenet_system_auto_pc_0_synth_1: D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.runs/lenet_system_auto_pc_0_synth_1/runme.log
+[Sun Sep  6 16:23:59 2026] Launched synth_1...
+Run output will be captured here: D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.runs/synth_1/runme.log
+WARNING: [Common 17-9] Error reading message records.
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Sep  6 16:30:00 2026...

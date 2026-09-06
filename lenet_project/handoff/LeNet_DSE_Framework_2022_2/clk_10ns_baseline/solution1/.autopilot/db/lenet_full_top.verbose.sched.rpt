@@ -1,0 +1,936 @@
+
+
+================================================================
+== Vitis HLS Report for 'lenet_full_top'
+================================================================
+* Date:           Sun Sep  6 21:22:55 2026
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        clk_10ns_baseline
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  8.280 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+---------+---------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |      Interval     | Pipeline|
+    |   min   |   max   |    min    |    max    |   min   |   max   |   Type  |
+    +---------+---------+-----------+-----------+---------+---------+---------+
+    |  1647854|  1647854|  16.479 ms|  16.479 ms|  1647855|  1647855|       no|
+    +---------+---------+-----------+-----------+---------+---------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |         Loop Name        |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- OUTPUT_CHANNEL          |   118338|   118338|     19723|          -|          -|     6|        no|
+        |- OUTPUT_CHANNEL          |  1230448|  1230448|     76903|          -|          -|    16|        no|
+        | + OUTPUT_ROW_OUTPUT_COL  |    76900|    76900|       769|          -|          -|   100|        no|
+        |- OUTPUT_CHANNEL          |   241440|   241440|      2012|          -|          -|   120|        no|
+        |- DENSE_OUTPUT            |    51408|    51408|       612|          -|          -|    84|        no|
+        |- DENSE_OUTPUT            |     4360|     4360|       436|          -|          -|    10|        no|
+        +--------------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 69
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 13 
+10 --> 11 
+11 --> 12 
+12 --> 9 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 32 
+21 --> 22 
+22 --> 23 20 
+23 --> 24 
+24 --> 25 
+25 --> 26 
+26 --> 27 
+27 --> 28 
+28 --> 29 
+29 --> 30 
+30 --> 31 
+31 --> 22 
+32 --> 33 
+33 --> 34 
+34 --> 35 
+35 --> 36 
+36 --> 37 
+37 --> 38 
+38 --> 39 
+39 --> 40 43 
+40 --> 41 
+41 --> 42 
+42 --> 39 
+43 --> 44 
+44 --> 45 
+45 --> 46 
+46 --> 47 
+47 --> 48 
+48 --> 49 
+49 --> 50 
+50 --> 51 54 
+51 --> 52 
+52 --> 53 
+53 --> 50 
+54 --> 55 
+55 --> 56 
+56 --> 57 
+57 --> 58 
+58 --> 59 
+59 --> 60 
+60 --> 61 
+61 --> 62 65 
+62 --> 63 
+63 --> 64 
+64 --> 61 
+65 --> 66 
+66 --> 67 
+67 --> 68 
+68 --> 69 
+69 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.58>
+ST_1 : Operation 70 [1/1] (0.00ns)   --->   "%phi_mul = alloca i32 1"   --->   Operation 70 'alloca' 'phi_mul' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%output_channel = alloca i32 1"   --->   Operation 71 'alloca' 'output_channel' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 72 [1/1] (1.00ns)   --->   "%feature_out_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %feature_out"   --->   Operation 72 'read' 'feature_out_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 73 [1/1] (1.00ns)   --->   "%bias_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %bias"   --->   Operation 73 'read' 'bias_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 74 [1/1] (1.00ns)   --->   "%weight_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %weight"   --->   Operation 74 'read' 'weight_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 75 [1/1] (1.00ns)   --->   "%feature_in_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %feature_in"   --->   Operation 75 'read' 'feature_in_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 76 [1/1] (0.00ns)   --->   "%conv1_output = alloca i64 1" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:279]   --->   Operation 76 'alloca' 'conv1_output' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 77 [1/1] (0.00ns)   --->   "%pool1_output = alloca i64 1" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:280]   --->   Operation 77 'alloca' 'pool1_output' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 78 [1/1] (0.00ns)   --->   "%conv2_output = alloca i64 1" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:281]   --->   Operation 78 'alloca' 'conv2_output' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 79 [1/1] (0.00ns)   --->   "%pool2_output = alloca i64 1" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:282]   --->   Operation 79 'alloca' 'pool2_output' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 80 [1/1] (0.00ns)   --->   "%conv3_output = alloca i64 1" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:283]   --->   Operation 80 'alloca' 'conv3_output' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 81 [1/1] (0.00ns)   --->   "%conv3_relu = alloca i64 1" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:284]   --->   Operation 81 'alloca' 'conv3_relu' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 82 [1/1] (0.00ns)   --->   "%fc1_output = alloca i64 1" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:285]   --->   Operation 82 'alloca' 'fc1_output' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 83 [1/1] (0.00ns)   --->   "%fc1_relu = alloca i64 1" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:286]   --->   Operation 83 'alloca' 'fc1_relu' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 84 [1/1] (0.00ns)   --->   "%trunc_ln = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %bias_read, i32 2, i32 63" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 84 'partselect' 'trunc_ln' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 85 [1/1] (0.00ns)   --->   "%sext_ln51 = sext i62 %trunc_ln" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 85 'sext' 'sext_ln51' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 86 [1/1] (0.00ns)   --->   "%gmem2_addr = getelementptr i32 %gmem2, i64 %sext_ln51" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 86 'getelementptr' 'gmem2_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 87 [1/1] (1.58ns)   --->   "%store_ln51 = store i3 0, i3 %output_channel" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 87 'store' 'store_ln51' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 88 [1/1] (1.58ns)   --->   "%store_ln51 = store i10 0, i10 %phi_mul" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 88 'store' 'store_ln51' <Predicate = true> <Delay = 1.58>
+
+State 2 <SV = 1> <Delay = 7.30>
+ST_2 : Operation 89 [7/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem2_addr, i32 6" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 89 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 3 <SV = 2> <Delay = 7.30>
+ST_3 : Operation 90 [6/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem2_addr, i32 6" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 90 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 4 <SV = 3> <Delay = 7.30>
+ST_4 : Operation 91 [5/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem2_addr, i32 6" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 91 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 5 <SV = 4> <Delay = 7.30>
+ST_5 : Operation 92 [4/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem2_addr, i32 6" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 92 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 6 <SV = 5> <Delay = 7.30>
+ST_6 : Operation 93 [3/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem2_addr, i32 6" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 93 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 7 <SV = 6> <Delay = 7.30>
+ST_7 : Operation 94 [2/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem2_addr, i32 6" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 94 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 8 <SV = 7> <Delay = 7.30>
+ST_8 : Operation 95 [1/1] (0.00ns)   --->   "%spectopmodule_ln264 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_14" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:264]   --->   Operation 95 'spectopmodule' 'spectopmodule_ln264' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 96 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem0, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 1024, void @empty_1, void @empty_2, void @empty_0, i32 16, i32 16, i32 16, i32 16, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 96 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 97 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %gmem0"   --->   Operation 97 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 98 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem1, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 61470, void @empty_3, void @empty_2, void @empty_0, i32 16, i32 16, i32 16, i32 16, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 98 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 99 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %gmem1"   --->   Operation 99 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 100 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem2, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 236, void @empty_4, void @empty_2, void @empty_0, i32 16, i32 16, i32 16, i32 16, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 100 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 101 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %gmem2"   --->   Operation 101 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 102 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem3, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 10, void @empty_5, void @empty_2, void @empty_0, i32 16, i32 16, i32 16, i32 16, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 102 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 103 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %gmem3"   --->   Operation 103 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 104 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %feature_in, void @empty_6, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_7, void @empty_8, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_9, i32 4294967295, i32 0"   --->   Operation 104 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 105 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %feature_in, void @empty_10, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_9, i32 4294967295, i32 0"   --->   Operation 105 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 106 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %weight, void @empty_6, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_7, void @empty_11, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_9, i32 4294967295, i32 0"   --->   Operation 106 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 107 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %weight, void @empty_10, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_9, i32 4294967295, i32 0"   --->   Operation 107 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 108 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %bias, void @empty_6, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_7, void @empty_12, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_9, i32 4294967295, i32 0"   --->   Operation 108 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 109 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %bias, void @empty_10, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_9, i32 4294967295, i32 0"   --->   Operation 109 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 110 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %feature_out, void @empty_6, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_7, void @empty_13, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_9, i32 4294967295, i32 0"   --->   Operation 110 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 111 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %feature_out, void @empty_10, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_9, i32 4294967295, i32 0"   --->   Operation 111 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 112 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_6, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_7, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 112 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 113 [1/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem2_addr, i32 6" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 113 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_8 : Operation 114 [1/1] (0.00ns)   --->   "%br_ln51 = br void %OUTPUT_ROW.i" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 114 'br' 'br_ln51' <Predicate = true> <Delay = 0.00>
+
+State 9 <SV = 8> <Delay = 3.52>
+ST_9 : Operation 115 [1/1] (0.00ns)   --->   "%phi_mul_load = load i10 %phi_mul" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 115 'load' 'phi_mul_load' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 116 [1/1] (0.00ns)   --->   "%output_channel_2 = load i3 %output_channel" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 116 'load' 'output_channel_2' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 117 [1/1] (1.73ns)   --->   "%add_ln51_6 = add i10 %phi_mul_load, i10 100" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 117 'add' 'add_ln51_6' <Predicate = true> <Delay = 1.73> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 118 [1/1] (1.13ns)   --->   "%icmp_ln51 = icmp_eq  i3 %output_channel_2, i3 6" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 118 'icmp' 'icmp_ln51' <Predicate = true> <Delay = 1.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 119 [1/1] (0.00ns)   --->   "%empty_92 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 6, i64 6, i64 6"   --->   Operation 119 'speclooptripcount' 'empty_92' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 120 [1/1] (1.65ns)   --->   "%add_ln51_1 = add i3 %output_channel_2, i3 1" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 120 'add' 'add_ln51_1' <Predicate = true> <Delay = 1.65> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 121 [1/1] (0.00ns)   --->   "%br_ln51 = br i1 %icmp_ln51, void %OUTPUT_ROW.i.split, void %POOL_KERNEL_ROW.i.preheader" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 121 'br' 'br_ln51' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 122 [1/1] (1.58ns)   --->   "%store_ln51 = store i3 %add_ln51_1, i3 %output_channel" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 122 'store' 'store_ln51' <Predicate = (!icmp_ln51)> <Delay = 1.58>
+ST_9 : Operation 123 [1/1] (1.58ns)   --->   "%store_ln51 = store i10 %add_ln51_6, i10 %phi_mul" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 123 'store' 'store_ln51' <Predicate = (!icmp_ln51)> <Delay = 1.58>
+ST_9 : Operation 124 [1/1] (0.00ns)   --->   "%phi_mul227 = alloca i32 1"   --->   Operation 124 'alloca' 'phi_mul227' <Predicate = (icmp_ln51)> <Delay = 0.00>
+ST_9 : Operation 125 [1/1] (0.00ns)   --->   "%output_channel_1 = alloca i32 1"   --->   Operation 125 'alloca' 'output_channel_1' <Predicate = (icmp_ln51)> <Delay = 0.00>
+ST_9 : Operation 126 [2/2] (0.00ns)   --->   "%call_ln0 = call void @lenet_full_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL, i32 %conv1_output, i32 %pool1_output"   --->   Operation 126 'call' 'call_ln0' <Predicate = (icmp_ln51)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_9 : Operation 127 [1/1] (3.52ns)   --->   "%add_ln51 = add i64 %bias_read, i64 24" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 127 'add' 'add_ln51' <Predicate = (icmp_ln51)> <Delay = 3.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 128 [1/1] (0.00ns)   --->   "%trunc_ln51_1 = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %add_ln51, i32 2, i32 63" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 128 'partselect' 'trunc_ln51_1' <Predicate = (icmp_ln51)> <Delay = 0.00>
+ST_9 : Operation 129 [1/1] (0.00ns)   --->   "%sext_ln51_1 = sext i62 %trunc_ln51_1" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 129 'sext' 'sext_ln51_1' <Predicate = (icmp_ln51)> <Delay = 0.00>
+ST_9 : Operation 130 [1/1] (0.00ns)   --->   "%gmem2_addr_1 = getelementptr i32 %gmem2, i64 %sext_ln51_1" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 130 'getelementptr' 'gmem2_addr_1' <Predicate = (icmp_ln51)> <Delay = 0.00>
+ST_9 : Operation 131 [1/1] (1.58ns)   --->   "%store_ln51 = store i5 0, i5 %output_channel_1" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 131 'store' 'store_ln51' <Predicate = (icmp_ln51)> <Delay = 1.58>
+ST_9 : Operation 132 [1/1] (1.58ns)   --->   "%store_ln51 = store i14 600, i14 %phi_mul227" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 132 'store' 'store_ln51' <Predicate = (icmp_ln51)> <Delay = 1.58>
+
+State 10 <SV = 9> <Delay = 7.30>
+ST_10 : Operation 133 [1/1] (7.30ns)   --->   "%gmem2_addr_read = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem2_addr" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 133 'read' 'gmem2_addr_read' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 11 <SV = 10> <Delay = 7.04>
+ST_11 : Operation 134 [1/1] (0.00ns)   --->   "%p_cast65 = zext i10 %phi_mul_load" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 134 'zext' 'p_cast65' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 135 [1/1] (3.52ns)   --->   "%empty_94 = add i64 %p_cast65, i64 %weight_read" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 135 'add' 'empty_94' <Predicate = true> <Delay = 3.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 136 [1/1] (0.00ns)   --->   "%p_shl = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i3.i5, i3 %output_channel_2, i5 0" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 136 'bitconcatenate' 'p_shl' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 137 [1/1] (0.00ns)   --->   "%p_shl_cast = zext i8 %p_shl" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 137 'zext' 'p_shl_cast' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 138 [1/1] (0.00ns)   --->   "%p_shl1 = bitconcatenate i5 @_ssdm_op_BitConcatenate.i5.i3.i2, i3 %output_channel_2, i2 0" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 138 'bitconcatenate' 'p_shl1' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 139 [1/1] (0.00ns)   --->   "%p_shl1_cast = zext i5 %p_shl1" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 139 'zext' 'p_shl1_cast' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 140 [1/1] (1.91ns)   --->   "%empty_95 = sub i9 %p_shl_cast, i9 %p_shl1_cast" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 140 'sub' 'empty_95' <Predicate = true> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 141 [1/1] (0.00ns)   --->   "%accumulator_2 = bitcast i32 %gmem2_addr_read" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 141 'bitcast' 'accumulator_2' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 142 [1/1] (0.00ns)   --->   "%trunc_ln1 = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %empty_94, i32 2, i32 63" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:35]   --->   Operation 142 'partselect' 'trunc_ln1' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 143 [2/2] (3.52ns)   --->   "%call_ln35 = call void @lenet_full_top_Pipeline_OUTPUT_ROW_OUTPUT_COL, i32 %gmem1, i32 %gmem0, i62 %trunc_ln1, i9 %empty_95, i64 %feature_in_read, i32 %accumulator_2, i32 %conv1_output" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:35]   --->   Operation 143 'call' 'call_ln35' <Predicate = true> <Delay = 3.52> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 12 <SV = 11> <Delay = 0.00>
+ST_12 : Operation 144 [1/1] (0.00ns)   --->   "%specloopname_ln51 = specloopname void @_ssdm_op_SpecLoopName, void @empty_19" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 144 'specloopname' 'specloopname_ln51' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 145 [1/2] (0.00ns)   --->   "%call_ln35 = call void @lenet_full_top_Pipeline_OUTPUT_ROW_OUTPUT_COL, i32 %gmem1, i32 %gmem0, i62 %trunc_ln1, i9 %empty_95, i64 %feature_in_read, i32 %accumulator_2, i32 %conv1_output" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:35]   --->   Operation 145 'call' 'call_ln35' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_12 : Operation 146 [1/1] (0.00ns)   --->   "%br_ln51 = br void %OUTPUT_ROW.i" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 146 'br' 'br_ln51' <Predicate = true> <Delay = 0.00>
+
+State 13 <SV = 9> <Delay = 7.30>
+ST_13 : Operation 147 [1/2] (0.00ns)   --->   "%call_ln0 = call void @lenet_full_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL, i32 %conv1_output, i32 %pool1_output"   --->   Operation 147 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_13 : Operation 148 [7/7] (7.30ns)   --->   "%empty_93 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem2_addr_1, i32 16" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 148 'readreq' 'empty_93' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 14 <SV = 10> <Delay = 7.30>
+ST_14 : Operation 149 [6/7] (7.30ns)   --->   "%empty_93 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem2_addr_1, i32 16" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 149 'readreq' 'empty_93' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 15 <SV = 11> <Delay = 7.30>
+ST_15 : Operation 150 [5/7] (7.30ns)   --->   "%empty_93 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem2_addr_1, i32 16" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 150 'readreq' 'empty_93' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 16 <SV = 12> <Delay = 7.30>
+ST_16 : Operation 151 [4/7] (7.30ns)   --->   "%empty_93 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem2_addr_1, i32 16" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 151 'readreq' 'empty_93' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 17 <SV = 13> <Delay = 7.30>
+ST_17 : Operation 152 [3/7] (7.30ns)   --->   "%empty_93 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem2_addr_1, i32 16" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 152 'readreq' 'empty_93' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 18 <SV = 14> <Delay = 7.30>
+ST_18 : Operation 153 [2/7] (7.30ns)   --->   "%empty_93 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem2_addr_1, i32 16" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 153 'readreq' 'empty_93' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 19 <SV = 15> <Delay = 7.30>
+ST_19 : Operation 154 [1/7] (7.30ns)   --->   "%empty_93 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem2_addr_1, i32 16" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 154 'readreq' 'empty_93' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_19 : Operation 155 [1/1] (0.00ns)   --->   "%br_ln51 = br void %OUTPUT_ROW.i16" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 155 'br' 'br_ln51' <Predicate = true> <Delay = 0.00>
+
+State 20 <SV = 16> <Delay = 3.52>
+ST_20 : Operation 156 [1/1] (0.00ns)   --->   "%output_channel_4 = load i5 %output_channel_1"   --->   Operation 156 'load' 'output_channel_4' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 157 [1/1] (1.36ns)   --->   "%icmp_ln51_1 = icmp_eq  i5 %output_channel_4, i5 16" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 157 'icmp' 'icmp_ln51_1' <Predicate = true> <Delay = 1.36> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.36> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 158 [1/1] (0.00ns)   --->   "%empty_96 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 16, i64 16, i64 16"   --->   Operation 158 'speclooptripcount' 'empty_96' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 159 [1/1] (1.78ns)   --->   "%add_ln51_4 = add i5 %output_channel_4, i5 1" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 159 'add' 'add_ln51_4' <Predicate = true> <Delay = 1.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 160 [1/1] (0.00ns)   --->   "%br_ln51 = br i1 %icmp_ln51_1, void %OUTPUT_ROW.i16.split, void %POOL_KERNEL_ROW.i81.preheader" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 160 'br' 'br_ln51' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 161 [1/1] (0.00ns)   --->   "%output_channel_3 = alloca i32 1"   --->   Operation 161 'alloca' 'output_channel_3' <Predicate = (icmp_ln51_1)> <Delay = 0.00>
+ST_20 : Operation 162 [2/2] (0.00ns)   --->   "%call_ln0 = call void @lenet_full_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL1, i32 %conv2_output, i32 %pool2_output"   --->   Operation 162 'call' 'call_ln0' <Predicate = (icmp_ln51_1)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_20 : Operation 163 [1/1] (3.52ns)   --->   "%add_ln51_2 = add i64 %weight_read, i64 10200" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 163 'add' 'add_ln51_2' <Predicate = (icmp_ln51_1)> <Delay = 3.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 164 [1/1] (0.00ns)   --->   "%trunc_ln51_2 = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %add_ln51_2, i32 2, i32 63" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 164 'partselect' 'trunc_ln51_2' <Predicate = (icmp_ln51_1)> <Delay = 0.00>
+ST_20 : Operation 165 [1/1] (3.52ns)   --->   "%add_ln51_3 = add i64 %bias_read, i64 88" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 165 'add' 'add_ln51_3' <Predicate = (icmp_ln51_1)> <Delay = 3.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 166 [1/1] (0.00ns)   --->   "%trunc_ln51_3 = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %add_ln51_3, i32 2, i32 63" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 166 'partselect' 'trunc_ln51_3' <Predicate = (icmp_ln51_1)> <Delay = 0.00>
+ST_20 : Operation 167 [1/1] (0.00ns)   --->   "%sext_ln51_3 = sext i62 %trunc_ln51_3" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 167 'sext' 'sext_ln51_3' <Predicate = (icmp_ln51_1)> <Delay = 0.00>
+ST_20 : Operation 168 [1/1] (0.00ns)   --->   "%gmem2_addr_2 = getelementptr i32 %gmem2, i64 %sext_ln51_3" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 168 'getelementptr' 'gmem2_addr_2' <Predicate = (icmp_ln51_1)> <Delay = 0.00>
+ST_20 : Operation 169 [1/1] (1.58ns)   --->   "%store_ln51 = store i7 0, i7 %output_channel_3" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 169 'store' 'store_ln51' <Predicate = (icmp_ln51_1)> <Delay = 1.58>
+
+State 21 <SV = 17> <Delay = 7.30>
+ST_21 : Operation 170 [1/1] (0.00ns)   --->   "%phi_mul227_load_1 = load i14 %phi_mul227"   --->   Operation 170 'load' 'phi_mul227_load_1' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 171 [1/1] (0.00ns)   --->   "%specloopname_ln51 = specloopname void @_ssdm_op_SpecLoopName, void @empty_19" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 171 'specloopname' 'specloopname_ln51' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 172 [1/1] (0.00ns)   --->   "%tmp_cast = zext i14 %phi_mul227_load_1"   --->   Operation 172 'zext' 'tmp_cast' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 173 [1/1] (3.52ns)   --->   "%empty_99 = add i64 %tmp_cast, i64 %weight_read"   --->   Operation 173 'add' 'empty_99' <Predicate = true> <Delay = 3.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 174 [1/1] (0.00ns)   --->   "%empty_100 = trunc i5 %output_channel_4"   --->   Operation 174 'trunc' 'empty_100' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 175 [1/1] (0.00ns)   --->   "%p_shl7 = bitconcatenate i7 @_ssdm_op_BitConcatenate.i7.i4.i3, i4 %empty_100, i3 0"   --->   Operation 175 'bitconcatenate' 'p_shl7' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 176 [1/1] (0.00ns)   --->   "%p_shl15_cast = zext i7 %p_shl7"   --->   Operation 176 'zext' 'p_shl15_cast' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 177 [1/1] (0.00ns)   --->   "%empty_101 = shl i5 %output_channel_4, i5 1"   --->   Operation 177 'shl' 'empty_101' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 178 [1/1] (0.00ns)   --->   "%p_shl16_cast = zext i5 %empty_101"   --->   Operation 178 'zext' 'p_shl16_cast' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 179 [1/1] (7.30ns)   --->   "%gmem2_addr_1_read = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem2_addr_1" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 179 'read' 'gmem2_addr_1_read' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_21 : Operation 180 [1/1] (0.00ns)   --->   "%accumulator_1 = bitcast i32 %gmem2_addr_1_read" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 180 'bitcast' 'accumulator_1' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 181 [1/1] (0.00ns)   --->   "%trunc_ln4 = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %empty_99, i32 2, i32 63" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:59]   --->   Operation 181 'partselect' 'trunc_ln4' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 182 [1/1] (0.00ns)   --->   "%sext_ln59 = sext i62 %trunc_ln4" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:59]   --->   Operation 182 'sext' 'sext_ln59' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 183 [1/1] (0.00ns)   --->   "%gmem1_addr_1 = getelementptr i32 %gmem1, i64 %sext_ln59" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:59]   --->   Operation 183 'getelementptr' 'gmem1_addr_1' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 184 [1/1] (1.58ns)   --->   "%br_ln53 = br void %INPUT_CHANNEL.i22" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:53]   --->   Operation 184 'br' 'br_ln53' <Predicate = true> <Delay = 1.58>
+
+State 22 <SV = 18> <Delay = 6.40>
+ST_22 : Operation 185 [1/1] (0.00ns)   --->   "%indvar_flatten108 = phi i7 0, void %OUTPUT_ROW.i16.split, i7 %add_ln53, void %for.inc26.i66" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:53]   --->   Operation 185 'phi' 'indvar_flatten108' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 186 [1/1] (0.00ns)   --->   "%output_row = phi i4 0, void %OUTPUT_ROW.i16.split, i4 %select_ln53_7, void %for.inc26.i66" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:53]   --->   Operation 186 'phi' 'output_row' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 187 [1/1] (0.00ns)   --->   "%output_col = phi i4 0, void %OUTPUT_ROW.i16.split, i4 %add_ln55, void %for.inc26.i66" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:55]   --->   Operation 187 'phi' 'output_col' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 188 [1/1] (1.48ns)   --->   "%icmp_ln53 = icmp_eq  i7 %indvar_flatten108, i7 100" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:53]   --->   Operation 188 'icmp' 'icmp_ln53' <Predicate = true> <Delay = 1.48> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 189 [1/1] (1.87ns)   --->   "%add_ln53 = add i7 %indvar_flatten108, i7 1" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:53]   --->   Operation 189 'add' 'add_ln53' <Predicate = true> <Delay = 1.87> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.87> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 190 [1/1] (0.00ns)   --->   "%br_ln53 = br i1 %icmp_ln53, void %for.inc26.i66, void %for.inc29.i69" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:53]   --->   Operation 190 'br' 'br_ln53' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 191 [1/1] (1.30ns)   --->   "%icmp_ln55 = icmp_eq  i4 %output_col, i4 10" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:55]   --->   Operation 191 'icmp' 'icmp_ln55' <Predicate = (!icmp_ln53)> <Delay = 1.30> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.30> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 192 [1/1] (1.02ns)   --->   "%select_ln53 = select i1 %icmp_ln55, i4 0, i4 %output_col" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:53]   --->   Operation 192 'select' 'select_ln53' <Predicate = (!icmp_ln53)> <Delay = 1.02> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_22 : Operation 193 [1/1] (1.73ns)   --->   "%add_ln53_4 = add i4 %output_row, i4 1" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:53]   --->   Operation 193 'add' 'add_ln53_4' <Predicate = (!icmp_ln53)> <Delay = 1.73> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 194 [1/1] (1.02ns)   --->   "%select_ln53_7 = select i1 %icmp_ln55, i4 %add_ln53_4, i4 %output_row" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:53]   --->   Operation 194 'select' 'select_ln53_7' <Predicate = (!icmp_ln53)> <Delay = 1.02> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_22 : Operation 195 [1/1] (0.00ns)   --->   "%zext_ln53 = zext i4 %select_ln53_7" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:53]   --->   Operation 195 'zext' 'zext_ln53' <Predicate = (!icmp_ln53)> <Delay = 0.00>
+ST_22 : Operation 196 [1/1] (1.78ns)   --->   "%add_ln53_5 = add i6 %p_shl16_cast, i6 %zext_ln53" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:53]   --->   Operation 196 'add' 'add_ln53_5' <Predicate = (!icmp_ln53)> <Delay = 1.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 197 [1/1] (0.00ns)   --->   "%zext_ln53_2 = zext i6 %add_ln53_5" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:53]   --->   Operation 197 'zext' 'zext_ln53_2' <Predicate = (!icmp_ln53)> <Delay = 0.00>
+ST_22 : Operation 198 [1/1] (1.87ns)   --->   "%add_ln53_6 = add i8 %zext_ln53_2, i8 %p_shl15_cast" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:53]   --->   Operation 198 'add' 'add_ln53_6' <Predicate = (!icmp_ln53)> <Delay = 1.87> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.87> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 199 [1/1] (1.73ns)   --->   "%add_ln55 = add i4 %select_ln53, i4 1" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:55]   --->   Operation 199 'add' 'add_ln55' <Predicate = (!icmp_ln53)> <Delay = 1.73> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 200 [1/1] (0.00ns)   --->   "%phi_mul227_load = load i14 %phi_mul227" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 200 'load' 'phi_mul227_load' <Predicate = (icmp_ln53)> <Delay = 0.00>
+ST_22 : Operation 201 [1/1] (1.81ns)   --->   "%add_ln51_7 = add i14 %phi_mul227_load, i14 600" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 201 'add' 'add_ln51_7' <Predicate = (icmp_ln53)> <Delay = 1.81> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.81> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 202 [1/1] (1.58ns)   --->   "%store_ln51 = store i5 %add_ln51_4, i5 %output_channel_1" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 202 'store' 'store_ln51' <Predicate = (icmp_ln53)> <Delay = 1.58>
+ST_22 : Operation 203 [1/1] (1.58ns)   --->   "%store_ln51 = store i14 %add_ln51_7, i14 %phi_mul227" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 203 'store' 'store_ln51' <Predicate = (icmp_ln53)> <Delay = 1.58>
+ST_22 : Operation 204 [1/1] (0.00ns)   --->   "%br_ln51 = br void %OUTPUT_ROW.i16" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 204 'br' 'br_ln51' <Predicate = (icmp_ln53)> <Delay = 0.00>
+
+State 23 <SV = 19> <Delay = 7.30>
+ST_23 : Operation 205 [7/7] (7.30ns)   --->   "%empty_103 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem1_addr_1, i32 150" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:59]   --->   Operation 205 'readreq' 'empty_103' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 24 <SV = 20> <Delay = 7.30>
+ST_24 : Operation 206 [6/7] (7.30ns)   --->   "%empty_103 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem1_addr_1, i32 150" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:59]   --->   Operation 206 'readreq' 'empty_103' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 25 <SV = 21> <Delay = 7.30>
+ST_25 : Operation 207 [5/7] (7.30ns)   --->   "%empty_103 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem1_addr_1, i32 150" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:59]   --->   Operation 207 'readreq' 'empty_103' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 26 <SV = 22> <Delay = 7.30>
+ST_26 : Operation 208 [4/7] (7.30ns)   --->   "%empty_103 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem1_addr_1, i32 150" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:59]   --->   Operation 208 'readreq' 'empty_103' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 27 <SV = 23> <Delay = 7.30>
+ST_27 : Operation 209 [3/7] (7.30ns)   --->   "%empty_103 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem1_addr_1, i32 150" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:59]   --->   Operation 209 'readreq' 'empty_103' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 28 <SV = 24> <Delay = 7.30>
+ST_28 : Operation 210 [2/7] (7.30ns)   --->   "%empty_103 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem1_addr_1, i32 150" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:59]   --->   Operation 210 'readreq' 'empty_103' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 29 <SV = 25> <Delay = 7.30>
+ST_29 : Operation 211 [1/1] (0.00ns)   --->   "%p_shl17_mid2 = bitconcatenate i11 @_ssdm_op_BitConcatenate.i11.i8.i3, i8 %add_ln53_6, i3 0" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:53]   --->   Operation 211 'bitconcatenate' 'p_shl17_mid2' <Predicate = true> <Delay = 0.00>
+ST_29 : Operation 212 [1/1] (0.00ns)   --->   "%p_shl18_mid2 = bitconcatenate i9 @_ssdm_op_BitConcatenate.i9.i8.i1, i8 %add_ln53_6, i1 0" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:53]   --->   Operation 212 'bitconcatenate' 'p_shl18_mid2' <Predicate = true> <Delay = 0.00>
+ST_29 : Operation 213 [1/1] (0.00ns)   --->   "%zext_ln55 = zext i4 %select_ln53" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:55]   --->   Operation 213 'zext' 'zext_ln55' <Predicate = true> <Delay = 0.00>
+ST_29 : Operation 214 [1/7] (7.30ns)   --->   "%empty_103 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem1_addr_1, i32 150" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:59]   --->   Operation 214 'readreq' 'empty_103' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_29 : Operation 215 [1/1] (1.82ns)   --->   "%add_ln76 = add i9 %p_shl18_mid2, i9 %zext_ln55" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:76]   --->   Operation 215 'add' 'add_ln76' <Predicate = true> <Delay = 1.82> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_29 : Operation 216 [1/1] (0.00ns)   --->   "%zext_ln76 = zext i9 %add_ln76" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:76]   --->   Operation 216 'zext' 'zext_ln76' <Predicate = true> <Delay = 0.00>
+ST_29 : Operation 217 [1/1] (1.63ns)   --->   "%add_ln76_1 = add i11 %zext_ln76, i11 %p_shl17_mid2" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:76]   --->   Operation 217 'add' 'add_ln76_1' <Predicate = true> <Delay = 1.63> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.63> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 30 <SV = 26> <Delay = 5.49>
+ST_30 : Operation 218 [2/2] (5.49ns)   --->   "%call_ln51 = call void @lenet_full_top_Pipeline_INPUT_CHANNEL, i32 %accumulator_1, i32 %gmem1, i32 %conv2_output, i11 %add_ln76_1, i62 %trunc_ln4, i4 %select_ln53_7, i4 %select_ln53, i32 %pool1_output" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 218 'call' 'call_ln51' <Predicate = true> <Delay = 5.49> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 31 <SV = 27> <Delay = 0.00>
+ST_31 : Operation 219 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @OUTPUT_ROW_OUTPUT_COL_str"   --->   Operation 219 'specloopname' 'specloopname_ln0' <Predicate = true> <Delay = 0.00>
+ST_31 : Operation 220 [1/1] (0.00ns)   --->   "%empty_102 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 100, i64 100, i64 100"   --->   Operation 220 'speclooptripcount' 'empty_102' <Predicate = true> <Delay = 0.00>
+ST_31 : Operation 221 [1/1] (0.00ns)   --->   "%specloopname_ln55 = specloopname void @_ssdm_op_SpecLoopName, void @empty_21" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:55]   --->   Operation 221 'specloopname' 'specloopname_ln55' <Predicate = true> <Delay = 0.00>
+ST_31 : Operation 222 [1/2] (0.00ns)   --->   "%call_ln51 = call void @lenet_full_top_Pipeline_INPUT_CHANNEL, i32 %accumulator_1, i32 %gmem1, i32 %conv2_output, i11 %add_ln76_1, i62 %trunc_ln4, i4 %select_ln53_7, i4 %select_ln53, i32 %pool1_output" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 222 'call' 'call_ln51' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_31 : Operation 223 [1/1] (0.00ns)   --->   "%br_ln55 = br void %INPUT_CHANNEL.i22" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:55]   --->   Operation 223 'br' 'br_ln55' <Predicate = true> <Delay = 0.00>
+
+State 32 <SV = 17> <Delay = 7.30>
+ST_32 : Operation 224 [1/2] (0.00ns)   --->   "%call_ln0 = call void @lenet_full_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL1, i32 %conv2_output, i32 %pool2_output"   --->   Operation 224 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_32 : Operation 225 [1/1] (0.00ns)   --->   "%sext_ln51_2 = sext i62 %trunc_ln51_2" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 225 'sext' 'sext_ln51_2' <Predicate = true> <Delay = 0.00>
+ST_32 : Operation 226 [1/1] (0.00ns)   --->   "%gmem1_addr = getelementptr i32 %gmem1, i64 %sext_ln51_2" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 226 'getelementptr' 'gmem1_addr' <Predicate = true> <Delay = 0.00>
+ST_32 : Operation 227 [7/7] (7.30ns)   --->   "%empty_97 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem1_addr, i32 48000" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 227 'readreq' 'empty_97' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_32 : Operation 228 [7/7] (7.30ns)   --->   "%empty_98 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem2_addr_2, i32 120" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 228 'readreq' 'empty_98' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 33 <SV = 18> <Delay = 7.30>
+ST_33 : Operation 229 [6/7] (7.30ns)   --->   "%empty_97 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem1_addr, i32 48000" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 229 'readreq' 'empty_97' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_33 : Operation 230 [6/7] (7.30ns)   --->   "%empty_98 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem2_addr_2, i32 120" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 230 'readreq' 'empty_98' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 34 <SV = 19> <Delay = 7.30>
+ST_34 : Operation 231 [5/7] (7.30ns)   --->   "%empty_97 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem1_addr, i32 48000" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 231 'readreq' 'empty_97' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_34 : Operation 232 [5/7] (7.30ns)   --->   "%empty_98 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem2_addr_2, i32 120" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 232 'readreq' 'empty_98' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 35 <SV = 20> <Delay = 7.30>
+ST_35 : Operation 233 [4/7] (7.30ns)   --->   "%empty_97 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem1_addr, i32 48000" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 233 'readreq' 'empty_97' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_35 : Operation 234 [4/7] (7.30ns)   --->   "%empty_98 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem2_addr_2, i32 120" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 234 'readreq' 'empty_98' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 36 <SV = 21> <Delay = 7.30>
+ST_36 : Operation 235 [3/7] (7.30ns)   --->   "%empty_97 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem1_addr, i32 48000" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 235 'readreq' 'empty_97' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_36 : Operation 236 [3/7] (7.30ns)   --->   "%empty_98 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem2_addr_2, i32 120" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 236 'readreq' 'empty_98' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 37 <SV = 22> <Delay = 7.30>
+ST_37 : Operation 237 [2/7] (7.30ns)   --->   "%empty_97 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem1_addr, i32 48000" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 237 'readreq' 'empty_97' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_37 : Operation 238 [2/7] (7.30ns)   --->   "%empty_98 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem2_addr_2, i32 120" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 238 'readreq' 'empty_98' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 38 <SV = 23> <Delay = 7.30>
+ST_38 : Operation 239 [1/7] (7.30ns)   --->   "%empty_97 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem1_addr, i32 48000" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 239 'readreq' 'empty_97' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_38 : Operation 240 [1/7] (7.30ns)   --->   "%empty_98 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem2_addr_2, i32 120" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 240 'readreq' 'empty_98' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_38 : Operation 241 [1/1] (0.00ns)   --->   "%br_ln51 = br void %OUTPUT_ROW.i119" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 241 'br' 'br_ln51' <Predicate = true> <Delay = 0.00>
+
+State 39 <SV = 24> <Delay = 3.52>
+ST_39 : Operation 242 [1/1] (0.00ns)   --->   "%output_channel_5 = load i7 %output_channel_3" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 242 'load' 'output_channel_5' <Predicate = true> <Delay = 0.00>
+ST_39 : Operation 243 [1/1] (1.48ns)   --->   "%icmp_ln51_2 = icmp_eq  i7 %output_channel_5, i7 120" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 243 'icmp' 'icmp_ln51_2' <Predicate = true> <Delay = 1.48> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_39 : Operation 244 [1/1] (0.00ns)   --->   "%empty_104 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 120, i64 120, i64 120"   --->   Operation 244 'speclooptripcount' 'empty_104' <Predicate = true> <Delay = 0.00>
+ST_39 : Operation 245 [1/1] (1.87ns)   --->   "%add_ln51_5 = add i7 %output_channel_5, i7 1" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 245 'add' 'add_ln51_5' <Predicate = true> <Delay = 1.87> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.87> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_39 : Operation 246 [1/1] (0.00ns)   --->   "%br_ln51 = br i1 %icmp_ln51_2, void %OUTPUT_ROW.i119.split, void %for.body.i.preheader" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 246 'br' 'br_ln51' <Predicate = true> <Delay = 0.00>
+ST_39 : Operation 247 [1/1] (1.58ns)   --->   "%store_ln51 = store i7 %add_ln51_5, i7 %output_channel_3" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 247 'store' 'store_ln51' <Predicate = (!icmp_ln51_2)> <Delay = 1.58>
+ST_39 : Operation 248 [1/1] (0.00ns)   --->   "%output_index = alloca i32 1"   --->   Operation 248 'alloca' 'output_index' <Predicate = (icmp_ln51_2)> <Delay = 0.00>
+ST_39 : Operation 249 [2/2] (0.00ns)   --->   "%call_ln0 = call void @lenet_full_top_Pipeline_RELU_LOOP, i32 %conv3_output, i32 %conv3_relu"   --->   Operation 249 'call' 'call_ln0' <Predicate = (icmp_ln51_2)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_39 : Operation 250 [1/1] (3.52ns)   --->   "%add_ln139 = add i64 %weight_read, i64 202200" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 250 'add' 'add_ln139' <Predicate = (icmp_ln51_2)> <Delay = 3.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_39 : Operation 251 [1/1] (0.00ns)   --->   "%trunc_ln5 = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %add_ln139, i32 2, i32 63" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 251 'partselect' 'trunc_ln5' <Predicate = (icmp_ln51_2)> <Delay = 0.00>
+ST_39 : Operation 252 [1/1] (3.52ns)   --->   "%add_ln139_1 = add i64 %bias_read, i64 568" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 252 'add' 'add_ln139_1' <Predicate = (icmp_ln51_2)> <Delay = 3.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_39 : Operation 253 [1/1] (0.00ns)   --->   "%trunc_ln139_1 = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %add_ln139_1, i32 2, i32 63" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 253 'partselect' 'trunc_ln139_1' <Predicate = (icmp_ln51_2)> <Delay = 0.00>
+ST_39 : Operation 254 [1/1] (0.00ns)   --->   "%sext_ln139_1 = sext i62 %trunc_ln139_1" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 254 'sext' 'sext_ln139_1' <Predicate = (icmp_ln51_2)> <Delay = 0.00>
+ST_39 : Operation 255 [1/1] (0.00ns)   --->   "%gmem2_addr_3 = getelementptr i32 %gmem2, i64 %sext_ln139_1" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 255 'getelementptr' 'gmem2_addr_3' <Predicate = (icmp_ln51_2)> <Delay = 0.00>
+ST_39 : Operation 256 [1/1] (1.58ns)   --->   "%store_ln139 = store i7 0, i7 %output_index" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 256 'store' 'store_ln139' <Predicate = (icmp_ln51_2)> <Delay = 1.58>
+
+State 40 <SV = 25> <Delay = 7.30>
+ST_40 : Operation 257 [1/1] (7.30ns)   --->   "%gmem2_addr_2_read = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem2_addr_2" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 257 'read' 'gmem2_addr_2_read' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 41 <SV = 26> <Delay = 1.58>
+ST_41 : Operation 258 [1/1] (0.00ns)   --->   "%accumulator = bitcast i32 %gmem2_addr_2_read" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 258 'bitcast' 'accumulator' <Predicate = true> <Delay = 0.00>
+ST_41 : Operation 259 [2/2] (1.58ns)   --->   "%call_ln51 = call void @lenet_full_top_Pipeline_INPUT_CHANNEL2, i32 %accumulator, i32 %gmem1, i32 %conv3_output, i7 %output_channel_5, i62 %trunc_ln51_2, i32 %pool2_output" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 259 'call' 'call_ln51' <Predicate = true> <Delay = 1.58> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 42 <SV = 27> <Delay = 0.00>
+ST_42 : Operation 260 [1/1] (0.00ns)   --->   "%specloopname_ln51 = specloopname void @_ssdm_op_SpecLoopName, void @empty_19" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 260 'specloopname' 'specloopname_ln51' <Predicate = true> <Delay = 0.00>
+ST_42 : Operation 261 [1/2] (0.00ns)   --->   "%call_ln51 = call void @lenet_full_top_Pipeline_INPUT_CHANNEL2, i32 %accumulator, i32 %gmem1, i32 %conv3_output, i7 %output_channel_5, i62 %trunc_ln51_2, i32 %pool2_output" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 261 'call' 'call_ln51' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_42 : Operation 262 [1/1] (0.00ns)   --->   "%br_ln51 = br void %OUTPUT_ROW.i119" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51]   --->   Operation 262 'br' 'br_ln51' <Predicate = true> <Delay = 0.00>
+
+State 43 <SV = 25> <Delay = 7.30>
+ST_43 : Operation 263 [1/2] (0.00ns)   --->   "%call_ln0 = call void @lenet_full_top_Pipeline_RELU_LOOP, i32 %conv3_output, i32 %conv3_relu"   --->   Operation 263 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_43 : Operation 264 [1/1] (0.00ns)   --->   "%sext_ln139 = sext i62 %trunc_ln5" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 264 'sext' 'sext_ln139' <Predicate = true> <Delay = 0.00>
+ST_43 : Operation 265 [1/1] (0.00ns)   --->   "%gmem1_addr_2 = getelementptr i32 %gmem1, i64 %sext_ln139" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 265 'getelementptr' 'gmem1_addr_2' <Predicate = true> <Delay = 0.00>
+ST_43 : Operation 266 [7/7] (7.30ns)   --->   "%empty_105 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem1_addr_2, i32 10080" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 266 'readreq' 'empty_105' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_43 : Operation 267 [7/7] (7.30ns)   --->   "%empty_106 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem2_addr_3, i32 84" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 267 'readreq' 'empty_106' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 44 <SV = 26> <Delay = 7.30>
+ST_44 : Operation 268 [6/7] (7.30ns)   --->   "%empty_105 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem1_addr_2, i32 10080" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 268 'readreq' 'empty_105' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_44 : Operation 269 [6/7] (7.30ns)   --->   "%empty_106 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem2_addr_3, i32 84" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 269 'readreq' 'empty_106' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 45 <SV = 27> <Delay = 7.30>
+ST_45 : Operation 270 [5/7] (7.30ns)   --->   "%empty_105 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem1_addr_2, i32 10080" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 270 'readreq' 'empty_105' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_45 : Operation 271 [5/7] (7.30ns)   --->   "%empty_106 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem2_addr_3, i32 84" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 271 'readreq' 'empty_106' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 46 <SV = 28> <Delay = 7.30>
+ST_46 : Operation 272 [4/7] (7.30ns)   --->   "%empty_105 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem1_addr_2, i32 10080" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 272 'readreq' 'empty_105' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_46 : Operation 273 [4/7] (7.30ns)   --->   "%empty_106 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem2_addr_3, i32 84" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 273 'readreq' 'empty_106' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 47 <SV = 29> <Delay = 7.30>
+ST_47 : Operation 274 [3/7] (7.30ns)   --->   "%empty_105 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem1_addr_2, i32 10080" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 274 'readreq' 'empty_105' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_47 : Operation 275 [3/7] (7.30ns)   --->   "%empty_106 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem2_addr_3, i32 84" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 275 'readreq' 'empty_106' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 48 <SV = 30> <Delay = 7.30>
+ST_48 : Operation 276 [2/7] (7.30ns)   --->   "%empty_105 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem1_addr_2, i32 10080" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 276 'readreq' 'empty_105' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_48 : Operation 277 [2/7] (7.30ns)   --->   "%empty_106 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem2_addr_3, i32 84" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 277 'readreq' 'empty_106' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 49 <SV = 31> <Delay = 7.30>
+ST_49 : Operation 278 [1/7] (7.30ns)   --->   "%empty_105 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem1_addr_2, i32 10080" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 278 'readreq' 'empty_105' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_49 : Operation 279 [1/7] (7.30ns)   --->   "%empty_106 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem2_addr_3, i32 84" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 279 'readreq' 'empty_106' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_49 : Operation 280 [1/1] (0.00ns)   --->   "%br_ln139 = br void %DENSE_INPUT.i" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 280 'br' 'br_ln139' <Predicate = true> <Delay = 0.00>
+
+State 50 <SV = 32> <Delay = 3.52>
+ST_50 : Operation 281 [1/1] (0.00ns)   --->   "%output_index_2 = load i7 %output_index" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 281 'load' 'output_index_2' <Predicate = true> <Delay = 0.00>
+ST_50 : Operation 282 [1/1] (1.48ns)   --->   "%icmp_ln139 = icmp_eq  i7 %output_index_2, i7 84" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 282 'icmp' 'icmp_ln139' <Predicate = true> <Delay = 1.48> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_50 : Operation 283 [1/1] (0.00ns)   --->   "%empty_107 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 84, i64 84, i64 84"   --->   Operation 283 'speclooptripcount' 'empty_107' <Predicate = true> <Delay = 0.00>
+ST_50 : Operation 284 [1/1] (1.87ns)   --->   "%add_ln139_4 = add i7 %output_index_2, i7 1" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 284 'add' 'add_ln139_4' <Predicate = true> <Delay = 1.87> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.87> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_50 : Operation 285 [1/1] (0.00ns)   --->   "%br_ln139 = br i1 %icmp_ln139, void %DENSE_INPUT.i.split, void %for.body.i183.preheader" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 285 'br' 'br_ln139' <Predicate = true> <Delay = 0.00>
+ST_50 : Operation 286 [1/1] (1.58ns)   --->   "%store_ln139 = store i7 %add_ln139_4, i7 %output_index" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 286 'store' 'store_ln139' <Predicate = (!icmp_ln139)> <Delay = 1.58>
+ST_50 : Operation 287 [1/1] (0.00ns)   --->   "%output_index_1 = alloca i32 1"   --->   Operation 287 'alloca' 'output_index_1' <Predicate = (icmp_ln139)> <Delay = 0.00>
+ST_50 : Operation 288 [2/2] (0.00ns)   --->   "%call_ln0 = call void @lenet_full_top_Pipeline_RELU_LOOP3, i32 %fc1_output, i32 %fc1_relu"   --->   Operation 288 'call' 'call_ln0' <Predicate = (icmp_ln139)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_50 : Operation 289 [1/1] (3.52ns)   --->   "%add_ln139_2 = add i64 %weight_read, i64 242520" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 289 'add' 'add_ln139_2' <Predicate = (icmp_ln139)> <Delay = 3.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_50 : Operation 290 [1/1] (0.00ns)   --->   "%trunc_ln139_2 = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %add_ln139_2, i32 2, i32 63" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 290 'partselect' 'trunc_ln139_2' <Predicate = (icmp_ln139)> <Delay = 0.00>
+ST_50 : Operation 291 [1/1] (3.52ns)   --->   "%add_ln139_3 = add i64 %bias_read, i64 904" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 291 'add' 'add_ln139_3' <Predicate = (icmp_ln139)> <Delay = 3.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_50 : Operation 292 [1/1] (0.00ns)   --->   "%trunc_ln139_3 = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %add_ln139_3, i32 2, i32 63" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 292 'partselect' 'trunc_ln139_3' <Predicate = (icmp_ln139)> <Delay = 0.00>
+ST_50 : Operation 293 [1/1] (0.00ns)   --->   "%sext_ln139_3 = sext i62 %trunc_ln139_3" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 293 'sext' 'sext_ln139_3' <Predicate = (icmp_ln139)> <Delay = 0.00>
+ST_50 : Operation 294 [1/1] (0.00ns)   --->   "%gmem2_addr_4 = getelementptr i32 %gmem2, i64 %sext_ln139_3" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 294 'getelementptr' 'gmem2_addr_4' <Predicate = (icmp_ln139)> <Delay = 0.00>
+ST_50 : Operation 295 [1/1] (0.00ns)   --->   "%trunc_ln139_4 = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %feature_out_read, i32 2, i32 63" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 295 'partselect' 'trunc_ln139_4' <Predicate = (icmp_ln139)> <Delay = 0.00>
+ST_50 : Operation 296 [1/1] (1.58ns)   --->   "%store_ln139 = store i4 0, i4 %output_index_1" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 296 'store' 'store_ln139' <Predicate = (icmp_ln139)> <Delay = 1.58>
+
+State 51 <SV = 33> <Delay = 7.30>
+ST_51 : Operation 297 [1/1] (7.30ns)   --->   "%gmem2_addr_3_read = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem2_addr_3" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:140]   --->   Operation 297 'read' 'gmem2_addr_3_read' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 52 <SV = 34> <Delay = 1.58>
+ST_52 : Operation 298 [1/1] (0.00ns)   --->   "%accumulator_4 = bitcast i32 %gmem2_addr_3_read" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:140]   --->   Operation 298 'bitcast' 'accumulator_4' <Predicate = true> <Delay = 0.00>
+ST_52 : Operation 299 [2/2] (1.58ns)   --->   "%call_ln140 = call void @lenet_full_top_Pipeline_DENSE_INPUT, i32 %accumulator_4, i32 %gmem1, i32 %fc1_output, i7 %output_index_2, i62 %trunc_ln5, i32 %conv3_relu" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:140]   --->   Operation 299 'call' 'call_ln140' <Predicate = true> <Delay = 1.58> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 53 <SV = 35> <Delay = 0.00>
+ST_53 : Operation 300 [1/1] (0.00ns)   --->   "%specloopname_ln139 = specloopname void @_ssdm_op_SpecLoopName, void @empty_16" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 300 'specloopname' 'specloopname_ln139' <Predicate = true> <Delay = 0.00>
+ST_53 : Operation 301 [1/2] (0.00ns)   --->   "%call_ln140 = call void @lenet_full_top_Pipeline_DENSE_INPUT, i32 %accumulator_4, i32 %gmem1, i32 %fc1_output, i7 %output_index_2, i62 %trunc_ln5, i32 %conv3_relu" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:140]   --->   Operation 301 'call' 'call_ln140' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_53 : Operation 302 [1/1] (0.00ns)   --->   "%br_ln139 = br void %DENSE_INPUT.i" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 302 'br' 'br_ln139' <Predicate = true> <Delay = 0.00>
+
+State 54 <SV = 33> <Delay = 7.30>
+ST_54 : Operation 303 [1/2] (0.00ns)   --->   "%call_ln0 = call void @lenet_full_top_Pipeline_RELU_LOOP3, i32 %fc1_output, i32 %fc1_relu"   --->   Operation 303 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_54 : Operation 304 [1/1] (0.00ns)   --->   "%sext_ln139_2 = sext i62 %trunc_ln139_2" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 304 'sext' 'sext_ln139_2' <Predicate = true> <Delay = 0.00>
+ST_54 : Operation 305 [1/1] (0.00ns)   --->   "%gmem1_addr_3 = getelementptr i32 %gmem1, i64 %sext_ln139_2" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 305 'getelementptr' 'gmem1_addr_3' <Predicate = true> <Delay = 0.00>
+ST_54 : Operation 306 [7/7] (7.30ns)   --->   "%empty_108 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem1_addr_3, i32 840" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 306 'readreq' 'empty_108' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_54 : Operation 307 [7/7] (7.30ns)   --->   "%empty_109 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem2_addr_4, i32 10" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 307 'readreq' 'empty_109' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 55 <SV = 34> <Delay = 7.30>
+ST_55 : Operation 308 [6/7] (7.30ns)   --->   "%empty_108 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem1_addr_3, i32 840" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 308 'readreq' 'empty_108' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_55 : Operation 309 [6/7] (7.30ns)   --->   "%empty_109 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem2_addr_4, i32 10" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 309 'readreq' 'empty_109' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 56 <SV = 35> <Delay = 7.30>
+ST_56 : Operation 310 [5/7] (7.30ns)   --->   "%empty_108 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem1_addr_3, i32 840" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 310 'readreq' 'empty_108' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_56 : Operation 311 [5/7] (7.30ns)   --->   "%empty_109 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem2_addr_4, i32 10" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 311 'readreq' 'empty_109' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 57 <SV = 36> <Delay = 7.30>
+ST_57 : Operation 312 [4/7] (7.30ns)   --->   "%empty_108 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem1_addr_3, i32 840" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 312 'readreq' 'empty_108' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_57 : Operation 313 [4/7] (7.30ns)   --->   "%empty_109 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem2_addr_4, i32 10" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 313 'readreq' 'empty_109' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 58 <SV = 37> <Delay = 7.30>
+ST_58 : Operation 314 [3/7] (7.30ns)   --->   "%empty_108 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem1_addr_3, i32 840" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 314 'readreq' 'empty_108' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_58 : Operation 315 [3/7] (7.30ns)   --->   "%empty_109 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem2_addr_4, i32 10" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 315 'readreq' 'empty_109' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 59 <SV = 38> <Delay = 7.30>
+ST_59 : Operation 316 [2/7] (7.30ns)   --->   "%empty_108 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem1_addr_3, i32 840" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 316 'readreq' 'empty_108' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_59 : Operation 317 [2/7] (7.30ns)   --->   "%empty_109 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem2_addr_4, i32 10" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 317 'readreq' 'empty_109' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 60 <SV = 39> <Delay = 7.30>
+ST_60 : Operation 318 [1/7] (7.30ns)   --->   "%empty_108 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem1_addr_3, i32 840" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 318 'readreq' 'empty_108' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_60 : Operation 319 [1/7] (7.30ns)   --->   "%empty_109 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem2_addr_4, i32 10" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 319 'readreq' 'empty_109' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_60 : Operation 320 [1/1] (0.00ns)   --->   "%sext_ln139_4 = sext i62 %trunc_ln139_4" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 320 'sext' 'sext_ln139_4' <Predicate = true> <Delay = 0.00>
+ST_60 : Operation 321 [1/1] (0.00ns)   --->   "%gmem3_addr = getelementptr i32 %gmem3, i64 %sext_ln139_4" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 321 'getelementptr' 'gmem3_addr' <Predicate = true> <Delay = 0.00>
+ST_60 : Operation 322 [1/1] (7.30ns)   --->   "%empty_110 = writereq i1 @_ssdm_op_WriteReq.m_axi.p1i32, i32 %gmem3_addr, i32 10" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 322 'writereq' 'empty_110' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_60 : Operation 323 [1/1] (0.00ns)   --->   "%br_ln139 = br void %DENSE_INPUT.i188" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 323 'br' 'br_ln139' <Predicate = true> <Delay = 0.00>
+
+State 61 <SV = 40> <Delay = 3.32>
+ST_61 : Operation 324 [1/1] (0.00ns)   --->   "%output_index_3 = load i4 %output_index_1" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 324 'load' 'output_index_3' <Predicate = true> <Delay = 0.00>
+ST_61 : Operation 325 [1/1] (1.30ns)   --->   "%icmp_ln139_1 = icmp_eq  i4 %output_index_3, i4 10" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 325 'icmp' 'icmp_ln139_1' <Predicate = true> <Delay = 1.30> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.30> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_61 : Operation 326 [1/1] (0.00ns)   --->   "%empty_111 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 10, i64 10, i64 10"   --->   Operation 326 'speclooptripcount' 'empty_111' <Predicate = true> <Delay = 0.00>
+ST_61 : Operation 327 [1/1] (1.73ns)   --->   "%add_ln139_5 = add i4 %output_index_3, i4 1" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 327 'add' 'add_ln139_5' <Predicate = true> <Delay = 1.73> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_61 : Operation 328 [1/1] (0.00ns)   --->   "%br_ln139 = br i1 %icmp_ln139_1, void %DENSE_INPUT.i188.split, void %_ZN5lenet12_GLOBAL__N_15denseILi84ELi10EEEvPKfS3_S3_Pf.exit" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 328 'br' 'br_ln139' <Predicate = true> <Delay = 0.00>
+ST_61 : Operation 329 [1/1] (1.58ns)   --->   "%store_ln139 = store i4 %add_ln139_5, i4 %output_index_1" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 329 'store' 'store_ln139' <Predicate = (!icmp_ln139_1)> <Delay = 1.58>
+
+State 62 <SV = 41> <Delay = 7.30>
+ST_62 : Operation 330 [1/1] (7.30ns)   --->   "%gmem2_addr_4_read = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem2_addr_4" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:140]   --->   Operation 330 'read' 'gmem2_addr_4_read' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 63 <SV = 42> <Delay = 1.58>
+ST_63 : Operation 331 [1/1] (0.00ns)   --->   "%accumulator_5 = bitcast i32 %gmem2_addr_4_read" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:140]   --->   Operation 331 'bitcast' 'accumulator_5' <Predicate = true> <Delay = 0.00>
+ST_63 : Operation 332 [2/2] (1.58ns)   --->   "%call_ln140 = call void @lenet_full_top_Pipeline_DENSE_INPUT4, i32 %accumulator_5, i32 %gmem3, i32 %gmem1, i62 %trunc_ln139_4, i62 %trunc_ln139_2, i32 %fc1_relu" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:140]   --->   Operation 332 'call' 'call_ln140' <Predicate = true> <Delay = 1.58> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 64 <SV = 43> <Delay = 0.00>
+ST_64 : Operation 333 [1/1] (0.00ns)   --->   "%specloopname_ln139 = specloopname void @_ssdm_op_SpecLoopName, void @empty_16" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 333 'specloopname' 'specloopname_ln139' <Predicate = true> <Delay = 0.00>
+ST_64 : Operation 334 [1/2] (0.00ns)   --->   "%call_ln140 = call void @lenet_full_top_Pipeline_DENSE_INPUT4, i32 %accumulator_5, i32 %gmem3, i32 %gmem1, i62 %trunc_ln139_4, i62 %trunc_ln139_2, i32 %fc1_relu" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:140]   --->   Operation 334 'call' 'call_ln140' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_64 : Operation 335 [1/1] (0.00ns)   --->   "%br_ln139 = br void %DENSE_INPUT.i188" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139]   --->   Operation 335 'br' 'br_ln139' <Predicate = true> <Delay = 0.00>
+
+State 65 <SV = 41> <Delay = 7.30>
+ST_65 : Operation 336 [5/5] (7.30ns)   --->   "%empty_112 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem3_addr" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:334]   --->   Operation 336 'writeresp' 'empty_112' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 66 <SV = 42> <Delay = 7.30>
+ST_66 : Operation 337 [4/5] (7.30ns)   --->   "%empty_112 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem3_addr" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:334]   --->   Operation 337 'writeresp' 'empty_112' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 67 <SV = 43> <Delay = 7.30>
+ST_67 : Operation 338 [3/5] (7.30ns)   --->   "%empty_112 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem3_addr" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:334]   --->   Operation 338 'writeresp' 'empty_112' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 68 <SV = 44> <Delay = 7.30>
+ST_68 : Operation 339 [2/5] (7.30ns)   --->   "%empty_112 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem3_addr" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:334]   --->   Operation 339 'writeresp' 'empty_112' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 69 <SV = 45> <Delay = 7.30>
+ST_69 : Operation 340 [1/5] (7.30ns)   --->   "%empty_112 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem3_addr" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:334]   --->   Operation 340 'writeresp' 'empty_112' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_69 : Operation 341 [1/1] (0.00ns)   --->   "%ret_ln334 = ret" [D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:334]   --->   Operation 341 'ret' 'ret_ln334' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 1.59ns
+The critical path consists of the following:
+	'alloca' operation ('output_channel') [10]  (0 ns)
+	'store' operation ('store_ln51', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51) of constant 0 on local variable 'output_channel' [45]  (1.59 ns)
+
+ <State 2>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51) on port 'gmem2' (D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51) [44]  (7.3 ns)
+
+ <State 3>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51) on port 'gmem2' (D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51) [44]  (7.3 ns)
+
+ <State 4>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51) on port 'gmem2' (D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51) [44]  (7.3 ns)
+
+ <State 5>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51) on port 'gmem2' (D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51) [44]  (7.3 ns)
+
+ <State 6>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51) on port 'gmem2' (D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51) [44]  (7.3 ns)
+
+ <State 7>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51) on port 'gmem2' (D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51) [44]  (7.3 ns)
+
+ <State 8>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51) on port 'gmem2' (D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51) [44]  (7.3 ns)
+
+ <State 9>: 3.52ns
+The critical path consists of the following:
+	'add' operation ('add_ln51', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51) [76]  (3.52 ns)
+
+ <State 10>: 7.3ns
+The critical path consists of the following:
+	bus read operation ('gmem2_addr_read', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51) on port 'gmem2' (D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51) [65]  (7.3 ns)
+
+ <State 11>: 7.04ns
+The critical path consists of the following:
+	'add' operation ('empty_94', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51) [59]  (3.52 ns)
+	'call' operation ('call_ln35', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:35) to 'lenet_full_top_Pipeline_OUTPUT_ROW_OUTPUT_COL' [68]  (3.52 ns)
+
+ <State 12>: 0ns
+The critical path consists of the following:
+
+ <State 13>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty_93', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51) on port 'gmem2' (D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51) [80]  (7.3 ns)
+
+ <State 14>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty_93', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51) on port 'gmem2' (D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51) [80]  (7.3 ns)
+
+ <State 15>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty_93', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51) on port 'gmem2' (D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51) [80]  (7.3 ns)
+
+ <State 16>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty_93', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51) on port 'gmem2' (D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51) [80]  (7.3 ns)
+
+ <State 17>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty_93', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51) on port 'gmem2' (D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51) [80]  (7.3 ns)
+
+ <State 18>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty_93', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51) on port 'gmem2' (D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51) [80]  (7.3 ns)
+
+ <State 19>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty_93', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51) on port 'gmem2' (D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51) [80]  (7.3 ns)
+
+ <State 20>: 3.52ns
+The critical path consists of the following:
+	'add' operation ('add_ln51_2', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51) [144]  (3.52 ns)
+
+ <State 21>: 7.3ns
+The critical path consists of the following:
+	bus read operation ('gmem2_addr_1_read', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51) on port 'gmem2' (D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51) [100]  (7.3 ns)
+
+ <State 22>: 6.41ns
+The critical path consists of the following:
+	'phi' operation ('output_row', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:53) with incoming values : ('select_ln53_7', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:53) [108]  (0 ns)
+	'add' operation ('add_ln53_4', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:53) [118]  (1.74 ns)
+	'select' operation ('select_ln53_7', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:53) [119]  (1.02 ns)
+	'add' operation ('add_ln53_5', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:53) [121]  (1.78 ns)
+	'add' operation ('add_ln53_6', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:53) [123]  (1.87 ns)
+
+ <State 23>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty_103', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:59) on port 'gmem1' (D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:59) [128]  (7.3 ns)
+
+ <State 24>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty_103', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:59) on port 'gmem1' (D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:59) [128]  (7.3 ns)
+
+ <State 25>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty_103', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:59) on port 'gmem1' (D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:59) [128]  (7.3 ns)
+
+ <State 26>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty_103', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:59) on port 'gmem1' (D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:59) [128]  (7.3 ns)
+
+ <State 27>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty_103', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:59) on port 'gmem1' (D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:59) [128]  (7.3 ns)
+
+ <State 28>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty_103', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:59) on port 'gmem1' (D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:59) [128]  (7.3 ns)
+
+ <State 29>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty_103', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:59) on port 'gmem1' (D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:59) [128]  (7.3 ns)
+
+ <State 30>: 5.5ns
+The critical path consists of the following:
+	'call' operation ('call_ln51', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51) to 'lenet_full_top_Pipeline_INPUT_CHANNEL' [132]  (5.5 ns)
+
+ <State 31>: 0ns
+The critical path consists of the following:
+
+ <State 32>: 7.3ns
+The critical path consists of the following:
+	'getelementptr' operation ('gmem1_addr', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51) [147]  (0 ns)
+	bus request operation ('empty_97', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51) on port 'gmem1' (D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51) [148]  (7.3 ns)
+
+ <State 33>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty_97', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51) on port 'gmem1' (D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51) [148]  (7.3 ns)
+
+ <State 34>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty_97', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51) on port 'gmem1' (D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51) [148]  (7.3 ns)
+
+ <State 35>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty_97', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51) on port 'gmem1' (D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51) [148]  (7.3 ns)
+
+ <State 36>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty_97', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51) on port 'gmem1' (D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51) [148]  (7.3 ns)
+
+ <State 37>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty_97', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51) on port 'gmem1' (D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51) [148]  (7.3 ns)
+
+ <State 38>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty_97', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51) on port 'gmem1' (D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51) [148]  (7.3 ns)
+
+ <State 39>: 3.52ns
+The critical path consists of the following:
+	'add' operation ('add_ln139', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139) [172]  (3.52 ns)
+
+ <State 40>: 7.3ns
+The critical path consists of the following:
+	bus read operation ('gmem2_addr_2_read', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51) on port 'gmem2' (D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51) [164]  (7.3 ns)
+
+ <State 41>: 1.59ns
+The critical path consists of the following:
+	'call' operation ('call_ln51', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:51) to 'lenet_full_top_Pipeline_INPUT_CHANNEL2' [166]  (1.59 ns)
+
+ <State 42>: 0ns
+The critical path consists of the following:
+
+ <State 43>: 7.3ns
+The critical path consists of the following:
+	'getelementptr' operation ('gmem1_addr_2', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139) [175]  (0 ns)
+	bus request operation ('empty_105', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139) on port 'gmem1' (D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139) [176]  (7.3 ns)
+
+ <State 44>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty_105', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139) on port 'gmem1' (D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139) [176]  (7.3 ns)
+
+ <State 45>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty_105', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139) on port 'gmem1' (D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139) [176]  (7.3 ns)
+
+ <State 46>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty_105', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139) on port 'gmem1' (D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139) [176]  (7.3 ns)
+
+ <State 47>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty_105', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139) on port 'gmem1' (D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139) [176]  (7.3 ns)
+
+ <State 48>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty_105', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139) on port 'gmem1' (D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139) [176]  (7.3 ns)
+
+ <State 49>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty_105', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139) on port 'gmem1' (D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139) [176]  (7.3 ns)
+
+ <State 50>: 3.52ns
+The critical path consists of the following:
+	'add' operation ('add_ln139_2', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139) [200]  (3.52 ns)
+
+ <State 51>: 7.3ns
+The critical path consists of the following:
+	bus read operation ('gmem2_addr_3_read', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:140) on port 'gmem2' (D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:140) [192]  (7.3 ns)
+
+ <State 52>: 1.59ns
+The critical path consists of the following:
+	'call' operation ('call_ln140', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:140) to 'lenet_full_top_Pipeline_DENSE_INPUT' [194]  (1.59 ns)
+
+ <State 53>: 0ns
+The critical path consists of the following:
+
+ <State 54>: 7.3ns
+The critical path consists of the following:
+	'getelementptr' operation ('gmem1_addr_3', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139) [203]  (0 ns)
+	bus request operation ('empty_108', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139) on port 'gmem1' (D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139) [204]  (7.3 ns)
+
+ <State 55>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty_108', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139) on port 'gmem1' (D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139) [204]  (7.3 ns)
+
+ <State 56>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty_108', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139) on port 'gmem1' (D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139) [204]  (7.3 ns)
+
+ <State 57>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty_108', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139) on port 'gmem1' (D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139) [204]  (7.3 ns)
+
+ <State 58>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty_108', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139) on port 'gmem1' (D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139) [204]  (7.3 ns)
+
+ <State 59>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty_108', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139) on port 'gmem1' (D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139) [204]  (7.3 ns)
+
+ <State 60>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty_108', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139) on port 'gmem1' (D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139) [204]  (7.3 ns)
+
+ <State 61>: 3.32ns
+The critical path consists of the following:
+	'load' operation ('output_index', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139) on local variable 'output_index' [217]  (0 ns)
+	'add' operation ('add_ln139_5', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139) [220]  (1.74 ns)
+	'store' operation ('store_ln139', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139) of variable 'add_ln139_5', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:139 on local variable 'output_index' [227]  (1.59 ns)
+
+ <State 62>: 7.3ns
+The critical path consists of the following:
+	bus read operation ('gmem2_addr_4_read', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:140) on port 'gmem2' (D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:140) [224]  (7.3 ns)
+
+ <State 63>: 1.59ns
+The critical path consists of the following:
+	'call' operation ('call_ln140', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:140) to 'lenet_full_top_Pipeline_DENSE_INPUT4' [226]  (1.59 ns)
+
+ <State 64>: 0ns
+The critical path consists of the following:
+
+ <State 65>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('empty_112', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:334) on port 'gmem3' (D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:334) [230]  (7.3 ns)
+
+ <State 66>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('empty_112', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:334) on port 'gmem3' (D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:334) [230]  (7.3 ns)
+
+ <State 67>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('empty_112', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:334) on port 'gmem3' (D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:334) [230]  (7.3 ns)
+
+ <State 68>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('empty_112', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:334) on port 'gmem3' (D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:334) [230]  (7.3 ns)
+
+ <State 69>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('empty_112', D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:334) on port 'gmem3' (D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/src/lenet_conv.cpp:334) [230]  (7.3 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+	State 51
+	State 52
+	State 53
+	State 54
+	State 55
+	State 56
+	State 57
+	State 58
+	State 59
+	State 60
+	State 61
+	State 62
+	State 63
+	State 64
+	State 65
+	State 66
+	State 67
+	State 68
+	State 69
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,27 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../tb/tb_lenet_conv.cpp in debug mode
+   Compiling ../../../../variants/mac_unroll_2/lenet_conv.cpp in debug mode
+   Generating csim.exe
+LeNet-5 model-V2 HLS verification
+Data layout: CHW feature maps, OIHW weights
+Input preprocessing: (pixel/255 - 0.1307) / 0.3081
+Golden Conv/FC maps are before ReLU; all biases are zero.
+
+Conv1 raw                max_abs=7.15255737e-007 mean_abs=4.50400518e-008 rmse=8.69312614e-008 tolerance=2.00000000e-005 max_index=1223 [PASS]
+ReLU+Pool1               max_abs=7.15255737e-007 mean_abs=3.15350892e-008 rmse=7.54770092e-008 tolerance=2.00000000e-005 max_index=303 [PASS]
+Conv2 isolated           max_abs=2.77566910e-003 mean_abs=4.07110520e-004 rmse=5.51732040e-004 tolerance=5.00000000e-003 max_index=1103 [PASS]
+Conv2 chained            max_abs=2.77566910e-003 mean_abs=4.07089818e-004 rmse=5.51703876e-004 tolerance=5.00000000e-003 max_index=1103 [PASS]
+ReLU+Pool2               max_abs=1.70207024e-003 mean_abs=1.49590014e-004 rmse=3.22357588e-004 tolerance=5.00000000e-003 max_index=153 [PASS]
+Conv3 isolated           max_abs=2.64120102e-003 mean_abs=6.35402603e-004 rmse=8.11162963e-004 tolerance=1.00000000e-002 max_index=41 [PASS]
+Conv3 chained            max_abs=3.23581696e-003 mean_abs=7.51582021e-004 rmse=9.85175179e-004 tolerance=1.00000000e-002 max_index=92 [PASS]
+FC1 isolated             max_abs=2.86102295e-006 mean_abs=4.43132151e-007 rmse=6.93039413e-007 tolerance=1.00000000e-002 max_index=24 [PASS]
+FC1 chained              max_abs=1.62982941e-003 mean_abs=4.71418103e-004 rmse=6.11613821e-004 tolerance=1.00000000e-002 max_index=6 [PASS]
+FC2 isolated             max_abs=1.90734863e-006 mean_abs=5.06639481e-007 rmse=8.81060690e-007 tolerance=1.00000000e-002 max_index=6 [PASS]
+FC2 chained              max_abs=9.63211060e-004 mean_abs=3.57413292e-004 rmse=4.58086413e-004 tolerance=1.00000000e-002 max_index=9 [PASS]
+Full single sample       max_abs=9.63211060e-004 mean_abs=3.57413292e-004 rmse=4.58086413e-004 tolerance=1.00000000e-002 max_index=9 [PASS]
+  predicted=7 expected=7 [PASS]
+
+Overall result: PASS
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

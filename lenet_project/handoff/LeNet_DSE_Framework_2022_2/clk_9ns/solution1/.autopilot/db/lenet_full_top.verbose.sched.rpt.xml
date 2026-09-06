@@ -1,0 +1,51 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'lenet_full_top'" level="0">
+<item name = "Date">Sun Sep  6 21:23:34 2026
+</item>
+<item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
+<item name = "Project">clk_9ns</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">9.00 ns, 7.466 ns, 2.43 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">2247712, 2247712, 20.229 ms, 20.229 ms, 2247713, 2247713, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- OUTPUT_CHANNEL">118614, 118614, 19769, -, -, 6, no</column>
+<column name="- OUTPUT_CHANNEL">1712048, 1712048, 107003, -, -, 16, no</column>
+<column name=" + OUTPUT_ROW_OUTPUT_COL">107000, 107000, 1070, -, -, 100, no</column>
+<column name="- OUTPUT_CHANNEL">337560, 337560, 2813, -, -, 120, no</column>
+<column name="- DENSE_OUTPUT">71568, 71568, 852, -, -, 84, no</column>
+<column name="- DENSE_OUTPUT">6060, 6060, 606, -, -, 10, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

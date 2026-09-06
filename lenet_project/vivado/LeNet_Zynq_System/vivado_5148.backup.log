@@ -1,0 +1,142 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Sun Sep  6 16:30:15 2026
+# Process ID: 5148
+# Current directory: D:/lenet_project/vivado/LeNet_Zynq_System
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent47072 D:\lenet_project\vivado\LeNet_Zynq_System\LeNet_Zynq_System.xpr
+# Log file: D:/lenet_project/vivado/LeNet_Zynq_System/vivado.log
+# Journal file: D:/lenet_project/vivado/LeNet_Zynq_System\vivado.jou
+# Running On: Ê±³Î, OS: Windows, CPU Frequency: 2495 MHz, CPU Physical cores: 32, Host memory: 34142 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.xpr
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at D:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at D:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at D:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at D:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.0 available at D:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at D:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at D:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at D:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at D:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/lenet_project/hls/lenet_full_hls/solution1/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2022.2/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_processing_system7_0_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_processing_system7_0_0/lenet_system_processing_system7_0_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_processing_system7_0_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_processing_system7_0_0/lenet_system_processing_system7_0_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_processing_system7_0_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_processing_system7_0_0/lenet_system_processing_system7_0_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_processing_system7_0_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_processing_system7_0_0/lenet_system_processing_system7_0_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_processing_system7_0_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_processing_system7_0_0/lenet_system_processing_system7_0_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_proc_sys_reset_0_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_proc_sys_reset_0_0/lenet_system_proc_sys_reset_0_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_proc_sys_reset_0_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_proc_sys_reset_0_0/lenet_system_proc_sys_reset_0_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_proc_sys_reset_0_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_proc_sys_reset_0_0/lenet_system_proc_sys_reset_0_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_proc_sys_reset_0_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_proc_sys_reset_0_0/lenet_system_proc_sys_reset_0_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_proc_sys_reset_0_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_proc_sys_reset_0_0/lenet_system_proc_sys_reset_0_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_util_vector_logic_0_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_util_vector_logic_0_0/lenet_system_util_vector_logic_0_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_util_vector_logic_0_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_util_vector_logic_0_0/lenet_system_util_vector_logic_0_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_util_vector_logic_0_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_util_vector_logic_0_0/lenet_system_util_vector_logic_0_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_util_vector_logic_0_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_util_vector_logic_0_0/lenet_system_util_vector_logic_0_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_util_vector_logic_0_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_util_vector_logic_0_0/lenet_system_util_vector_logic_0_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_lenet_full_top_0_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_lenet_full_top_0_0/lenet_system_lenet_full_top_0_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_lenet_full_top_0_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_lenet_full_top_0_0/lenet_system_lenet_full_top_0_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_lenet_full_top_0_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_lenet_full_top_0_0/lenet_system_lenet_full_top_0_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_lenet_full_top_0_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_lenet_full_top_0_0/lenet_system_lenet_full_top_0_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_lenet_full_top_0_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_lenet_full_top_0_0/lenet_system_lenet_full_top_0_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_auto_pc_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_auto_pc_0/lenet_system_auto_pc_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_auto_pc_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_auto_pc_0/lenet_system_auto_pc_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_auto_pc_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_auto_pc_0/lenet_system_auto_pc_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_auto_pc_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_auto_pc_0/lenet_system_auto_pc_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_auto_pc_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_auto_pc_0/lenet_system_auto_pc_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_smartconnect_0_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_smartconnect_0_0/lenet_system_smartconnect_0_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_smartconnect_0_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_smartconnect_0_0/lenet_system_smartconnect_0_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_smartconnect_0_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_smartconnect_0_0/lenet_system_smartconnect_0_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_smartconnect_0_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_smartconnect_0_0/lenet_system_smartconnect_0_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'lenet_system_smartconnect_0_0' generated file not found 'd:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.gen/sources_1/bd/lenet_system/ip/lenet_system_smartconnect_0_0/lenet_system_smartconnect_0_0_sim_netlist.vhdl'. Please regenerate to continue.
+open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:08 . Memory (MB): peak = 1893.613 ; gain = 411.285
+update_compile_order -fileset sources_1
+reset_run synth_1
+reset_run lenet_system_processing_system7_0_0_synth_1
+reset_run lenet_system_util_vector_logic_0_0_synth_1
+reset_run lenet_system_proc_sys_reset_0_0_synth_1
+reset_run lenet_system_lenet_full_top_0_0_synth_1
+reset_run lenet_system_smartconnect_0_0_synth_1
+reset_run lenet_system_auto_pc_0_synth_1
+launch_runs synth_1 -jobs 8
+INFO: [IP_Flow 19-6930] IPCACHE: runCacheChecks() number of threads = 8
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP lenet_system_auto_pc_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP lenet_system_lenet_full_top_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP lenet_system_proc_sys_reset_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP lenet_system_smartconnect_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP lenet_system_util_vector_logic_0_0
+INFO: [IP_Flow 19-8020] IPCACHE: runCacheChecks() calling threadPool finishWork()
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: lenet_system_auto_pc_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: lenet_system_lenet_full_top_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: lenet_system_proc_sys_reset_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: lenet_system_smartconnect_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: lenet_system_util_vector_logic_0_0
+WARNING: [Vivado 12-7122] Auto Incremental Compile:: No reference checkpoint was found in run synth_1. Auto-incremental flow will not be run, the standard flow will be run instead.
+[Sun Sep  6 16:31:40 2026] Launched lenet_system_processing_system7_0_0_synth_1, lenet_system_util_vector_logic_0_0_synth_1, lenet_system_proc_sys_reset_0_0_synth_1, lenet_system_lenet_full_top_0_0_synth_1, lenet_system_smartconnect_0_0_synth_1, lenet_system_auto_pc_0_synth_1...
+Run output will be captured here:
+lenet_system_processing_system7_0_0_synth_1: D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.runs/lenet_system_processing_system7_0_0_synth_1/runme.log
+lenet_system_util_vector_logic_0_0_synth_1: D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.runs/lenet_system_util_vector_logic_0_0_synth_1/runme.log
+lenet_system_proc_sys_reset_0_0_synth_1: D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.runs/lenet_system_proc_sys_reset_0_0_synth_1/runme.log
+lenet_system_lenet_full_top_0_0_synth_1: D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.runs/lenet_system_lenet_full_top_0_0_synth_1/runme.log
+lenet_system_smartconnect_0_0_synth_1: D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.runs/lenet_system_smartconnect_0_0_synth_1/runme.log
+lenet_system_auto_pc_0_synth_1: D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.runs/lenet_system_auto_pc_0_synth_1/runme.log
+[Sun Sep  6 16:31:41 2026] Launched synth_1...
+Run output will be captured here: D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.runs/synth_1/runme.log
+reset_run synth_1
+reset_run lenet_system_processing_system7_0_0_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. PID not specified
+
+reset_run lenet_system_util_vector_logic_0_0_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. PID not specified
+
+reset_run lenet_system_proc_sys_reset_0_0_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. PID not specified
+
+reset_run lenet_system_lenet_full_top_0_0_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. PID not specified
+
+reset_run lenet_system_smartconnect_0_0_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. PID not specified
+
+reset_run lenet_system_auto_pc_0_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. PID not specified
+
+launch_runs synth_1
+INFO: [IP_Flow 19-6930] IPCACHE: runCacheChecks() number of threads = 8
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP lenet_system_auto_pc_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP lenet_system_lenet_full_top_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP lenet_system_proc_sys_reset_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP lenet_system_smartconnect_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP lenet_system_util_vector_logic_0_0
+INFO: [IP_Flow 19-8020] IPCACHE: runCacheChecks() calling threadPool finishWork()
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: lenet_system_auto_pc_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: lenet_system_lenet_full_top_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: lenet_system_proc_sys_reset_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: lenet_system_smartconnect_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: lenet_system_util_vector_logic_0_0
+WARNING: [Vivado 12-7122] Auto Incremental Compile:: No reference checkpoint was found in run synth_1. Auto-incremental flow will not be run, the standard flow will be run instead.
+[Sun Sep  6 16:32:10 2026] Launched lenet_system_processing_system7_0_0_synth_1, lenet_system_util_vector_logic_0_0_synth_1, lenet_system_proc_sys_reset_0_0_synth_1, lenet_system_lenet_full_top_0_0_synth_1, lenet_system_smartconnect_0_0_synth_1, lenet_system_auto_pc_0_synth_1...
+Run output will be captured here:
+lenet_system_processing_system7_0_0_synth_1: D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.runs/lenet_system_processing_system7_0_0_synth_1/runme.log
+lenet_system_util_vector_logic_0_0_synth_1: D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.runs/lenet_system_util_vector_logic_0_0_synth_1/runme.log
+lenet_system_proc_sys_reset_0_0_synth_1: D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.runs/lenet_system_proc_sys_reset_0_0_synth_1/runme.log
+lenet_system_lenet_full_top_0_0_synth_1: D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.runs/lenet_system_lenet_full_top_0_0_synth_1/runme.log
+lenet_system_smartconnect_0_0_synth_1: D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.runs/lenet_system_smartconnect_0_0_synth_1/runme.log
+lenet_system_auto_pc_0_synth_1: D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.runs/lenet_system_auto_pc_0_synth_1/runme.log
+[Sun Sep  6 16:32:11 2026] Launched synth_1...
+Run output will be captured here: D:/lenet_project/vivado/LeNet_Zynq_System/LeNet_Zynq_System.runs/synth_1/runme.log
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Sep  6 16:42:45 2026...

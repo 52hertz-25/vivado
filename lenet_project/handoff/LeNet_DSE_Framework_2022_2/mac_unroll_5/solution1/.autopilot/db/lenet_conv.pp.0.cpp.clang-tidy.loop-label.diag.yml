@@ -1,0 +1,13 @@
+---
+MainSourceFile:  'D:/lenet_project/handoff/LeNet_DSE_Framework_2022_2/LeNet_DSE_Framework_2022_2/mac_unroll_5/solution1/.autopilot/db/lenet_conv.pp.0.cpp'
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_36_1:  '
+    FileOffset:      36
+    FilePath:        'D:\lenet_project\handoff\LeNet_DSE_Framework_2022_2\LeNet_DSE_Framework_2022_2\variants\mac_unroll_5\lenet_conv.cpp'
+    Replacements:    
+      - FilePath:        'D:\lenet_project\handoff\LeNet_DSE_Framework_2022_2\LeNet_DSE_Framework_2022_2\mac_unroll_5\solution1\.autopilot\db\lenet_conv.pp.0.cpp'
+        Offset:          15663
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_36_1: '
+...

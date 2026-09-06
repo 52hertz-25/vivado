@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="lenet_conv.cpp" path="D:\lenet_project\member_c_conv_hls\src\lenet_conv.cpp"/>
+    <originFiles name="lenet_conv.h" path="D:\lenet_project\member_c_conv_hls\include\lenet_conv.h"/>
+  </source>
+  <testbench>
+    <originFiles name="npy_reader.h" path="D:\lenet_project\member_c_conv_hls\tb\npy_reader.h"/>
+    <originFiles name="tb_lenet_conv.cpp" path="D:\lenet_project\member_c_conv_hls\tb\tb_lenet_conv.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

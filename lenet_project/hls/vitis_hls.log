@@ -1,0 +1,61 @@
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user '时澄' on host '时澄' (Windows NT_amd64 version 6.2) on Sun Sep 06 00:07:44 +0800 2026
+INFO: [HLS 200-10] In directory 'D:/lenet_project/hls'
+Sourcing Tcl script 'D:/lenet_project/hls/lenet_full_hls/solution1/export.tcl'
+INFO: [HLS 200-1510] Running: source D:/lenet_project/hls/lenet_full_hls/solution1/export.tcl
+INFO: [HLS 200-1510] Running: open_project lenet_full_hls 
+INFO: [HLS 200-10] Opening project 'D:/lenet_project/hls/lenet_full_hls'.
+INFO: [HLS 200-1510] Running: set_top lenet_full_top 
+INFO: [HLS 200-1510] Running: add_files ../member_c_conv_hls/src/lenet_conv.cpp -cflags -ID:/lenet_project/member_c_conv_hls/include 
+INFO: [HLS 200-10] Adding design file '../member_c_conv_hls/src/lenet_conv.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files ../member_c_conv_hls/include/lenet_conv.h 
+INFO: [HLS 200-10] Adding design file '../member_c_conv_hls/include/lenet_conv.h' to the project
+INFO: [HLS 200-1510] Running: add_files -tb ../member_c_conv_hls/tb/npy_reader.h 
+INFO: [HLS 200-10] Adding test bench file '../member_c_conv_hls/tb/npy_reader.h' to the project
+INFO: [HLS 200-1510] Running: add_files -tb ../member_c_conv_hls/tb/tb_lenet_conv.cpp -cflags -DLENET_HLS_TOP_FULL -ID:/lenet_project/member_c_conv_hls/include -ID:/lenet_project/member_c_conv_hls/tb -std=c++11 
+INFO: [HLS 200-10] Adding test bench file '../member_c_conv_hls/tb/tb_lenet_conv.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution 'D:/lenet_project/hls/lenet_full_hls/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1464] Running solution command: config_export -description {LeNet-5 full network accelerator for Zynq-7020}
+INFO: [HLS 200-1464] Running solution command: config_export -display_name {LeNet Full Accelerator}
+INFO: [HLS 200-1464] Running solution command: config_export -library=hls
+INFO: [HLS 200-1464] Running solution command: config_export -output=D:/lenet_project/hls/lenet_full_hls/solution1/impl/ip
+INFO: [HLS 200-1464] Running solution command: config_export -vendor=user.org
+INFO: [HLS 200-1464] Running solution command: config_export -version=1.0
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: config_export -description LeNet-5 full network accelerator for Zynq-7020 -display_name LeNet Full Accelerator -library hls -output D:/lenet_project/hls/lenet_full_hls/solution1/impl/ip -vendor user.org -version 1.0 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog -output D:/lenet_project/hls/lenet_full_hls/solution1/impl/ip 
+Running Dispatch Server on port: 64379
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2022.2/data/ip'.
+WARNING: [IP_Flow 19-4832] The IP name 'lenet_full_top_fadd_32ns_32ns_32_5_full_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'lenet_full_top_fadd_32ns_32ns_32_5_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'lenet_full_top_fadd_32ns_32ns_32_5_full_dsp_1_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'lenet_full_top_fcmp_32ns_32ns_1_2_no_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'lenet_full_top_fcmp_32ns_32ns_1_2_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'lenet_full_top_fcmp_32ns_32ns_1_2_no_dsp_1_ip'...
+WARNING: [IP_Flow 19-4832] The IP name 'lenet_full_top_fmul_32ns_32ns_32_4_max_dsp_1_ip' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'lenet_full_top_fmul_32ns_32ns_32_4_max_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'lenet_full_top_fmul_32ns_32ns_32_4_max_dsp_1_ip'...
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2022.2/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Sun Sep  6 00:08:17 2026...
+INFO: [HLS 200-802] Generated output file lenet_full_hls/solution1/impl/ip/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 21.044 seconds; current allocated memory: 12.941 MB.
+INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 1 seconds. Total elapsed time: 33.828 seconds; peak allocated memory: 689.715 MB.
