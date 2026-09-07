@@ -1,0 +1,6 @@
+===== 每层权重最大绝对值 (用于确定量化缩放因子) =====
+conv1.weight: max_abs = 0.538206, range = [-0.5382, 0.3774]
+conv2.weight: max_abs = 0.543202, range = [-0.5432, 0.3854]
+conv3.weight: max_abs = 0.628281, range = [-0.6283, 0.6007]
+fc1.weight: max_abs = 0.473589, range = [-0.4736, 0.3690]
+fc2.weight: max_abs = 0.573334, range = [-0.5733, 0.3619]

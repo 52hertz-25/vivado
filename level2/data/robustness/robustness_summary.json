@@ -1,0 +1,42 @@
+{
+  "created_at_utc": "2026-09-07T09:08:27.289832+00:00",
+  "source_root": "./data/preprocessed/dataset/processed_28x28",
+  "source_sample_count": 320,
+  "source_label_counts": {
+    "0": 32,
+    "1": 32,
+    "2": 32,
+    "3": 32,
+    "4": 32,
+    "5": 32,
+    "6": 32,
+    "7": 32,
+    "8": 32,
+    "9": 32
+  },
+  "seed": 20260907,
+  "normalization": {
+    "padding": 2,
+    "mean": 0.1307000070810318,
+    "std": 0.30809998512268066
+  },
+  "labeled_variant_count": 10,
+  "labeled_output_count": 3200,
+  "blank_output_count": 65,
+  "counts": {
+    "rotation/angle_m15": 320,
+    "rotation/angle_m10": 320,
+    "rotation/angle_p10": 320,
+    "rotation/angle_p15": 320,
+    "blur/kernel_3": 320,
+    "blur/kernel_5": 320,
+    "noise/sigma_10": 320,
+    "noise/sigma_25": 320,
+    "brightness/factor_0p7": 320,
+    "brightness/factor_1p3": 320,
+    "blank/pure_white": 1,
+    "blank/shadow": 32,
+    "blank/clutter": 32
+  },
+  "blank_note": "Blank controls are synthetic model-input-level checks. Pure white becomes an all-zero inverted 28x28 image; shadow and clutter contain no target digit."
+}

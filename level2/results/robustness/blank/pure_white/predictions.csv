@@ -1,0 +1,2 @@
+﻿sample_id,file_path,true_label,pred_label,correct,confidence,logit_0,logit_1,logit_2,logit_3,logit_4,logit_5,logit_6,logit_7,logit_8,logit_9,condition,parameter
+blank_pure_white_001,./data/robustness/blank/pure_white/normalized_32x32/unlabeled/blank_pure_white_001.npy,,5,,0.11029895015978002,-0.075287364423275,-0.0059651946648955345,-0.02698414772748947,0.026981988921761513,-0.11803767085075378,0.060234203934669495,-0.0728607028722763,-0.006715880241245031,-0.11115692555904388,-0.06367214769124985,blank,pure_white

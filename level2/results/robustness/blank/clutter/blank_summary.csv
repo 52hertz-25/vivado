@@ -1,0 +1,2 @@
+﻿dataset,condition,parameter,sample_count,predicted_digit_count,mean_confidence,max_confidence,predicted_class_counts,notes
+synthetic_blank,blank,clutter,32,32,0.6452573478994403,0.9989237872345523,0:0;1:4;2:6;3:2;4:5;5:7;6:1;7:5;8:1;9:1,No target label; report predictions instead of accuracy.

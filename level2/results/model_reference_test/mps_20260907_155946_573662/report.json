@@ -1,0 +1,262 @@
+{
+  "stage": "model_reference_validation",
+  "requested_device": "mps",
+  "status": "FAIL",
+  "environment": {
+    "python": "/Users/liangke/miniforge3/envs/xgb_env/bin/python",
+    "torch": "2.8.0",
+    "numpy": "2.2.6",
+    "machine": "arm64",
+    "macos": "14.3",
+    "mps_built": true,
+    "mps_available": true,
+    "mps_cpu_fallback": "disabled"
+  },
+  "atol": 0.0001,
+  "rtol": 0.0001,
+  "comparison_rule": "abs(actual-reference) <= atol + rtol*abs(reference)",
+  "scope": "One supplied golden input. Not MNIST accuracy, not the 320-sample dataset evaluation.",
+  "model_source": "./work/model.py",
+  "model_source_sha256": "ddad41e91456f06a096b3d88ec1059dede87c5d6671bcb75e7ff6f83f4122a46",
+  "weights": [
+    {
+      "name": "conv1.weight",
+      "shape": [
+        6,
+        1,
+        5,
+        5
+      ],
+      "count": 150,
+      "source": "./model/hw_weights/conv1.weight.txt",
+      "sha256": "69665e5ebd77cd8273cb8142e67d2c8cd6c13b5ae8fec3e068eb8d787e980750"
+    },
+    {
+      "name": "conv2.weight",
+      "shape": [
+        16,
+        6,
+        5,
+        5
+      ],
+      "count": 2400,
+      "source": "./model/hw_weights/conv2.weight.txt",
+      "sha256": "b6de882afbc399786b268b3c34ed0e32c27f7e8f33c4f0ada964807aa19ca319"
+    },
+    {
+      "name": "conv3.weight",
+      "shape": [
+        120,
+        16,
+        5,
+        5
+      ],
+      "count": 48000,
+      "source": "./model/hw_weights/conv3.weight.txt",
+      "sha256": "a66ed765b2539d1a0aabfc260694f2720c23034b726a6fc7b029c174aedf9938"
+    },
+    {
+      "name": "fc1.weight",
+      "shape": [
+        84,
+        120
+      ],
+      "count": 10080,
+      "source": "./model/hw_weights/fc1.weight.txt",
+      "sha256": "26ba7b194b93c7c66394602883131f58df81e2df9d00c89073795a4b818f06d7"
+    },
+    {
+      "name": "fc2.weight",
+      "shape": [
+        10,
+        84
+      ],
+      "count": 840,
+      "source": "./model/hw_weights/fc2.weight.txt",
+      "sha256": "481828249209c267e02e9b436274727b774e77ea0fc23cb3fc26c790bb26e402"
+    }
+  ],
+  "parameter_count": 61470,
+  "parameter_bytes": 245880,
+  "input": {
+    "source": "./model/Golden_Reference_For_HW/input_raw.txt",
+    "sha256": "bfa4d70715e9e79b71a1759dc9f09b3043b14257bc544c22d4b7510ab7157715",
+    "shape": [
+      1,
+      1,
+      32,
+      32
+    ],
+    "normalization": "(raw/255 - 0.1307)/0.3081"
+  },
+  "reference_files": [
+    {
+      "layer": "conv1",
+      "source": "./model/hw_feature_maps/conv1.npy",
+      "sha256": "907164b7ee9e388d43b069382b0d1a15021f7eb0110de27c76be2b14d4203177"
+    },
+    {
+      "layer": "pool1",
+      "source": "./model/hw_feature_maps/pool1.npy",
+      "sha256": "7869addeb37663b632a322ee52b58c81a1ff9eee884f3d226777bb302bf1ba53"
+    },
+    {
+      "layer": "conv2",
+      "source": "./model/hw_feature_maps/conv2.npy",
+      "sha256": "cf115f7c25e1a9fa03b97be7408c7c35a5447df603b0446dc5aa6b90bef2ef17"
+    },
+    {
+      "layer": "pool2",
+      "source": "./model/hw_feature_maps/pool2.npy",
+      "sha256": "8bc40af589940ce26d723ebd0e580c7d99e4522ba1cdfb071251cc61c3ff2945"
+    },
+    {
+      "layer": "conv3",
+      "source": "./model/hw_feature_maps/conv3.npy",
+      "sha256": "12b94929929b9ea725b10825be5ae5265be5ac458a3accef7751d2b034ea9d4d"
+    },
+    {
+      "layer": "fc1",
+      "source": "./model/hw_feature_maps/fc1.npy",
+      "sha256": "5a9e67652b98877a03553fa9b6546fa9090d6c996a7e2200c0dd22e63b8ba55b"
+    },
+    {
+      "layer": "fc2",
+      "source": "./model/hw_feature_maps/fc2.npy",
+      "sha256": "ff6401e5588130821f00244901a8cb1ef577dadc3ec333618e782b6ce5ef8dc3"
+    }
+  ],
+  "static_validation": "PASS: architecture, weights, input and reference shapes",
+  "memory_before_model_on_mps": {
+    "current_allocated_memory_bytes": 0,
+    "driver_allocated_memory_bytes": 393216,
+    "recommended_max_memory_bytes": 5726633984
+  },
+  "memory_after_forward": {
+    "current_allocated_memory_bytes": 246528,
+    "driver_allocated_memory_bytes": 10895360,
+    "recommended_max_memory_bytes": 5726633984
+  },
+  "validation_seconds_including_capture": 0.2013976250309497,
+  "actual_device": "mps:0",
+  "layer_devices": {
+    "conv1": "mps:0",
+    "pool1": "mps:0",
+    "conv2": "mps:0",
+    "pool2": "mps:0",
+    "conv3": "mps:0",
+    "fc1": "mps:0",
+    "fc2": "mps:0"
+  },
+  "layers": [
+    {
+      "layer": "conv1",
+      "shape": "[1, 6, 28, 28]",
+      "device": "mps:0",
+      "capture_point": "pre_relu",
+      "max_abs_error": 4.76837158203125e-07,
+      "mean_abs_error": 8.956302438918454e-09,
+      "mismatched_elements": 0,
+      "total_elements": 4704,
+      "passed": true
+    },
+    {
+      "layer": "pool1",
+      "shape": "[1, 6, 14, 14]",
+      "device": "mps:0",
+      "capture_point": "post_relu_maxpool",
+      "max_abs_error": 2.384185791015625e-07,
+      "mean_abs_error": 4.601078012920156e-09,
+      "mismatched_elements": 0,
+      "total_elements": 1176,
+      "passed": true
+    },
+    {
+      "layer": "conv2",
+      "shape": "[1, 16, 10, 10]",
+      "device": "mps:0",
+      "capture_point": "pre_relu",
+      "max_abs_error": 0.0032567977905273438,
+      "mean_abs_error": 0.0005250468221493066,
+      "mismatched_elements": 781,
+      "total_elements": 1600,
+      "passed": false
+    },
+    {
+      "layer": "pool2",
+      "shape": "[1, 16, 5, 5]",
+      "device": "mps:0",
+      "capture_point": "post_relu_maxpool",
+      "max_abs_error": 0.0014328956604003906,
+      "mean_abs_error": 0.00011289145797491073,
+      "mismatched_elements": 55,
+      "total_elements": 400,
+      "passed": false
+    },
+    {
+      "layer": "conv3",
+      "shape": "[1, 120, 1, 1]",
+      "device": "mps:0",
+      "capture_point": "pre_relu",
+      "max_abs_error": 0.0045757293701171875,
+      "mean_abs_error": 0.0009360086172819137,
+      "mismatched_elements": 63,
+      "total_elements": 120,
+      "passed": false
+    },
+    {
+      "layer": "fc1",
+      "shape": "[1, 84]",
+      "device": "mps:0",
+      "capture_point": "pre_relu",
+      "max_abs_error": 0.003063201904296875,
+      "mean_abs_error": 0.0006828286818095616,
+      "mismatched_elements": 32,
+      "total_elements": 84,
+      "passed": false
+    },
+    {
+      "layer": "fc2",
+      "shape": "[1, 10]",
+      "device": "mps:0",
+      "capture_point": "logits",
+      "max_abs_error": 0.00084686279296875,
+      "mean_abs_error": 0.0005230605602264404,
+      "mismatched_elements": 1,
+      "total_elements": 10,
+      "passed": false
+    }
+  ],
+  "predicted_label": 7,
+  "reference_predicted_label": 7,
+  "expected_label": 7,
+  "logits": [
+    [
+      -12.57392692565918,
+      -7.045920372009277,
+      -7.110461235046387,
+      -5.820333480834961,
+      0.3438341021537781,
+      -11.502907752990723,
+      -16.069303512573242,
+      15.19714069366455,
+      -11.932706832885742,
+      1.417283535003662
+    ]
+  ],
+  "reference_logits": [
+    [
+      -12.574230194091797,
+      -7.046509742736816,
+      -7.111126899719238,
+      -5.820855617523193,
+      0.3438676595687866,
+      -11.503645896911621,
+      -16.06981658935547,
+      15.197785377502441,
+      -11.932332992553711,
+      1.4181303977966309
+    ]
+  ],
+  "message": "严格逐层参考对比失败；请从第一个失败层排查计算精度和生成平台。"
+}

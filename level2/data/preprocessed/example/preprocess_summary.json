@@ -1,0 +1,74 @@
+{
+  "rows": 4,
+  "cols": 4,
+  "class_counts": {
+    "0": 2,
+    "1": 2,
+    "2": 2,
+    "3": 2,
+    "4": 2,
+    "5": 2,
+    "6": 1,
+    "7": 1,
+    "8": 1,
+    "9": 1
+  },
+  "pages": [
+    {
+      "page": "./data/raw/example/example.jpg",
+      "page_id": "example_621d755b",
+      "status": "processed",
+      "warning": "paper_near_image_edge",
+      "corners": [
+        [
+          31.200000762939453,
+          219.60000610351562
+        ],
+        [
+          1071.5999755859375,
+          217.1999969482422
+        ],
+        [
+          1078.800048828125,
+          1737.5999755859375
+        ],
+        [
+          14.399999618530273,
+          1689.5999755859375
+        ]
+      ],
+      "perspective_matrix": [
+        [
+          1.061781761857687,
+          0.012134649785470792,
+          -35.792360946988445
+        ],
+        [
+          0.00244923258142028,
+          1.0617382481423816,
+          -233.23414183081195
+        ],
+        [
+          3.241261500574854e-05,
+          1.5977022694806293e-05,
+          1.0
+        ]
+      ],
+      "expected_digits": 16,
+      "extracted_digits": 16,
+      "flagged_cells": 0
+    }
+  ],
+  "preprocessing": {
+    "foreground": "white_on_black",
+    "digit_long_side": 20,
+    "centering": "intensity_mass",
+    "canvas": 28,
+    "padding_before_normalization": 2,
+    "mean": 0.1307,
+    "std": 0.3081,
+    "dtype": "float32"
+  },
+  "notice": "Extraction only. Labels are supplied, not recognized. Model/HLS input convention still needs B/C confirmation. Review all previews before using dataset.",
+  "stage": "preprocessing"
+}

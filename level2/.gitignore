@@ -1,0 +1,11 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.vscode/
+.venv/
+.ruff_cache/
+# Repeated local runs
+data/preprocessed/dataset_*/
+data/preprocessed/example_*/
+data/robustness_*/
+results/robustness_*/

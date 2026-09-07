@@ -1,0 +1,2 @@
+﻿dataset,condition,parameter,sample_count,correct_count,accuracy,notes
+self_collected,rotation,+10deg,320,305,0.953125,per-class=0:32/32;1:32/32;2:31/32;3:29/32;4:30/32;5:32/32;6:30/32;7:32/32;8:32/32;9:25/32

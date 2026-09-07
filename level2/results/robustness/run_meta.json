@@ -1,0 +1,129 @@
+{
+  "created_at_utc": "2026-09-07T09:21:52.962714+00:00",
+  "device": "cpu",
+  "model_source": "./work/model.py",
+  "weights_root": "./model/hw_weights",
+  "robustness_root": "./data/robustness",
+  "manifest": "./data/robustness/robustness_manifest.csv",
+  "prediction_count": 3265,
+  "labeled_group_count": 10,
+  "blank_group_count": 3,
+  "groups": [
+    {
+      "condition": "rotation",
+      "parameter": "-15deg",
+      "folder": "angle_m15",
+      "sample_count": 320,
+      "error_review_files": [
+        "./results/robustness/rotation/angle_m15/error_cases_001.png",
+        "./results/robustness/rotation/angle_m15/error_cases_002.png"
+      ]
+    },
+    {
+      "condition": "rotation",
+      "parameter": "-10deg",
+      "folder": "angle_m10",
+      "sample_count": 320,
+      "error_review_files": [
+        "./results/robustness/rotation/angle_m10/error_cases_001.png",
+        "./results/robustness/rotation/angle_m10/error_cases_002.png"
+      ]
+    },
+    {
+      "condition": "rotation",
+      "parameter": "+10deg",
+      "folder": "angle_p10",
+      "sample_count": 320,
+      "error_review_files": [
+        "./results/robustness/rotation/angle_p10/error_cases_001.png",
+        "./results/robustness/rotation/angle_p10/error_cases_002.png"
+      ]
+    },
+    {
+      "condition": "rotation",
+      "parameter": "+15deg",
+      "folder": "angle_p15",
+      "sample_count": 320,
+      "error_review_files": [
+        "./results/robustness/rotation/angle_p15/error_cases_001.png",
+        "./results/robustness/rotation/angle_p15/error_cases_002.png"
+      ]
+    },
+    {
+      "condition": "blur",
+      "parameter": "3x3",
+      "folder": "kernel_3",
+      "sample_count": 320,
+      "error_review_files": [
+        "./results/robustness/blur/kernel_3/error_cases.png"
+      ]
+    },
+    {
+      "condition": "blur",
+      "parameter": "5x5",
+      "folder": "kernel_5",
+      "sample_count": 320,
+      "error_review_files": [
+        "./results/robustness/blur/kernel_5/error_cases.png"
+      ]
+    },
+    {
+      "condition": "noise",
+      "parameter": "sigma=10/255",
+      "folder": "sigma_10",
+      "sample_count": 320,
+      "error_review_files": [
+        "./results/robustness/noise/sigma_10/error_cases.png"
+      ]
+    },
+    {
+      "condition": "noise",
+      "parameter": "sigma=25/255",
+      "folder": "sigma_25",
+      "sample_count": 320,
+      "error_review_files": [
+        "./results/robustness/noise/sigma_25/error_cases_001.png",
+        "./results/robustness/noise/sigma_25/error_cases_002.png"
+      ]
+    },
+    {
+      "condition": "brightness",
+      "parameter": "0.7x",
+      "folder": "factor_0p7",
+      "sample_count": 320,
+      "error_review_files": [
+        "./results/robustness/brightness/factor_0p7/error_cases.png"
+      ]
+    },
+    {
+      "condition": "brightness",
+      "parameter": "1.3x",
+      "folder": "factor_1p3",
+      "sample_count": 320,
+      "error_review_files": [
+        "./results/robustness/brightness/factor_1p3/error_cases.png"
+      ]
+    },
+    {
+      "condition": "blank",
+      "parameter": "pure_white",
+      "folder": "pure_white",
+      "sample_count": 1,
+      "error_review_files": []
+    },
+    {
+      "condition": "blank",
+      "parameter": "shadow",
+      "folder": "shadow",
+      "sample_count": 32,
+      "error_review_files": []
+    },
+    {
+      "condition": "blank",
+      "parameter": "clutter",
+      "folder": "clutter",
+      "sample_count": 32,
+      "error_review_files": []
+    }
+  ]
+}

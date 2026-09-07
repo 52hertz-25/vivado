@@ -1,0 +1,12 @@
+{
+  "dataset": "dataset",
+  "condition": "original",
+  "parameter": "",
+  "input_root": "./data/preprocessed/dataset/normalized_32x32",
+  "device": "mps",
+  "model_source": "./work/model.py",
+  "weights_root": "./model/hw_weights",
+  "sample_count": 320,
+  "correct_count": 312,
+  "accuracy": 0.975
+}
