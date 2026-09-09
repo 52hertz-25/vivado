@@ -1,0 +1,11 @@
+--- baseline/src/lenet_conv.cpp
++++ PE_MAC5/src/lenet_conv.cpp
+@@
++新增函数：mac_5x5_pe5
++- 5个完全分割的部分和累加器
++- PE_LANE 完全展开
++- PE_GROUP 请求 II=1 流水化
++
+@@ conv5x5_valid
+- mac_5x5(window, &weight[kernel_base], accumulator)
++ mac_5x5_pe5(window, &weight[kernel_base], accumulator)
