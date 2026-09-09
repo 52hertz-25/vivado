@@ -1,0 +1,2 @@
+config_id,top1_accuracy_percent,max_abs_error,pass_fail,notes
+fp32_baseline,,,,Fill from C simulation / software golden model

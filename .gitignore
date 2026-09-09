@@ -1,0 +1,21 @@
+# Course reference material is local-only.
+/课件/
+
+# Private build, render, and scratch files created while preparing deliverables.
+/.codex_tmp/
+/.chart-data-*/
+/.codex-finalizer/
+/tmp/
+**/__pycache__/
+lenet_project/member_e_deliverables/scripts/node_modules/
+lenet_project/member_e_deliverables/report/rendered/
+lenet_project/member_e_deliverables/slides/rendered/
+*.py[cod]
+~$*
+*.tmp
+
+# Tool logs accidentally emitted at the repository root.
+/vivado*.log
+/vivado*.jou
+/vitis_hls*.log
+/vitis_hls*.jou

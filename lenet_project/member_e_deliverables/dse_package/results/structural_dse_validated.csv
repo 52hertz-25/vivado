@@ -1,0 +1,4 @@
+﻿Config,CSim,Target_ns,Estimated_ns,Estimated_Fmax_MHz,Latency_cycles,Latency_ms_at_target,Interval,LUT,FF,BRAM_18K,DSP,Source_report
+struct_baseline,PASS,10.0,8.28,120.77294685990339,1647854,16.47854,1647855,17108,13452,70,5,lenet_project\handoff\LeNet_DSE_Framework_2022_2\struct_baseline\solution1\syn\report\lenet_full_top_csynth.xml
+mac_unroll_2,PASS,10.0,8.28,120.77294685990339,1647854,16.47854,1647855,17108,13452,70,5,lenet_project\handoff\LeNet_DSE_Framework_2022_2\mac_unroll_2\solution1\syn\report\lenet_full_top_csynth.xml
+mac_unroll_5,PASS,10.0,8.28,120.77294685990339,1647854,16.47854,1647855,17108,13452,70,5,lenet_project\handoff\LeNet_DSE_Framework_2022_2\mac_unroll_5\solution1\syn\report\lenet_full_top_csynth.xml
