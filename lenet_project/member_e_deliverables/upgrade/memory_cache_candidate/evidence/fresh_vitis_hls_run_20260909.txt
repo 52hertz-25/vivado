@@ -1,0 +1,422 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+  **** SW Build 3670227 on Oct 13 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source E:/Xilinx/Vitis_HLS/2022.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running 'E:/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user 'Chen_zk' on host 'laptop-jgc58ktj' (Windows NT_amd64 version 6.2) on Wed Sep 09 21:35:47 +0800 2026
+INFO: [HLS 200-10] In directory 'E:/member_e_hls_tmp_20260909/memory_cache_candidate'
+Sourcing Tcl script 'E:\member_e_hls_tmp_20260909\memory_cache_candidate\scripts\run_memory_cache.tcl'
+MEMBER_E_CACHE_BEGIN d2_external_weight_baseline
+INFO: [HLS 200-1510] Running: open_project -reset d2_external_weight_baseline 
+INFO: [HLS 200-10] Creating and opening project 'E:/member_e_hls_tmp_20260909/memory_cache_candidate/work/d2_external_weight_baseline'.
+INFO: [HLS 200-1510] Running: set_top lenet_conv2_top 
+INFO: [HLS 200-1510] Running: add_files E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp -cflags -std=c++11 -IE:/member_e_hls_tmp_20260909/memory_cache_candidate/include -IE:/member_e_hls_tmp_20260909/memory_cache_candidate/tb 
+INFO: [HLS 200-10] Adding design file 'E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb E:/member_e_hls_tmp_20260909/memory_cache_candidate/tb/tb_lenet_conv.cpp -cflags -std=c++11 -IE:/member_e_hls_tmp_20260909/memory_cache_candidate/include -IE:/member_e_hls_tmp_20260909/memory_cache_candidate/tb -DLENET_HLS_TOP_CONV2 
+INFO: [HLS 200-10] Adding test bench file 'E:/member_e_hls_tmp_20260909/memory_cache_candidate/tb/tb_lenet_conv.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution -reset solution1 
+INFO: [HLS 200-10] Creating and opening solution 'E:/member_e_hls_tmp_20260909/memory_cache_candidate/work/d2_external_weight_baseline/solution1'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vivado' configuration: config_interface -m_axi_latency=0
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1510] Running: create_clock -period 10.0 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csim_design -clean -argv E:/member_e_hls_tmp_20260909/memory_cache_candidate/model 
+Running Dispatch Server on port: 50584
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../../tb/tb_lenet_conv.cpp in debug mode
+   Compiling ../../../../../src/lenet_conv_D2_baseline.cpp in debug mode
+   Generating csim.exe
+LeNet-5 model-V2 HLS verification
+Data layout: CHW feature maps, OIHW weights
+Input preprocessing: (pixel/255 - 0.1307) / 0.3081
+Golden Conv/FC maps are before ReLU; all biases are zero.
+
+Vivado HLS testbench mode: Conv2
+
+Conv2 isolated           max_abs=2.77566910e-003 mean_abs=4.07125083e-004 rmse=5.51745293e-004 tolerance=5.00000000e-003 max_index=1103 [PASS]
+ReLU+Pool2               max_abs=1.70207024e-003 mean_abs=1.49611239e-004 rmse=3.22430928e-004 tolerance=5.00000000e-003 max_index=153 [PASS]
+
+Overall result: PASS
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.288 seconds; current allocated memory: 0.598 MB.
+MEMBER_E_CACHE_CSIM_PASS d2_external_weight_baseline
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.004 seconds; current allocated memory: 109.051 MB.
+INFO: [HLS 200-10] Analyzing design file 'E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.715 seconds; current allocated memory: 111.707 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-131] Inlining function 'void lenet::(anonymous namespace)::generate_window_5x5<14, 14>(float const*, int, int, int, float*)' into 'void lenet::(anonymous namespace)::conv5x5_valid<6, 14, 14, 16>(float const*, float const*, float const*, float*)' (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp:101:21)
+INFO: [HLS 214-131] Inlining function 'lenet::(anonymous namespace)::mac_5x5_pe(float const*, float const*, float)' into 'void lenet::(anonymous namespace)::conv5x5_valid<6, 14, 14, 16>(float const*, float const*, float const*, float*)' (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp:111:25)
+INFO: [HLS 214-291] Loop 'INPUT_CHANNEL' is marked as complete unroll implied by the pipeline pragma (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp:98:17)
+INFO: [HLS 214-291] Loop 'WINDOW_ROW' is marked as complete unroll implied by the pipeline pragma (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp:16:5)
+INFO: [HLS 214-291] Loop 'WINDOW_COL' is marked as complete unroll implied by the pipeline pragma (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp:18:9)
+INFO: [HLS 214-291] Loop 'INIT_PARTIAL' is marked as complete unroll implied by the pipeline pragma (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp:55:5)
+INFO: [HLS 214-291] Loop 'MAC_GROUP' is marked as complete unroll implied by the pipeline pragma (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp:61:5)
+INFO: [HLS 214-291] Loop 'MAC_PE' is marked as complete unroll implied by the pipeline pragma (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp:64:9)
+INFO: [HLS 214-291] Loop 'REDUCE' is marked as complete unroll implied by the pipeline pragma (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp:72:5)
+INFO: [HLS 214-186] Unrolling loop 'INPUT_CHANNEL' (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp:98:17) in function 'lenet::(anonymous namespace)::conv5x5_valid<6, 14, 14, 16>' completely with a factor of 6 (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp:84:0)
+INFO: [HLS 214-186] Unrolling loop 'REDUCE' (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp:72:5) in function 'lenet::(anonymous namespace)::conv5x5_valid<6, 14, 14, 16>' completely with a factor of 5 (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp:84:0)
+INFO: [HLS 214-186] Unrolling loop 'MAC_GROUP' (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp:61:5) in function 'lenet::(anonymous namespace)::conv5x5_valid<6, 14, 14, 16>' completely with a factor of 5 (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp:84:0)
+WARNING: [HLS 214-189] Pipeline directive for loop 'MAC_GROUP' (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp:61:5) in function 'lenet::(anonymous namespace)::conv5x5_valid<6, 14, 14, 16>' has been removed because the loop is unrolled completely (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp:84:0)
+INFO: [HLS 214-186] Unrolling loop 'MAC_PE' (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp:64:9) in function 'lenet::(anonymous namespace)::conv5x5_valid<6, 14, 14, 16>' completely with a factor of 5 (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp:84:0)
+INFO: [HLS 214-186] Unrolling loop 'INIT_PARTIAL' (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp:55:5) in function 'lenet::(anonymous namespace)::conv5x5_valid<6, 14, 14, 16>' completely with a factor of 5 (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp:84:0)
+INFO: [HLS 214-186] Unrolling loop 'WINDOW_ROW' (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp:16:5) in function 'lenet::(anonymous namespace)::conv5x5_valid<6, 14, 14, 16>' completely with a factor of 5 (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp:84:0)
+INFO: [HLS 214-186] Unrolling loop 'WINDOW_COL' (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp:18:9) in function 'lenet::(anonymous namespace)::conv5x5_valid<6, 14, 14, 16>' completely with a factor of 5 (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp:84:0)
+WARNING: [HLS 214-253] Ignored unsupported array_partition pragma on variable 'weight'. This can happen when applying a pragma on a function argument with mismatched array size w.r.t. its call site, or when providing a dim too deep on an array of insufficient dimension. (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp:248:2)
+INFO: [HLS 214-115] Multiple burst writes of length 1600 and bit width 32 in loop 'OUTPUT_CHANNEL'(E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp:89:5) has been inferred on bundle 'gmem3'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp:89:5)
+INFO: [HLS 214-115] Multiple burst reads of length 2400 and bit width 32 in loop 'OUTPUT_CHANNEL'(E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp:89:5) has been inferred on bundle 'gmem1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp:89:5)
+INFO: [HLS 214-115] Multiple burst reads of length 16 and bit width 32 in loop 'OUTPUT_CHANNEL'(E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp:89:5) has been inferred on bundle 'gmem2'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp:89:5)
+INFO: [HLS 214-115] Multiple burst reads of length 5 and bit width 32 has been inferred on bundle 'gmem0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp:23:17)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 4.677 seconds; current allocated memory: 116.367 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 116.367 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.056 seconds; current allocated memory: 123.855 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.045 seconds; current allocated memory: 125.352 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.137 seconds; current allocated memory: 149.996 MB.
+INFO: [XFORM 203-541] Flattening a loop nest 'OUTPUT_ROW' (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp:91:18) in function 'lenet::(anonymous namespace)::conv5x5_valid<6, 14, 14, 16>'.
+WARNING: [HLS 200-960] Cannot flatten loop 'OUTPUT_CHANNEL' (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp:89:14) in function 'lenet::(anonymous namespace)::conv5x5_valid<6, 14, 14, 16>' the outer loop is not a perfect loop.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-960.html
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.174 seconds; current allocated memory: 166.191 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'lenet_conv2_top' ...
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)conv5x5_valid<6, 14, 14, 16>_Pipeline_OUTPUT_ROW_OUTPUT_COL' to 'p_anonymous_namespace_conv5x5_valid_6_14_14_16_Pipeline_OUTPUT_ROW_OUTPUT_COL'.
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)conv5x5_valid<6, 14, 14, 16>' to 'p_anonymous_namespace_conv5x5_valid_6_14_14_16_s'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_conv5x5_valid_6_14_14_16_Pipeline_OUTPUT_ROW_OUTPUT_COL' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'OUTPUT_ROW_OUTPUT_COL'.
+WARNING: [HLS 200-880] The II Violation in module 'p_anonymous_namespace_conv5x5_valid_6_14_14_16_Pipeline_OUTPUT_ROW_OUTPUT_COL' (loop 'OUTPUT_ROW_OUTPUT_COL'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between bus read operation ('gmem0_addr_read_4', E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp:23) on port 'gmem0' (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp:23) and bus read operation ('gmem0_addr_read', E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp:23) on port 'gmem0' (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp:23).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'p_anonymous_namespace_conv5x5_valid_6_14_14_16_Pipeline_OUTPUT_ROW_OUTPUT_COL' (loop 'OUTPUT_ROW_OUTPUT_COL'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between bus read operation ('gmem0_addr_read_4', E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp:23) on port 'gmem0' (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp:23) and bus read operation ('gmem0_addr_read', E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp:23) on port 'gmem0' (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp:23).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'p_anonymous_namespace_conv5x5_valid_6_14_14_16_Pipeline_OUTPUT_ROW_OUTPUT_COL' (loop 'OUTPUT_ROW_OUTPUT_COL'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between bus read operation ('gmem0_addr_read_4', E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp:23) on port 'gmem0' (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp:23) and bus read operation ('gmem0_addr_read', E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp:23) on port 'gmem0' (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp:23).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'p_anonymous_namespace_conv5x5_valid_6_14_14_16_Pipeline_OUTPUT_ROW_OUTPUT_COL' (loop 'OUTPUT_ROW_OUTPUT_COL'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between bus read operation ('gmem0_addr_read_4', E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp:23) on port 'gmem0' (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp:23) and bus read operation ('gmem0_addr_read', E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp:23) on port 'gmem0' (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp:23).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-885] The II Violation in module 'p_anonymous_namespace_conv5x5_valid_6_14_14_16_Pipeline_OUTPUT_ROW_OUTPUT_COL' (loop 'OUTPUT_ROW_OUTPUT_COL'): Unable to schedule bus read operation ('gmem0_addr_26_read', E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp:23) on port 'gmem0' (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp:23) due to limited memory ports (II = 130). Please consider using a memory core with more ports or partitioning the array.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'p_anonymous_namespace_conv5x5_valid_6_14_14_16_Pipeline_OUTPUT_ROW_OUTPUT_COL' (loop 'OUTPUT_ROW_OUTPUT_COL'): Unable to schedule bus read operation ('gmem0_addr_29_read', E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp:23) on port 'gmem0' (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp:23) due to limited memory ports (II = 145). Please consider using a memory core with more ports or partitioning the array.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'p_anonymous_namespace_conv5x5_valid_6_14_14_16_Pipeline_OUTPUT_ROW_OUTPUT_COL' (loop 'OUTPUT_ROW_OUTPUT_COL'): Unable to schedule bus read operation ('gmem0_addr_29_read_4', E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp:23) on port 'gmem0' (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp:23) due to limited memory ports (II = 149). Please consider using a memory core with more ports or partitioning the array.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 150, Depth = 190, loop 'OUTPUT_ROW_OUTPUT_COL'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 2.798 seconds; current allocated memory: 187.297 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] After resource sharing, estimated clock period (10.2ns) exceeds the target (target clock period: 10ns, clock uncertainty: 2.7ns, effective delay budget: 7.3ns).
+INFO: [BIND 205-100] The critical path consists of the following:
+	'fadd' operation ('add19_i', E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_D2_baseline.cpp:67) (10.2 ns)
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 1.561 seconds; current allocated memory: 188.594 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_conv5x5_valid_6_14_14_16_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.474 seconds; current allocated memory: 189.633 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.512 seconds; current allocated memory: 189.668 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lenet_conv2_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.319 seconds; current allocated memory: 189.727 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.118 seconds; current allocated memory: 189.875 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_conv5x5_valid_6_14_14_16_Pipeline_OUTPUT_ROW_OUTPUT_COL' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'p_anonymous_namespace_conv5x5_valid_6_14_14_16_Pipeline_OUTPUT_ROW_OUTPUT_COL' pipeline 'OUTPUT_ROW_OUTPUT_COL' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_conv5x5_valid_6_14_14_16_Pipeline_OUTPUT_ROW_OUTPUT_COL/m_axi_gmem3_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_conv5x5_valid_6_14_14_16_Pipeline_OUTPUT_ROW_OUTPUT_COL/m_axi_gmem3_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_conv5x5_valid_6_14_14_16_Pipeline_OUTPUT_ROW_OUTPUT_COL/m_axi_gmem3_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_conv5x5_valid_6_14_14_16_Pipeline_OUTPUT_ROW_OUTPUT_COL/m_axi_gmem3_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_conv5x5_valid_6_14_14_16_Pipeline_OUTPUT_ROW_OUTPUT_COL/m_axi_gmem3_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_conv5x5_valid_6_14_14_16_Pipeline_OUTPUT_ROW_OUTPUT_COL/m_axi_gmem3_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_conv5x5_valid_6_14_14_16_Pipeline_OUTPUT_ROW_OUTPUT_COL/m_axi_gmem3_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_conv5x5_valid_6_14_14_16_Pipeline_OUTPUT_ROW_OUTPUT_COL/m_axi_gmem3_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_conv5x5_valid_6_14_14_16_Pipeline_OUTPUT_ROW_OUTPUT_COL/m_axi_gmem3_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_conv5x5_valid_6_14_14_16_Pipeline_OUTPUT_ROW_OUTPUT_COL/m_axi_gmem3_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_conv5x5_valid_6_14_14_16_Pipeline_OUTPUT_ROW_OUTPUT_COL/m_axi_gmem3_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_conv5x5_valid_6_14_14_16_Pipeline_OUTPUT_ROW_OUTPUT_COL/m_axi_gmem3_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_conv5x5_valid_6_14_14_16_Pipeline_OUTPUT_ROW_OUTPUT_COL/m_axi_gmem3_BREADY' to 0.
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_conv5x5_valid_6_14_14_16_Pipeline_OUTPUT_ROW_OUTPUT_COL'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.273 seconds; current allocated memory: 207.906 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_conv5x5_valid_6_14_14_16_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_conv5x5_valid_6_14_14_16_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 2.493 seconds; current allocated memory: 231.047 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lenet_conv2_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_conv2_top/gmem0' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_conv2_top/gmem1' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_conv2_top/gmem2' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_conv2_top/gmem3' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_conv2_top/feature_in' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_conv2_top/weight' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_conv2_top/bias' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_conv2_top/feature_out' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'lenet_conv2_top' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lenet_conv2_top'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.661 seconds; current allocated memory: 238.250 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.731 seconds; current allocated memory: 242.914 MB.
+INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.369 seconds; current allocated memory: 250.781 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for lenet_conv2_top.
+INFO: [VLOG 209-307] Generating Verilog RTL for lenet_conv2_top.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 98.04 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 13 seconds. CPU system time: 1 seconds. Elapsed time: 19.268 seconds; current allocated memory: 142.008 MB.
+MEMBER_E_CACHE_CSYNTH_PASS d2_external_weight_baseline
+INFO: [HLS 200-1510] Running: close_project 
+MEMBER_E_CACHE_BEGIN d2_local_weight_cache
+INFO: [HLS 200-1510] Running: open_project -reset d2_local_weight_cache 
+INFO: [HLS 200-10] Creating and opening project 'E:/member_e_hls_tmp_20260909/memory_cache_candidate/work/d2_local_weight_cache'.
+INFO: [HLS 200-1510] Running: set_top lenet_conv2_top 
+INFO: [HLS 200-1510] Running: add_files E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp -cflags -std=c++11 -IE:/member_e_hls_tmp_20260909/memory_cache_candidate/include -IE:/member_e_hls_tmp_20260909/memory_cache_candidate/tb 
+INFO: [HLS 200-10] Adding design file 'E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb E:/member_e_hls_tmp_20260909/memory_cache_candidate/tb/tb_lenet_conv.cpp -cflags -std=c++11 -IE:/member_e_hls_tmp_20260909/memory_cache_candidate/include -IE:/member_e_hls_tmp_20260909/memory_cache_candidate/tb -DLENET_HLS_TOP_CONV2 
+INFO: [HLS 200-10] Adding test bench file 'E:/member_e_hls_tmp_20260909/memory_cache_candidate/tb/tb_lenet_conv.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution -reset solution1 
+INFO: [HLS 200-10] Creating and opening solution 'E:/member_e_hls_tmp_20260909/memory_cache_candidate/work/d2_local_weight_cache/solution1'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vivado' configuration: config_interface -m_axi_latency=0
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10.0 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csim_design -clean -argv E:/member_e_hls_tmp_20260909/memory_cache_candidate/model 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../../tb/tb_lenet_conv.cpp in debug mode
+   Compiling ../../../../../src/lenet_conv_cache.cpp in debug mode
+   Generating csim.exe
+LeNet-5 model-V2 HLS verification
+Data layout: CHW feature maps, OIHW weights
+Input preprocessing: (pixel/255 - 0.1307) / 0.3081
+Golden Conv/FC maps are before ReLU; all biases are zero.
+
+Vivado HLS testbench mode: Conv2
+
+Conv2 isolated           max_abs=2.77566910e-003 mean_abs=4.07125083e-004 rmse=5.51745293e-004 tolerance=5.00000000e-003 max_index=1103 [PASS]
+ReLU+Pool2               max_abs=1.70207024e-003 mean_abs=1.49611239e-004 rmse=3.22430928e-004 tolerance=5.00000000e-003 max_index=153 [PASS]
+
+Overall result: PASS
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.297 seconds; current allocated memory: 0.000 MB.
+MEMBER_E_CACHE_CSIM_PASS d2_local_weight_cache
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.004 seconds; current allocated memory: 250.887 MB.
+INFO: [HLS 200-10] Analyzing design file 'E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.691 seconds; current allocated memory: 250.887 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-131] Inlining function 'void lenet::(anonymous namespace)::generate_window_5x5<14, 14>(float const*, int, int, int, float*)' into 'void lenet::(anonymous namespace)::conv5x5_valid<6, 14, 14, 16>(float const*, float const*, float const*, float*)' (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:101:21)
+INFO: [HLS 214-131] Inlining function 'lenet::(anonymous namespace)::mac_5x5_pe(float const*, float const*, float)' into 'void lenet::(anonymous namespace)::conv5x5_valid<6, 14, 14, 16>(float const*, float const*, float const*, float*)' (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:111:25)
+INFO: [HLS 214-291] Loop 'INPUT_CHANNEL' is marked as complete unroll implied by the pipeline pragma (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:98:17)
+INFO: [HLS 214-291] Loop 'WINDOW_ROW' is marked as complete unroll implied by the pipeline pragma (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:16:5)
+INFO: [HLS 214-291] Loop 'WINDOW_COL' is marked as complete unroll implied by the pipeline pragma (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:18:9)
+INFO: [HLS 214-291] Loop 'INIT_PARTIAL' is marked as complete unroll implied by the pipeline pragma (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:55:5)
+INFO: [HLS 214-291] Loop 'MAC_GROUP' is marked as complete unroll implied by the pipeline pragma (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:61:5)
+INFO: [HLS 214-291] Loop 'MAC_PE' is marked as complete unroll implied by the pipeline pragma (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:64:9)
+INFO: [HLS 214-291] Loop 'REDUCE' is marked as complete unroll implied by the pipeline pragma (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:72:5)
+INFO: [HLS 214-186] Unrolling loop 'INPUT_CHANNEL' (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:98:17) in function 'lenet::(anonymous namespace)::conv5x5_valid<6, 14, 14, 16>' completely with a factor of 6 (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:84:0)
+INFO: [HLS 214-186] Unrolling loop 'REDUCE' (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:72:5) in function 'lenet::(anonymous namespace)::conv5x5_valid<6, 14, 14, 16>' completely with a factor of 5 (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:84:0)
+INFO: [HLS 214-186] Unrolling loop 'MAC_GROUP' (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:61:5) in function 'lenet::(anonymous namespace)::conv5x5_valid<6, 14, 14, 16>' completely with a factor of 5 (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:84:0)
+WARNING: [HLS 214-189] Pipeline directive for loop 'MAC_GROUP' (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:61:5) in function 'lenet::(anonymous namespace)::conv5x5_valid<6, 14, 14, 16>' has been removed because the loop is unrolled completely (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:84:0)
+INFO: [HLS 214-186] Unrolling loop 'MAC_PE' (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:64:9) in function 'lenet::(anonymous namespace)::conv5x5_valid<6, 14, 14, 16>' completely with a factor of 5 (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:84:0)
+INFO: [HLS 214-186] Unrolling loop 'INIT_PARTIAL' (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:55:5) in function 'lenet::(anonymous namespace)::conv5x5_valid<6, 14, 14, 16>' completely with a factor of 5 (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:84:0)
+INFO: [HLS 214-186] Unrolling loop 'WINDOW_ROW' (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:16:5) in function 'lenet::(anonymous namespace)::conv5x5_valid<6, 14, 14, 16>' completely with a factor of 5 (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:84:0)
+INFO: [HLS 214-186] Unrolling loop 'WINDOW_COL' (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:18:9) in function 'lenet::(anonymous namespace)::conv5x5_valid<6, 14, 14, 16>' completely with a factor of 5 (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:84:0)
+WARNING: [HLS 214-253] Ignored unsupported array_partition pragma on variable 'lenet_conv2_top::weight_cache'. This can happen when applying a pragma on a function argument with mismatched array size w.r.t. its call site, or when providing a dim too deep on an array of insufficient dimension. (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:260:5)
+INFO: [HLS 214-248] Applying array_partition to '_ZZ15lenet_conv2_topE12weight_cache': Cyclic partitioning with factor 5 on dimension 1. (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:250:0)
+INFO: [HLS 214-115] Multiple burst writes of length 1600 and bit width 32 in loop 'OUTPUT_CHANNEL'(E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:89:5) has been inferred on bundle 'gmem3'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:89:5)
+INFO: [HLS 214-115] Multiple burst reads of length 16 and bit width 32 in loop 'OUTPUT_CHANNEL'(E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:89:5) has been inferred on bundle 'gmem2'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:89:5)
+INFO: [HLS 214-115] Multiple burst reads of length 5 and bit width 32 has been inferred on bundle 'gmem0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:23:17)
+INFO: [HLS 214-115] Multiple burst reads of length 2400 and bit width 32 in loop 'CACHE_CONV2_WEIGHTS'(E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:255:5) has been inferred on bundle 'gmem1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:255:5)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 4.803 seconds; current allocated memory: 250.887 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.001 seconds; current allocated memory: 250.887 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.071 seconds; current allocated memory: 250.887 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.069 seconds; current allocated memory: 250.887 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.233 seconds; current allocated memory: 250.887 MB.
+INFO: [XFORM 203-541] Flattening a loop nest 'OUTPUT_ROW' (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:91:18) in function 'lenet::(anonymous namespace)::conv5x5_valid<6, 14, 14, 16>'.
+WARNING: [HLS 200-960] Cannot flatten loop 'OUTPUT_CHANNEL' (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:89:14) in function 'lenet::(anonymous namespace)::conv5x5_valid<6, 14, 14, 16>' the outer loop is not a perfect loop.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-960.html
+INFO: [HLS 200-472] Inferring partial write operation for 'weight_cache' (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:257:22)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.186 seconds; current allocated memory: 250.887 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'lenet_conv2_top' ...
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)conv5x5_valid<6, 14, 14, 16>_Pipeline_OUTPUT_ROW_OUTPUT_COL' to 'p_anonymous_namespace_conv5x5_valid_6_14_14_16_Pipeline_OUTPUT_ROW_OUTPUT_COL'.
+WARNING: [SYN 201-103] Legalizing function name '(anonymous namespace)conv5x5_valid<6, 14, 14, 16>' to 'p_anonymous_namespace_conv5x5_valid_6_14_14_16_s'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lenet_conv2_top_Pipeline_CACHE_CONV2_WEIGHTS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'CACHE_CONV2_WEIGHTS'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'CACHE_CONV2_WEIGHTS'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.238 seconds; current allocated memory: 250.887 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.071 seconds; current allocated memory: 250.887 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_conv5x5_valid_6_14_14_16_Pipeline_OUTPUT_ROW_OUTPUT_COL' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'OUTPUT_ROW_OUTPUT_COL'.
+WARNING: [HLS 200-880] The II Violation in module 'p_anonymous_namespace_conv5x5_valid_6_14_14_16_Pipeline_OUTPUT_ROW_OUTPUT_COL' (loop 'OUTPUT_ROW_OUTPUT_COL'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between bus read operation ('gmem0_addr_read_4', E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:23) on port 'gmem0' (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:23) and bus read operation ('gmem0_addr_read', E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:23) on port 'gmem0' (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:23).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'p_anonymous_namespace_conv5x5_valid_6_14_14_16_Pipeline_OUTPUT_ROW_OUTPUT_COL' (loop 'OUTPUT_ROW_OUTPUT_COL'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between bus read operation ('gmem0_addr_read_4', E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:23) on port 'gmem0' (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:23) and bus read operation ('gmem0_addr_read', E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:23) on port 'gmem0' (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:23).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'p_anonymous_namespace_conv5x5_valid_6_14_14_16_Pipeline_OUTPUT_ROW_OUTPUT_COL' (loop 'OUTPUT_ROW_OUTPUT_COL'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between bus read operation ('gmem0_addr_read_4', E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:23) on port 'gmem0' (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:23) and bus read operation ('gmem0_addr_read', E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:23) on port 'gmem0' (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:23).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'p_anonymous_namespace_conv5x5_valid_6_14_14_16_Pipeline_OUTPUT_ROW_OUTPUT_COL' (loop 'OUTPUT_ROW_OUTPUT_COL'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between bus read operation ('gmem0_addr_read_4', E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:23) on port 'gmem0' (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:23) and bus read operation ('gmem0_addr_read', E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:23) on port 'gmem0' (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:23).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-885] The II Violation in module 'p_anonymous_namespace_conv5x5_valid_6_14_14_16_Pipeline_OUTPUT_ROW_OUTPUT_COL' (loop 'OUTPUT_ROW_OUTPUT_COL'): Unable to schedule bus read operation ('gmem0_addr_26_read', E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:23) on port 'gmem0' (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:23) due to limited memory ports (II = 130). Please consider using a memory core with more ports or partitioning the array.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'p_anonymous_namespace_conv5x5_valid_6_14_14_16_Pipeline_OUTPUT_ROW_OUTPUT_COL' (loop 'OUTPUT_ROW_OUTPUT_COL'): Unable to schedule bus read operation ('gmem0_addr_29_read', E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:23) on port 'gmem0' (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:23) due to limited memory ports (II = 145). Please consider using a memory core with more ports or partitioning the array.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'p_anonymous_namespace_conv5x5_valid_6_14_14_16_Pipeline_OUTPUT_ROW_OUTPUT_COL' (loop 'OUTPUT_ROW_OUTPUT_COL'): Unable to schedule bus read operation ('gmem0_addr_29_read_4', E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:23) on port 'gmem0' (E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:23) due to limited memory ports (II = 149). Please consider using a memory core with more ports or partitioning the array.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 150, Depth = 190, loop 'OUTPUT_ROW_OUTPUT_COL'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 2.669 seconds; current allocated memory: 250.887 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] After resource sharing, estimated clock period (10.2ns) exceeds the target (target clock period: 10ns, clock uncertainty: 2.7ns, effective delay budget: 7.3ns).
+INFO: [BIND 205-100] The critical path consists of the following:
+	'fadd' operation ('add19_i', E:/member_e_hls_tmp_20260909/memory_cache_candidate/src/lenet_conv_cache.cpp:67) (10.2 ns)
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.631 seconds; current allocated memory: 250.887 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_anonymous_namespace_conv5x5_valid_6_14_14_16_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 1.425 seconds; current allocated memory: 250.887 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.303 seconds; current allocated memory: 251.219 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lenet_conv2_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.351 seconds; current allocated memory: 251.238 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.144 seconds; current allocated memory: 251.250 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lenet_conv2_top_Pipeline_CACHE_CONV2_WEIGHTS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'lenet_conv2_top_Pipeline_CACHE_CONV2_WEIGHTS' pipeline 'CACHE_CONV2_WEIGHTS' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_conv2_top_Pipeline_CACHE_CONV2_WEIGHTS/m_axi_gmem1_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_conv2_top_Pipeline_CACHE_CONV2_WEIGHTS/m_axi_gmem1_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_conv2_top_Pipeline_CACHE_CONV2_WEIGHTS/m_axi_gmem1_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_conv2_top_Pipeline_CACHE_CONV2_WEIGHTS/m_axi_gmem1_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_conv2_top_Pipeline_CACHE_CONV2_WEIGHTS/m_axi_gmem1_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_conv2_top_Pipeline_CACHE_CONV2_WEIGHTS/m_axi_gmem1_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_conv2_top_Pipeline_CACHE_CONV2_WEIGHTS/m_axi_gmem1_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_conv2_top_Pipeline_CACHE_CONV2_WEIGHTS/m_axi_gmem1_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_conv2_top_Pipeline_CACHE_CONV2_WEIGHTS/m_axi_gmem1_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_conv2_top_Pipeline_CACHE_CONV2_WEIGHTS/m_axi_gmem1_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_conv2_top_Pipeline_CACHE_CONV2_WEIGHTS/m_axi_gmem1_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_conv2_top_Pipeline_CACHE_CONV2_WEIGHTS/m_axi_gmem1_ARUSER' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lenet_conv2_top_Pipeline_CACHE_CONV2_WEIGHTS'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.42 seconds; current allocated memory: 251.270 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_conv5x5_valid_6_14_14_16_Pipeline_OUTPUT_ROW_OUTPUT_COL' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'p_anonymous_namespace_conv5x5_valid_6_14_14_16_Pipeline_OUTPUT_ROW_OUTPUT_COL' pipeline 'OUTPUT_ROW_OUTPUT_COL' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_conv5x5_valid_6_14_14_16_Pipeline_OUTPUT_ROW_OUTPUT_COL/m_axi_gmem3_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_conv5x5_valid_6_14_14_16_Pipeline_OUTPUT_ROW_OUTPUT_COL/m_axi_gmem3_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_conv5x5_valid_6_14_14_16_Pipeline_OUTPUT_ROW_OUTPUT_COL/m_axi_gmem3_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_conv5x5_valid_6_14_14_16_Pipeline_OUTPUT_ROW_OUTPUT_COL/m_axi_gmem3_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_conv5x5_valid_6_14_14_16_Pipeline_OUTPUT_ROW_OUTPUT_COL/m_axi_gmem3_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_conv5x5_valid_6_14_14_16_Pipeline_OUTPUT_ROW_OUTPUT_COL/m_axi_gmem3_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_conv5x5_valid_6_14_14_16_Pipeline_OUTPUT_ROW_OUTPUT_COL/m_axi_gmem3_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_conv5x5_valid_6_14_14_16_Pipeline_OUTPUT_ROW_OUTPUT_COL/m_axi_gmem3_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_conv5x5_valid_6_14_14_16_Pipeline_OUTPUT_ROW_OUTPUT_COL/m_axi_gmem3_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_conv5x5_valid_6_14_14_16_Pipeline_OUTPUT_ROW_OUTPUT_COL/m_axi_gmem3_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_conv5x5_valid_6_14_14_16_Pipeline_OUTPUT_ROW_OUTPUT_COL/m_axi_gmem3_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_conv5x5_valid_6_14_14_16_Pipeline_OUTPUT_ROW_OUTPUT_COL/m_axi_gmem3_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'p_anonymous_namespace_conv5x5_valid_6_14_14_16_Pipeline_OUTPUT_ROW_OUTPUT_COL/m_axi_gmem3_BREADY' to 0.
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_conv5x5_valid_6_14_14_16_Pipeline_OUTPUT_ROW_OUTPUT_COL'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.113 seconds; current allocated memory: 262.730 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_anonymous_namespace_conv5x5_valid_6_14_14_16_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_anonymous_namespace_conv5x5_valid_6_14_14_16_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 3 seconds. CPU system time: 1 seconds. Elapsed time: 2.408 seconds; current allocated memory: 284.906 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lenet_conv2_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_conv2_top/gmem0' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_conv2_top/gmem1' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_conv2_top/gmem2' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_conv2_top/gmem3' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_conv2_top/feature_in' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_conv2_top/weight' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_conv2_top/bias' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_conv2_top/feature_out' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'lenet_conv2_top' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lenet_conv2_top'.
+INFO: [RTMG 210-278] Implementing memory 'lenet_conv2_top_weight_cache_RAM_2P_BRAM_1R1W' using block RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.72 seconds; current allocated memory: 289.398 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.793 seconds; current allocated memory: 294.828 MB.
+INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 2.123 seconds; current allocated memory: 301.430 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for lenet_conv2_top.
+INFO: [VLOG 209-307] Generating Verilog RTL for lenet_conv2_top.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 98.04 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 13 seconds. CPU system time: 1 seconds. Elapsed time: 20.642 seconds; current allocated memory: 50.543 MB.
+MEMBER_E_CACHE_CSYNTH_PASS d2_local_weight_cache
+INFO: [HLS 200-1510] Running: close_project 
+INFO: [HLS 200-112] Total CPU user time: 28 seconds. Total CPU system time: 2 seconds. Total elapsed time: 53.817 seconds; peak allocated memory: 301.430 MB.
+INFO: [Common 17-206] Exiting vitis_hls at Wed Sep  9 21:36:41 2026...

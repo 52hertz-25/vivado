@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "joint_configs": 13,
+  "fresh_hls_fp32": 4,
+  "blocked_quantized": 9,
+  "recommended": "fp32_d2_pe5_pipeline_10ns",
+  "memory_hls_validated": 2,
+  "memory_decision": "STOP_NO_PERFORMANCE_GAIN",
+  "vivado_rerun": "PASS",
+  "xsa_exported": true,
+  "docx_tables": 16,
+  "docx_figures": 2,
+  "axi_manifest_entries": 36
+}

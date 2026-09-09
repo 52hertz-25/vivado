@@ -1,0 +1,5 @@
+config_id,tool,measurement_scope,csim,estimated_clock_ns,latency_cycles,interval_cycles,lut,ff,bram_18k,dsp,reported_pipeline_ii,provenance
+fp32_d0_no_pipeline_10ns,Vitis HLS 2022.2,Conv2,PASS_REPORTED_BY_D,8.280,1240076,1240077,8372,5249,0,5,automatic INPUT_CHANNEL pipeline,PE_Array_Optimization_and_Memory_Bottleneck_Analysis/实验数据存档_Conv2.txt（含D0-D4）.txt
+fp32_d1_pipeline_10ns,Vitis HLS 2022.2,Conv2,PASS_REPORTED_BY_D,10.200,254749,254750,16190,27134,0,5,requested II=1 not satisfied,PE_Array_Optimization_and_Memory_Bottleneck_Analysis/实验数据存档_Conv2.txt（含D0-D4）.txt
+fp32_d2_pe5_pipeline_10ns,Vitis HLS 2022.2,Conv2,PASS_REPORTED_BY_D,10.200,243101,243102,13444,16887,0,7,requested II=1 limited by dependency and AXI,PE_Array_Optimization_and_Memory_Bottleneck_Analysis/实验数据存档_Conv2.txt（含D0-D4）.txt
+fp32_d3_pe5_oc2_pipeline_10ns,Vitis HLS 2022.2,Conv2,PASS_REPORTED_BY_D,10.203,283203,283204,15476,12511,0,7,II=1 reported satisfied,PE_Array_Optimization_and_Memory_Bottleneck_Analysis/实验数据存档_Conv2.txt（含D0-D4）.txt

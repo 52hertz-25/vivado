@@ -1,5 +1,6 @@
 # Course reference material is local-only.
 /课件/
+/E_plan/
 
 # Private build, render, and scratch files created while preparing deliverables.
 /.codex_tmp/
@@ -19,3 +20,13 @@ lenet_project/member_e_deliverables/slides/rendered/
 /vivado*.jou
 /vitis_hls*.log
 /vitis_hls*.jou
+
+# Member E upgrade: generated HLS/Vivado workspaces and local render previews.
+/lenet_project/member_e_deliverables/upgrade/**/work/
+/lenet_project/member_e_deliverables/upgrade/**/.Xil/
+/lenet_project/member_e_deliverables/upgrade/report/rendered/
+/lenet_project/member_e_deliverables/upgrade/**/vivado*.log
+/lenet_project/member_e_deliverables/upgrade/**/vivado*.jou
+/lenet_project/member_e_deliverables/upgrade/**/vitis_hls*.log
+/lenet_project/member_e_deliverables/upgrade/**/vitis_hls*.jou
+/lenet_project/member_e_deliverables/upgrade/**/joint_dse_vitis_hls.log

@@ -1,0 +1,17 @@
+scope,metric,value,unit,status,evidence
+Zynq_system,part,xc7z020clg400-1,,FRESH_VIVADO_RERUN,reports/rerun/utilization_hierarchical.rpt
+Zynq_system,clock_period,10.000,ns,FRESH_VIVADO_RERUN,reports/rerun/timing_summary.rpt
+Zynq_system,WNS,0.415,ns,PASS_FRESH_RERUN,reports/rerun/timing_summary.rpt
+Zynq_system,TNS,0.000,ns,PASS_FRESH_RERUN,reports/rerun/timing_summary.rpt
+Zynq_system,WHS,0.028,ns,PASS_FRESH_RERUN,reports/rerun/timing_summary.rpt
+Zynq_system,routed_nets,26721,nets,PASS_FRESH_RERUN,reports/rerun/route_status.rpt
+Zynq_system,routing_errors,0,nets,PASS_FRESH_RERUN,reports/rerun/route_status.rpt
+Zynq_system,LUT,11612,count,FRESH_VIVADO_RERUN,reports/rerun/utilization_hierarchical.rpt
+Zynq_system,FF,17612,count,FRESH_VIVADO_RERUN,reports/rerun/utilization_hierarchical.rpt
+Zynq_system,RAMB36,33,count,FRESH_VIVADO_RERUN,reports/rerun/utilization_hierarchical.rpt
+Zynq_system,RAMB18,8,count,FRESH_VIVADO_RERUN,reports/rerun/utilization_hierarchical.rpt
+Zynq_system,BRAM_tile_equivalent,37,count,FRESH_VIVADO_RERUN,reports/rerun/utilization_hierarchical.rpt
+Zynq_system,DSP,5,count,FRESH_VIVADO_RERUN,reports/rerun/utilization_hierarchical.rpt
+Block_design,control_base,0x40000000,address,VALIDATED_SOURCE,lenet_system.bd
+Block_design,validation,validate_bd_design -force,,PASS_FRESH_RERUN,evidence/fresh_vivado_rerun_20260909.txt
+Hardware_platform,XSA,lenet_system_wrapper.xsa,,CREATED_FRESH_RERUN,reports/rerun/lenet_system_wrapper.xsa

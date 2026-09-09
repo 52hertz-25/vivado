@@ -1,0 +1,22 @@
+2026-09-09 Member E Vivado rerun result
+
+Vivado 2022.2 batch execution completed successfully after supplying the missing
+PROCESSOR_ARCHITECTURE=AMD64 environment variable.
+
+Executed operations:
+- open LeNet_Zynq_System.xpr;
+- open lenet_system.bd and run validate_bd_design -force;
+- save the validated block design;
+- open implementation run impl_1;
+- regenerate route status, timing summary, hierarchical utilization and power;
+- export lenet_system_wrapper.xsa.
+
+Success marker: MEMBER_E_VIVADO_RERUN_PASS
+Full transcript: evidence/fresh_vivado_rerun_20260909.txt
+Fresh outputs: reports/rerun/
+
+Observed warnings:
+- local Tcl store was not writable and Vivado used its installation Tcl store;
+- the old IPUserFilesDir path was absent, while the current HLS IP repository was loaded successfully.
+
+Neither warning stopped validation, report generation or XSA export.

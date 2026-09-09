@@ -1,0 +1,3 @@
+﻿config_id,status,csim,max_abs_error,target_clock_ns,estimated_clock_ns,latency_cycles,interval_cycles,lut,ff,bram_18k,dsp,latency_change_percent,interval_change_percent,lut_change,ff_change,bram_change,dsp_change,decision,source_report
+d2_external_weight_baseline,VALIDATED,PASS,0.0027756691,10.00,10.200,243101,243102,13444,16887,0,7,,,,,,,CONTROL,work\d2_external_weight_baseline\solution1\syn\report\lenet_conv2_top_csynth.xml
+d2_local_weight_cache,VALIDATED,PASS,0.0027756691,10.00,10.200,243353,243354,14224,12121,10,7,0.1037,0.1037,780,-4766,10,0,STOP_NO_PERFORMANCE_GAIN,work\d2_local_weight_cache\solution1\syn\report\lenet_conv2_top_csynth.xml

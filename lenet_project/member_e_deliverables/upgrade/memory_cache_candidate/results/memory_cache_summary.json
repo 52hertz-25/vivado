@@ -1,0 +1,42 @@
+{
+  "comparison": [
+    {
+      "config_id": "d2_external_weight_baseline",
+      "status": "VALIDATED",
+      "csim": "PASS",
+      "max_abs_error": "0.0027756691",
+      "target_clock_ns": "10.00",
+      "estimated_clock_ns": "10.200",
+      "latency_cycles": 243101,
+      "interval_cycles": 243102,
+      "lut": 13444,
+      "ff": 16887,
+      "bram_18k": 0,
+      "dsp": 7,
+      "source_report": "work\\d2_external_weight_baseline\\solution1\\syn\\report\\lenet_conv2_top_csynth.xml",
+      "decision": "CONTROL"
+    },
+    {
+      "config_id": "d2_local_weight_cache",
+      "status": "VALIDATED",
+      "csim": "PASS",
+      "max_abs_error": "0.0027756691",
+      "target_clock_ns": "10.00",
+      "estimated_clock_ns": "10.200",
+      "latency_cycles": 243353,
+      "interval_cycles": 243354,
+      "lut": 14224,
+      "ff": 12121,
+      "bram_18k": 10,
+      "dsp": 7,
+      "source_report": "work\\d2_local_weight_cache\\solution1\\syn\\report\\lenet_conv2_top_csynth.xml",
+      "latency_change_percent": "0.1037",
+      "interval_change_percent": "0.1037",
+      "lut_change": 780,
+      "ff_change": -4766,
+      "bram_change": 10,
+      "dsp_change": 0,
+      "decision": "STOP_NO_PERFORMANCE_GAIN"
+    }
+  ]
+}

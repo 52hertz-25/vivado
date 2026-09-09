@@ -1,0 +1,18 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../../tb/tb_lenet_conv.cpp in debug mode
+   Compiling ../../../../../src/lenet_conv_cache.cpp in debug mode
+   Generating csim.exe
+LeNet-5 model-V2 HLS verification
+Data layout: CHW feature maps, OIHW weights
+Input preprocessing: (pixel/255 - 0.1307) / 0.3081
+Golden Conv/FC maps are before ReLU; all biases are zero.
+
+Vivado HLS testbench mode: Conv2
+
+Conv2 isolated           max_abs=2.77566910e-003 mean_abs=4.07125083e-004 rmse=5.51745293e-004 tolerance=5.00000000e-003 max_index=1103 [PASS]
+ReLU+Pool2               max_abs=1.70207024e-003 mean_abs=1.49611239e-004 rmse=3.22430928e-004 tolerance=5.00000000e-003 max_index=153 [PASS]
+
+Overall result: PASS
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************
