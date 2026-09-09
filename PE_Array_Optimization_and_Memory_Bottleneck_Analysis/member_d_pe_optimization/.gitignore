@@ -1,0 +1,9 @@
+# Vitis HLS 工程产物（本地复现时生成，不入库）
+build*/
+
+# 编译产物
+*.exe
+*.o
+obj/
+
+vitis_hls.log

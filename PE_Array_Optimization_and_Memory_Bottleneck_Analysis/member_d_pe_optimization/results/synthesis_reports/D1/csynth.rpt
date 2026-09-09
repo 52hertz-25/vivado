@@ -1,0 +1,576 @@
+
+
+================================================================
+== Synthesis Summary Report of 'lenet_conv2_top'
+================================================================
++ General Information: 
+    * Date:           Wed Sep  9 15:36:32 2026
+    * Version:        2022.2 (Build 3670227 on Oct 13 2022)
+    * Project:        conv2_hls
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +------------------------------------------------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+------+--------+-------------+-------------+-----+
+    |                                       Modules                                      |  Issue |       | Latency |  Latency  | Iteration|         | Trip |          |      |        |             |             |     |
+    |                                       & Loops                                      |  Type  | Slack | (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined| BRAM |   DSP  |      FF     |     LUT     | URAM|
+    +------------------------------------------------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+------+--------+-------------+-------------+-----+
+    |+ lenet_conv2_top                                                                   |  Timing|  -2.90|   254749|  2.598e+06|         -|   254750|     -|        no|     -|  5 (2%)|  27134 (25%)|  16190 (30%)|    -|
+    | + p_anonymous_namespace_conv5x5_valid_6_14_14_16_s                                 |  Timing|  -2.90|   254748|  2.598e+06|         -|   254748|     -|        no|     -|  5 (2%)|  24259 (22%)|  10823 (20%)|    -|
+    |  o OUTPUT_CHANNEL                                                                  |       -|   7.30|   254736|  2.598e+06|     15921|        -|    16|        no|     -|       -|            -|            -|    -|
+    |   + p_anonymous_namespace_conv5x5_valid_6_14_14_16_Pipeline_OUTPUT_ROW_OUTPUT_COL  |  Timing|  -2.90|    15769|  1.608e+05|         -|    15769|     -|        no|     -|  5 (2%)|  14395 (13%)|   9689 (18%)|    -|
+    |    o OUTPUT_ROW_OUTPUT_COL                                                         |      II|   7.30|    15767|  1.608e+05|       769|      150|   100|       yes|     -|       -|            -|            -|    -|
+    +------------------------------------------------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+------+--------+-------------+-------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| Interface   | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   |
+|             | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| m_axi_gmem0 | 32 -> 32   | 64            | 0       | direct | 0        | 0         | 16           | 16           | 16          | 16          |
+| m_axi_gmem1 | 32 -> 32   | 64            | 0       | direct | 0        | 0         | 16           | 16           | 16          | 16          |
+| m_axi_gmem2 | 32 -> 32   | 64            | 0       | direct | 0        | 0         | 16           | 16           | 16          | 16          |
+| m_axi_gmem3 | 32 -> 32   | 64            | 0       | direct | 0        | 0         | 16           | 16           | 16          | 16          |
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+
+* Other Ports
++-------------+---------+----------+
+| Interface   | Mode    | Bitwidth |
++-------------+---------+----------+
+| bias        | ap_none | 64       |
+| feature_in  | ap_none | 64       |
+| feature_out | ap_none | 64       |
+| weight      | ap_none | 64       |
++-------------+---------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst_n  | reset      | ap_rst_n                          |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++-------------+-----------+---------------+
+| Argument    | Direction | Datatype      |
++-------------+-----------+---------------+
+| feature_in  | in        | float const * |
+| weight      | in        | float const * |
+| bias        | in        | float const * |
+| feature_out | in        | float*        |
++-------------+-----------+---------------+
+
+* SW-to-HW Mapping
++-------------+--------------+-----------+----------+
+| Argument    | HW Interface | HW Type   | HW Usage |
++-------------+--------------+-----------+----------+
+| feature_in  | m_axi_gmem0  | interface |          |
+| feature_in  | feature_in   | port      | offset   |
+| weight      | m_axi_gmem1  | interface |          |
+| weight      | weight       | port      | offset   |
+| bias        | m_axi_gmem2  | interface |          |
+| bias        | bias         | port      | offset   |
+| feature_out | m_axi_gmem3  | interface |          |
+| feature_out | feature_out  | port      | offset   |
++-------------+--------------+-----------+----------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* Inferred Burst Summary
++--------------+----------------+-----------+--------+-------+-----------------------------------------------------------------------------------------+
+| HW Interface | Loop           | Direction | Length | Width | Location                                                                                |
++--------------+----------------+-----------+--------+-------+-----------------------------------------------------------------------------------------+
+| m_axi_gmem3  | OUTPUT_CHANNEL | write     | 1600   | 32    | D:/FPGA_project/lenet_project/member_d_pe/member_c_conv_hls/src/lenet_conv_D1.cpp:51:5  |
+| m_axi_gmem1  | OUTPUT_CHANNEL | read      | 2400   | 32    | D:/FPGA_project/lenet_project/member_d_pe/member_c_conv_hls/src/lenet_conv_D1.cpp:51:5  |
+| m_axi_gmem2  | OUTPUT_CHANNEL | read      | 16     | 32    | D:/FPGA_project/lenet_project/member_d_pe/member_c_conv_hls/src/lenet_conv_D1.cpp:51:5  |
+| m_axi_gmem0  |                | read      | 5      | 32    | D:/FPGA_project/lenet_project/member_d_pe/member_c_conv_hls/src/lenet_conv_D1.cpp:23:17 |
++--------------+----------------+-----------+--------+-------+-----------------------------------------------------------------------------------------+
+
+* Inferred Bursts and Widening Missed
++--------------+-------------+----------------+---------------------------------------------------------------------------------------------------------+------------+-----------------------------------------------------------------------------------------+
+| HW Interface | Variable    | Loop           | Problem                                                                                                 | Resolution | Location                                                                                |
++--------------+-------------+----------------+---------------------------------------------------------------------------------------------------------+------------+-----------------------------------------------------------------------------------------+
+| m_axi_gmem0  | feature_in  |                | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | D:/FPGA_project/lenet_project/member_d_pe/member_c_conv_hls/src/lenet_conv_D1.cpp:23:17 |
+| m_axi_gmem0  | feature_in  |                | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | D:/FPGA_project/lenet_project/member_d_pe/member_c_conv_hls/src/lenet_conv_D1.cpp:23:17 |
+| m_axi_gmem0  | feature_in  |                | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | D:/FPGA_project/lenet_project/member_d_pe/member_c_conv_hls/src/lenet_conv_D1.cpp:23:17 |
+| m_axi_gmem0  | feature_in  |                | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | D:/FPGA_project/lenet_project/member_d_pe/member_c_conv_hls/src/lenet_conv_D1.cpp:23:17 |
+| m_axi_gmem0  | feature_in  |                | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | D:/FPGA_project/lenet_project/member_d_pe/member_c_conv_hls/src/lenet_conv_D1.cpp:23:17 |
+| m_axi_gmem0  | feature_in  |                | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | D:/FPGA_project/lenet_project/member_d_pe/member_c_conv_hls/src/lenet_conv_D1.cpp:23:17 |
+| m_axi_gmem0  | feature_in  |                | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | D:/FPGA_project/lenet_project/member_d_pe/member_c_conv_hls/src/lenet_conv_D1.cpp:23:17 |
+| m_axi_gmem0  | feature_in  |                | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | D:/FPGA_project/lenet_project/member_d_pe/member_c_conv_hls/src/lenet_conv_D1.cpp:23:17 |
+| m_axi_gmem0  | feature_in  |                | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | D:/FPGA_project/lenet_project/member_d_pe/member_c_conv_hls/src/lenet_conv_D1.cpp:23:17 |
+| m_axi_gmem0  | feature_in  |                | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | D:/FPGA_project/lenet_project/member_d_pe/member_c_conv_hls/src/lenet_conv_D1.cpp:23:17 |
+| m_axi_gmem0  | feature_in  |                | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | D:/FPGA_project/lenet_project/member_d_pe/member_c_conv_hls/src/lenet_conv_D1.cpp:23:17 |
+| m_axi_gmem0  | feature_in  |                | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | D:/FPGA_project/lenet_project/member_d_pe/member_c_conv_hls/src/lenet_conv_D1.cpp:23:17 |
+| m_axi_gmem0  | feature_in  |                | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | D:/FPGA_project/lenet_project/member_d_pe/member_c_conv_hls/src/lenet_conv_D1.cpp:23:17 |
+| m_axi_gmem0  | feature_in  |                | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | D:/FPGA_project/lenet_project/member_d_pe/member_c_conv_hls/src/lenet_conv_D1.cpp:23:17 |
+| m_axi_gmem0  | feature_in  |                | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | D:/FPGA_project/lenet_project/member_d_pe/member_c_conv_hls/src/lenet_conv_D1.cpp:23:17 |
+| m_axi_gmem0  | feature_in  |                | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | D:/FPGA_project/lenet_project/member_d_pe/member_c_conv_hls/src/lenet_conv_D1.cpp:23:17 |
+| m_axi_gmem0  | feature_in  |                | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | D:/FPGA_project/lenet_project/member_d_pe/member_c_conv_hls/src/lenet_conv_D1.cpp:23:17 |
+| m_axi_gmem0  | feature_in  |                | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | D:/FPGA_project/lenet_project/member_d_pe/member_c_conv_hls/src/lenet_conv_D1.cpp:23:17 |
+| m_axi_gmem0  | feature_in  |                | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | D:/FPGA_project/lenet_project/member_d_pe/member_c_conv_hls/src/lenet_conv_D1.cpp:23:17 |
+| m_axi_gmem0  | feature_in  |                | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | D:/FPGA_project/lenet_project/member_d_pe/member_c_conv_hls/src/lenet_conv_D1.cpp:23:17 |
+| m_axi_gmem0  | feature_in  |                | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | D:/FPGA_project/lenet_project/member_d_pe/member_c_conv_hls/src/lenet_conv_D1.cpp:23:17 |
+| m_axi_gmem0  | feature_in  |                | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | D:/FPGA_project/lenet_project/member_d_pe/member_c_conv_hls/src/lenet_conv_D1.cpp:23:17 |
+| m_axi_gmem0  | feature_in  |                | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | D:/FPGA_project/lenet_project/member_d_pe/member_c_conv_hls/src/lenet_conv_D1.cpp:23:17 |
+| m_axi_gmem0  | feature_in  |                | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | D:/FPGA_project/lenet_project/member_d_pe/member_c_conv_hls/src/lenet_conv_D1.cpp:23:17 |
+| m_axi_gmem0  | feature_in  |                | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | D:/FPGA_project/lenet_project/member_d_pe/member_c_conv_hls/src/lenet_conv_D1.cpp:23:17 |
+| m_axi_gmem0  | feature_in  |                | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | D:/FPGA_project/lenet_project/member_d_pe/member_c_conv_hls/src/lenet_conv_D1.cpp:23:17 |
+| m_axi_gmem0  | feature_in  |                | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | D:/FPGA_project/lenet_project/member_d_pe/member_c_conv_hls/src/lenet_conv_D1.cpp:23:17 |
+| m_axi_gmem0  | feature_in  |                | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | D:/FPGA_project/lenet_project/member_d_pe/member_c_conv_hls/src/lenet_conv_D1.cpp:23:17 |
+| m_axi_gmem0  | feature_in  |                | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | D:/FPGA_project/lenet_project/member_d_pe/member_c_conv_hls/src/lenet_conv_D1.cpp:23:17 |
+| m_axi_gmem0  | feature_in  |                | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | D:/FPGA_project/lenet_project/member_d_pe/member_c_conv_hls/src/lenet_conv_D1.cpp:23:17 |
+| m_axi_gmem3  | feature_out | OUTPUT_COL     | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | D:/FPGA_project/lenet_project/member_d_pe/member_c_conv_hls/src/lenet_conv_D1.cpp:55:13 |
+| m_axi_gmem2  | bias        | OUTPUT_CHANNEL | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | D:/FPGA_project/lenet_project/member_d_pe/member_c_conv_hls/src/lenet_conv_D1.cpp:51:5  |
+| m_axi_gmem1  | weight      | OUTPUT_CHANNEL | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | D:/FPGA_project/lenet_project/member_d_pe/member_c_conv_hls/src/lenet_conv_D1.cpp:51:5  |
++--------------+-------------+----------------+---------------------------------------------------------------------------------------------------------+------------+-----------------------------------------------------------------------------------------+
+
+    * Resolution URL: www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=XXX-YYY.html (replace XXX-YYY with column value)
+
+================================================================
+== Bind Op Report
+================================================================
++-----------------------------------------------------------------------------------+-----+--------+--------------------------+------+---------+---------+
+| Name                                                                              | DSP | Pragma | Variable                 | Op   | Impl    | Latency |
++-----------------------------------------------------------------------------------+-----+--------+--------------------------+------+---------+---------+
+| + lenet_conv2_top                                                                 | 5   |        |                          |      |         |         |
+|  + p_anonymous_namespace_conv5x5_valid_6_14_14_16_s                               | 5   |        |                          |      |         |         |
+|    add_ln51_fu_376_p2                                                             | -   |        | add_ln51                 | add  | fabric  | 0       |
+|   + p_anonymous_namespace_conv5x5_valid_6_14_14_16_Pipeline_OUTPUT_ROW_OUTPUT_COL | 5   |        |                          |      |         |         |
+|     empty_197_fu_1992_p2                                                          | -   |        | empty_197                | sub  | fabric  | 0       |
+|     add_ln53_fu_2004_p2                                                           | -   |        | add_ln53                 | add  | fabric  | 0       |
+|     indvars_iv_next738_dup98_fu_2027_p2                                           | -   |        | indvars_iv_next738_dup98 | add  | fabric  | 0       |
+|     p_mid1_fu_2057_p2                                                             | -   |        | p_mid1                   | sub  | fabric  | 0       |
+|     empty_200_fu_4338_p2                                                          | -   |        | empty_200                | add  | fabric  | 0       |
+|     empty_202_fu_4277_p2                                                          | -   |        | empty_202                | add  | fabric  | 0       |
+|     empty_203_fu_4173_p2                                                          | -   |        | empty_203                | add  | fabric  | 0       |
+|     empty_204_fu_4190_p2                                                          | -   |        | empty_204                | add  | fabric  | 0       |
+|     tmp3_fu_4078_p2                                                               | -   |        | tmp3                     | add  | fabric  | 0       |
+|     empty_205_fu_4091_p2                                                          | -   |        | empty_205                | add  | fabric  | 0       |
+|     empty_206_fu_4108_p2                                                          | -   |        | empty_206                | add  | fabric  | 0       |
+|     tmp4_fu_3997_p2                                                               | -   |        | tmp4                     | add  | fabric  | 0       |
+|     empty_207_fu_4010_p2                                                          | -   |        | empty_207                | add  | fabric  | 0       |
+|     empty_208_fu_4028_p2                                                          | -   |        | empty_208                | add  | fabric  | 0       |
+|     empty_210_fu_3944_p2                                                          | -   |        | empty_210                | add  | fabric  | 0       |
+|     empty_212_fu_3868_p2                                                          | -   |        | empty_212                | add  | fabric  | 0       |
+|     empty_214_fu_3792_p2                                                          | -   |        | empty_214                | add  | fabric  | 0       |
+|     tmp8_fu_3690_p2                                                               | -   |        | tmp8                     | add  | fabric  | 0       |
+|     empty_215_fu_3699_p2                                                          | -   |        | empty_215                | add  | fabric  | 0       |
+|     empty_216_fu_3716_p2                                                          | -   |        | empty_216                | add  | fabric  | 0       |
+|     empty_217_fu_3623_p2                                                          | -   |        | empty_217                | add  | fabric  | 0       |
+|     empty_218_fu_3640_p2                                                          | -   |        | empty_218                | add  | fabric  | 0       |
+|     empty_220_fu_3562_p2                                                          | -   |        | empty_220                | add  | fabric  | 0       |
+|     empty_222_fu_3490_p2                                                          | -   |        | empty_222                | add  | fabric  | 0       |
+|     empty_224_fu_3418_p2                                                          | -   |        | empty_224                | add  | fabric  | 0       |
+|     empty_226_fu_3346_p2                                                          | -   |        | empty_226                | add  | fabric  | 0       |
+|     empty_228_fu_3274_p2                                                          | -   |        | empty_228                | add  | fabric  | 0       |
+|     empty_229_fu_3181_p2                                                          | -   |        | empty_229                | add  | fabric  | 0       |
+|     empty_230_fu_3198_p2                                                          | -   |        | empty_230                | add  | fabric  | 0       |
+|     tmp16_fu_3086_p2                                                              | -   |        | tmp16                    | add  | fabric  | 0       |
+|     empty_231_fu_3099_p2                                                          | -   |        | empty_231                | add  | fabric  | 0       |
+|     empty_232_fu_3116_p2                                                          | -   |        | empty_232                | add  | fabric  | 0       |
+|     tmp17_fu_3006_p2                                                              | -   |        | tmp17                    | add  | fabric  | 0       |
+|     empty_233_fu_3019_p2                                                          | -   |        | empty_233                | add  | fabric  | 0       |
+|     empty_234_fu_3036_p2                                                          | -   |        | empty_234                | add  | fabric  | 0       |
+|     tmp18_fu_2926_p2                                                              | -   |        | tmp18                    | add  | fabric  | 0       |
+|     empty_235_fu_2939_p2                                                          | -   |        | empty_235                | add  | fabric  | 0       |
+|     empty_236_fu_2956_p2                                                          | -   |        | empty_236                | add  | fabric  | 0       |
+|     tmp19_fu_2844_p2                                                              | -   |        | tmp19                    | add  | fabric  | 0       |
+|     empty_237_fu_2858_p2                                                          | -   |        | empty_237                | add  | fabric  | 0       |
+|     empty_238_fu_2876_p2                                                          | -   |        | empty_238                | add  | fabric  | 0       |
+|     empty_240_fu_2788_p2                                                          | -   |        | empty_240                | add  | fabric  | 0       |
+|     tmp21_fu_2686_p2                                                              | -   |        | tmp21                    | add  | fabric  | 0       |
+|     empty_241_fu_2699_p2                                                          | -   |        | empty_241                | add  | fabric  | 0       |
+|     empty_242_fu_2716_p2                                                          | -   |        | empty_242                | add  | fabric  | 0       |
+|     empty_243_fu_2619_p2                                                          | -   |        | empty_243                | add  | fabric  | 0       |
+|     empty_244_fu_2636_p2                                                          | -   |        | empty_244                | add  | fabric  | 0       |
+|     tmp23_fu_2524_p2                                                              | -   |        | tmp23                    | add  | fabric  | 0       |
+|     empty_245_fu_2537_p2                                                          | -   |        | empty_245                | add  | fabric  | 0       |
+|     empty_246_fu_2554_p2                                                          | -   |        | empty_246                | add  | fabric  | 0       |
+|     tmp24_fu_2444_p2                                                              | -   |        | tmp24                    | add  | fabric  | 0       |
+|     empty_247_fu_2457_p2                                                          | -   |        | empty_247                | add  | fabric  | 0       |
+|     empty_248_fu_2474_p2                                                          | -   |        | empty_248                | add  | fabric  | 0       |
+|     tmp25_fu_2363_p2                                                              | -   |        | tmp25                    | add  | fabric  | 0       |
+|     empty_249_fu_2373_p2                                                          | -   |        | empty_249                | add  | fabric  | 0       |
+|     empty_250_fu_2394_p2                                                          | -   |        | empty_250                | add  | fabric  | 0       |
+|     tmp26_fu_2289_p2                                                              | -   |        | tmp26                    | add  | fabric  | 0       |
+|     empty_251_fu_2298_p2                                                          | -   |        | empty_251                | add  | fabric  | 0       |
+|     empty_252_fu_2315_p2                                                          | -   |        | empty_252                | add  | fabric  | 0       |
+|     tmp27_fu_2212_p2                                                              | -   |        | tmp27                    | add  | fabric  | 0       |
+|     empty_253_fu_2222_p2                                                          | -   |        | empty_253                | add  | fabric  | 0       |
+|     empty_254_fu_2239_p2                                                          | -   |        | empty_254                | add  | fabric  | 0       |
+|     tmp28_fu_2152_p2                                                              | -   |        | tmp28                    | add  | fabric  | 0       |
+|     empty_255_fu_2162_p2                                                          | -   |        | empty_255                | add  | fabric  | 0       |
+|     empty_256_fu_2179_p2                                                          | -   |        | empty_256                | add  | fabric  | 0       |
+|     empty_257_fu_2107_p2                                                          | -   |        | empty_257                | add  | fabric  | 0       |
+|     empty_258_fu_2124_p2                                                          | -   |        | empty_258                | add  | fabric  | 0       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5                   | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_1     | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_s                 | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_2     | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_25                | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_3     | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_26                | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_4     | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_27                | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_5     | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_28                | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_6     | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_6                 | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_7     | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_7                 | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_8     | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_8                 | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_9     | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_9                 | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_s     | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_10                | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_10    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_11                | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_11    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_12                | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_12    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_13                | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_13    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_14                | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_14    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_15                | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_15    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_16                | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_16    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_17                | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_17    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_18                | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_18    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_19                | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_19    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_20                | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_20    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_21                | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_21    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_22                | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_22    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_23                | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_23    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_24                | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_1            | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_1                 | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign       | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_1_1               | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_24    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_1_2               | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_25    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_1_3               | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_26    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_1_4               | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_27    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_1_5               | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_28    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_1_6               | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_29    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_1_7               | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_30    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_1_8               | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_31    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_1_9               | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_32    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_1_s               | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_33    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_1_10              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_34    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_1_11              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_35    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_1_12              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_36    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_1_13              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_37    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_1_14              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_38    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_1_15              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_39    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_1_16              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_40    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_1_17              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_41    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_1_18              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_42    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_1_19              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_43    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_1_20              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_44    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_1_21              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_45    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_1_22              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_46    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_1_23              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_2            | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_2                 | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_47    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_2_1               | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_48    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_2_2               | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_49    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_2_3               | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_50    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_2_4               | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_51    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_2_5               | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_52    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_2_6               | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_53    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_2_7               | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_54    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_2_8               | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_55    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_2_9               | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_56    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_2_s               | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_57    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_2_10              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_58    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_2_11              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_59    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_2_12              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_60    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_2_13              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_61    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_2_14              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_62    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_2_15              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_63    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_2_16              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_64    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_2_17              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_65    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_2_18              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_66    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_2_19              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_67    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_2_20              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_68    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_2_21              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_69    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_2_22              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_70    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_2_23              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_3            | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_3                 | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_71    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_3_1               | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_72    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_3_2               | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_73    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_3_3               | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_74    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_3_4               | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_75    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_3_5               | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_76    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_3_6               | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_77    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_3_7               | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_78    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_3_8               | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_79    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_3_9               | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_80    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_3_s               | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_81    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_3_10              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_82    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_3_11              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_83    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_3_12              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_84    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_3_13              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_85    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_3_14              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_86    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_3_15              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_87    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_3_16              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_88    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_3_17              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_89    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_3_18              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_90    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_3_19              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_91    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_3_20              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_92    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_3_21              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_93    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_3_22              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_94    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_3_23              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_4            | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_4                 | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_95    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_4_1               | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_96    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_4_2               | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_97    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_4_3               | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_98    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_4_4               | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_99    | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_4_5               | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_100   | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_4_6               | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_101   | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_4_7               | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_102   | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_4_8               | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_103   | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_4_9               | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_104   | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_4_s               | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_105   | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_4_10              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_106   | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_4_11              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_107   | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_4_12              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_108   | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_4_13              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_109   | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_4_14              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_110   | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_4_15              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_111   | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_4_16              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_112   | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_4_17              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_113   | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_4_18              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_114   | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_4_19              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_115   | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_4_20              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_116   | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_4_21              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_117   | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_4_22              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_118   | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_4_23              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_5            | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_5                 | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_119   | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_5_1               | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_120   | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_5_2               | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_121   | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_5_3               | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_122   | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_5_4               | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_123   | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_5_5               | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_124   | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_5_6               | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_125   | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_5_7               | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_126   | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_5_8               | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_127   | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_5_9               | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_128   | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_5_s               | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_129   | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_5_10              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_130   | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_5_11              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_131   | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_5_12              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_132   | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_5_13              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_133   | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_5_14              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_134   | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_5_15              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_135   | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_5_16              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_136   | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_5_17              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_137   | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_5_18              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_138   | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_5_19              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_139   | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_5_20              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_140   | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_5_21              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_141   | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_5_22              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_assign_142   | fadd | fulldsp | 4       |
+|     fmul_32ns_32ns_32_4_max_dsp_1_U2                                              | 3   |        | mul_i5_5_23              | fmul | maxdsp  | 3       |
+|     fadd_32ns_32ns_32_5_full_dsp_1_U1                                             | 2   |        | accumulator_6            | fadd | fulldsp | 4       |
+|     add_ln55_fu_2083_p2                                                           | -   |        | add_ln55                 | add  | fabric  | 0       |
++-----------------------------------------------------------------------------------+-----+--------+--------------------------+------+---------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+--------------------------------------------------------------+--------------------------------------------------------------+
+| Type      | Options                                                      | Location                                                     |
++-----------+--------------------------------------------------------------+--------------------------------------------------------------+
+| inline    |                                                              | ../src/lenet_conv_D1.cpp:13 in generate_window_5x5           |
+| inline    |                                                              | ../src/lenet_conv_D1.cpp:32 in mac_5x5                       |
+| pipeline  | II=1                                                         | ../src/lenet_conv_D1.cpp:56 in conv5x5_valid                 |
+| interface | m_axi port=feature_in offset=direct bundle=gmem0 depth=1024  | ../src/lenet_conv_D1.cpp:188 in lenet_conv1_top, feature_in  |
+| interface | m_axi port=weight offset=direct bundle=gmem1 depth=150       | ../src/lenet_conv_D1.cpp:189 in lenet_conv1_top, weight      |
+| interface | m_axi port=bias offset=direct bundle=gmem2 depth=6           | ../src/lenet_conv_D1.cpp:190 in lenet_conv1_top, bias        |
+| interface | m_axi port=feature_out offset=direct bundle=gmem3 depth=4704 | ../src/lenet_conv_D1.cpp:191 in lenet_conv1_top, feature_out |
+| interface | ap_ctrl_hs port=return                                       | ../src/lenet_conv_D1.cpp:192 in lenet_conv1_top, return      |
+| interface | m_axi port=feature_in offset=direct bundle=gmem0 depth=1176  | ../src/lenet_conv_D1.cpp:204 in lenet_conv2_top, feature_in  |
+| interface | m_axi port=weight offset=direct bundle=gmem1 depth=2400      | ../src/lenet_conv_D1.cpp:205 in lenet_conv2_top, weight      |
+| interface | m_axi port=bias offset=direct bundle=gmem2 depth=16          | ../src/lenet_conv_D1.cpp:206 in lenet_conv2_top, bias        |
+| interface | m_axi port=feature_out offset=direct bundle=gmem3 depth=1600 | ../src/lenet_conv_D1.cpp:207 in lenet_conv2_top, feature_out |
+| interface | ap_ctrl_hs port=return                                       | ../src/lenet_conv_D1.cpp:208 in lenet_conv2_top, return      |
+| interface | m_axi port=feature_in offset=direct bundle=gmem0 depth=400   | ../src/lenet_conv_D1.cpp:222 in lenet_conv3_top, feature_in  |
+| interface | m_axi port=weight offset=direct bundle=gmem1 depth=48000     | ../src/lenet_conv_D1.cpp:223 in lenet_conv3_top, weight      |
+| interface | m_axi port=bias offset=direct bundle=gmem2 depth=120         | ../src/lenet_conv_D1.cpp:224 in lenet_conv3_top, bias        |
+| interface | m_axi port=feature_out offset=direct bundle=gmem3 depth=120  | ../src/lenet_conv_D1.cpp:225 in lenet_conv3_top, feature_out |
+| interface | ap_ctrl_hs port=return                                       | ../src/lenet_conv_D1.cpp:226 in lenet_conv3_top, return      |
+| interface | m_axi port=feature_in offset=direct bundle=gmem0 depth=120   | ../src/lenet_conv_D1.cpp:240 in lenet_fc1_top, feature_in    |
+| interface | m_axi port=weight offset=direct bundle=gmem1 depth=10080     | ../src/lenet_conv_D1.cpp:241 in lenet_fc1_top, weight        |
+| interface | m_axi port=bias offset=direct bundle=gmem2 depth=84          | ../src/lenet_conv_D1.cpp:242 in lenet_fc1_top, bias          |
+| interface | m_axi port=feature_out offset=direct bundle=gmem3 depth=84   | ../src/lenet_conv_D1.cpp:243 in lenet_fc1_top, feature_out   |
+| interface | ap_ctrl_hs port=return                                       | ../src/lenet_conv_D1.cpp:244 in lenet_fc1_top, return        |
+| interface | m_axi port=feature_in offset=direct bundle=gmem0 depth=84    | ../src/lenet_conv_D1.cpp:255 in lenet_fc2_top, feature_in    |
+| interface | m_axi port=weight offset=direct bundle=gmem1 depth=840       | ../src/lenet_conv_D1.cpp:256 in lenet_fc2_top, weight        |
+| interface | m_axi port=bias offset=direct bundle=gmem2 depth=10          | ../src/lenet_conv_D1.cpp:257 in lenet_fc2_top, bias          |
+| interface | m_axi port=feature_out offset=direct bundle=gmem3 depth=10   | ../src/lenet_conv_D1.cpp:258 in lenet_fc2_top, feature_out   |
+| interface | ap_ctrl_hs port=return                                       | ../src/lenet_conv_D1.cpp:259 in lenet_fc2_top, return        |
+| interface | m_axi port=feature_in offset=direct bundle=gmem0 depth=1024  | ../src/lenet_conv_D1.cpp:270 in lenet_full_top, feature_in   |
+| interface | m_axi port=weight offset=direct bundle=gmem1 depth=61470     | ../src/lenet_conv_D1.cpp:271 in lenet_full_top, weight       |
+| interface | m_axi port=bias offset=direct bundle=gmem2 depth=236         | ../src/lenet_conv_D1.cpp:272 in lenet_full_top, bias         |
+| interface | m_axi port=feature_out offset=direct bundle=gmem3 depth=10   | ../src/lenet_conv_D1.cpp:273 in lenet_full_top, feature_out  |
+| interface | ap_ctrl_hs port=return                                       | ../src/lenet_conv_D1.cpp:274 in lenet_full_top, return       |
++-----------+--------------------------------------------------------------+--------------------------------------------------------------+
+
+
