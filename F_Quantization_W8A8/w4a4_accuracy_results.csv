@@ -1,0 +1,2 @@
+Configuration,WeightBits,ActivationBits,AccumulatorBits,Total,FP32Correct,QuantizedCorrect,FP32Accuracy,QuantizedAccuracy,AccuracyDrop,PredictionAgreement,INT32OverflowCheck
+W4A4-INT32,4,4,32,10000,9882,9746,98.82,97.46,1.3599999999999994,97.99,PASS

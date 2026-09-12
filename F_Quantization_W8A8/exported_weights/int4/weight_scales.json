@@ -1,0 +1,108 @@
+{
+  "conv1": {
+    "bits": 4,
+    "dtype": "int4",
+    "storage_dtype": "int8",
+    "qmin": -7,
+    "qmax": 7,
+    "zero_point": 0,
+    "scale": 0.06526424203600202,
+    "shape": [
+      6,
+      1,
+      5,
+      5
+    ],
+    "number_of_values": 150,
+    "max_abs_fp32": 0.45684969425201416,
+    "integer_min": -7,
+    "integer_max": 6,
+    "rmse": 0.01904502883553505,
+    "npy_file": "conv1.weight.int4.npy",
+    "txt_file": "conv1.weight.int4.txt"
+  },
+  "conv2": {
+    "bits": 4,
+    "dtype": "int4",
+    "storage_dtype": "int8",
+    "qmin": -7,
+    "qmax": 7,
+    "zero_point": 0,
+    "scale": 0.07385987043380737,
+    "shape": [
+      16,
+      6,
+      5,
+      5
+    ],
+    "number_of_values": 2400,
+    "max_abs_fp32": 0.5170190930366516,
+    "integer_min": -7,
+    "integer_max": 4,
+    "rmse": 0.02153092995285988,
+    "npy_file": "conv2.weight.int4.npy",
+    "txt_file": "conv2.weight.int4.txt"
+  },
+  "conv3": {
+    "bits": 4,
+    "dtype": "int4",
+    "storage_dtype": "int8",
+    "qmin": -7,
+    "qmax": 7,
+    "zero_point": 0,
+    "scale": 0.07139351538249425,
+    "shape": [
+      120,
+      16,
+      5,
+      5
+    ],
+    "number_of_values": 48000,
+    "max_abs_fp32": 0.4997546076774597,
+    "integer_min": -7,
+    "integer_max": 6,
+    "rmse": 0.020758558064699173,
+    "npy_file": "conv3.weight.int4.npy",
+    "txt_file": "conv3.weight.int4.txt"
+  },
+  "fc1": {
+    "bits": 4,
+    "dtype": "int4",
+    "storage_dtype": "int8",
+    "qmin": -7,
+    "qmax": 7,
+    "zero_point": 0,
+    "scale": 0.06117813502039228,
+    "shape": [
+      84,
+      120
+    ],
+    "number_of_values": 10080,
+    "max_abs_fp32": 0.42824694514274597,
+    "integer_min": -6,
+    "integer_max": 7,
+    "rmse": 0.017773522064089775,
+    "npy_file": "fc1.weight.int4.npy",
+    "txt_file": "fc1.weight.int4.txt"
+  },
+  "fc2": {
+    "bits": 4,
+    "dtype": "int4",
+    "storage_dtype": "int8",
+    "qmin": -7,
+    "qmax": 7,
+    "zero_point": 0,
+    "scale": 0.053169067416872294,
+    "shape": [
+      10,
+      84
+    ],
+    "number_of_values": 840,
+    "max_abs_fp32": 0.3721834719181061,
+    "integer_min": -7,
+    "integer_max": 4,
+    "rmse": 0.015475422143936157,
+    "npy_file": "fc2.weight.int4.npy",
+    "txt_file": "fc2.weight.int4.txt"
+  }
+}

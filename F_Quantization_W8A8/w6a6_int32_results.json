@@ -1,0 +1,19 @@
+{
+  "method": "W6A6-INT32",
+  "weight_bits": 6,
+  "activation_bits": 6,
+  "accumulator_bits": 32,
+  "test_samples": 10000,
+  "fp32_accuracy_percent": 98.82,
+  "quantized_accuracy_percent": 98.83,
+  "accuracy_drop_percentage_points": -0.010000000000005116,
+  "fp32_prediction_agreement_percent": 99.87,
+  "accumulator_max_abs": {
+    "conv1": 5967,
+    "conv2": 7613,
+    "conv3": 7002,
+    "fc1": 2307,
+    "fc2": 3733
+  },
+  "int32_overflow_check": true
+}

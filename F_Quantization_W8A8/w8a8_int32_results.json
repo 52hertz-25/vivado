@@ -1,0 +1,19 @@
+{
+  "method": "W8A8-INT32",
+  "weight_bits": 8,
+  "activation_bits": 8,
+  "accumulator_bits": 32,
+  "test_samples": 10000,
+  "fp32_accuracy_percent": 98.82,
+  "quantized_accuracy_percent": 98.83,
+  "accuracy_drop_percentage_points": -0.010000000000005116,
+  "fp32_prediction_agreement_percent": 99.99,
+  "accumulator_max_abs": {
+    "conv1": 100460,
+    "conv2": 126618,
+    "conv3": 117635,
+    "fc1": 38292,
+    "fc2": 61465
+  },
+  "int32_overflow_check": true
+}

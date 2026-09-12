@@ -1,0 +1,72 @@
+{
+  "model": "LeNet-5",
+  "total_weights": 61470,
+  "fp32_baseline_accuracy_percent": 98.82,
+  "results": [
+    {
+      "Configuration": "FP32",
+      "WeightBits": 32,
+      "ActivationBits": 32,
+      "AccumulatorBits": 32,
+      "TestSamples": 10000,
+      "AccuracyPercent": 98.82,
+      "AccuracyDropPoints": 0.0,
+      "PredictionAgreementPercent": 100.0,
+      "TheoreticalWeightStorageBytes": 245880,
+      "TheoreticalWeightStorageKB": 240.1171875,
+      "CompressionRatioVsFP32": 1.0,
+      "INT32OverflowCheck": "N/A"
+    },
+    {
+      "Configuration": "W8A8-INT32",
+      "WeightBits": 8,
+      "ActivationBits": 8,
+      "AccumulatorBits": 32,
+      "TestSamples": 10000,
+      "AccuracyPercent": 98.83,
+      "AccuracyDropPoints": -0.010000000000005116,
+      "PredictionAgreementPercent": 99.99,
+      "TheoreticalWeightStorageBytes": 61470,
+      "TheoreticalWeightStorageKB": 60.029296875,
+      "CompressionRatioVsFP32": 4.0,
+      "INT32OverflowCheck": "PASS"
+    },
+    {
+      "Configuration": "W6A6-INT32",
+      "WeightBits": 6,
+      "ActivationBits": 6,
+      "AccumulatorBits": 32,
+      "TestSamples": 10000,
+      "AccuracyPercent": 98.83,
+      "AccuracyDropPoints": -0.010000000000005116,
+      "PredictionAgreementPercent": 99.87,
+      "TheoreticalWeightStorageBytes": 46103,
+      "TheoreticalWeightStorageKB": 45.0224609375,
+      "CompressionRatioVsFP32": 5.333275491833503,
+      "INT32OverflowCheck": "PASS"
+    },
+    {
+      "Configuration": "W4A4-INT32",
+      "WeightBits": 4,
+      "ActivationBits": 4,
+      "AccumulatorBits": 32,
+      "TestSamples": 10000,
+      "AccuracyPercent": 97.46,
+      "AccuracyDropPoints": 1.3599999999999994,
+      "PredictionAgreementPercent": 97.99,
+      "TheoreticalWeightStorageBytes": 30735,
+      "TheoreticalWeightStorageKB": 30.0146484375,
+      "CompressionRatioVsFP32": 8.0,
+      "INT32OverflowCheck": "PASS"
+    }
+  ],
+  "recommendation": {
+    "reliable_configuration": "W8A8-INT32",
+    "balanced_configuration": "W6A6-INT32",
+    "maximum_compression_configuration": "W4A4-INT32",
+    "hardware_comparison_candidates": [
+      "W8A8-INT32",
+      "W4A4-INT32"
+    ]
+  }
+}
