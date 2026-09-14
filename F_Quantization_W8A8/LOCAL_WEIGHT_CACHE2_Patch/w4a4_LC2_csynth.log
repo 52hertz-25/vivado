@@ -1,0 +1,665 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+  **** SW Build 3670227 on Oct 13 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source D:/Xilinx/Vitis_HLS/2022.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user '时澄' on host 'benedicta' (Windows NT_amd64 version 6.2) on Mon Sep 14 19:43:15 +0800 2026
+INFO: [HLS 200-10] In directory 'D:/GitHub/vivado/vivado/F_Quantization_W8A8/LOCAL_WEIGHT_CACHE2_Patch'
+Sourcing Tcl script 'run_localcache2_csynth.tcl'
+INFO: [HLS 200-1510] Running: open_project -reset w4a4_lc2_hls 
+INFO: [HLS 200-10] Creating and opening project 'D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/work_level3_localcache2/w4a4_lc2_hls'.
+INFO: [HLS 200-1510] Running: set_top lenet_w4a4_top 
+INFO: [HLS 200-1510] Running: add_files D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp -cflags -ID:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/include -std=c++11 
+INFO: [HLS 200-10] Adding design file 'D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution -reset solution1 -flow_target vivado 
+INFO: [HLS 200-10] Creating and opening solution 'D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/work_level3_localcache2/w4a4_lc2_hls/solution1'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vivado' configuration: config_interface -m_axi_latency=0
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1510] Running: create_clock -period 10.0 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog 
+INFO: [HLS 200-1510] Running: csynth_design 
+Running Dispatch Server on port: 63246
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 10.063 seconds; current allocated memory: 674.590 MB.
+INFO: [HLS 200-10] Analyzing design file 'D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp' ... 
+WARNING: [HLS 207-5559] Only for/while loops support the 'Unroll ' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:146:9)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.418 seconds; current allocated memory: 677.543 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-131] Inlining function 'ap_range_ref<8, false>::ap_range_ref(ap_int_base<8, false>*, int, int)' into 'ap_int_base<8, false>::range(int, int) const' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1055:12)
+INFO: [HLS 214-131] Inlining function 'ap_range_ref<8, false>::get() const' into 'ap_int_base<4, false>::ap_int_base<8, false>(ap_range_ref<8, false> const&)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:358:20)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<4, false>::ap_int_base<8, false>(ap_range_ref<8, false> const&)' into 'ap_uint<4>::ap_uint<8, false>(ap_range_ref<8, false> const&)'
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi4ELb1EEC2EDq4_i' into 'ap_int_base<4, true>::ap_int_base<4, false>(ap_int_base<4, false> const&)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:185:106)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<4, true>::ap_int_base<4, false>(ap_int_base<4, false> const&)' into 'ap_int<4>::ap_int<4>(ap_uint<4> const&)'
+INFO: [HLS 214-131] Inlining function 'ap_int_base<8, false>::range(int, int) const' into 'lenet_w4a4::(anonymous namespace)::unpack_int4(ap_uint<8> const*, int)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:13:23)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<8, false>::range(int, int) const' into 'lenet_w4a4::(anonymous namespace)::unpack_int4(ap_uint<8> const*, int)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:15:23)
+INFO: [HLS 214-131] Inlining function 'ssdm_int<32, true>::ssdm_int(int)' into 'ap_int_base<32, true>::ap_int_base(int)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:214:67)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::ap_int_base(int)' into 'ap_int<32>::ap_int(int)'
+INFO: [HLS 214-131] Inlining function 'ssdm_int<32, true>::ssdm_int(int)' into 'ap_int_base<32, true>::ap_int_base<4, true>(ap_int_base<4, true> const&)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:185:106)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::ap_int_base<4, true>(ap_int_base<4, true> const&)' into 'ap_int<32>::ap_int<4>(ap_int<4> const&)'
+INFO: [HLS 214-131] Inlining function 'ssdm_int<64, true>::ssdm_int(long)' into 'ap_int_base<64, true>::ap_int_base<32, true>(ap_int_base<32, true> const&)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:185:106)
+INFO: [HLS 214-131] Inlining function 'ssdm_int<64, true>::ssdm_int(long)' into 'ap_int_base<64, true>::ap_int_base(int)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:214:67)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, true>::ap_int_base<32, true>(ap_int_base<32, true> const&)' into 'ap_int_base<32, true>::RType<32, true>::mult operator*<32, true, 32, true>(ap_int_base<32, true> const&, ap_int_base<32, true> const&)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1494:339)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, true>::ap_int_base(int)' into 'ap_int_base<32, true>::RType<32, true>::mult operator*<32, true, 32, true>(ap_int_base<32, true> const&, ap_int_base<32, true> const&)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1494:516)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, true>::ap_int_base<32, true>(ap_int_base<32, true> const&)' into 'ap_int_base<32, true>::RType<32, true>::mult operator*<32, true, 32, true>(ap_int_base<32, true> const&, ap_int_base<32, true> const&)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1494:427)
+INFO: [HLS 214-131] Inlining function 'lenet_w4a4::(anonymous namespace)::unpack_int4(ap_uint<8> const*, int)' into 'void lenet_w4a4::(anonymous namespace)::conv5x5_accumulate<1, 32, 32, 6>(ap_int<4> const*, ap_uint<8> const*, int, ap_int<32>*)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:131:21)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>& ap_int_base<32, true>::operator+=<64, true>(ap_int_base<64, true> const&)' into 'void lenet_w4a4::(anonymous namespace)::conv5x5_accumulate<1, 32, 32, 6>(ap_int<4> const*, ap_uint<8> const*, int, ap_int<32>*)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:174:41)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::RType<32, true>::mult operator*<32, true, 32, true>(ap_int_base<32, true> const&, ap_int_base<32, true> const&)' into 'void lenet_w4a4::(anonymous namespace)::conv5x5_accumulate<1, 32, 32, 6>(ap_int<4> const*, ap_uint<8> const*, int, ap_int<32>*)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:177:35)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi4ELb1EEC2EDq4_i' into 'ap_int_base<4, true>::ap_int_base(int)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:214:67)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<4, true>::ap_int_base(int)' into 'ap_int<4>::ap_int(int)'
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::ap_int_base(int)' into 'bool operator<=<32, true>(ap_int_base<32, true> const&, int)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1788:1473)
+INFO: [HLS 214-131] Inlining function 'bool ap_int_base<32, true>::operator<=<32, true>(ap_int_base<32, true> const&) const' into 'bool operator<=<32, true>(ap_int_base<32, true> const&, int)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1788:1470)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::ap_int_base(int)' into 'bool operator<<32, true>(ap_int_base<32, true> const&, int)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1788:713)
+INFO: [HLS 214-131] Inlining function 'bool ap_int_base<32, true>::operator<<32, true>(ap_int_base<32, true> const&) const' into 'bool operator<<32, true>(ap_int_base<32, true> const&, int)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1788:711)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi33ELb1EEC2EDq33_i' into 'ap_int_base<33, true>::ap_int_base<32, true>(ap_int_base<32, true> const&)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:185:106)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<33, true>::ap_int_base<32, true>(ap_int_base<32, true> const&)' into 'ap_int<33>::ap_int<32>(ap_int<32> const&)'
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi1ELb0EEC2EDq1_j' into 'ap_int_base<1, false>::ap_int_base(int)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:214:67)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi34ELb1EEC2EDq34_i' into 'ap_int_base<34, true>::ap_int_base<1, false>(ap_int_base<1, false> const&)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:185:106)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi34ELb1EEC2EDq34_i' into 'ap_int_base<34, true>::ap_int_base<33, true>(ap_int_base<33, true> const&)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:185:106)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi34ELb1EEC2EDq34_i' into 'ap_int_base<34, true>::ap_int_base(int)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:214:67)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<34, true>::ap_int_base<1, false>(ap_int_base<1, false> const&)' into 'ap_int_base<1, false>::RType<33, true>::minus operator-<1, false, 33, true>(ap_int_base<1, false> const&, ap_int_base<33, true> const&)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1496:341)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<34, true>::ap_int_base(int)' into 'ap_int_base<1, false>::RType<33, true>::minus operator-<1, false, 33, true>(ap_int_base<1, false> const&, ap_int_base<33, true> const&)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1496:520)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<34, true>::ap_int_base<33, true>(ap_int_base<33, true> const&)' into 'ap_int_base<1, false>::RType<33, true>::minus operator-<1, false, 33, true>(ap_int_base<1, false> const&, ap_int_base<33, true> const&)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1496:430)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<1, false>::ap_int_base(int)' into 'ap_int_base<33, true>::operator-() const' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:895:12)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<1, false>::RType<33, true>::minus operator-<1, false, 33, true>(ap_int_base<1, false> const&, ap_int_base<33, true> const&)' into 'ap_int_base<33, true>::operator-() const' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:895:37)
+INFO: [HLS 214-131] Inlining function 'ssdm_int<32, false>::ssdm_int(unsigned int)' into 'ap_int_base<32, false>::ap_int_base<34, true>(ap_int_base<34, true> const&)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:185:106)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, false>::ap_int_base<34, true>(ap_int_base<34, true> const&)' into 'ap_uint<32>::ap_uint<34>(ap_int<34> const&)'
+INFO: [HLS 214-131] Inlining function 'ssdm_int<32, false>::ssdm_int(unsigned int)' into 'ap_int_base<32, false>::ap_int_base<32, true>(ap_int_base<32, true> const&)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:185:106)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, false>::ap_int_base<32, true>(ap_int_base<32, true> const&)' into 'ap_uint<32>::ap_uint<32>(ap_int<32> const&)'
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi80ELb0EEC2EDq80_j' into 'ap_int_base<80, false>::ap_int_base<32, false>(ap_int_base<32, false> const&)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:185:106)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<80, false>::ap_int_base<32, false>(ap_int_base<32, false> const&)' into 'ap_uint<80>::ap_uint<32>(ap_uint<32> const&)'
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi48ELb0EEC2EDq48_j' into 'ap_int_base<48, false>::ap_int_base(unsigned long long)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:219:72)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<48, false>::ap_int_base(unsigned long long)' into 'ap_uint<48>::ap_uint(unsigned long long)'
+INFO: [HLS 214-131] Inlining function 'ssdm_int<128, false>::ssdm_int(unsigned __int128)' into 'ap_int_base<128, false>::ap_int_base<80, false>(ap_int_base<80, false> const&)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:185:106)
+INFO: [HLS 214-131] Inlining function 'ssdm_int<128, false>::ssdm_int(unsigned __int128)' into 'ap_int_base<128, false>::ap_int_base<48, false>(ap_int_base<48, false> const&)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:185:106)
+INFO: [HLS 214-131] Inlining function 'ssdm_int<128, false>::ssdm_int(unsigned __int128)' into 'ap_int_base<128, false>::ap_int_base(int)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:214:67)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<128, false>::ap_int_base<80, false>(ap_int_base<80, false> const&)' into 'ap_int_base<80, false>::RType<48, false>::mult operator*<80, false, 48, false>(ap_int_base<80, false> const&, ap_int_base<48, false> const&)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1494:339)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<128, false>::ap_int_base(int)' into 'ap_int_base<80, false>::RType<48, false>::mult operator*<80, false, 48, false>(ap_int_base<80, false> const&, ap_int_base<48, false> const&)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1494:516)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<128, false>::ap_int_base<48, false>(ap_int_base<48, false> const&)' into 'ap_int_base<80, false>::RType<48, false>::mult operator*<80, false, 48, false>(ap_int_base<80, false> const&, ap_int_base<48, false> const&)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1494:427)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi80ELb0EEC2EDq80_j' into 'ap_int_base<80, false>::ap_int_base<128, false>(ap_int_base<128, false> const&)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:185:106)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<80, false>::ap_int_base<128, false>(ap_int_base<128, false> const&)' into 'ap_uint<80>::ap_uint<128>(ap_uint<128> const&)'
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi80ELb0EEC2EDq80_j' into 'ap_int_base<80, false>::ap_int_base(int)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:214:67)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<80, false>::ap_int_base(int)' into 'ap_int_base<80, false>::RType<80, false>::arg1 operator>><80, false>(ap_int_base<80, false> const&, int)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1669:558)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi40ELb0EEC2EDq40_j' into 'ap_int_base<40, false>::ap_int_base<80, false>(ap_int_base<80, false> const&)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:185:106)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<40, false>::ap_int_base<80, false>(ap_int_base<80, false> const&)' into 'ap_uint<40>::ap_uint<80>(ap_uint<80> const&)'
+INFO: [HLS 214-131] Inlining function 'ap_int_base<80, false>::ap_int_base(int)' into 'ap_uint<80>::ap_uint(int)'
+INFO: [HLS 214-131] Inlining function 'ap_int_base<80, false>::ap_int_base(int)' into 'ap_int_base<80, false>::RType<80, false>::arg1 operator<<<80, false>(ap_int_base<80, false> const&, int)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1669:228)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi82ELb1EEC2EDq82_i' into 'ap_int_base<82, true>::ap_int_base<80, false>(ap_int_base<80, false> const&)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:185:106)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi82ELb1EEC2EDq82_i' into 'ap_int_base<82, true>::ap_int_base<32, true>(ap_int_base<32, true> const&)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:185:106)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi82ELb1EEC2EDq82_i' into 'ap_int_base<82, true>::ap_int_base(int)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:214:67)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<82, true>::ap_int_base<80, false>(ap_int_base<80, false> const&)' into 'ap_int_base<80, false>::RType<32, true>::minus operator-<80, false, 32, true>(ap_int_base<80, false> const&, ap_int_base<32, true> const&)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1496:341)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<82, true>::ap_int_base(int)' into 'ap_int_base<80, false>::RType<32, true>::minus operator-<80, false, 32, true>(ap_int_base<80, false> const&, ap_int_base<32, true> const&)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1496:520)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<82, true>::ap_int_base<32, true>(ap_int_base<32, true> const&)' into 'ap_int_base<80, false>::RType<32, true>::minus operator-<80, false, 32, true>(ap_int_base<80, false> const&, ap_int_base<32, true> const&)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1496:430)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::ap_int_base(int)' into 'ap_int_base<80, false>::RType<($_0)32, true>::minus operator-<80, false>(ap_int_base<80, false> const&, int)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1633:1531)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<80, false>::RType<32, true>::minus operator-<80, false, 32, true>(ap_int_base<80, false> const&, ap_int_base<32, true> const&)' into 'ap_int_base<80, false>::RType<($_0)32, true>::minus operator-<80, false>(ap_int_base<80, false> const&, int)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1633:1529)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi80ELb0EEC2EDq80_j' into 'ap_int_base<80, false>::ap_int_base<82, true>(ap_int_base<82, true> const&)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:185:106)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<80, false>::ap_int_base<82, true>(ap_int_base<82, true> const&)' into 'ap_uint<80>::ap_uint<82>(ap_int<82> const&)'
+INFO: [HLS 214-131] Inlining function 'ap_int_base<80, false>::ap_int_base(int)' into 'ap_int_base<80, false>::RType<80, false>::logic operator&<80, false, 80, false>(ap_int_base<80, false> const&, ap_int_base<80, false> const&)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1497:520)
+INFO: [HLS 214-131] Inlining function 'ap_bit_ref<40, false>::ap_bit_ref(ap_int_base<40, false>*, int)' into 'ap_int_base<40, false>::operator[](int)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1129:30)
+INFO: [HLS 214-131] Inlining function 'ap_bit_ref<40, false>::operator bool() const' into 'bool operator==<40, false>(ap_bit_ref<40, false> const&, int)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_ref.h:1042:365)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<1, false>::ap_int_base(int)' into 'ap_int_base<40, false>::operator++(int)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:879:16)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<40, false>& ap_int_base<40, false>::operator+=<1, false>(ap_int_base<1, false> const&)' into 'ap_int_base<40, false>::operator++(int)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:879:5)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi42ELb1EEC2EDq42_i' into 'ap_int_base<42, true>::ap_int_base<40, false>(ap_int_base<40, false> const&)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:185:106)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<42, true>::ap_int_base<40, false>(ap_int_base<40, false> const&)' into 'ap_int<42>::ap_int<40>(ap_uint<40> const&)'
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi43ELb1EEC2EDq43_i' into 'ap_int_base<43, true>::ap_int_base<1, false>(ap_int_base<1, false> const&)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:185:106)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi43ELb1EEC2EDq43_i' into 'ap_int_base<43, true>::ap_int_base<42, true>(ap_int_base<42, true> const&)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:185:106)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi43ELb1EEC2EDq43_i' into 'ap_int_base<43, true>::ap_int_base(int)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:214:67)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<43, true>::ap_int_base<1, false>(ap_int_base<1, false> const&)' into 'ap_int_base<1, false>::RType<42, true>::minus operator-<1, false, 42, true>(ap_int_base<1, false> const&, ap_int_base<42, true> const&)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1496:341)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<43, true>::ap_int_base(int)' into 'ap_int_base<1, false>::RType<42, true>::minus operator-<1, false, 42, true>(ap_int_base<1, false> const&, ap_int_base<42, true> const&)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1496:520)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<43, true>::ap_int_base<42, true>(ap_int_base<42, true> const&)' into 'ap_int_base<1, false>::RType<42, true>::minus operator-<1, false, 42, true>(ap_int_base<1, false> const&, ap_int_base<42, true> const&)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1496:430)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<1, false>::ap_int_base(int)' into 'ap_int_base<42, true>::operator-() const' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:895:12)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<1, false>::RType<42, true>::minus operator-<1, false, 42, true>(ap_int_base<1, false> const&, ap_int_base<42, true> const&)' into 'ap_int_base<42, true>::operator-() const' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:895:37)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi42ELb1EEC2EDq42_i' into 'ap_int_base<42, true>::ap_int_base<43, true>(ap_int_base<43, true> const&)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:185:106)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<42, true>::ap_int_base<43, true>(ap_int_base<43, true> const&)' into 'ap_int<42>::ap_int<43>(ap_int<43> const&)'
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::ap_int_base(int)' into 'bool operator<<42, true>(ap_int_base<42, true> const&, int)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1788:713)
+INFO: [HLS 214-131] Inlining function 'bool ap_int_base<42, true>::operator<<32, true>(ap_int_base<32, true> const&) const' into 'bool operator<<42, true>(ap_int_base<42, true> const&, int)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1788:711)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi42ELb1EEC2EDq42_i' into 'ap_int_base<42, true>::ap_int_base(int)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:214:67)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<42, true>::ap_int_base(int)' into 'ap_int<42>::ap_int(int)'
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::ap_int_base(int)' into 'bool operator><42, true>(ap_int_base<42, true> const&, int)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1788:337)
+INFO: [HLS 214-131] Inlining function 'bool ap_int_base<42, true>::operator><32, true>(ap_int_base<32, true> const&) const' into 'bool operator><42, true>(ap_int_base<42, true> const&, int)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1788:335)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi4ELb1EEC2EDq4_i' into 'ap_int_base<4, true>::ap_int_base<42, true>(ap_int_base<42, true> const&)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:185:106)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<4, true>::ap_int_base<42, true>(ap_int_base<42, true> const&)' into 'ap_int<4>::ap_int<42>(ap_int<42> const&)'
+INFO: [HLS 214-131] Inlining function 'bool operator<=<32, true>(ap_int_base<32, true> const&, int)' into 'lenet_w4a4::(anonymous namespace)::round_scale_and_saturate(ap_int<32>, unsigned long long, bool)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:29:20)
+INFO: [HLS 214-131] Inlining function 'bool operator<<42, true>(ap_int_base<42, true> const&, int)' into 'lenet_w4a4::(anonymous namespace)::round_scale_and_saturate(ap_int<32>, unsigned long long, bool)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:87:17)
+INFO: [HLS 214-131] Inlining function 'bool operator><42, true>(ap_int_base<42, true> const&, int)' into 'lenet_w4a4::(anonymous namespace)::round_scale_and_saturate(ap_int<32>, unsigned long long, bool)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:83:17)
+INFO: [HLS 214-131] Inlining function 'bool operator<<42, true>(ap_int_base<42, true> const&, int)' into 'lenet_w4a4::(anonymous namespace)::round_scale_and_saturate(ap_int<32>, unsigned long long, bool)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:79:25)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<42, true>::operator-() const' into 'lenet_w4a4::(anonymous namespace)::round_scale_and_saturate(ap_int<32>, unsigned long long, bool)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:76:19)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<40, false>::operator++(int)' into 'lenet_w4a4::(anonymous namespace)::round_scale_and_saturate(ap_int<32>, unsigned long long, bool)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:66:9)
+INFO: [HLS 214-131] Inlining function 'bool operator==<40, false>(ap_bit_ref<40, false> const&, int)' into 'lenet_w4a4::(anonymous namespace)::round_scale_and_saturate(ap_int<32>, unsigned long long, bool)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:64:43)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<40, false>::operator[](int)' into 'lenet_w4a4::(anonymous namespace)::round_scale_and_saturate(ap_int<32>, unsigned long long, bool)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:64:31)
+INFO: [HLS 214-131] Inlining function 'bool ap_int_base<80, false>::operator==<80, false>(ap_int_base<80, false> const&) const' into 'lenet_w4a4::(anonymous namespace)::round_scale_and_saturate(ap_int<32>, unsigned long long, bool)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:64:20)
+INFO: [HLS 214-131] Inlining function 'bool ap_int_base<80, false>::operator><80, false>(ap_int_base<80, false> const&) const' into 'lenet_w4a4::(anonymous namespace)::round_scale_and_saturate(ap_int<32>, unsigned long long, bool)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:63:19)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<80, false>::RType<80, false>::arg1 operator<<<80, false>(ap_int_base<80, false> const&, int)' into 'lenet_w4a4::(anonymous namespace)::round_scale_and_saturate(ap_int<32>, unsigned long long, bool)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:58:24)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<80, false>::RType<80, false>::logic operator&<80, false, 80, false>(ap_int_base<80, false> const&, ap_int_base<80, false> const&)' into 'lenet_w4a4::(anonymous namespace)::round_scale_and_saturate(ap_int<32>, unsigned long long, bool)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:55:17)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<80, false>::RType<($_0)32, true>::minus operator-<80, false>(ap_int_base<80, false> const&, int)' into 'lenet_w4a4::(anonymous namespace)::round_scale_and_saturate(ap_int<32>, unsigned long long, bool)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:52:43)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<80, false>::RType<80, false>::arg1 operator<<<80, false>(ap_int_base<80, false> const&, int)' into 'lenet_w4a4::(anonymous namespace)::round_scale_and_saturate(ap_int<32>, unsigned long long, bool)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:52:25)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<80, false>::RType<80, false>::arg1 operator>><80, false>(ap_int_base<80, false> const&, int)' into 'lenet_w4a4::(anonymous namespace)::round_scale_and_saturate(ap_int<32>, unsigned long long, bool)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:49:29)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<80, false>::RType<48, false>::mult operator*<80, false, 48, false>(ap_int_base<80, false> const&, ap_int_base<48, false> const&)' into 'lenet_w4a4::(anonymous namespace)::round_scale_and_saturate(ap_int<32>, unsigned long long, bool)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:45:32)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<33, true>::operator-() const' into 'lenet_w4a4::(anonymous namespace)::round_scale_and_saturate(ap_int<32>, unsigned long long, bool)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:39:33)
+INFO: [HLS 214-131] Inlining function 'bool operator<<32, true>(ap_int_base<32, true> const&, int)' into 'lenet_w4a4::(anonymous namespace)::round_scale_and_saturate(ap_int<32>, unsigned long long, bool)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:33:33)
+INFO: [HLS 214-131] Inlining function 'bool ap_int_base<4, true>::operator><4, true>(ap_int_base<4, true> const&) const' into 'void lenet_w4a4::(anonymous namespace)::requant_relu_pool2x2<6, 28, 28>(ap_int<32> const*, ap_int<4>*, unsigned long long)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:268:35)
+INFO: [HLS 214-131] Inlining function 'lenet_w4a4::(anonymous namespace)::round_scale_and_saturate(ap_int<32>, unsigned long long, bool)' into 'void lenet_w4a4::(anonymous namespace)::requant_relu_pool2x2<6, 28, 28>(ap_int<32> const*, ap_int<4>*, unsigned long long)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:262:29)
+INFO: [HLS 214-131] Inlining function 'lenet_w4a4::(anonymous namespace)::unpack_int4(ap_uint<8> const*, int)' into 'void lenet_w4a4::(anonymous namespace)::conv5x5_accumulate<6, 14, 14, 16>(ap_int<4> const*, ap_uint<8> const*, int, ap_int<32>*)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:131:21)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>& ap_int_base<32, true>::operator+=<64, true>(ap_int_base<64, true> const&)' into 'void lenet_w4a4::(anonymous namespace)::conv5x5_accumulate<6, 14, 14, 16>(ap_int<4> const*, ap_uint<8> const*, int, ap_int<32>*)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:174:41)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::RType<32, true>::mult operator*<32, true, 32, true>(ap_int_base<32, true> const&, ap_int_base<32, true> const&)' into 'void lenet_w4a4::(anonymous namespace)::conv5x5_accumulate<6, 14, 14, 16>(ap_int<4> const*, ap_uint<8> const*, int, ap_int<32>*)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:177:35)
+INFO: [HLS 214-131] Inlining function 'bool ap_int_base<4, true>::operator><4, true>(ap_int_base<4, true> const&) const' into 'void lenet_w4a4::(anonymous namespace)::requant_relu_pool2x2<16, 10, 10>(ap_int<32> const*, ap_int<4>*, unsigned long long)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:268:35)
+INFO: [HLS 214-131] Inlining function 'lenet_w4a4::(anonymous namespace)::round_scale_and_saturate(ap_int<32>, unsigned long long, bool)' into 'void lenet_w4a4::(anonymous namespace)::requant_relu_pool2x2<16, 10, 10>(ap_int<32> const*, ap_int<4>*, unsigned long long)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:262:29)
+INFO: [HLS 214-131] Inlining function 'lenet_w4a4::(anonymous namespace)::unpack_int4(ap_uint<8> const*, int)' into 'void lenet_w4a4::(anonymous namespace)::conv5x5_accumulate<16, 5, 5, 120>(ap_int<4> const*, ap_uint<8> const*, int, ap_int<32>*)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:131:21)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>& ap_int_base<32, true>::operator+=<64, true>(ap_int_base<64, true> const&)' into 'void lenet_w4a4::(anonymous namespace)::conv5x5_accumulate<16, 5, 5, 120>(ap_int<4> const*, ap_uint<8> const*, int, ap_int<32>*)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:174:41)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::RType<32, true>::mult operator*<32, true, 32, true>(ap_int_base<32, true> const&, ap_int_base<32, true> const&)' into 'void lenet_w4a4::(anonymous namespace)::conv5x5_accumulate<16, 5, 5, 120>(ap_int<4> const*, ap_uint<8> const*, int, ap_int<32>*)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:177:35)
+INFO: [HLS 214-131] Inlining function 'lenet_w4a4::(anonymous namespace)::round_scale_and_saturate(ap_int<32>, unsigned long long, bool)' into 'void lenet_w4a4::(anonymous namespace)::requant_vector<120>(ap_int<32> const*, ap_int<4>*, unsigned long long, bool)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:303:13)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>& ap_int_base<32, true>::operator+=<64, true>(ap_int_base<64, true> const&)' into 'void lenet_w4a4::(anonymous namespace)::dense_accumulate<120, 84>(ap_int<4> const*, ap_uint<8> const*, int, ap_int<32>*)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:354:25)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::RType<32, true>::mult operator*<32, true, 32, true>(ap_int_base<32, true> const&, ap_int_base<32, true> const&)' into 'void lenet_w4a4::(anonymous namespace)::dense_accumulate<120, 84>(ap_int<4> const*, ap_uint<8> const*, int, ap_int<32>*)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:355:50)
+INFO: [HLS 214-131] Inlining function 'lenet_w4a4::(anonymous namespace)::unpack_int4(ap_uint<8> const*, int)' into 'void lenet_w4a4::(anonymous namespace)::dense_accumulate<120, 84>(ap_int<4> const*, ap_uint<8> const*, int, ap_int<32>*)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:348:17)
+INFO: [HLS 214-131] Inlining function 'lenet_w4a4::(anonymous namespace)::round_scale_and_saturate(ap_int<32>, unsigned long long, bool)' into 'void lenet_w4a4::(anonymous namespace)::requant_vector<84>(ap_int<32> const*, ap_int<4>*, unsigned long long, bool)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:303:13)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>& ap_int_base<32, true>::operator+=<64, true>(ap_int_base<64, true> const&)' into 'void lenet_w4a4::(anonymous namespace)::dense_accumulate<84, 10>(ap_int<4> const*, ap_uint<8> const*, int, ap_int<32>*)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:354:25)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::RType<32, true>::mult operator*<32, true, 32, true>(ap_int_base<32, true> const&, ap_int_base<32, true> const&)' into 'void lenet_w4a4::(anonymous namespace)::dense_accumulate<84, 10>(ap_int<4> const*, ap_uint<8> const*, int, ap_int<32>*)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:355:50)
+INFO: [HLS 214-131] Inlining function 'lenet_w4a4::(anonymous namespace)::unpack_int4(ap_uint<8> const*, int)' into 'void lenet_w4a4::(anonymous namespace)::dense_accumulate<84, 10>(ap_int<4> const*, ap_uint<8> const*, int, ap_int<32>*)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:348:17)
+INFO: [HLS 214-131] Inlining function 'lenet_w4a4::(anonymous namespace)::round_scale_and_saturate(ap_int<32>, unsigned long long, bool)' into 'void lenet_w4a4::(anonymous namespace)::requant_vector<10>(ap_int<32> const*, ap_int<4>*, unsigned long long, bool)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:303:13)
+INFO: [HLS 214-131] Inlining function 'lenet_w4a4::(anonymous namespace)::unpack_int4(ap_uint<8> const*, int)' into 'lenet_w4a4_top' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:442:13)
+INFO: [HLS 214-178] Inlining function 'void lenet_w4a4::(anonymous namespace)::conv5x5_accumulate<1, 32, 32, 6>(ap_int<4> const*, ap_uint<8> const*, int, ap_int<32>*)' into 'lenet_w4a4_top' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:380:0)
+INFO: [HLS 214-178] Inlining function 'void lenet_w4a4::(anonymous namespace)::requant_relu_pool2x2<6, 28, 28>(ap_int<32> const*, ap_int<4>*, unsigned long long)' into 'lenet_w4a4_top' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:380:0)
+INFO: [HLS 214-178] Inlining function 'void lenet_w4a4::(anonymous namespace)::conv5x5_accumulate<6, 14, 14, 16>(ap_int<4> const*, ap_uint<8> const*, int, ap_int<32>*)' into 'lenet_w4a4_top' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:380:0)
+INFO: [HLS 214-178] Inlining function 'void lenet_w4a4::(anonymous namespace)::requant_relu_pool2x2<16, 10, 10>(ap_int<32> const*, ap_int<4>*, unsigned long long)' into 'lenet_w4a4_top' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:380:0)
+INFO: [HLS 214-178] Inlining function 'void lenet_w4a4::(anonymous namespace)::conv5x5_accumulate<16, 5, 5, 120>(ap_int<4> const*, ap_uint<8> const*, int, ap_int<32>*)' into 'lenet_w4a4_top' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:380:0)
+INFO: [HLS 214-178] Inlining function 'void lenet_w4a4::(anonymous namespace)::requant_vector<120>(ap_int<32> const*, ap_int<4>*, unsigned long long, bool)' into 'lenet_w4a4_top' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:380:0)
+INFO: [HLS 214-178] Inlining function 'void lenet_w4a4::(anonymous namespace)::dense_accumulate<120, 84>(ap_int<4> const*, ap_uint<8> const*, int, ap_int<32>*)' into 'lenet_w4a4_top' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:380:0)
+INFO: [HLS 214-178] Inlining function 'void lenet_w4a4::(anonymous namespace)::requant_vector<84>(ap_int<32> const*, ap_int<4>*, unsigned long long, bool)' into 'lenet_w4a4_top' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:380:0)
+INFO: [HLS 214-178] Inlining function 'void lenet_w4a4::(anonymous namespace)::dense_accumulate<84, 10>(ap_int<4> const*, ap_uint<8> const*, int, ap_int<32>*)' into 'lenet_w4a4_top' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:380:0)
+INFO: [HLS 214-178] Inlining function 'void lenet_w4a4::(anonymous namespace)::requant_vector<10>(ap_int<32> const*, ap_int<4>*, unsigned long long, bool)' into 'lenet_w4a4_top' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:380:0)
+INFO: [HLS 214-248] Applying array_partition to 'local_weight.i151': Cyclic partitioning with factor 2 on dimension 1. (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:126:18)
+INFO: [HLS 214-248] Applying array_partition to 'local_weight.i12': Cyclic partitioning with factor 2 on dimension 1. (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:126:18)
+INFO: [HLS 214-248] Applying array_partition to 'local_weight.i': Cyclic partitioning with factor 2 on dimension 1. (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:126:18)
+INFO: [HLS 214-115] Multiple burst writes of length 10 and bit width 32 in loop 'WRITE_LOGITS'(D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:563:5) has been inferred on bundle 'gmem2'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:563:5)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 4.562 seconds; current allocated memory: 680.441 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.001 seconds; current allocated memory: 680.699 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.274 seconds; current allocated memory: 700.730 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.391 seconds; current allocated memory: 712.723 MB.
+INFO: [XFORM 203-510] Pipelining loop 'UNPACK_INPUT' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:6) in function 'lenet_w4a4_top' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'OUT_COL' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:143) in function 'lenet_w4a4_top' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'POOL_COL' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:234) in function 'lenet_w4a4_top' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'KERNEL_COL' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:143) in function 'lenet_w4a4_top' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'POOL_COL' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:234) in function 'lenet_w4a4_top' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'KERNEL_COL' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:143) in function 'lenet_w4a4_top' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'REQUANT_VECTOR' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:298) in function 'lenet_w4a4_top' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'DENSE_INPUT' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:334) in function 'lenet_w4a4_top' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'REQUANT_VECTOR' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:298) in function 'lenet_w4a4_top' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'DENSE_INPUT' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:334) in function 'lenet_w4a4_top' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'REQUANT_VECTOR' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:298) in function 'lenet_w4a4_top' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'WRITE_LOGITS' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:564) in function 'lenet_w4a4_top' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'OUT_COL' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:143) in function 'lenet_w4a4_top' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'POOL_COL' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:234) in function 'lenet_w4a4_top' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'POOL_COL' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:234) in function 'lenet_w4a4_top' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'KERNEL_ROW' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:143) in function 'lenet_w4a4_top' completely with a factor of 5.
+INFO: [HLS 200-489] Unrolling loop 'KERNEL_COL' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:143) in function 'lenet_w4a4_top' completely with a factor of 5.
+INFO: [HLS 200-489] Unrolling loop 'POOL_KERNEL_ROW' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:234) in function 'lenet_w4a4_top' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'POOL_KERNEL_COL' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:234) in function 'lenet_w4a4_top' completely with a factor of 2.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:6:34) to (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:436:5) in function 'lenet_w4a4_top'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:130:9) to (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:131:19) in function 'lenet_w4a4_top'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:234:23) to (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:230:13) in function 'lenet_w4a4_top'... converting 21 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:130:9) to (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:131:19) in function 'lenet_w4a4_top'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:234:23) to (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:230:13) in function 'lenet_w4a4_top'... converting 21 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:130:9) to (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:131:19) in function 'lenet_w4a4_top'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:298:14) to (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:298:5) in function 'lenet_w4a4_top'... converting 6 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:334:17) to (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:337:9) in function 'lenet_w4a4_top'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:298:14) to (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:298:5) in function 'lenet_w4a4_top'... converting 6 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:334:17) to (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:337:9) in function 'lenet_w4a4_top'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:298:14) to (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:298:5) in function 'lenet_w4a4_top'... converting 4 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'lenet_w4a4_top' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:6:25)...24 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 1.824 seconds; current allocated memory: 752.469 MB.
+INFO: [XFORM 203-541] Flattening a loop nest 'OUT_ROW' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:138:18) in function 'lenet_w4a4_top'.
+WARNING: [HLS 200-960] Cannot flatten loop 'OUT_CHANNEL' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:125:14) in function 'lenet_w4a4_top' more than one sub loop.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-960.html
+INFO: [XFORM 203-541] Flattening a loop nest 'POOL_ROW' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:225:18) in function 'lenet_w4a4_top'.
+INFO: [XFORM 203-541] Flattening a loop nest 'POOL_CHANNEL' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:220:14) in function 'lenet_w4a4_top'.
+INFO: [XFORM 203-541] Flattening a loop nest 'KERNEL_ROW' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:143:25) in function 'lenet_w4a4_top'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_147_1' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:143:25) in function 'lenet_w4a4_top'.
+WARNING: [HLS 200-960] Cannot flatten loop 'OUT_COL' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:143:25) in function 'lenet_w4a4_top' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-960.html
+INFO: [XFORM 203-541] Flattening a loop nest 'OUT_ROW' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:138:18) in function 'lenet_w4a4_top'.
+WARNING: [HLS 200-960] Cannot flatten loop 'OUT_CHANNEL' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:125:14) in function 'lenet_w4a4_top' more than one sub loop.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-960.html
+INFO: [XFORM 203-541] Flattening a loop nest 'POOL_ROW' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:225:18) in function 'lenet_w4a4_top'.
+INFO: [XFORM 203-541] Flattening a loop nest 'POOL_CHANNEL' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:220:14) in function 'lenet_w4a4_top'.
+INFO: [XFORM 203-541] Flattening a loop nest 'KERNEL_ROW' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:143:25) in function 'lenet_w4a4_top'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_147_1' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:143:25) in function 'lenet_w4a4_top'.
+WARNING: [HLS 200-960] Cannot flatten loop 'OUT_CHANNEL' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:125:14) in function 'lenet_w4a4_top' more than one sub loop.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-960.html
+INFO: [XFORM 203-541] Flattening a loop nest 'DENSE_OUTPUT' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:334:17) in function 'lenet_w4a4_top'.
+INFO: [XFORM 203-541] Flattening a loop nest 'DENSE_OUTPUT' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:334:17) in function 'lenet_w4a4_top'.
+INFO: [HLS 200-472] Inferring partial write operation for 'input.V' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:441:22)
+INFO: [HLS 200-472] Inferring partial write operation for 'local_weight.V.4' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:131:19)
+INFO: [HLS 200-472] Inferring partial write operation for 'conv1_acc.V' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:190:43)
+INFO: [HLS 200-472] Inferring partial write operation for 'pool1.V' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:281:43)
+INFO: [HLS 200-472] Inferring partial write operation for 'local_weight.V.2' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:131:19)
+INFO: [HLS 200-472] Inferring partial write operation for 'conv2_acc.V' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:190:43)
+INFO: [HLS 200-472] Inferring partial write operation for 'pool2.V' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:281:43)
+INFO: [HLS 200-472] Inferring partial write operation for 'local_weight.V' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:131:19)
+INFO: [HLS 200-472] Inferring partial write operation for 'conv3_acc.V' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:190:43)
+INFO: [HLS 200-472] Inferring partial write operation for 'conv3_relu.V' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:302:28)
+INFO: [HLS 200-472] Inferring partial write operation for 'fc1_acc.V' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:359:35)
+INFO: [HLS 200-472] Inferring partial write operation for 'fc1_relu.V' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:302:28)
+INFO: [HLS 200-472] Inferring partial write operation for 'fc2_acc.V' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:359:35)
+INFO: [HLS 200-472] Inferring partial write operation for 'fc2_quant.V' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:302:28)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 4 seconds. CPU system time: 0 seconds. Elapsed time: 3.518 seconds; current allocated memory: 890.570 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'lenet_w4a4_top' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lenet_w4a4_top_Pipeline_UNPACK_INPUT' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'input_V'. Use bind_storage pragma to override this type.
+INFO: [SCHED 204-61] Pipelining loop 'UNPACK_INPUT'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 10, loop 'UNPACK_INPUT'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.146 seconds; current allocated memory: 895.055 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.053 seconds; current allocated memory: 896.254 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'LOAD_LOCAL_WEIGHT'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 10, loop 'LOAD_LOCAL_WEIGHT'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 896.887 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.053 seconds; current allocated memory: 896.887 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lenet_w4a4_top_Pipeline_OUT_ROW_OUT_COL' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_24) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_22) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_18) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_20) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_15) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_17) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_12) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_14) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_9) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_11) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_8) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'conv1_acc_V'. Use bind_storage pragma to override this type.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'input_V'. Use bind_storage pragma to override this type.
+INFO: [SCHED 204-61] Pipelining loop 'OUT_ROW_OUT_COL'.
+WARNING: [HLS 200-885] The II Violation in module 'lenet_w4a4_top_Pipeline_OUT_ROW_OUT_COL' (loop 'OUT_ROW_OUT_COL'): Unable to schedule 'load' operation ('input_V_load_12', D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:175) on array 'input_V' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'input_V'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 9, loop 'OUT_ROW_OUT_COL'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.249 seconds; current allocated memory: 900.008 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.161 seconds; current allocated memory: 900.160 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lenet_w4a4_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'conv1_acc_V'. Use bind_storage pragma to override this type.
+INFO: [SCHED 204-61] Pipelining loop 'POOL_CHANNEL_POOL_ROW_POOL_COL'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 8, loop 'POOL_CHANNEL_POOL_ROW_POOL_COL'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.354 seconds; current allocated memory: 901.980 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.173 seconds; current allocated memory: 902.152 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'LOAD_LOCAL_WEIGHT'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 10, loop 'LOAD_LOCAL_WEIGHT'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.29 seconds; current allocated memory: 902.449 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.057 seconds; current allocated memory: 902.461 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lenet_w4a4_top_Pipeline_VITIS_LOOP_147_1_KERNEL_ROW_KERNEL_COL' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_147_1_KERNEL_ROW_KERNEL_COL'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 7, loop 'VITIS_LOOP_147_1_KERNEL_ROW_KERNEL_COL'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.118 seconds; current allocated memory: 903.973 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 904.031 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lenet_w4a4_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'conv2_acc_V'. Use bind_storage pragma to override this type.
+INFO: [SCHED 204-61] Pipelining loop 'POOL_CHANNEL_POOL_ROW_POOL_COL'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 9, loop 'POOL_CHANNEL_POOL_ROW_POOL_COL'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.246 seconds; current allocated memory: 905.949 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.169 seconds; current allocated memory: 906.090 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'LOAD_LOCAL_WEIGHT'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 10, loop 'LOAD_LOCAL_WEIGHT'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.284 seconds; current allocated memory: 906.148 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.055 seconds; current allocated memory: 906.160 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lenet_w4a4_top_Pipeline_VITIS_LOOP_147_1_KERNEL_ROW_KERNEL_COL4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_147_1_KERNEL_ROW_KERNEL_COL'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 7, loop 'VITIS_LOOP_147_1_KERNEL_ROW_KERNEL_COL'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.099 seconds; current allocated memory: 906.973 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.081 seconds; current allocated memory: 907.016 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lenet_w4a4_top_Pipeline_REQUANT_VECTOR' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'REQUANT_VECTOR'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 6, loop 'REQUANT_VECTOR'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.129 seconds; current allocated memory: 907.223 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.055 seconds; current allocated memory: 907.293 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lenet_w4a4_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_1) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'DENSE_OUTPUT_DENSE_INPUT'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 15, loop 'DENSE_OUTPUT_DENSE_INPUT'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.111 seconds; current allocated memory: 907.684 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.085 seconds; current allocated memory: 907.684 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lenet_w4a4_top_Pipeline_REQUANT_VECTOR5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'REQUANT_VECTOR'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 6, loop 'REQUANT_VECTOR'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.105 seconds; current allocated memory: 907.879 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.055 seconds; current allocated memory: 907.879 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lenet_w4a4_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln331) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'DENSE_OUTPUT_DENSE_INPUT'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 17, loop 'DENSE_OUTPUT_DENSE_INPUT'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.111 seconds; current allocated memory: 908.039 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.083 seconds; current allocated memory: 908.090 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lenet_w4a4_top_Pipeline_REQUANT_VECTOR7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'REQUANT_VECTOR'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 7, loop 'REQUANT_VECTOR'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.098 seconds; current allocated memory: 908.699 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.062 seconds; current allocated memory: 909.000 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lenet_w4a4_top_Pipeline_WRITE_LOGITS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'WRITE_LOGITS'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'WRITE_LOGITS'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.087 seconds; current allocated memory: 909.355 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.036 seconds; current allocated memory: 909.355 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lenet_w4a4_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'conv2_acc_V'. Use bind_storage pragma to override this type.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.125 seconds; current allocated memory: 911.055 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.456 seconds; current allocated memory: 911.859 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lenet_w4a4_top_Pipeline_UNPACK_INPUT' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'lenet_w4a4_top_Pipeline_UNPACK_INPUT' pipeline 'UNPACK_INPUT' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lenet_w4a4_top_Pipeline_UNPACK_INPUT'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.871 seconds; current allocated memory: 913.703 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT' pipeline 'LOAD_LOCAL_WEIGHT' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.118 seconds; current allocated memory: 915.082 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lenet_w4a4_top_Pipeline_OUT_ROW_OUT_COL' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'lenet_w4a4_top_Pipeline_OUT_ROW_OUT_COL' pipeline 'OUT_ROW_OUT_COL' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_4s_4s_8s_9_4_1': 9 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_4s_4s_9s_9_4_1': 7 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_4s_4s_8_1_1': 9 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lenet_w4a4_top_Pipeline_OUT_ROW_OUT_COL'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.192 seconds; current allocated memory: 918.973 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lenet_w4a4_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'lenet_w4a4_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL' pipeline 'POOL_CHANNEL_POOL_ROW_POOL_COL' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_32ns_36ns_67_2_1': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lenet_w4a4_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.828 seconds; current allocated memory: 924.551 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT1' pipeline 'LOAD_LOCAL_WEIGHT' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.956 seconds; current allocated memory: 928.742 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lenet_w4a4_top_Pipeline_VITIS_LOOP_147_1_KERNEL_ROW_KERNEL_COL' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'lenet_w4a4_top_Pipeline_VITIS_LOOP_147_1_KERNEL_ROW_KERNEL_COL' pipeline 'VITIS_LOOP_147_1_KERNEL_ROW_KERNEL_COL' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_3ns_4s_15s_15_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_21_4_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lenet_w4a4_top_Pipeline_VITIS_LOOP_147_1_KERNEL_ROW_KERNEL_COL'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.174 seconds; current allocated memory: 930.695 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lenet_w4a4_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'lenet_w4a4_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL2' pipeline 'POOL_CHANNEL_POOL_ROW_POOL_COL' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_32ns_37ns_68_2_1': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lenet_w4a4_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.487 seconds; current allocated memory: 934.805 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT3' pipeline 'LOAD_LOCAL_WEIGHT' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.868 seconds; current allocated memory: 938.895 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lenet_w4a4_top_Pipeline_VITIS_LOOP_147_1_KERNEL_ROW_KERNEL_COL4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'lenet_w4a4_top_Pipeline_VITIS_LOOP_147_1_KERNEL_ROW_KERNEL_COL4' pipeline 'VITIS_LOOP_147_1_KERNEL_ROW_KERNEL_COL' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_3ns_4s_16s_16_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_21_4_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lenet_w4a4_top_Pipeline_VITIS_LOOP_147_1_KERNEL_ROW_KERNEL_COL4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.168 seconds; current allocated memory: 940.113 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lenet_w4a4_top_Pipeline_REQUANT_VECTOR' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'lenet_w4a4_top_Pipeline_REQUANT_VECTOR' pipeline 'REQUANT_VECTOR' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_32ns_37ns_68_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lenet_w4a4_top_Pipeline_REQUANT_VECTOR'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.379 seconds; current allocated memory: 941.891 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lenet_w4a4_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'lenet_w4a4_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT' pipeline 'DENSE_OUTPUT_DENSE_INPUT' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_3ns_4s_14s_14_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lenet_w4a4_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.201 seconds; current allocated memory: 943.570 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lenet_w4a4_top_Pipeline_REQUANT_VECTOR5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'lenet_w4a4_top_Pipeline_REQUANT_VECTOR5' pipeline 'REQUANT_VECTOR' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_32ns_38ns_69_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lenet_w4a4_top_Pipeline_REQUANT_VECTOR5'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.264 seconds; current allocated memory: 945.637 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lenet_w4a4_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'lenet_w4a4_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT6' pipeline 'DENSE_OUTPUT_DENSE_INPUT' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_3ns_4s_14s_14_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_4ns_7ns_7ns_10_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lenet_w4a4_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT6'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.207 seconds; current allocated memory: 947.164 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lenet_w4a4_top_Pipeline_REQUANT_VECTOR7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'lenet_w4a4_top_Pipeline_REQUANT_VECTOR7' pipeline 'REQUANT_VECTOR' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_32ns_37ns_68_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lenet_w4a4_top_Pipeline_REQUANT_VECTOR7'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.262 seconds; current allocated memory: 948.945 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lenet_w4a4_top_Pipeline_WRITE_LOGITS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'lenet_w4a4_top_Pipeline_WRITE_LOGITS' pipeline 'WRITE_LOGITS' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w4a4_top_Pipeline_WRITE_LOGITS/m_axi_gmem2_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w4a4_top_Pipeline_WRITE_LOGITS/m_axi_gmem2_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w4a4_top_Pipeline_WRITE_LOGITS/m_axi_gmem2_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w4a4_top_Pipeline_WRITE_LOGITS/m_axi_gmem2_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w4a4_top_Pipeline_WRITE_LOGITS/m_axi_gmem2_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w4a4_top_Pipeline_WRITE_LOGITS/m_axi_gmem2_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w4a4_top_Pipeline_WRITE_LOGITS/m_axi_gmem2_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w4a4_top_Pipeline_WRITE_LOGITS/m_axi_gmem2_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w4a4_top_Pipeline_WRITE_LOGITS/m_axi_gmem2_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w4a4_top_Pipeline_WRITE_LOGITS/m_axi_gmem2_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w4a4_top_Pipeline_WRITE_LOGITS/m_axi_gmem2_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w4a4_top_Pipeline_WRITE_LOGITS/m_axi_gmem2_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w4a4_top_Pipeline_WRITE_LOGITS/m_axi_gmem2_BREADY' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lenet_w4a4_top_Pipeline_WRITE_LOGITS'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.304 seconds; current allocated memory: 950.758 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lenet_w4a4_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_w4a4_top/gmem0' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_w4a4_top/gmem1' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_w4a4_top/gmem2' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_w4a4_top/feature_in' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_w4a4_top/weight' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_w4a4_top/logits' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'lenet_w4a4_top' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'feature_in', 'weight', 'logits' and 'return' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Generating core module 'mul_32ns_37ns_68_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_4ns_9ns_12_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lenet_w4a4_top'.
+INFO: [RTMG 210-278] Implementing memory 'lenet_w4a4_top_local_weight_V_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_w4a4_top_local_weight_V_2_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_w4a4_top_local_weight_V_4_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_w4a4_top_input_V_RAM_1WNR_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_w4a4_top_conv1_acc_V_RAM_1WNR_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_w4a4_top_pool1_V_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_w4a4_top_conv2_acc_V_RAM_1WNR_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_w4a4_top_pool2_V_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_w4a4_top_conv3_acc_V_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_w4a4_top_conv3_relu_V_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_w4a4_top_fc1_acc_V_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_w4a4_top_fc1_relu_V_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_w4a4_top_fc2_acc_V_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_w4a4_top_fc2_quant_V_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.299 seconds; current allocated memory: 956.520 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 2.662 seconds; current allocated memory: 964.617 MB.
+INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 1.272 seconds; current allocated memory: 975.438 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for lenet_w4a4_top.
+INFO: [VLOG 209-307] Generating Verilog RTL for lenet_w4a4_top.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 136.99 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 21 seconds. CPU system time: 3 seconds. Elapsed time: 31.118 seconds; current allocated memory: 301.172 MB.
+INFO: [HLS 200-1510] Running: close_project 
+LOCALCACHE2_SYNTH_PASS tag=w4a4
+INFO: [HLS 200-112] Total CPU user time: 23 seconds. Total CPU system time: 4 seconds. Total elapsed time: 43.693 seconds; peak allocated memory: 975.809 MB.
+INFO: [Common 17-206] Exiting vitis_hls at Mon Sep 14 19:43:59 2026...

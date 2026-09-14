@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="lenet_system_processing_system7_0_0_synth_1" LaunchDir="D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w8a8/vivado_review/project/LeNet_W8A8_Review.runs/lenet_system_processing_system7_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="lenet_system_util_vector_logic_0_0_synth_1" LaunchDir="D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w8a8/vivado_review/project/LeNet_W8A8_Review.runs/lenet_system_util_vector_logic_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="lenet_system_proc_sys_reset_0_0_synth_1" LaunchDir="D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w8a8/vivado_review/project/LeNet_W8A8_Review.runs/lenet_system_proc_sys_reset_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="lenet_system_smartconnect_0_0_synth_1" LaunchDir="D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w8a8/vivado_review/project/LeNet_W8A8_Review.runs/lenet_system_smartconnect_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="lenet_system_auto_pc_0_synth_1" LaunchDir="D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w8a8/vivado_review/project/LeNet_W8A8_Review.runs/lenet_system_auto_pc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="lenet_system_lenet_w8a8_top_0_0_synth_1" LaunchDir="D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w8a8/vivado_review/project/LeNet_W8A8_Review.runs/lenet_system_lenet_w8a8_top_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w8a8/vivado_review/project/LeNet_W8A8_Review.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="lenet_system_processing_system7_0_0_synth_1"/>
+		<Parent Id="lenet_system_util_vector_logic_0_0_synth_1"/>
+		<Parent Id="lenet_system_proc_sys_reset_0_0_synth_1"/>
+		<Parent Id="lenet_system_smartconnect_0_0_synth_1"/>
+		<Parent Id="lenet_system_auto_pc_0_synth_1"/>
+		<Parent Id="lenet_system_lenet_w8a8_top_0_0_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

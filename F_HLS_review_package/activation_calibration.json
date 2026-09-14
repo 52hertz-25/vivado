@@ -1,0 +1,58 @@
+{
+    "input": {
+        "max_abs": 2.821486711502075,
+        "scale_int8": 0.02221643079922894,
+        "zero_point": 0,
+        "qmin": -127,
+        "qmax": 127
+    },
+    "conv1_relu": {
+        "max_abs": 6.304703712463379,
+        "scale_int8": 0.04964333631860928,
+        "zero_point": 0,
+        "qmin": -127,
+        "qmax": 127
+    },
+    "pool1": {
+        "max_abs": 6.304703712463379,
+        "scale_int8": 0.04964333631860928,
+        "zero_point": 0,
+        "qmin": -127,
+        "qmax": 127
+    },
+    "conv2_relu": {
+        "max_abs": 12.39389419555664,
+        "scale_int8": 0.09758971807524913,
+        "zero_point": 0,
+        "qmin": -127,
+        "qmax": 127
+    },
+    "pool2": {
+        "max_abs": 12.39389419555664,
+        "scale_int8": 0.09758971807524913,
+        "zero_point": 0,
+        "qmin": -127,
+        "qmax": 127
+    },
+    "conv3_relu": {
+        "max_abs": 22.059181213378906,
+        "scale_int8": 0.17369434026282604,
+        "zero_point": 0,
+        "qmin": -127,
+        "qmax": 127
+    },
+    "fc1_relu": {
+        "max_abs": 18.976226806640625,
+        "scale_int8": 0.1494191087137057,
+        "zero_point": 0,
+        "qmin": -127,
+        "qmax": 127
+    },
+    "fc2_output": {
+        "max_abs": 24.888519287109375,
+        "scale_int8": 0.19597259281188484,
+        "zero_point": 0,
+        "qmin": -127,
+        "qmax": 127
+    }
+}

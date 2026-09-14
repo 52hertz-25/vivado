@@ -1,0 +1,426 @@
+
+
+================================================================
+== Vitis HLS Report for 'lenet_w4a4_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL2'
+================================================================
+* Date:           Tue Sep 15 00:31:02 2026
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        g_w4a4_lc2_validation
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.958 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      409|      409|  4.090 us|  4.090 us|  409|  409|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                                  |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |             Loop Name            |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- POOL_CHANNEL_POOL_ROW_POOL_COL  |      407|      407|         9|          1|          1|   400|       yes|
+        +----------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 9
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 9
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 9, States = { 1 2 3 4 5 6 7 8 9 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 6.62>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%output_col = alloca i32 1"   --->   Operation 12 'alloca' 'output_col' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%output_row = alloca i32 1"   --->   Operation 13 'alloca' 'output_row' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%indvar_flatten208 = alloca i32 1"   --->   Operation 14 'alloca' 'indvar_flatten208' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%channel = alloca i32 1"   --->   Operation 15 'alloca' 'channel' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%indvar_flatten264 = alloca i32 1"   --->   Operation 16 'alloca' 'indvar_flatten264' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (1.58ns)   --->   "%store_ln0 = store i9 0, i9 %indvar_flatten264"   --->   Operation 17 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 18 [1/1] (1.58ns)   --->   "%store_ln0 = store i5 0, i5 %channel"   --->   Operation 18 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 19 [1/1] (1.58ns)   --->   "%store_ln0 = store i6 0, i6 %indvar_flatten208"   --->   Operation 19 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 20 [1/1] (1.58ns)   --->   "%store_ln0 = store i3 0, i3 %output_row"   --->   Operation 20 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 21 [1/1] (1.58ns)   --->   "%store_ln0 = store i3 0, i3 %output_col"   --->   Operation 21 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%br_ln0 = br void %POOL_KERNEL_ROW.i95"   --->   Operation 22 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%output_row_1 = load i3 %output_row" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:226]   --->   Operation 23 'load' 'output_row_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%indvar_flatten264_load = load i9 %indvar_flatten264" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:221]   --->   Operation 24 'load' 'indvar_flatten264_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (1.66ns)   --->   "%icmp_ln221 = icmp_eq  i9 %indvar_flatten264_load, i9 400" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:221]   --->   Operation 25 'icmp' 'icmp_ln221' <Predicate = true> <Delay = 1.66> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.66> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 26 [1/1] (1.82ns)   --->   "%add_ln221 = add i9 %indvar_flatten264_load, i9 1" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:221]   --->   Operation 26 'add' 'add_ln221' <Predicate = true> <Delay = 1.82> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%br_ln221 = br i1 %icmp_ln221, void %for.inc38.i150, void %LOAD_LOCAL_WEIGHT.i157.preheader.exitStub" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:221]   --->   Operation 27 'br' 'br_ln221' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%output_col_load = load i3 %output_col" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:231]   --->   Operation 28 'load' 'output_col_load' <Predicate = (!icmp_ln221)> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%indvar_flatten208_load = load i6 %indvar_flatten208" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:226]   --->   Operation 29 'load' 'indvar_flatten208_load' <Predicate = (!icmp_ln221)> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (1.42ns)   --->   "%icmp_ln226 = icmp_eq  i6 %indvar_flatten208_load, i6 25" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:226]   --->   Operation 30 'icmp' 'icmp_ln226' <Predicate = (!icmp_ln221)> <Delay = 1.42> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 31 [1/1] (0.98ns)   --->   "%select_ln221 = select i1 %icmp_ln226, i3 0, i3 %output_row_1" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:221]   --->   Operation 31 'select' 'select_ln221' <Predicate = (!icmp_ln221)> <Delay = 0.98> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 32 [1/1] (0.00ns) (grouped into LUT with out node and_ln221)   --->   "%xor_ln221 = xor i1 %icmp_ln226, i1 1" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:221]   --->   Operation 32 'xor' 'xor_ln221' <Predicate = (!icmp_ln221)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 33 [1/1] (1.13ns)   --->   "%icmp_ln231 = icmp_eq  i3 %output_col_load, i3 5" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:231]   --->   Operation 33 'icmp' 'icmp_ln231' <Predicate = (!icmp_ln221)> <Delay = 1.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 34 [1/1] (0.97ns) (out node of the LUT)   --->   "%and_ln221 = and i1 %icmp_ln231, i1 %xor_ln221" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:221]   --->   Operation 34 'and' 'and_ln221' <Predicate = (!icmp_ln221)> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 35 [1/1] (1.65ns)   --->   "%add_ln227 = add i3 %select_ln221, i3 1" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:227]   --->   Operation 35 'add' 'add_ln227' <Predicate = (!icmp_ln221)> <Delay = 1.65> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 36 [1/1] (0.00ns) (grouped into LUT with out node select_ln226)   --->   "%or_ln226 = or i1 %and_ln221, i1 %icmp_ln226" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:226]   --->   Operation 36 'or' 'or_ln226' <Predicate = (!icmp_ln221)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 37 [1/1] (0.98ns) (out node of the LUT)   --->   "%select_ln226 = select i1 %or_ln226, i3 0, i3 %output_col_load" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:226]   --->   Operation 37 'select' 'select_ln226' <Predicate = (!icmp_ln221)> <Delay = 0.98> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 38 [1/1] (0.98ns)   --->   "%select_ln226_3 = select i1 %and_ln221, i3 %add_ln227, i3 %select_ln221" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:226]   --->   Operation 38 'select' 'select_ln226_3' <Predicate = (!icmp_ln221)> <Delay = 0.98> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 39 [1/1] (1.65ns)   --->   "%add_ln232 = add i3 %select_ln226, i3 1" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:232]   --->   Operation 39 'add' 'add_ln232' <Predicate = (!icmp_ln221)> <Delay = 1.65> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 40 [1/1] (1.82ns)   --->   "%add_ln226 = add i6 %indvar_flatten208_load, i6 1" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:226]   --->   Operation 40 'add' 'add_ln226' <Predicate = (!icmp_ln221)> <Delay = 1.82> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 41 [1/1] (1.18ns)   --->   "%select_ln226_4 = select i1 %icmp_ln226, i6 1, i6 %add_ln226" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:226]   --->   Operation 41 'select' 'select_ln226_4' <Predicate = (!icmp_ln221)> <Delay = 1.18> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.18> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 42 [1/1] (1.58ns)   --->   "%store_ln230 = store i9 %add_ln221, i9 %indvar_flatten264" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:230]   --->   Operation 42 'store' 'store_ln230' <Predicate = (!icmp_ln221)> <Delay = 1.58>
+ST_1 : Operation 43 [1/1] (1.58ns)   --->   "%store_ln230 = store i6 %select_ln226_4, i6 %indvar_flatten208" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:230]   --->   Operation 43 'store' 'store_ln230' <Predicate = (!icmp_ln221)> <Delay = 1.58>
+ST_1 : Operation 44 [1/1] (1.58ns)   --->   "%store_ln230 = store i3 %select_ln226_3, i3 %output_row" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:230]   --->   Operation 44 'store' 'store_ln230' <Predicate = (!icmp_ln221)> <Delay = 1.58>
+ST_1 : Operation 45 [1/1] (1.58ns)   --->   "%store_ln230 = store i3 %add_ln232, i3 %output_col" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:230]   --->   Operation 45 'store' 'store_ln230' <Predicate = (!icmp_ln221)> <Delay = 1.58>
+
+State 2 <SV = 1> <Delay = 6.67>
+ST_2 : Operation 46 [1/1] (0.00ns)   --->   "%channel_1 = load i5 %channel"   --->   Operation 46 'load' 'channel_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 47 [1/1] (0.00ns)   --->   "%empty = trunc i5 %channel_1"   --->   Operation 47 'trunc' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 48 [1/1] (0.00ns)   --->   "%p_shl = bitconcatenate i7 @_ssdm_op_BitConcatenate.i7.i4.i3, i4 %empty, i3 0"   --->   Operation 48 'bitconcatenate' 'p_shl' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 49 [1/1] (0.00ns)   --->   "%p_shl24_cast = zext i7 %p_shl"   --->   Operation 49 'zext' 'p_shl24_cast' <Predicate = (!icmp_ln226 & !and_ln221)> <Delay = 0.00>
+ST_2 : Operation 50 [1/1] (0.00ns)   --->   "%empty_69 = shl i5 %channel_1, i5 1"   --->   Operation 50 'shl' 'empty_69' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 51 [1/1] (0.00ns)   --->   "%p_shl25_cast = zext i5 %empty_69"   --->   Operation 51 'zext' 'p_shl25_cast' <Predicate = (!icmp_ln226 & !and_ln221)> <Delay = 0.00>
+ST_2 : Operation 52 [1/1] (0.00ns)   --->   "%zext_ln226 = zext i3 %output_row_1" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:226]   --->   Operation 52 'zext' 'zext_ln226' <Predicate = (!icmp_ln226 & !and_ln221)> <Delay = 0.00>
+ST_2 : Operation 53 [1/1] (0.00ns)   --->   "%tmp_s = bitconcatenate i4 @_ssdm_op_BitConcatenate.i4.i3.i1, i3 %output_row_1, i1 0" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:226]   --->   Operation 53 'bitconcatenate' 'tmp_s' <Predicate = (!icmp_ln226 & !and_ln221)> <Delay = 0.00>
+ST_2 : Operation 54 [1/1] (0.00ns)   --->   "%p_cast100 = zext i4 %tmp_s" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:226]   --->   Operation 54 'zext' 'p_cast100' <Predicate = (!icmp_ln226 & !and_ln221)> <Delay = 0.00>
+ST_2 : Operation 55 [1/1] (1.78ns)   --->   "%tmp66 = add i5 %channel_1, i5 %zext_ln226" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:226]   --->   Operation 55 'add' 'tmp66' <Predicate = (!icmp_ln226 & !and_ln221)> <Delay = 1.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 56 [1/1] (1.78ns)   --->   "%tmp67 = add i6 %p_shl25_cast, i6 %p_cast100" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:226]   --->   Operation 56 'add' 'tmp67' <Predicate = (!icmp_ln226 & !and_ln221)> <Delay = 1.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 57 [1/1] (0.00ns)   --->   "%tmp67_cast = zext i6 %tmp67" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:226]   --->   Operation 57 'zext' 'tmp67_cast' <Predicate = (!icmp_ln226 & !and_ln221)> <Delay = 0.00>
+ST_2 : Operation 58 [1/1] (1.87ns)   --->   "%empty_71 = add i8 %tmp67_cast, i8 %p_shl24_cast" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:226]   --->   Operation 58 'add' 'empty_71' <Predicate = (!icmp_ln226 & !and_ln221)> <Delay = 1.87> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.87> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 59 [1/1] (1.78ns)   --->   "%add_ln222 = add i5 %channel_1, i5 1" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:222]   --->   Operation 59 'add' 'add_ln222' <Predicate = true> <Delay = 1.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 60 [1/1] (0.00ns)   --->   "%empty_73 = trunc i5 %add_ln222" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:222]   --->   Operation 60 'trunc' 'empty_73' <Predicate = (!icmp_ln221)> <Delay = 0.00>
+ST_2 : Operation 61 [1/1] (0.00ns)   --->   "%p_shl24_mid1 = bitconcatenate i7 @_ssdm_op_BitConcatenate.i7.i4.i3, i4 %empty_73, i3 0" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:222]   --->   Operation 61 'bitconcatenate' 'p_shl24_mid1' <Predicate = (!icmp_ln221)> <Delay = 0.00>
+ST_2 : Operation 62 [1/1] (0.00ns)   --->   "%p_shl24_cast_mid1 = zext i7 %p_shl24_mid1" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:222]   --->   Operation 62 'zext' 'p_shl24_cast_mid1' <Predicate = (!icmp_ln221 & icmp_ln226 & !and_ln221)> <Delay = 0.00>
+ST_2 : Operation 63 [1/1] (0.00ns) (grouped into LUT with out node p_mid1204)   --->   "%select_ln221_1 = select i1 %icmp_ln226, i7 %p_shl24_mid1, i7 %p_shl" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:221]   --->   Operation 63 'select' 'select_ln221_1' <Predicate = (!icmp_ln221 & and_ln221)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 64 [1/1] (0.00ns) (grouped into LUT with out node p_mid1204)   --->   "%zext_ln221_1 = zext i7 %select_ln221_1" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:221]   --->   Operation 64 'zext' 'zext_ln221_1' <Predicate = (!icmp_ln221 & and_ln221)> <Delay = 0.00>
+ST_2 : Operation 65 [1/1] (0.00ns)   --->   "%empty_74 = shl i5 %add_ln222, i5 1" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:222]   --->   Operation 65 'shl' 'empty_74' <Predicate = (!icmp_ln221)> <Delay = 0.00>
+ST_2 : Operation 66 [1/1] (0.00ns) (grouped into LUT with out node tmp67_mid1)   --->   "%select_ln221_2 = select i1 %icmp_ln226, i5 %empty_74, i5 %empty_69" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:221]   --->   Operation 66 'select' 'select_ln221_2' <Predicate = (!icmp_ln221 & and_ln221)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 67 [1/1] (0.00ns) (grouped into LUT with out node tmp67_mid1)   --->   "%zext_ln221_2 = zext i5 %select_ln221_2" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:221]   --->   Operation 67 'zext' 'zext_ln221_2' <Predicate = (!icmp_ln221 & and_ln221)> <Delay = 0.00>
+ST_2 : Operation 68 [1/1] (0.00ns)   --->   "%tmp67_cast_mid1238 = zext i5 %empty_74" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:222]   --->   Operation 68 'zext' 'tmp67_cast_mid1238' <Predicate = (!icmp_ln221 & icmp_ln226 & !and_ln221)> <Delay = 0.00>
+ST_2 : Operation 69 [1/1] (1.87ns)   --->   "%p_mid1240 = add i8 %tmp67_cast_mid1238, i8 %p_shl24_cast_mid1" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:222]   --->   Operation 69 'add' 'p_mid1240' <Predicate = (!icmp_ln221 & icmp_ln226 & !and_ln221)> <Delay = 1.87> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.87> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 70 [1/1] (0.00ns) (grouped into LUT with out node select_ln226_2)   --->   "%select_ln221_5 = select i1 %icmp_ln226, i8 %p_mid1240, i8 %empty_71" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:221]   --->   Operation 70 'select' 'select_ln221_5' <Predicate = (!icmp_ln221 & !and_ln221)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 71 [1/1] (1.21ns)   --->   "%select_ln221_6 = select i1 %icmp_ln226, i5 %add_ln222, i5 %channel_1" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:221]   --->   Operation 71 'select' 'select_ln221_6' <Predicate = (!icmp_ln221)> <Delay = 1.21> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 72 [1/1] (0.00ns)   --->   "%zext_ln226_1 = zext i3 %add_ln227" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:226]   --->   Operation 72 'zext' 'zext_ln226_1' <Predicate = (!icmp_ln221 & and_ln221)> <Delay = 0.00>
+ST_2 : Operation 73 [1/1] (0.00ns) (grouped into LUT with out node tmp67_mid1)   --->   "%p_mid2 = bitconcatenate i4 @_ssdm_op_BitConcatenate.i4.i3.i1, i3 %add_ln227, i1 0" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:227]   --->   Operation 73 'bitconcatenate' 'p_mid2' <Predicate = (!icmp_ln221 & and_ln221)> <Delay = 0.00>
+ST_2 : Operation 74 [1/1] (0.00ns) (grouped into LUT with out node tmp67_mid1)   --->   "%p_cast100_mid1 = zext i4 %p_mid2" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:227]   --->   Operation 74 'zext' 'p_cast100_mid1' <Predicate = (!icmp_ln221 & and_ln221)> <Delay = 0.00>
+ST_2 : Operation 75 [1/1] (1.78ns)   --->   "%tmp66_mid1 = add i5 %select_ln221_6, i5 %zext_ln226_1" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:221]   --->   Operation 75 'add' 'tmp66_mid1' <Predicate = (!icmp_ln221 & and_ln221)> <Delay = 1.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 76 [1/1] (1.78ns) (out node of the LUT)   --->   "%tmp67_mid1 = add i6 %zext_ln221_2, i6 %p_cast100_mid1" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:221]   --->   Operation 76 'add' 'tmp67_mid1' <Predicate = (!icmp_ln221 & and_ln221)> <Delay = 1.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 77 [1/1] (0.00ns) (grouped into LUT with out node p_mid1204)   --->   "%tmp67_cast_mid1 = zext i6 %tmp67_mid1" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:221]   --->   Operation 77 'zext' 'tmp67_cast_mid1' <Predicate = (!icmp_ln221 & and_ln221)> <Delay = 0.00>
+ST_2 : Operation 78 [1/1] (1.87ns) (out node of the LUT)   --->   "%p_mid1204 = add i8 %tmp67_cast_mid1, i8 %zext_ln221_1" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:221]   --->   Operation 78 'add' 'p_mid1204' <Predicate = (!icmp_ln221 & and_ln221)> <Delay = 1.87> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.87> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 79 [1/1] (1.24ns) (out node of the LUT)   --->   "%select_ln226_2 = select i1 %and_ln221, i8 %p_mid1204, i8 %select_ln221_5" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:226]   --->   Operation 79 'select' 'select_ln226_2' <Predicate = (!icmp_ln221)> <Delay = 1.24> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 80 [1/1] (1.58ns)   --->   "%store_ln230 = store i5 %select_ln221_6, i5 %channel" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:230]   --->   Operation 80 'store' 'store_ln230' <Predicate = (!icmp_ln221)> <Delay = 1.58>
+
+State 3 <SV = 2> <Delay = 6.71>
+ST_3 : Operation 81 [1/1] (0.00ns)   --->   "%p_shl5 = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i4.i2, i4 %empty, i2 0"   --->   Operation 81 'bitconcatenate' 'p_shl5' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 82 [1/1] (0.00ns)   --->   "%zext_ln225 = zext i6 %p_shl5" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:225]   --->   Operation 82 'zext' 'zext_ln225' <Predicate = (!icmp_ln226 & !and_ln221)> <Delay = 0.00>
+ST_3 : Operation 83 [1/1] (0.00ns)   --->   "%tmp66_cast = zext i5 %tmp66" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:226]   --->   Operation 83 'zext' 'tmp66_cast' <Predicate = (!icmp_ln226 & !and_ln221)> <Delay = 0.00>
+ST_3 : Operation 84 [1/1] (1.82ns)   --->   "%empty_70 = add i7 %tmp66_cast, i7 %zext_ln225" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:226]   --->   Operation 84 'add' 'empty_70' <Predicate = (!icmp_ln226 & !and_ln221)> <Delay = 1.82> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 85 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 85 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 86 [1/1] (0.00ns)   --->   "%zext_ln221 = zext i5 %add_ln222" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:221]   --->   Operation 86 'zext' 'zext_ln221' <Predicate = (!icmp_ln221 & icmp_ln226 & !and_ln221)> <Delay = 0.00>
+ST_3 : Operation 87 [1/1] (0.00ns)   --->   "%p_shl23_mid1 = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i4.i2, i4 %empty_73, i2 0" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:222]   --->   Operation 87 'bitconcatenate' 'p_shl23_mid1' <Predicate = (!icmp_ln221)> <Delay = 0.00>
+ST_3 : Operation 88 [1/1] (0.00ns)   --->   "%zext_ln225_1 = zext i6 %p_shl23_mid1" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:225]   --->   Operation 88 'zext' 'zext_ln225_1' <Predicate = (!icmp_ln221 & icmp_ln226 & !and_ln221)> <Delay = 0.00>
+ST_3 : Operation 89 [1/1] (0.00ns) (grouped into LUT with out node p_mid1202)   --->   "%select_ln221_3 = select i1 %icmp_ln226, i6 %p_shl23_mid1, i6 %p_shl5" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:221]   --->   Operation 89 'select' 'select_ln221_3' <Predicate = (!icmp_ln221 & and_ln221)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.18> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 90 [1/1] (0.00ns) (grouped into LUT with out node p_mid1202)   --->   "%zext_ln221_3 = zext i6 %select_ln221_3" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:221]   --->   Operation 90 'zext' 'zext_ln221_3' <Predicate = (!icmp_ln221 & and_ln221)> <Delay = 0.00>
+ST_3 : Operation 91 [1/1] (1.82ns)   --->   "%p_mid1230 = add i7 %zext_ln221, i7 %zext_ln225_1" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:221]   --->   Operation 91 'add' 'p_mid1230' <Predicate = (!icmp_ln221 & icmp_ln226 & !and_ln221)> <Delay = 1.82> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 92 [1/1] (0.00ns) (grouped into LUT with out node select_ln226_1)   --->   "%select_ln221_4 = select i1 %icmp_ln226, i7 %p_mid1230, i7 %empty_70" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:221]   --->   Operation 92 'select' 'select_ln221_4' <Predicate = (!icmp_ln221 & !and_ln221)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 93 [1/1] (0.00ns) (grouped into LUT with out node p_mid1202)   --->   "%tmp66_cast_mid1 = zext i5 %tmp66_mid1" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:221]   --->   Operation 93 'zext' 'tmp66_cast_mid1' <Predicate = (!icmp_ln221 & and_ln221)> <Delay = 0.00>
+ST_3 : Operation 94 [1/1] (1.82ns) (out node of the LUT)   --->   "%p_mid1202 = add i7 %tmp66_cast_mid1, i7 %zext_ln221_3" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:221]   --->   Operation 94 'add' 'p_mid1202' <Predicate = (!icmp_ln221 & and_ln221)> <Delay = 1.82> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 95 [1/1] (0.99ns) (out node of the LUT)   --->   "%select_ln226_1 = select i1 %and_ln221, i7 %p_mid1202, i7 %select_ln221_4" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:226]   --->   Operation 95 'select' 'select_ln226_1' <Predicate = (!icmp_ln221)> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 96 [1/1] (0.00ns)   --->   "%p_shl26_mid2 = bitconcatenate i9 @_ssdm_op_BitConcatenate.i9.i7.i2, i7 %select_ln226_1, i2 0" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:226]   --->   Operation 96 'bitconcatenate' 'p_shl26_mid2' <Predicate = (!icmp_ln221)> <Delay = 0.00>
+ST_3 : Operation 97 [1/1] (0.00ns)   --->   "%p_shl27_0_mid2 = bitconcatenate i11 @_ssdm_op_BitConcatenate.i11.i8.i3, i8 %select_ln226_2, i3 0" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:226]   --->   Operation 97 'bitconcatenate' 'p_shl27_0_mid2' <Predicate = (!icmp_ln221)> <Delay = 0.00>
+ST_3 : Operation 98 [1/1] (0.00ns)   --->   "%p_shl28_0_mid2 = bitconcatenate i9 @_ssdm_op_BitConcatenate.i9.i8.i1, i8 %select_ln226_2, i1 0" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:226]   --->   Operation 98 'bitconcatenate' 'p_shl28_0_mid2' <Predicate = (!icmp_ln221)> <Delay = 0.00>
+ST_3 : Operation 99 [1/1] (0.00ns)   --->   "%or_ln226_1 = or i8 %select_ln226_2, i8 1" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:226]   --->   Operation 99 'or' 'or_ln226_1' <Predicate = (!icmp_ln221)> <Delay = 0.00>
+ST_3 : Operation 100 [1/1] (0.00ns)   --->   "%p_shl27_1_mid2 = bitconcatenate i11 @_ssdm_op_BitConcatenate.i11.i8.i3, i8 %or_ln226_1, i3 0" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:226]   --->   Operation 100 'bitconcatenate' 'p_shl27_1_mid2' <Predicate = (!icmp_ln221)> <Delay = 0.00>
+ST_3 : Operation 101 [1/1] (0.00ns)   --->   "%zext_ln230_mid2_v = bitconcatenate i9 @_ssdm_op_BitConcatenate.i9.i8.i1, i8 %or_ln226_1, i1 0" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:226]   --->   Operation 101 'bitconcatenate' 'zext_ln230_mid2_v' <Predicate = (!icmp_ln221)> <Delay = 0.00>
+ST_3 : Operation 102 [1/1] (0.00ns)   --->   "%zext_ln226_2 = zext i9 %zext_ln230_mid2_v" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:226]   --->   Operation 102 'zext' 'zext_ln226_2' <Predicate = (!icmp_ln221)> <Delay = 0.00>
+ST_3 : Operation 103 [1/1] (0.00ns)   --->   "%output_col_1_cast115 = zext i3 %select_ln226" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:226]   --->   Operation 103 'zext' 'output_col_1_cast115' <Predicate = (!icmp_ln221)> <Delay = 0.00>
+ST_3 : Operation 104 [1/1] (0.00ns)   --->   "%tmp_1 = bitconcatenate i4 @_ssdm_op_BitConcatenate.i4.i3.i1, i3 %select_ln226, i1 0" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:226]   --->   Operation 104 'bitconcatenate' 'tmp_1' <Predicate = (!icmp_ln221)> <Delay = 0.00>
+ST_3 : Operation 105 [1/1] (0.00ns)   --->   "%zext_ln258 = zext i4 %tmp_1" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:258]   --->   Operation 105 'zext' 'zext_ln258' <Predicate = (!icmp_ln221)> <Delay = 0.00>
+ST_3 : Operation 106 [1/1] (0.00ns)   --->   "%zext_ln258_1 = zext i4 %tmp_1" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:258]   --->   Operation 106 'zext' 'zext_ln258_1' <Predicate = (!icmp_ln221)> <Delay = 0.00>
+ST_3 : Operation 107 [1/1] (1.82ns)   --->   "%add_ln258 = add i9 %p_shl28_0_mid2, i9 %zext_ln258_1" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:258]   --->   Operation 107 'add' 'add_ln258' <Predicate = (!icmp_ln221)> <Delay = 1.82> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 108 [1/1] (0.00ns)   --->   "%zext_ln258_2 = zext i9 %add_ln258" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:258]   --->   Operation 108 'zext' 'zext_ln258_2' <Predicate = (!icmp_ln221)> <Delay = 0.00>
+ST_3 : Operation 109 [1/1] (1.63ns)   --->   "%add_ln258_1 = add i11 %zext_ln258_2, i11 %p_shl27_0_mid2" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:258]   --->   Operation 109 'add' 'add_ln258_1' <Predicate = (!icmp_ln221)> <Delay = 1.63> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.63> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 110 [1/1] (0.00ns)   --->   "%zext_ln263 = zext i11 %add_ln258_1" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:263]   --->   Operation 110 'zext' 'zext_ln263' <Predicate = (!icmp_ln221)> <Delay = 0.00>
+ST_3 : Operation 111 [1/1] (0.00ns)   --->   "%conv2_acc_V_addr = getelementptr i15 %conv2_acc_V, i64 0, i64 %zext_ln263" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:263]   --->   Operation 111 'getelementptr' 'conv2_acc_V_addr' <Predicate = (!icmp_ln221)> <Delay = 0.00>
+ST_3 : Operation 112 [2/2] (3.25ns)   --->   "%conv2_acc_V_load = load i11 %conv2_acc_V_addr" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:263]   --->   Operation 112 'load' 'conv2_acc_V_load' <Predicate = (!icmp_ln221)> <Delay = 3.25> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 15> <Depth = 1600> <RAM>
+ST_3 : Operation 113 [1/1] (0.00ns)   --->   "%or_ln258 = or i11 %add_ln258_1, i11 1" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:258]   --->   Operation 113 'or' 'or_ln258' <Predicate = (!icmp_ln221)> <Delay = 0.00>
+ST_3 : Operation 114 [1/1] (0.00ns)   --->   "%zext_ln263_1 = zext i11 %or_ln258" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:263]   --->   Operation 114 'zext' 'zext_ln263_1' <Predicate = (!icmp_ln221)> <Delay = 0.00>
+ST_3 : Operation 115 [1/1] (0.00ns)   --->   "%conv2_acc_V_addr_1 = getelementptr i15 %conv2_acc_V, i64 0, i64 %zext_ln263_1" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:263]   --->   Operation 115 'getelementptr' 'conv2_acc_V_addr_1' <Predicate = (!icmp_ln221)> <Delay = 0.00>
+ST_3 : Operation 116 [2/2] (3.25ns)   --->   "%conv2_acc_V_load_1 = load i11 %conv2_acc_V_addr_1" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:263]   --->   Operation 116 'load' 'conv2_acc_V_load_1' <Predicate = (!icmp_ln221)> <Delay = 3.25> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 15> <Depth = 1600> <RAM>
+ST_3 : Operation 117 [1/1] (1.82ns)   --->   "%add_ln258_2 = add i10 %zext_ln226_2, i10 %zext_ln258" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:258]   --->   Operation 117 'add' 'add_ln258_2' <Predicate = (!icmp_ln221)> <Delay = 1.82> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 118 [1/1] (0.00ns)   --->   "%zext_ln258_3 = zext i10 %add_ln258_2" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:258]   --->   Operation 118 'zext' 'zext_ln258_3' <Predicate = (!icmp_ln221)> <Delay = 0.00>
+ST_3 : Operation 119 [1/1] (1.63ns)   --->   "%add_ln258_3 = add i11 %zext_ln258_3, i11 %p_shl27_1_mid2" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:258]   --->   Operation 119 'add' 'add_ln258_3' <Predicate = (!icmp_ln221)> <Delay = 1.63> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.63> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 120 [1/1] (0.00ns)   --->   "%zext_ln263_2 = zext i11 %add_ln258_3" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:263]   --->   Operation 120 'zext' 'zext_ln263_2' <Predicate = (!icmp_ln221)> <Delay = 0.00>
+ST_3 : Operation 121 [1/1] (0.00ns)   --->   "%conv2_acc_V_addr_2 = getelementptr i15 %conv2_acc_V, i64 0, i64 %zext_ln263_2" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:263]   --->   Operation 121 'getelementptr' 'conv2_acc_V_addr_2' <Predicate = (!icmp_ln221)> <Delay = 0.00>
+ST_3 : Operation 122 [2/2] (3.25ns)   --->   "%conv2_acc_V_load_2 = load i11 %conv2_acc_V_addr_2" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:263]   --->   Operation 122 'load' 'conv2_acc_V_load_2' <Predicate = (!icmp_ln221)> <Delay = 3.25> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 15> <Depth = 1600> <RAM>
+ST_3 : Operation 123 [1/1] (0.00ns)   --->   "%or_ln258_1 = or i11 %add_ln258_3, i11 1" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:258]   --->   Operation 123 'or' 'or_ln258_1' <Predicate = (!icmp_ln221)> <Delay = 0.00>
+ST_3 : Operation 124 [1/1] (0.00ns)   --->   "%zext_ln263_3 = zext i11 %or_ln258_1" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:263]   --->   Operation 124 'zext' 'zext_ln263_3' <Predicate = (!icmp_ln221)> <Delay = 0.00>
+ST_3 : Operation 125 [1/1] (0.00ns)   --->   "%conv2_acc_V_addr_3 = getelementptr i15 %conv2_acc_V, i64 0, i64 %zext_ln263_3" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:263]   --->   Operation 125 'getelementptr' 'conv2_acc_V_addr_3' <Predicate = (!icmp_ln221)> <Delay = 0.00>
+ST_3 : Operation 126 [2/2] (3.25ns)   --->   "%conv2_acc_V_load_3 = load i11 %conv2_acc_V_addr_3" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:263]   --->   Operation 126 'load' 'conv2_acc_V_load_3' <Predicate = (!icmp_ln221)> <Delay = 3.25> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 15> <Depth = 1600> <RAM>
+ST_3 : Operation 127 [1/1] (1.87ns)   --->   "%add_ln278 = add i7 %select_ln226_1, i7 %output_col_1_cast115" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:278]   --->   Operation 127 'add' 'add_ln278' <Predicate = (!icmp_ln221)> <Delay = 1.87> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.87> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 128 [1/1] (0.00ns)   --->   "%zext_ln278 = zext i7 %add_ln278" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:278]   --->   Operation 128 'zext' 'zext_ln278' <Predicate = (!icmp_ln221)> <Delay = 0.00>
+ST_3 : Operation 129 [1/1] (1.82ns)   --->   "%add_ln278_1 = add i9 %zext_ln278, i9 %p_shl26_mid2" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:278]   --->   Operation 129 'add' 'add_ln278_1' <Predicate = (!icmp_ln221)> <Delay = 1.82> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 3.25>
+ST_4 : Operation 130 [1/2] (3.25ns)   --->   "%conv2_acc_V_load = load i11 %conv2_acc_V_addr" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:263]   --->   Operation 130 'load' 'conv2_acc_V_load' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 15> <Depth = 1600> <RAM>
+ST_4 : Operation 131 [1/2] (3.25ns)   --->   "%conv2_acc_V_load_1 = load i11 %conv2_acc_V_addr_1" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:263]   --->   Operation 131 'load' 'conv2_acc_V_load_1' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 15> <Depth = 1600> <RAM>
+ST_4 : Operation 132 [1/2] (3.25ns)   --->   "%conv2_acc_V_load_2 = load i11 %conv2_acc_V_addr_2" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:263]   --->   Operation 132 'load' 'conv2_acc_V_load_2' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 15> <Depth = 1600> <RAM>
+ST_4 : Operation 133 [1/2] (3.25ns)   --->   "%conv2_acc_V_load_3 = load i11 %conv2_acc_V_addr_3" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:263]   --->   Operation 133 'load' 'conv2_acc_V_load_3' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM_1WnR">   --->   Core 83 'RAM_1WnR' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 17> <Width = 15> <Depth = 1600> <RAM>
+
+State 5 <SV = 4> <Delay = 6.91>
+ST_5 : Operation 134 [1/1] (2.31ns)   --->   "%icmp_ln1039 = icmp_slt  i15 %conv2_acc_V_load, i15 1"   --->   Operation 134 'icmp' 'icmp_ln1039' <Predicate = true> <Delay = 2.31> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.31> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 135 [1/1] (0.00ns)   --->   "%sext_ln186 = sext i15 %conv2_acc_V_load"   --->   Operation 135 'sext' 'sext_ln186' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 136 [1/1] (0.00ns)   --->   "%zext_ln186 = zext i32 %sext_ln186"   --->   Operation 136 'zext' 'zext_ln186' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 137 [2/2] (6.91ns)   --->   "%mul_ln186 = mul i68 %zext_ln186, i68 41310957922"   --->   Operation 137 'mul' 'mul_ln186' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 138 [1/1] (2.31ns)   --->   "%icmp_ln1039_1 = icmp_slt  i15 %conv2_acc_V_load_1, i15 1"   --->   Operation 138 'icmp' 'icmp_ln1039_1' <Predicate = true> <Delay = 2.31> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.31> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 139 [1/1] (0.00ns)   --->   "%sext_ln186_1 = sext i15 %conv2_acc_V_load_1"   --->   Operation 139 'sext' 'sext_ln186_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 140 [1/1] (0.00ns)   --->   "%zext_ln186_1 = zext i32 %sext_ln186_1"   --->   Operation 140 'zext' 'zext_ln186_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 141 [2/2] (6.91ns)   --->   "%mul_ln186_1 = mul i68 %zext_ln186_1, i68 41310957922"   --->   Operation 141 'mul' 'mul_ln186_1' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 142 [1/1] (2.31ns)   --->   "%icmp_ln1039_2 = icmp_slt  i15 %conv2_acc_V_load_2, i15 1"   --->   Operation 142 'icmp' 'icmp_ln1039_2' <Predicate = true> <Delay = 2.31> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.31> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 143 [1/1] (0.00ns)   --->   "%sext_ln186_2 = sext i15 %conv2_acc_V_load_2"   --->   Operation 143 'sext' 'sext_ln186_2' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 144 [1/1] (0.00ns)   --->   "%zext_ln186_2 = zext i32 %sext_ln186_2"   --->   Operation 144 'zext' 'zext_ln186_2' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 145 [2/2] (6.91ns)   --->   "%mul_ln186_2 = mul i68 %zext_ln186_2, i68 41310957922"   --->   Operation 145 'mul' 'mul_ln186_2' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 146 [1/1] (2.31ns)   --->   "%icmp_ln1039_3 = icmp_slt  i15 %conv2_acc_V_load_3, i15 1"   --->   Operation 146 'icmp' 'icmp_ln1039_3' <Predicate = true> <Delay = 2.31> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.31> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 147 [1/1] (0.00ns)   --->   "%sext_ln186_3 = sext i15 %conv2_acc_V_load_3"   --->   Operation 147 'sext' 'sext_ln186_3' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 148 [1/1] (0.00ns)   --->   "%zext_ln186_3 = zext i32 %sext_ln186_3"   --->   Operation 148 'zext' 'zext_ln186_3' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 149 [2/2] (6.91ns)   --->   "%mul_ln186_3 = mul i68 %zext_ln186_3, i68 41310957922"   --->   Operation 149 'mul' 'mul_ln186_3' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 6.91>
+ST_6 : Operation 150 [1/2] (6.91ns)   --->   "%mul_ln186 = mul i68 %zext_ln186, i68 41310957922"   --->   Operation 150 'mul' 'mul_ln186' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 151 [1/1] (0.00ns)   --->   "%trunc_ln1669 = trunc i68 %mul_ln186"   --->   Operation 151 'trunc' 'trunc_ln1669' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 152 [1/1] (0.00ns)   --->   "%trunc_ln186_2 = partselect i28 @_ssdm_op_PartSelect.i28.i68.i32.i32, i68 %mul_ln186, i32 40, i32 67"   --->   Operation 152 'partselect' 'trunc_ln186_2' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 153 [1/2] (6.91ns)   --->   "%mul_ln186_1 = mul i68 %zext_ln186_1, i68 41310957922"   --->   Operation 153 'mul' 'mul_ln186_1' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 154 [1/1] (0.00ns)   --->   "%trunc_ln1669_1 = trunc i68 %mul_ln186_1"   --->   Operation 154 'trunc' 'trunc_ln1669_1' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 155 [1/1] (0.00ns)   --->   "%trunc_ln186_5 = partselect i28 @_ssdm_op_PartSelect.i28.i68.i32.i32, i68 %mul_ln186_1, i32 40, i32 67"   --->   Operation 155 'partselect' 'trunc_ln186_5' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 156 [1/2] (6.91ns)   --->   "%mul_ln186_2 = mul i68 %zext_ln186_2, i68 41310957922"   --->   Operation 156 'mul' 'mul_ln186_2' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 157 [1/1] (0.00ns)   --->   "%trunc_ln1669_2 = trunc i68 %mul_ln186_2"   --->   Operation 157 'trunc' 'trunc_ln1669_2' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 158 [1/1] (0.00ns)   --->   "%trunc_ln186_7 = partselect i28 @_ssdm_op_PartSelect.i28.i68.i32.i32, i68 %mul_ln186_2, i32 40, i32 67"   --->   Operation 158 'partselect' 'trunc_ln186_7' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 159 [1/2] (6.91ns)   --->   "%mul_ln186_3 = mul i68 %zext_ln186_3, i68 41310957922"   --->   Operation 159 'mul' 'mul_ln186_3' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 160 [1/1] (0.00ns)   --->   "%trunc_ln1669_3 = trunc i68 %mul_ln186_3"   --->   Operation 160 'trunc' 'trunc_ln1669_3' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 161 [1/1] (0.00ns)   --->   "%trunc_ln186_8 = partselect i28 @_ssdm_op_PartSelect.i28.i68.i32.i32, i68 %mul_ln186_3, i32 40, i32 67"   --->   Operation 161 'partselect' 'trunc_ln186_8' <Predicate = true> <Delay = 0.00>
+
+State 7 <SV = 6> <Delay = 6.95>
+ST_7 : Operation 162 [1/1] (0.00ns) (grouped into LUT with out node select_ln64)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i68.i32, i68 %mul_ln186, i32 40"   --->   Operation 162 'bitselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 163 [1/1] (2.53ns)   --->   "%icmp_ln1035 = icmp_ugt  i40 %trunc_ln1669, i40 549755813888"   --->   Operation 163 'icmp' 'icmp_ln1035' <Predicate = true> <Delay = 2.53> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.53> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 164 [1/1] (2.43ns)   --->   "%add_ln840 = add i28 %trunc_ln186_2, i28 1"   --->   Operation 164 'add' 'add_ln840' <Predicate = true> <Delay = 2.43> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.43> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 165 [1/1] (2.53ns)   --->   "%icmp_ln1019 = icmp_eq  i40 %trunc_ln1669, i40 549755813888"   --->   Operation 165 'icmp' 'icmp_ln1019' <Predicate = true> <Delay = 2.53> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.53> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 166 [1/1] (0.00ns) (grouped into LUT with out node select_ln64)   --->   "%and_ln64 = and i1 %icmp_ln1019, i1 %tmp" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:64]   --->   Operation 166 'and' 'and_ln64' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 167 [1/1] (0.00ns) (grouped into LUT with out node select_ln64)   --->   "%or_ln64 = or i1 %icmp_ln1035, i1 %and_ln64" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:64]   --->   Operation 167 'or' 'or_ln64' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 168 [1/1] (0.97ns) (out node of the LUT)   --->   "%select_ln64 = select i1 %or_ln64, i28 %add_ln840, i28 %trunc_ln186_2" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:64]   --->   Operation 168 'select' 'select_ln64' <Predicate = true> <Delay = 0.97> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.83> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_7 : Operation 169 [1/1] (0.00ns)   --->   "%tmp_2 = partselect i25 @_ssdm_op_PartSelect.i25.i28.i32.i32, i28 %select_ln64, i32 3, i32 27"   --->   Operation 169 'partselect' 'tmp_2' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 170 [1/1] (2.45ns)   --->   "%icmp_ln1035_4 = icmp_ne  i25 %tmp_2, i25 0"   --->   Operation 170 'icmp' 'icmp_ln1035_4' <Predicate = true> <Delay = 2.45> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.45> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 171 [1/1] (0.00ns) (grouped into LUT with out node select_ln1039_3)   --->   "%trunc_ln91 = trunc i28 %select_ln64" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:91]   --->   Operation 171 'trunc' 'trunc_ln91' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 172 [1/1] (0.00ns) (grouped into LUT with out node select_ln1039_3)   --->   "%xor_ln1039 = xor i1 %icmp_ln1039, i1 1"   --->   Operation 172 'xor' 'xor_ln1039' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 173 [1/1] (0.00ns) (grouped into LUT with out node select_ln1039_3)   --->   "%select_ln1039 = select i1 %xor_ln1039, i3 7, i3 0"   --->   Operation 173 'select' 'select_ln1039' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_7 : Operation 174 [1/1] (0.00ns) (grouped into LUT with out node select_ln1039_3)   --->   "%or_ln1039 = or i1 %icmp_ln1039, i1 %icmp_ln1035_4"   --->   Operation 174 'or' 'or_ln1039' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 175 [1/1] (0.99ns) (out node of the LUT)   --->   "%select_ln1039_3 = select i1 %or_ln1039, i3 %select_ln1039, i3 %trunc_ln91"   --->   Operation 175 'select' 'select_ln1039_3' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_7 : Operation 176 [1/1] (0.00ns) (grouped into LUT with out node select_ln64_1)   --->   "%tmp_3 = bitselect i1 @_ssdm_op_BitSelect.i1.i68.i32, i68 %mul_ln186_1, i32 40"   --->   Operation 176 'bitselect' 'tmp_3' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 177 [1/1] (2.53ns)   --->   "%icmp_ln1035_5 = icmp_ugt  i40 %trunc_ln1669_1, i40 549755813888"   --->   Operation 177 'icmp' 'icmp_ln1035_5' <Predicate = true> <Delay = 2.53> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.53> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 178 [1/1] (2.43ns)   --->   "%add_ln840_1 = add i28 %trunc_ln186_5, i28 1"   --->   Operation 178 'add' 'add_ln840_1' <Predicate = true> <Delay = 2.43> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.43> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 179 [1/1] (2.53ns)   --->   "%icmp_ln1019_1 = icmp_eq  i40 %trunc_ln1669_1, i40 549755813888"   --->   Operation 179 'icmp' 'icmp_ln1019_1' <Predicate = true> <Delay = 2.53> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.53> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 180 [1/1] (0.00ns) (grouped into LUT with out node select_ln64_1)   --->   "%and_ln64_1 = and i1 %icmp_ln1019_1, i1 %tmp_3" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:64]   --->   Operation 180 'and' 'and_ln64_1' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 181 [1/1] (0.00ns) (grouped into LUT with out node select_ln64_1)   --->   "%or_ln64_1 = or i1 %icmp_ln1035_5, i1 %and_ln64_1" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:64]   --->   Operation 181 'or' 'or_ln64_1' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 182 [1/1] (0.97ns) (out node of the LUT)   --->   "%select_ln64_1 = select i1 %or_ln64_1, i28 %add_ln840_1, i28 %trunc_ln186_5" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:64]   --->   Operation 182 'select' 'select_ln64_1' <Predicate = true> <Delay = 0.97> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.83> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_7 : Operation 183 [1/1] (0.00ns)   --->   "%tmp_4 = partselect i25 @_ssdm_op_PartSelect.i25.i28.i32.i32, i28 %select_ln64_1, i32 3, i32 27"   --->   Operation 183 'partselect' 'tmp_4' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 184 [1/1] (2.45ns)   --->   "%icmp_ln1035_6 = icmp_ne  i25 %tmp_4, i25 0"   --->   Operation 184 'icmp' 'icmp_ln1035_6' <Predicate = true> <Delay = 2.45> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.45> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 185 [1/1] (0.00ns) (grouped into LUT with out node select_ln1039_5)   --->   "%trunc_ln91_1 = trunc i28 %select_ln64_1" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:91]   --->   Operation 185 'trunc' 'trunc_ln91_1' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 186 [1/1] (0.00ns) (grouped into LUT with out node select_ln1039_5)   --->   "%xor_ln1039_1 = xor i1 %icmp_ln1039_1, i1 1"   --->   Operation 186 'xor' 'xor_ln1039_1' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 187 [1/1] (0.00ns) (grouped into LUT with out node select_ln1039_5)   --->   "%select_ln1039_4 = select i1 %xor_ln1039_1, i3 7, i3 0"   --->   Operation 187 'select' 'select_ln1039_4' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_7 : Operation 188 [1/1] (0.00ns) (grouped into LUT with out node select_ln1039_5)   --->   "%or_ln1039_1 = or i1 %icmp_ln1039_1, i1 %icmp_ln1035_6"   --->   Operation 188 'or' 'or_ln1039_1' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 189 [1/1] (0.99ns) (out node of the LUT)   --->   "%select_ln1039_5 = select i1 %or_ln1039_1, i3 %select_ln1039_4, i3 %trunc_ln91_1"   --->   Operation 189 'select' 'select_ln1039_5' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_7 : Operation 190 [1/1] (0.00ns) (grouped into LUT with out node select_ln64_2)   --->   "%tmp_5 = bitselect i1 @_ssdm_op_BitSelect.i1.i68.i32, i68 %mul_ln186_2, i32 40"   --->   Operation 190 'bitselect' 'tmp_5' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 191 [1/1] (2.53ns)   --->   "%icmp_ln1035_8 = icmp_ugt  i40 %trunc_ln1669_2, i40 549755813888"   --->   Operation 191 'icmp' 'icmp_ln1035_8' <Predicate = true> <Delay = 2.53> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.53> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 192 [1/1] (2.43ns)   --->   "%add_ln840_2 = add i28 %trunc_ln186_7, i28 1"   --->   Operation 192 'add' 'add_ln840_2' <Predicate = true> <Delay = 2.43> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.43> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 193 [1/1] (2.53ns)   --->   "%icmp_ln1019_2 = icmp_eq  i40 %trunc_ln1669_2, i40 549755813888"   --->   Operation 193 'icmp' 'icmp_ln1019_2' <Predicate = true> <Delay = 2.53> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.53> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 194 [1/1] (0.00ns) (grouped into LUT with out node select_ln64_2)   --->   "%and_ln64_2 = and i1 %icmp_ln1019_2, i1 %tmp_5" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:64]   --->   Operation 194 'and' 'and_ln64_2' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 195 [1/1] (0.00ns) (grouped into LUT with out node select_ln64_2)   --->   "%or_ln64_2 = or i1 %icmp_ln1035_8, i1 %and_ln64_2" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:64]   --->   Operation 195 'or' 'or_ln64_2' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 196 [1/1] (0.97ns) (out node of the LUT)   --->   "%select_ln64_2 = select i1 %or_ln64_2, i28 %add_ln840_2, i28 %trunc_ln186_7" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:64]   --->   Operation 196 'select' 'select_ln64_2' <Predicate = true> <Delay = 0.97> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.83> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_7 : Operation 197 [1/1] (0.00ns)   --->   "%tmp_6 = partselect i25 @_ssdm_op_PartSelect.i25.i28.i32.i32, i28 %select_ln64_2, i32 3, i32 27"   --->   Operation 197 'partselect' 'tmp_6' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 198 [1/1] (2.45ns)   --->   "%icmp_ln1035_9 = icmp_ne  i25 %tmp_6, i25 0"   --->   Operation 198 'icmp' 'icmp_ln1035_9' <Predicate = true> <Delay = 2.45> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.45> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 199 [1/1] (0.00ns) (grouped into LUT with out node select_ln1039_7)   --->   "%trunc_ln91_2 = trunc i28 %select_ln64_2" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:91]   --->   Operation 199 'trunc' 'trunc_ln91_2' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 200 [1/1] (0.00ns) (grouped into LUT with out node select_ln1039_7)   --->   "%xor_ln1039_2 = xor i1 %icmp_ln1039_2, i1 1"   --->   Operation 200 'xor' 'xor_ln1039_2' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 201 [1/1] (0.00ns) (grouped into LUT with out node select_ln1039_7)   --->   "%select_ln1039_6 = select i1 %xor_ln1039_2, i3 7, i3 0"   --->   Operation 201 'select' 'select_ln1039_6' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_7 : Operation 202 [1/1] (0.00ns) (grouped into LUT with out node select_ln1039_7)   --->   "%or_ln1039_2 = or i1 %icmp_ln1039_2, i1 %icmp_ln1035_9"   --->   Operation 202 'or' 'or_ln1039_2' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 203 [1/1] (0.99ns) (out node of the LUT)   --->   "%select_ln1039_7 = select i1 %or_ln1039_2, i3 %select_ln1039_6, i3 %trunc_ln91_2"   --->   Operation 203 'select' 'select_ln1039_7' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_7 : Operation 204 [1/1] (0.00ns) (grouped into LUT with out node select_ln64_3)   --->   "%tmp_7 = bitselect i1 @_ssdm_op_BitSelect.i1.i68.i32, i68 %mul_ln186_3, i32 40"   --->   Operation 204 'bitselect' 'tmp_7' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 205 [1/1] (2.53ns)   --->   "%icmp_ln1035_11 = icmp_ugt  i40 %trunc_ln1669_3, i40 549755813888"   --->   Operation 205 'icmp' 'icmp_ln1035_11' <Predicate = true> <Delay = 2.53> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.53> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 206 [1/1] (2.43ns)   --->   "%add_ln840_3 = add i28 %trunc_ln186_8, i28 1"   --->   Operation 206 'add' 'add_ln840_3' <Predicate = true> <Delay = 2.43> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.43> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 207 [1/1] (2.53ns)   --->   "%icmp_ln1019_3 = icmp_eq  i40 %trunc_ln1669_3, i40 549755813888"   --->   Operation 207 'icmp' 'icmp_ln1019_3' <Predicate = true> <Delay = 2.53> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.53> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 208 [1/1] (0.00ns) (grouped into LUT with out node select_ln64_3)   --->   "%and_ln64_3 = and i1 %icmp_ln1019_3, i1 %tmp_7" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:64]   --->   Operation 208 'and' 'and_ln64_3' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 209 [1/1] (0.00ns) (grouped into LUT with out node select_ln64_3)   --->   "%or_ln64_3 = or i1 %icmp_ln1035_11, i1 %and_ln64_3" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:64]   --->   Operation 209 'or' 'or_ln64_3' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 210 [1/1] (0.97ns) (out node of the LUT)   --->   "%select_ln64_3 = select i1 %or_ln64_3, i28 %add_ln840_3, i28 %trunc_ln186_8" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:64]   --->   Operation 210 'select' 'select_ln64_3' <Predicate = true> <Delay = 0.97> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.83> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_7 : Operation 211 [1/1] (0.00ns)   --->   "%tmp_8 = partselect i25 @_ssdm_op_PartSelect.i25.i28.i32.i32, i28 %select_ln64_3, i32 3, i32 27"   --->   Operation 211 'partselect' 'tmp_8' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 212 [1/1] (2.45ns)   --->   "%icmp_ln1035_12 = icmp_ne  i25 %tmp_8, i25 0"   --->   Operation 212 'icmp' 'icmp_ln1035_12' <Predicate = true> <Delay = 2.45> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.45> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 213 [1/1] (0.00ns) (grouped into LUT with out node select_ln1039_9)   --->   "%trunc_ln91_3 = trunc i28 %select_ln64_3" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:91]   --->   Operation 213 'trunc' 'trunc_ln91_3' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 214 [1/1] (0.00ns) (grouped into LUT with out node select_ln1039_9)   --->   "%xor_ln1039_3 = xor i1 %icmp_ln1039_3, i1 1"   --->   Operation 214 'xor' 'xor_ln1039_3' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 215 [1/1] (0.00ns) (grouped into LUT with out node select_ln1039_9)   --->   "%select_ln1039_8 = select i1 %xor_ln1039_3, i3 7, i3 0"   --->   Operation 215 'select' 'select_ln1039_8' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_7 : Operation 216 [1/1] (0.00ns) (grouped into LUT with out node select_ln1039_9)   --->   "%or_ln1039_3 = or i1 %icmp_ln1039_3, i1 %icmp_ln1035_12"   --->   Operation 216 'or' 'or_ln1039_3' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 217 [1/1] (0.99ns) (out node of the LUT)   --->   "%select_ln1039_9 = select i1 %or_ln1039_3, i3 %select_ln1039_8, i3 %trunc_ln91_3"   --->   Operation 217 'select' 'select_ln1039_9' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 6.33>
+ST_8 : Operation 218 [1/1] (1.13ns)   --->   "%icmp_ln1035_7 = icmp_ugt  i3 %select_ln1039_5, i3 %select_ln1039_3"   --->   Operation 218 'icmp' 'icmp_ln1035_7' <Predicate = true> <Delay = 1.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 219 [1/1] (0.98ns)   --->   "%select_ln268 = select i1 %icmp_ln1035_7, i3 %select_ln1039_5, i3 %select_ln1039_3" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:268]   --->   Operation 219 'select' 'select_ln268' <Predicate = true> <Delay = 0.98> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_8 : Operation 220 [1/1] (1.13ns)   --->   "%icmp_ln1035_10 = icmp_ugt  i3 %select_ln1039_7, i3 %select_ln268"   --->   Operation 220 'icmp' 'icmp_ln1035_10' <Predicate = true> <Delay = 1.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 221 [1/1] (0.98ns)   --->   "%select_ln268_1 = select i1 %icmp_ln1035_10, i3 %select_ln1039_7, i3 %select_ln268" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:268]   --->   Operation 221 'select' 'select_ln268_1' <Predicate = true> <Delay = 0.98> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_8 : Operation 222 [1/1] (1.13ns)   --->   "%icmp_ln1035_13 = icmp_ugt  i3 %select_ln1039_9, i3 %select_ln268_1"   --->   Operation 222 'icmp' 'icmp_ln1035_13' <Predicate = true> <Delay = 1.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 223 [1/1] (0.98ns)   --->   "%select_ln268_2 = select i1 %icmp_ln1035_13, i3 %select_ln1039_9, i3 %select_ln268_1" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:268]   --->   Operation 223 'select' 'select_ln268_2' <Predicate = true> <Delay = 0.98> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_8 : Operation 234 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 234 'ret' 'ret_ln0' <Predicate = (icmp_ln221)> <Delay = 0.00>
+
+State 9 <SV = 8> <Delay = 3.25>
+ST_9 : Operation 224 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @POOL_CHANNEL_POOL_ROW_POOL_COL_str"   --->   Operation 224 'specloopname' 'specloopname_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 225 [1/1] (0.00ns)   --->   "%empty_72 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 400, i64 400, i64 400"   --->   Operation 225 'speclooptripcount' 'empty_72' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 226 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 226 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 227 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @POOL_ROW_POOL_COL_str"   --->   Operation 227 'specloopname' 'specloopname_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 228 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 228 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 229 [1/1] (0.00ns)   --->   "%specloopname_ln234 = specloopname void @_ssdm_op_SpecLoopName, void @empty_19" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:234]   --->   Operation 229 'specloopname' 'specloopname_ln234' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 230 [1/1] (0.00ns)   --->   "%zext_ln281 = zext i9 %add_ln278_1" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:281]   --->   Operation 230 'zext' 'zext_ln281' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 231 [1/1] (0.00ns)   --->   "%pool2_V_addr = getelementptr i3 %pool2_V, i64 0, i64 %zext_ln281" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:281]   --->   Operation 231 'getelementptr' 'pool2_V_addr' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 232 [1/1] (3.25ns)   --->   "%store_ln281 = store i3 %select_ln268_2, i9 %pool2_V_addr" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:281]   --->   Operation 232 'store' 'store_ln281' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 3> <Depth = 400> <RAM>
+ST_9 : Operation 233 [1/1] (0.00ns)   --->   "%br_ln230 = br void %POOL_KERNEL_ROW.i95" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:230]   --->   Operation 233 'br' 'br_ln230' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 6.62ns
+The critical path consists of the following:
+	'alloca' operation ('indvar_flatten208') [5]  (0 ns)
+	'load' operation ('indvar_flatten208_load', D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:226) on local variable 'indvar_flatten208' [41]  (0 ns)
+	'icmp' operation ('icmp_ln226', D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:226) [44]  (1.43 ns)
+	'select' operation ('select_ln221', D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:221) [45]  (0.98 ns)
+	'add' operation ('add_ln227', D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:227) [69]  (1.65 ns)
+	'select' operation ('select_ln226_3', D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:226) [92]  (0.98 ns)
+	'store' operation ('store_ln230', D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:230) of variable 'select_ln226_3', D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:226 on local variable 'output_row' [216]  (1.59 ns)
+
+ <State 2>: 6.68ns
+The critical path consists of the following:
+	'load' operation ('channel') on local variable 'channel' [16]  (0 ns)
+	'add' operation ('add_ln222', D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:222) [35]  (1.78 ns)
+	'shl' operation ('empty_74', D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:222) [52]  (0 ns)
+	'select' operation ('select_ln221_2', D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:221) [53]  (0 ns)
+	'add' operation ('tmp67_mid1', D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:221) [81]  (1.78 ns)
+	'add' operation ('p_mid1204', D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:221) [83]  (1.87 ns)
+	'select' operation ('select_ln226_2', D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:226) [84]  (1.25 ns)
+
+ <State 3>: 6.72ns
+The critical path consists of the following:
+	'add' operation ('add_ln258', D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:258) [98]  (1.82 ns)
+	'add' operation ('add_ln258_1', D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:258) [100]  (1.64 ns)
+	'getelementptr' operation ('conv2_acc_V_addr', D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:263) [102]  (0 ns)
+	'load' operation ('conv2_acc_V_load', D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:263) on array 'conv2_acc_V' [103]  (3.25 ns)
+
+ <State 4>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('conv2_acc_V_load', D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:263) on array 'conv2_acc_V' [103]  (3.25 ns)
+
+ <State 5>: 6.91ns
+The critical path consists of the following:
+	'mul' operation ('mul_ln186') [107]  (6.91 ns)
+
+ <State 6>: 6.91ns
+The critical path consists of the following:
+	'mul' operation ('mul_ln186') [107]  (6.91 ns)
+
+ <State 7>: 6.96ns
+The critical path consists of the following:
+	'icmp' operation ('icmp_ln1035') [111]  (2.53 ns)
+	'or' operation ('or_ln64', D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:64) [115]  (0 ns)
+	'select' operation ('select_ln64', D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:64) [116]  (0.978 ns)
+	'icmp' operation ('icmp_ln1035_4') [118]  (2.45 ns)
+	'or' operation ('or_ln1039') [122]  (0 ns)
+	'select' operation ('select_ln1039_3') [123]  (0.993 ns)
+
+ <State 8>: 6.33ns
+The critical path consists of the following:
+	'icmp' operation ('icmp_ln1035_7') [148]  (1.13 ns)
+	'select' operation ('select_ln268', D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:268) [149]  (0.98 ns)
+	'icmp' operation ('icmp_ln1035_10') [176]  (1.13 ns)
+	'select' operation ('select_ln268_1', D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:268) [177]  (0.98 ns)
+	'icmp' operation ('icmp_ln1035_13') [202]  (1.13 ns)
+	'select' operation ('select_ln268_2', D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:268) [203]  (0.98 ns)
+
+ <State 9>: 3.25ns
+The critical path consists of the following:
+	'getelementptr' operation ('pool2_V_addr', D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:281) [208]  (0 ns)
+	'store' operation ('store_ln281', D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:281) of variable 'select_ln268_2', D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:268 on array 'pool2_V' [209]  (3.25 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

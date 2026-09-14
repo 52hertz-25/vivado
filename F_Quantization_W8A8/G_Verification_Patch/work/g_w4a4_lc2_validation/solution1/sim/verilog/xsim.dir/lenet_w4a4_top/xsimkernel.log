@@ -1,0 +1,4 @@
+Running: xsim.dir/lenet_w4a4_top/xsimk.exe -simmode gui -wdb lenet_w4a4_top.wdb -simrunnum 0 -socket 54712
+Design successfully loaded
+Design Loading Memory Usage: 13784 KB (Peak: 13784 KB)
+Design Loading CPU Usage: 46 ms

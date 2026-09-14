@@ -1,0 +1,248 @@
+============================================================
+Running W6A6 mode: csim
+Project root: D:\GitHub\vivado\vivado\F_Quantization_W8A8\hls_w6a6
+Model root:   D:\GitHub\vivado\vivado\F_Quantization_W8A8\hls_w6a6\..\..\lenet_project\handoff\LeNet_DSE_Framework_2022_2\model
+Weight root:  D:\GitHub\vivado\vivado\F_Quantization_W8A8\hls_w6a6\model\int6_weights
+============================================================
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+  **** SW Build 3670227 on Oct 13 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source D:/Xilinx/Vitis_HLS/2022.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user '时澄' on host 'benedicta' (Windows NT_amd64 version 6.2) on Sun Sep 13 18:21:38 +0800 2026
+INFO: [HLS 200-10] In directory 'D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6'
+Sourcing Tcl script 'D:\GitHub\vivado\vivado\F_Quantization_W8A8\hls_w6a6\scripts\run_w6a6.tcl'
+============================================================
+LeNet-5 W6A6 INT32 HLS
+Project root : D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6
+Model root   : D:/GitHub/vivado/vivado/lenet_project/handoff/LeNet_DSE_Framework_2022_2/model
+Weight root  : D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/model/int6_weights
+Run mode     : csim
+============================================================
+Work directory: D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/work
+HLS project   : w6a6_hls
+INFO: [HLS 200-1510] Running: open_project -reset w6a6_hls 
+INFO: [HLS 200-10] Creating and opening project 'D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/work/w6a6_hls'.
+INFO: [HLS 200-1510] Running: set_top lenet_w6a6_top 
+INFO: [HLS 200-1510] Running: add_files D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6.cpp -cflags -ID:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/include -std=c++11 
+INFO: [HLS 200-10] Adding design file 'D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/tb/tb_lenet_w6a6.cpp -cflags -ID:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/include -std=c++11 
+INFO: [HLS 200-10] Adding test bench file 'D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/tb/tb_lenet_w6a6.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution -reset solution1 -flow_target vivado 
+INFO: [HLS 200-10] Creating and opening solution 'D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/work/w6a6_hls/solution1'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vivado' configuration: config_interface -m_axi_latency=0
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1510] Running: create_clock -period 10.0 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog 
+============================================================
+Starting W6A6 C simulation
+Testing 10 representative MNIST samples
+============================================================
+INFO: [HLS 200-1510] Running: csim_design -argv D:/GitHub/vivado/vivado/lenet_project/handoff/LeNet_DSE_Framework_2022_2/model D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/model/int6_weights --multi 
+Running Dispatch Server on port: 51162
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../../tb/tb_lenet_w6a6.cpp in debug mode
+   Compiling ../../../../../src/lenet_w6a6.cpp in debug mode
+   Generating csim.exe
+In file included from D:/Xilinx/Vitis_HLS/2022.2/include/floating_point_v7_1_bitacc_cmodel.h:149:0,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/hls_fpo.h:143,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/hls_half_fpo.h:18,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/hls_half.h:25,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/etc/ap_private.h:52,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/ap_common.h:666,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/ap_int.h:10,
+                 from D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/include/lenet_w6a6.h:4,
+                 from ../../../../../tb/tb_lenet_w6a6.cpp:1:
+D:/Xilinx/Vitis_HLS/2022.2/include/gmp.h:58:0: warning: "__GMP_LIBGMP_DLL" redefined
+ #define __GMP_LIBGMP_DLL  0
+ 
+In file included from D:/Xilinx/Vitis_HLS/2022.2/include/hls_fpo.h:143:0,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/hls_half_fpo.h:18,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/hls_half.h:25,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/etc/ap_private.h:52,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/ap_common.h:666,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/ap_int.h:10,
+                 from D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/include/lenet_w6a6.h:4,
+                 from ../../../../../tb/tb_lenet_w6a6.cpp:1:
+D:/Xilinx/Vitis_HLS/2022.2/include/floating_point_v7_1_bitacc_cmodel.h:141:0: note: this is the location of the previous definition
+ #define __GMP_LIBGMP_DLL 1
+ 
+In file included from D:/Xilinx/Vitis_HLS/2022.2/include/floating_point_v7_1_bitacc_cmodel.h:149:0,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/hls_fpo.h:143,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/hls_half_fpo.h:18,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/hls_half.h:25,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/etc/ap_private.h:52,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/ap_common.h:666,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/ap_int.h:10,
+                 from D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/include/lenet_w6a6.h:4,
+                 from ../../../../../src/lenet_w6a6.cpp:1:
+D:/Xilinx/Vitis_HLS/2022.2/include/gmp.h:58:0: warning: "__GMP_LIBGMP_DLL" redefined
+ #define __GMP_LIBGMP_DLL  0
+ 
+In file included from D:/Xilinx/Vitis_HLS/2022.2/include/hls_fpo.h:143:0,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/hls_half_fpo.h:18,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/hls_half.h:25,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/etc/ap_private.h:52,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/ap_common.h:666,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/ap_int.h:10,
+                 from D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/include/lenet_w6a6.h:4,
+                 from ../../../../../src/lenet_w6a6.cpp:1:
+D:/Xilinx/Vitis_HLS/2022.2/include/floating_point_v7_1_bitacc_cmodel.h:141:0: note: this is the location of the previous definition
+ #define __GMP_LIBGMP_DLL 1
+ 
+sample_00 logits (INT32 / dequantized):
+  [0] -1032 / -7.584435
+  [1] -307 / -2.256223
+  [2] -146 / -1.072992
+  [3] 280 / 2.057793
+  [4] -234 / -1.719727
+  [5] -726 / -5.335562
+  [6] -2490 / -18.299655
+  [7] 1801 / 13.236016
+  [8] -457 / -3.358611
+  [9] -96 / -0.705529
+sample_00 predicted=7 expected=7 [PASS]
+sample_00 logits (INT32 / dequantized):
+  [0] -1032 / -7.584435
+  [1] -307 / -2.256223
+  [2] -146 / -1.072992
+  [3] 280 / 2.057793
+  [4] -234 / -1.719727
+  [5] -726 / -5.335562
+  [6] -2490 / -18.299655
+  [7] 1801 / 13.236016
+  [8] -457 / -3.358611
+  [9] -96 / -0.705529
+sample_00 predicted=7 expected=7 [PASS]
+sample_01 logits (INT32 / dequantized):
+  [0] 260 / 1.910807
+  [1] 428 / 3.145483
+  [2] 2629 / 19.321202
+  [3] -825 / -6.063139
+  [4] -1218 / -8.951398
+  [5] -1864 / -13.699019
+  [6] -239 / -1.756473
+  [7] -113 / -0.830466
+  [8] -769 / -5.651580
+  [9] -2222 / -16.330054
+sample_01 predicted=2 expected=2 [PASS]
+sample_02 logits (INT32 / dequantized):
+  [0] -989 / -7.268417
+  [1] 1544 / 11.347256
+  [2] -331 / -2.432605
+  [3] -1258 / -9.245368
+  [4] -202 / -1.484550
+  [5] -356 / -2.616336
+  [6] -634 / -4.659430
+  [7] 57 / 0.418908
+  [8] -264 / -1.940204
+  [9] -798 / -5.864709
+sample_02 predicted=1 expected=1 [PASS]
+sample_03 logits (INT32 / dequantized):
+  [0] 1962 / 14.419246
+  [1] -1173 / -8.620681
+  [2] -683 / -5.019544
+  [3] -480 / -3.527644
+  [4] -586 / -4.306666
+  [5] -126 / -0.926007
+  [6] 363 / 2.667781
+  [7] -608 / -4.468350
+  [8] -519 / -3.814265
+  [9] -98 / -0.720227
+sample_03 predicted=0 expected=0 [PASS]
+sample_04 logits (INT32 / dequantized):
+  [0] -891 / -6.548190
+  [1] -486 / -3.571740
+  [2] -607 / -4.461000
+  [3] -1151 / -8.458997
+  [4] 1880 / 13.816607
+  [5] -882 / -6.482047
+  [6] -1200 / -8.819111
+  [7] -269 / -1.976951
+  [8] -873 / -6.415903
+  [9] 566 / 4.159681
+sample_04 predicted=4 expected=4 [PASS]
+sample_05 logits (INT32 / dequantized):
+  [0] -1112 / -8.172376
+  [1] 1883 / 13.838655
+  [2] -599 / -4.402206
+  [3] -1437 / -10.560885
+  [4] -276 / -2.028396
+  [5] -490 / -3.601137
+  [6] -900 / -6.614333
+  [7] 141 / 1.036246
+  [8] -270 / -1.984300
+  [9] -838 / -6.158679
+sample_05 predicted=1 expected=1 [PASS]
+sample_06 logits (INT32 / dequantized):
+  [0] -1565 / -11.501590
+  [1] -135 / -0.992150
+  [2] -520 / -3.821615
+  [3] -1272 / -9.348258
+  [4] 1384 / 10.171375
+  [5] -539 / -3.961251
+  [6] -1141 / -8.385505
+  [7] -196 / -1.440455
+  [8] 226 / 1.660933
+  [9] 390 / 2.866211
+sample_06 predicted=4 expected=4 [PASS]
+sample_07 logits (INT32 / dequantized):
+  [0] -878 / -6.452649
+  [1] -454 / -3.336564
+  [2] -307 / -2.256223
+  [3] 59 / 0.433606
+  [4] -126 / -0.926007
+  [5] -668 / -4.909305
+  [6] -1600 / -11.758815
+  [7] -564 / -4.144982
+  [8] 135 / 0.992150
+  [9] 1577 / 11.589782
+sample_07 predicted=9 expected=9 [PASS]
+sample_08 logits (INT32 / dequantized):
+  [0] -676 / -4.968099
+  [1] -354 / -2.601638
+  [2] -667 / -4.901956
+  [3] -693 / -5.093037
+  [4] -460 / -3.380659
+  [5] 1794 / 13.184571
+  [6] 494 / 3.630534
+  [7] -919 / -6.753969
+  [8] 441 / 3.241023
+  [9] -55 / -0.404209
+sample_08 predicted=5 expected=5 [PASS]
+sample_09 logits (INT32 / dequantized):
+  [0] -1140 / -8.378155
+  [1] -1150 / -8.451648
+  [2] -1170 / -8.598633
+  [3] -579 / -4.255221
+  [4] 523 / 3.843662
+  [5] -1082 / -7.951898
+  [6] -2526 / -18.564228
+  [7] 275 / 2.021046
+  [8] -393 / -2.888259
+  [9] 1987 / 14.602978
+sample_09 predicted=9 expected=9 [PASS]
+
+W6A6 C-simulation result: PASS
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 8.404 seconds; current allocated memory: 0.637 MB.
+============================================================
+W6A6 C simulation completed
+============================================================
+INFO: [HLS 200-1510] Running: close_project 
+============================================================
+W6A6 HLS operation completed successfully
+Mode: csim
+============================================================
+INFO: [HLS 200-112] Total CPU user time: 4 seconds. Total CPU system time: 2 seconds. Total elapsed time: 23.926 seconds; peak allocated memory: 675.402 MB.
+INFO: [Common 17-206] Exiting vitis_hls at Sun Sep 13 18:22:01 2026...

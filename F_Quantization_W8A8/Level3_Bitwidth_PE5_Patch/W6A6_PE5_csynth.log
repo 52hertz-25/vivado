@@ -1,0 +1,514 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+  **** SW Build 3670227 on Oct 13 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source D:/Xilinx/Vitis_HLS/2022.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user '时澄' on host 'benedicta' (Windows NT_amd64 version 6.2) on Mon Sep 14 14:53:11 +0800 2026
+INFO: [HLS 200-10] In directory 'D:/GitHub/vivado/vivado/F_Quantization_W8A8/Level3_Bitwidth_PE5_Patch'
+Sourcing Tcl script 'run_pe5_csynth.tcl'
+INFO: [HLS 200-1510] Running: open_project -reset w6a6_pe5_hls 
+INFO: [HLS 200-10] Creating and opening project 'D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/work_level3_pe/w6a6_pe5_hls'.
+INFO: [HLS 200-1510] Running: set_top lenet_w6a6_top 
+INFO: [HLS 200-1510] Running: add_files D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp -cflags -ID:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/include -std=c++11 
+INFO: [HLS 200-10] Adding design file 'D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution -reset solution1 -flow_target vivado 
+INFO: [HLS 200-10] Creating and opening solution 'D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/work_level3_pe/w6a6_pe5_hls/solution1'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vivado' configuration: config_interface -m_axi_latency=0
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1510] Running: create_clock -period 10.0 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog 
+INFO: [HLS 200-1510] Running: csynth_design 
+Running Dispatch Server on port: 61377
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 10.133 seconds; current allocated memory: 674.449 MB.
+INFO: [HLS 200-10] Analyzing design file 'D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp' ... 
+WARNING: [HLS 207-5559] Only for/while loops support the 'Unroll ' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:49:9)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 6.349 seconds; current allocated memory: 677.195 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-131] Inlining function 'ssdm_int<32, true>::ssdm_int(int)' into 'ap_int_base<32, true>::ap_int_base(int)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:214:67)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::ap_int_base(int)' into 'ap_int<32>::ap_int(int)'
+INFO: [HLS 214-131] Inlining function 'ssdm_int<32, true>::ssdm_int(int)' into 'ap_int_base<32, true>::ap_int_base<6, true>(ap_int_base<6, true> const&)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:185:106)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::ap_int_base<6, true>(ap_int_base<6, true> const&)' into 'ap_int<32>::ap_int<6>(ap_int<6> const&)'
+INFO: [HLS 214-131] Inlining function 'ssdm_int<64, true>::ssdm_int(long)' into 'ap_int_base<64, true>::ap_int_base<32, true>(ap_int_base<32, true> const&)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:185:106)
+INFO: [HLS 214-131] Inlining function 'ssdm_int<64, true>::ssdm_int(long)' into 'ap_int_base<64, true>::ap_int_base(int)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:214:67)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, true>::ap_int_base<32, true>(ap_int_base<32, true> const&)' into 'ap_int_base<32, true>::RType<32, true>::mult operator*<32, true, 32, true>(ap_int_base<32, true> const&, ap_int_base<32, true> const&)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1494:339)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, true>::ap_int_base(int)' into 'ap_int_base<32, true>::RType<32, true>::mult operator*<32, true, 32, true>(ap_int_base<32, true> const&, ap_int_base<32, true> const&)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1494:516)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, true>::ap_int_base<32, true>(ap_int_base<32, true> const&)' into 'ap_int_base<32, true>::RType<32, true>::mult operator*<32, true, 32, true>(ap_int_base<32, true> const&, ap_int_base<32, true> const&)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1494:427)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>& ap_int_base<32, true>::operator+=<64, true>(ap_int_base<64, true> const&)' into 'void lenet_w6a6::(anonymous namespace)::conv5x5_accumulate<1, 32, 32, 6>(ap_int<6> const*, ap_int<6> const*, ap_int<32>*)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:56:41)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::RType<32, true>::mult operator*<32, true, 32, true>(ap_int_base<32, true> const&, ap_int_base<32, true> const&)' into 'void lenet_w6a6::(anonymous namespace)::conv5x5_accumulate<1, 32, 32, 6>(ap_int<6> const*, ap_int<6> const*, ap_int<32>*)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:57:66)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi6ELb1EEC2EDq6_i' into 'ap_int_base<6, true>::ap_int_base(int)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:214:67)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<6, true>::ap_int_base(int)' into 'ap_int<6>::ap_int(int)'
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::ap_int_base(int)' into 'bool operator<=<32, true>(ap_int_base<32, true> const&, int)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1788:1473)
+INFO: [HLS 214-131] Inlining function 'bool ap_int_base<32, true>::operator<=<32, true>(ap_int_base<32, true> const&) const' into 'bool operator<=<32, true>(ap_int_base<32, true> const&, int)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1788:1470)
+INFO: [HLS 214-131] Inlining function 'ssdm_int<64, false>::ssdm_int(unsigned long)' into 'ap_int_base<64, false>::ap_int_base<32, true>(ap_int_base<32, true> const&)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:185:106)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, false>::ap_int_base<32, true>(ap_int_base<32, true> const&)' into 'ap_uint<64>::ap_uint<32>(ap_int<32> const&)'
+INFO: [HLS 214-131] Inlining function 'ssdm_int<64, false>::ssdm_int(unsigned long)' into 'ap_int_base<64, false>::ap_int_base(long long)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:218:72)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, false>::ap_int_base(long long)' into 'ap_uint<64>::ap_uint(long long)'
+INFO: [HLS 214-131] Inlining function 'ssdm_int<128, false>::ssdm_int(unsigned __int128)' into 'ap_int_base<128, false>::ap_int_base<64, false>(ap_int_base<64, false> const&)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:185:106)
+INFO: [HLS 214-131] Inlining function 'ssdm_int<128, false>::ssdm_int(unsigned __int128)' into 'ap_int_base<128, false>::ap_int_base(int)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:214:67)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<128, false>::ap_int_base<64, false>(ap_int_base<64, false> const&)' into 'ap_int_base<64, false>::RType<64, false>::mult operator*<64, false, 64, false>(ap_int_base<64, false> const&, ap_int_base<64, false> const&)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1494:339)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<128, false>::ap_int_base(int)' into 'ap_int_base<64, false>::RType<64, false>::mult operator*<64, false, 64, false>(ap_int_base<64, false> const&, ap_int_base<64, false> const&)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1494:516)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<128, false>::ap_int_base<64, false>(ap_int_base<64, false> const&)' into 'ap_int_base<64, false>::RType<64, false>::mult operator*<64, false, 64, false>(ap_int_base<64, false> const&, ap_int_base<64, false> const&)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1494:427)
+INFO: [HLS 214-131] Inlining function 'ssdm_int<64, false>::ssdm_int(unsigned long)' into 'ap_int_base<64, false>::ap_int_base<128, false>(ap_int_base<128, false> const&)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:185:106)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, false>::ap_int_base<128, false>(ap_int_base<128, false> const&)' into 'ap_uint<64>::ap_uint<128>(ap_uint<128> const&)'
+INFO: [HLS 214-131] Inlining function 'ssdm_int<64, false>::ssdm_int(unsigned long)' into 'ap_int_base<64, false>::ap_int_base(int)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:214:67)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, false>::ap_int_base(int)' into 'ap_int_base<64, false>::RType<64, false>::arg1 operator>><64, false>(ap_int_base<64, false> const&, int)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1669:558)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, false>::ap_int_base(int)' into 'ap_uint<64>::ap_uint(int)'
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, false>::ap_int_base(int)' into 'ap_int_base<64, false>::RType<64, false>::arg1 operator<<<64, false>(ap_int_base<64, false> const&, int)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1669:228)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi66ELb1EEC2EDq66_i' into 'ap_int_base<66, true>::ap_int_base<64, false>(ap_int_base<64, false> const&)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:185:106)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi66ELb1EEC2EDq66_i' into 'ap_int_base<66, true>::ap_int_base<32, true>(ap_int_base<32, true> const&)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:185:106)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi66ELb1EEC2EDq66_i' into 'ap_int_base<66, true>::ap_int_base(int)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:214:67)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<66, true>::ap_int_base<64, false>(ap_int_base<64, false> const&)' into 'ap_int_base<64, false>::RType<32, true>::minus operator-<64, false, 32, true>(ap_int_base<64, false> const&, ap_int_base<32, true> const&)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1496:341)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<66, true>::ap_int_base(int)' into 'ap_int_base<64, false>::RType<32, true>::minus operator-<64, false, 32, true>(ap_int_base<64, false> const&, ap_int_base<32, true> const&)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1496:520)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<66, true>::ap_int_base<32, true>(ap_int_base<32, true> const&)' into 'ap_int_base<64, false>::RType<32, true>::minus operator-<64, false, 32, true>(ap_int_base<64, false> const&, ap_int_base<32, true> const&)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1496:430)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::ap_int_base(int)' into 'ap_int_base<64, false>::RType<($_0)32, true>::minus operator-<64, false>(ap_int_base<64, false> const&, int)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1633:1531)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, false>::RType<32, true>::minus operator-<64, false, 32, true>(ap_int_base<64, false> const&, ap_int_base<32, true> const&)' into 'ap_int_base<64, false>::RType<($_0)32, true>::minus operator-<64, false>(ap_int_base<64, false> const&, int)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1633:1529)
+INFO: [HLS 214-131] Inlining function 'ssdm_int<64, false>::ssdm_int(unsigned long)' into 'ap_int_base<64, false>::ap_int_base<66, true>(ap_int_base<66, true> const&)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:185:106)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, false>::ap_int_base<66, true>(ap_int_base<66, true> const&)' into 'ap_uint<64>::ap_uint<66>(ap_int<66> const&)'
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, false>::ap_int_base(int)' into 'ap_int_base<64, false>::RType<64, false>::logic operator&<64, false, 64, false>(ap_int_base<64, false> const&, ap_int_base<64, false> const&)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1497:520)
+INFO: [HLS 214-131] Inlining function 'ap_bit_ref<64, false>::ap_bit_ref(ap_int_base<64, false>*, int)' into 'ap_int_base<64, false>::operator[](int)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1129:30)
+INFO: [HLS 214-131] Inlining function 'ap_bit_ref<64, false>::operator bool() const' into 'bool operator==<64, false>(ap_bit_ref<64, false> const&, int)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_ref.h:1042:365)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi1ELb0EEC2EDq1_j' into 'ap_int_base<1, false>::ap_int_base(int)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:214:67)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<1, false>::ap_int_base(int)' into 'ap_int_base<64, false>::operator++()' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:866:16)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, false>& ap_int_base<64, false>::operator+=<1, false>(ap_int_base<1, false> const&)' into 'ap_int_base<64, false>::operator++()' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:866:5)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::ap_int_base(int)' into 'bool operator><64, false>(ap_int_base<64, false> const&, int)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1788:337)
+INFO: [HLS 214-131] Inlining function 'bool ap_int_base<64, false>::operator><32, true>(ap_int_base<32, true> const&) const' into 'bool operator><64, false>(ap_int_base<64, false> const&, int)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1788:335)
+INFO: [HLS 214-131] Inlining function 'ap_range_ref<64, false>::ap_range_ref(ap_int_base<64, false>*, int, int)' into 'ap_int_base<64, false>::range(int, int)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1048:12)
+INFO: [HLS 214-131] Inlining function 'ap_range_ref<64, false>::get() const' into 'ap_int_base<6, true>::ap_int_base<64, false>(ap_range_ref<64, false> const&)' (D:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:358:20)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<6, true>::ap_int_base<64, false>(ap_range_ref<64, false> const&)' into 'ap_int<6>::ap_int<64, false>(ap_range_ref<64, false> const&)'
+INFO: [HLS 214-131] Inlining function 'bool operator<=<32, true>(ap_int_base<32, true> const&, int)' into 'lenet_w6a6::(anonymous namespace)::requantize_relu(ap_int<32>, long long)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:8:12)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, false>::range(int, int)' into 'lenet_w6a6::(anonymous namespace)::requantize_relu(ap_int<32>, long long)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:26:27)
+INFO: [HLS 214-131] Inlining function 'bool operator><64, false>(ap_int_base<64, false> const&, int)' into 'lenet_w6a6::(anonymous namespace)::requantize_relu(ap_int<32>, long long)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:23:18)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, false>::operator++()' into 'lenet_w6a6::(anonymous namespace)::requantize_relu(ap_int<32>, long long)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:21:9)
+INFO: [HLS 214-131] Inlining function 'bool operator==<64, false>(ap_bit_ref<64, false> const&, int)' into 'lenet_w6a6::(anonymous namespace)::requantize_relu(ap_int<32>, long long)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:20:63)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, false>::operator[](int)' into 'lenet_w6a6::(anonymous namespace)::requantize_relu(ap_int<32>, long long)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:20:51)
+INFO: [HLS 214-131] Inlining function 'bool ap_int_base<64, false>::operator==<64, false>(ap_int_base<64, false> const&) const' into 'lenet_w6a6::(anonymous namespace)::requantize_relu(ap_int<32>, long long)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:20:40)
+INFO: [HLS 214-131] Inlining function 'bool ap_int_base<64, false>::operator><64, false>(ap_int_base<64, false> const&) const' into 'lenet_w6a6::(anonymous namespace)::requantize_relu(ap_int<32>, long long)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:20:19)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, false>::RType<64, false>::arg1 operator<<<64, false>(ap_int_base<64, false> const&, int)' into 'lenet_w6a6::(anonymous namespace)::requantize_relu(ap_int<32>, long long)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:17:45)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, false>::RType<64, false>::logic operator&<64, false, 64, false>(ap_int_base<64, false> const&, ap_int_base<64, false> const&)' into 'lenet_w6a6::(anonymous namespace)::requantize_relu(ap_int<32>, long long)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:16:43)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, false>::RType<($_0)32, true>::minus operator-<64, false>(ap_int_base<64, false> const&, int)' into 'lenet_w6a6::(anonymous namespace)::requantize_relu(ap_int<32>, long long)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:15:64)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, false>::RType<64, false>::arg1 operator<<<64, false>(ap_int_base<64, false> const&, int)' into 'lenet_w6a6::(anonymous namespace)::requantize_relu(ap_int<32>, long long)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:15:46)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, false>::RType<64, false>::arg1 operator>><64, false>(ap_int_base<64, false> const&, int)' into 'lenet_w6a6::(anonymous namespace)::requantize_relu(ap_int<32>, long long)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:14:36)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<64, false>::RType<64, false>::mult operator*<64, false, 64, false>(ap_int_base<64, false> const&, ap_int_base<64, false> const&)' into 'lenet_w6a6::(anonymous namespace)::requantize_relu(ap_int<32>, long long)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:13:28)
+INFO: [HLS 214-131] Inlining function 'bool ap_int_base<6, true>::operator><6, true>(ap_int_base<6, true> const&) const' into 'void lenet_w6a6::(anonymous namespace)::requant_relu_pool2x2<6, 28, 28>(ap_int<32> const*, ap_int<6>*, long long)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:93:35)
+INFO: [HLS 214-131] Inlining function 'lenet_w6a6::(anonymous namespace)::requantize_relu(ap_int<32>, long long)' into 'void lenet_w6a6::(anonymous namespace)::requant_relu_pool2x2<6, 28, 28>(ap_int<32> const*, ap_int<6>*, long long)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:92:29)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>& ap_int_base<32, true>::operator+=<64, true>(ap_int_base<64, true> const&)' into 'void lenet_w6a6::(anonymous namespace)::conv5x5_accumulate<6, 14, 14, 16>(ap_int<6> const*, ap_int<6> const*, ap_int<32>*)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:56:41)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::RType<32, true>::mult operator*<32, true, 32, true>(ap_int_base<32, true> const&, ap_int_base<32, true> const&)' into 'void lenet_w6a6::(anonymous namespace)::conv5x5_accumulate<6, 14, 14, 16>(ap_int<6> const*, ap_int<6> const*, ap_int<32>*)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:57:66)
+INFO: [HLS 214-131] Inlining function 'bool ap_int_base<6, true>::operator><6, true>(ap_int_base<6, true> const&) const' into 'void lenet_w6a6::(anonymous namespace)::requant_relu_pool2x2<16, 10, 10>(ap_int<32> const*, ap_int<6>*, long long)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:93:35)
+INFO: [HLS 214-131] Inlining function 'lenet_w6a6::(anonymous namespace)::requantize_relu(ap_int<32>, long long)' into 'void lenet_w6a6::(anonymous namespace)::requant_relu_pool2x2<16, 10, 10>(ap_int<32> const*, ap_int<6>*, long long)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:92:29)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>& ap_int_base<32, true>::operator+=<64, true>(ap_int_base<64, true> const&)' into 'void lenet_w6a6::(anonymous namespace)::conv5x5_accumulate<16, 5, 5, 120>(ap_int<6> const*, ap_int<6> const*, ap_int<32>*)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:56:41)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::RType<32, true>::mult operator*<32, true, 32, true>(ap_int_base<32, true> const&, ap_int_base<32, true> const&)' into 'void lenet_w6a6::(anonymous namespace)::conv5x5_accumulate<16, 5, 5, 120>(ap_int<6> const*, ap_int<6> const*, ap_int<32>*)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:57:66)
+INFO: [HLS 214-131] Inlining function 'lenet_w6a6::(anonymous namespace)::requantize_relu(ap_int<32>, long long)' into 'void lenet_w6a6::(anonymous namespace)::requant_relu_vector<120>(ap_int<32> const*, ap_int<6>*, long long)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:111:26)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>& ap_int_base<32, true>::operator+=<64, true>(ap_int_base<64, true> const&)' into 'void lenet_w6a6::(anonymous namespace)::dense_accumulate<120, 84>(ap_int<6> const*, ap_int<6> const*, ap_int<32>*)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:125:25)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::RType<32, true>::mult operator*<32, true, 32, true>(ap_int_base<32, true> const&, ap_int_base<32, true> const&)' into 'void lenet_w6a6::(anonymous namespace)::dense_accumulate<120, 84>(ap_int<6> const*, ap_int<6> const*, ap_int<32>*)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:126:50)
+INFO: [HLS 214-131] Inlining function 'lenet_w6a6::(anonymous namespace)::requantize_relu(ap_int<32>, long long)' into 'void lenet_w6a6::(anonymous namespace)::requant_relu_vector<84>(ap_int<32> const*, ap_int<6>*, long long)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:111:26)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>& ap_int_base<32, true>::operator+=<64, true>(ap_int_base<64, true> const&)' into 'void lenet_w6a6::(anonymous namespace)::dense_accumulate<84, 10>(ap_int<6> const*, ap_int<6> const*, ap_int<32>*)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:125:25)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::RType<32, true>::mult operator*<32, true, 32, true>(ap_int_base<32, true> const&, ap_int_base<32, true> const&)' into 'void lenet_w6a6::(anonymous namespace)::dense_accumulate<84, 10>(ap_int<6> const*, ap_int<6> const*, ap_int<32>*)' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:126:50)
+INFO: [HLS 214-178] Inlining function 'void lenet_w6a6::(anonymous namespace)::conv5x5_accumulate<1, 32, 32, 6>(ap_int<6> const*, ap_int<6> const*, ap_int<32>*)' into 'lenet_w6a6_top' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:139:0)
+INFO: [HLS 214-178] Inlining function 'void lenet_w6a6::(anonymous namespace)::requant_relu_pool2x2<6, 28, 28>(ap_int<32> const*, ap_int<6>*, long long)' into 'lenet_w6a6_top' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:139:0)
+INFO: [HLS 214-178] Inlining function 'void lenet_w6a6::(anonymous namespace)::conv5x5_accumulate<6, 14, 14, 16>(ap_int<6> const*, ap_int<6> const*, ap_int<32>*)' into 'lenet_w6a6_top' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:139:0)
+INFO: [HLS 214-178] Inlining function 'void lenet_w6a6::(anonymous namespace)::requant_relu_pool2x2<16, 10, 10>(ap_int<32> const*, ap_int<6>*, long long)' into 'lenet_w6a6_top' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:139:0)
+INFO: [HLS 214-178] Inlining function 'void lenet_w6a6::(anonymous namespace)::conv5x5_accumulate<16, 5, 5, 120>(ap_int<6> const*, ap_int<6> const*, ap_int<32>*)' into 'lenet_w6a6_top' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:139:0)
+INFO: [HLS 214-178] Inlining function 'void lenet_w6a6::(anonymous namespace)::requant_relu_vector<120>(ap_int<32> const*, ap_int<6>*, long long)' into 'lenet_w6a6_top' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:139:0)
+INFO: [HLS 214-178] Inlining function 'void lenet_w6a6::(anonymous namespace)::dense_accumulate<120, 84>(ap_int<6> const*, ap_int<6> const*, ap_int<32>*)' into 'lenet_w6a6_top' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:139:0)
+INFO: [HLS 214-178] Inlining function 'void lenet_w6a6::(anonymous namespace)::requant_relu_vector<84>(ap_int<32> const*, ap_int<6>*, long long)' into 'lenet_w6a6_top' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:139:0)
+INFO: [HLS 214-178] Inlining function 'void lenet_w6a6::(anonymous namespace)::dense_accumulate<84, 10>(ap_int<6> const*, ap_int<6> const*, ap_int<32>*)' into 'lenet_w6a6_top' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:139:0)
+INFO: [HLS 214-115] Multiple burst reads of length 25 and bit width 8 in loop 'KERNEL_ROW'(D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:47:21) has been inferred on bundle 'gmem1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:47:21)
+INFO: [HLS 214-115] Multiple burst reads of length 5 and bit width 8 in loop 'VITIS_LOOP_50_1'(D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:50:19) has been inferred on bundle 'gmem0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:50:19)
+INFO: [HLS 214-115] Multiple burst reads of length 150 and bit width 8 in loop 'IN_CHANNEL'(D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:45:17) has been inferred on bundle 'gmem1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:45:17)
+INFO: [HLS 214-115] Multiple burst reads of length 48000 and bit width 8 in loop 'OUT_CHANNEL'(D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:38:5) has been inferred on bundle 'gmem1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:38:5)
+INFO: [HLS 214-115] Multiple burst reads of length 10080 and bit width 8 in loop 'DENSE_OUTPUT'(D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:121:5) has been inferred on bundle 'gmem1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:121:5)
+INFO: [HLS 214-115] Multiple burst reads of length 840 and bit width 8 in loop 'DENSE_OUTPUT'(D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:121:5) has been inferred on bundle 'gmem1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:121:5)
+INFO: [HLS 214-115] Multiple burst writes of length 10 and bit width 32 in loop 'DENSE_OUTPUT'(D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:121:5) has been inferred on bundle 'gmem2'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:121:5)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 7.697 seconds; current allocated memory: 679.797 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.001 seconds; current allocated memory: 680.020 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.641 seconds; current allocated memory: 697.266 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 1.628 seconds; current allocated memory: 708.406 MB.
+INFO: [XFORM 203-510] Pipelining loop 'OUT_COL' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:43) in function 'lenet_w6a6_top' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'POOL_COL' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:83) in function 'lenet_w6a6_top' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_50_1' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:43) in function 'lenet_w6a6_top' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'POOL_COL' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:83) in function 'lenet_w6a6_top' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_50_1' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:43) in function 'lenet_w6a6_top' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'REQUANT_VECTOR' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:110) in function 'lenet_w6a6_top' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'DENSE_INPUT' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:122) in function 'lenet_w6a6_top' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'REQUANT_VECTOR' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:110) in function 'lenet_w6a6_top' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'DENSE_INPUT' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:122) in function 'lenet_w6a6_top' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'OUT_COL' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:43) in function 'lenet_w6a6_top' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'POOL_COL' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:83) in function 'lenet_w6a6_top' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'POOL_COL' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:83) in function 'lenet_w6a6_top' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'KERNEL_ROW' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:43) in function 'lenet_w6a6_top' completely with a factor of 5.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_50_1' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:43) in function 'lenet_w6a6_top' completely with a factor of 5.
+INFO: [HLS 200-489] Unrolling loop 'POOL_KH' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:83) in function 'lenet_w6a6_top' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'POOL_KW' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:83) in function 'lenet_w6a6_top' completely with a factor of 2.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:83:23) to (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:82:13) in function 'lenet_w6a6_top'... converting 21 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:83:23) to (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:82:13) in function 'lenet_w6a6_top'... converting 21 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:110:14) to (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:110:5) in function 'lenet_w6a6_top'... converting 6 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:110:14) to (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:110:5) in function 'lenet_w6a6_top'... converting 6 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'lenet_w6a6_top' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:20:9)...24 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 1.979 seconds; current allocated memory: 744.645 MB.
+INFO: [XFORM 203-541] Flattening a loop nest 'OUT_ROW' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:40:18) in function 'lenet_w6a6_top'.
+INFO: [XFORM 203-541] Flattening a loop nest 'OUT_CHANNEL' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:38:14) in function 'lenet_w6a6_top'.
+INFO: [XFORM 203-541] Flattening a loop nest 'POOL_ROW' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:80:18) in function 'lenet_w6a6_top'.
+INFO: [XFORM 203-541] Flattening a loop nest 'POOL_CHANNEL' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:78:14) in function 'lenet_w6a6_top'.
+INFO: [XFORM 203-541] Flattening a loop nest 'KERNEL_ROW' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:43:25) in function 'lenet_w6a6_top'.
+INFO: [XFORM 203-541] Flattening a loop nest 'IN_CHANNEL' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:43:25) in function 'lenet_w6a6_top'.
+WARNING: [HLS 200-960] Cannot flatten loop 'OUT_COL' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:43:25) in function 'lenet_w6a6_top' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-960.html
+INFO: [XFORM 203-541] Flattening a loop nest 'OUT_ROW' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:40:18) in function 'lenet_w6a6_top'.
+INFO: [XFORM 203-541] Flattening a loop nest 'OUT_CHANNEL' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:38:14) in function 'lenet_w6a6_top'.
+INFO: [XFORM 203-541] Flattening a loop nest 'POOL_ROW' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:80:18) in function 'lenet_w6a6_top'.
+INFO: [XFORM 203-541] Flattening a loop nest 'POOL_CHANNEL' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:78:14) in function 'lenet_w6a6_top'.
+INFO: [XFORM 203-541] Flattening a loop nest 'KERNEL_ROW' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:43:25) in function 'lenet_w6a6_top'.
+INFO: [XFORM 203-541] Flattening a loop nest 'IN_CHANNEL' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:43:25) in function 'lenet_w6a6_top'.
+WARNING: [HLS 200-960] Cannot flatten loop 'OUT_CHANNEL' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:38:14) in function 'lenet_w6a6_top' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-960.html
+INFO: [XFORM 203-541] Flattening a loop nest 'DENSE_OUTPUT' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:122:17) in function 'lenet_w6a6_top'.
+WARNING: [HLS 200-960] Cannot flatten loop 'DENSE_OUTPUT' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:122:17) in function 'lenet_w6a6_top' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-960.html
+INFO: [HLS 200-472] Inferring partial write operation for 'conv1_acc.V' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:63:43)
+INFO: [HLS 200-472] Inferring partial write operation for 'pool1.V' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:98:60)
+INFO: [HLS 200-472] Inferring partial write operation for 'conv2_acc.V' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:63:43)
+INFO: [HLS 200-472] Inferring partial write operation for 'pool2.V' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:98:60)
+INFO: [HLS 200-472] Inferring partial write operation for 'conv3_acc.V' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:63:43)
+INFO: [HLS 200-472] Inferring partial write operation for 'conv3_relu.V' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:111:24)
+INFO: [HLS 200-472] Inferring partial write operation for 'fc1_acc.V' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:129:35)
+INFO: [HLS 200-472] Inferring partial write operation for 'fc1_relu.V' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:111:24)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 5 seconds. CPU system time: 0 seconds. Elapsed time: 4.694 seconds; current allocated memory: 825.957 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'lenet_w6a6_top' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lenet_w6a6_top_Pipeline_OUT_CHANNEL_OUT_ROW_OUT_COL' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_24) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_22) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_18) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_20) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_15) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_17) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_12) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_14) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_9) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_11) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_8) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'conv1_acc_V'. Use bind_storage pragma to override this type.
+INFO: [SCHED 204-61] Pipelining loop 'OUT_CHANNEL_OUT_ROW_OUT_COL'.
+WARNING: [HLS 200-880] The II Violation in module 'lenet_w6a6_top_Pipeline_OUT_CHANNEL_OUT_ROW_OUT_COL' (loop 'OUT_CHANNEL_OUT_ROW_OUT_COL'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between bus read operation ('gmem1_addr_read_24', D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:58) on port 'gmem1' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:58) and bus read operation ('gmem1_addr_read', D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:58) on port 'gmem1' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:58).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'lenet_w6a6_top_Pipeline_OUT_CHANNEL_OUT_ROW_OUT_COL' (loop 'OUT_CHANNEL_OUT_ROW_OUT_COL'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between bus read operation ('gmem1_addr_read_24', D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:58) on port 'gmem1' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:58) and bus read operation ('gmem1_addr_read', D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:58) on port 'gmem1' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:58).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'lenet_w6a6_top_Pipeline_OUT_CHANNEL_OUT_ROW_OUT_COL' (loop 'OUT_CHANNEL_OUT_ROW_OUT_COL'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between bus read operation ('gmem1_addr_read_24', D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:58) on port 'gmem1' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:58) and bus read operation ('gmem1_addr_read', D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:58) on port 'gmem1' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:58).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'lenet_w6a6_top_Pipeline_OUT_CHANNEL_OUT_ROW_OUT_COL' (loop 'OUT_CHANNEL_OUT_ROW_OUT_COL'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between bus read operation ('gmem1_addr_read_24', D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:58) on port 'gmem1' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:58) and bus read operation ('gmem1_addr_read', D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:58) on port 'gmem1' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:58).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'lenet_w6a6_top_Pipeline_OUT_CHANNEL_OUT_ROW_OUT_COL' (loop 'OUT_CHANNEL_OUT_ROW_OUT_COL'): Unable to enforce a carried dependence constraint (II = 19, distance = 1, offset = 1) between bus read operation ('gmem1_addr_read_24', D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:58) on port 'gmem1' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:58) and bus read operation ('gmem1_addr_read', D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:58) on port 'gmem1' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:58).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'lenet_w6a6_top_Pipeline_OUT_CHANNEL_OUT_ROW_OUT_COL' (loop 'OUT_CHANNEL_OUT_ROW_OUT_COL'): Unable to enforce a carried dependence constraint (II = 23, distance = 1, offset = 1) between bus read operation ('gmem1_addr_read_24', D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:58) on port 'gmem1' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:58) and bus read operation ('gmem1_addr_read', D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:58) on port 'gmem1' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:58).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'lenet_w6a6_top_Pipeline_OUT_CHANNEL_OUT_ROW_OUT_COL' (loop 'OUT_CHANNEL_OUT_ROW_OUT_COL'): Unable to enforce a carried dependence constraint (II = 24, distance = 1, offset = 1) between bus read operation ('gmem1_addr_read_24', D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:58) on port 'gmem1' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:58) and bus read operation ('gmem1_addr_read', D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:58) on port 'gmem1' (D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6_pe5.cpp:58).
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 25, Depth = 39, loop 'OUT_CHANNEL_OUT_ROW_OUT_COL'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.937 seconds; current allocated memory: 836.953 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.496 seconds; current allocated memory: 838.137 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lenet_w6a6_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'conv1_acc_V'. Use bind_storage pragma to override this type.
+INFO: [SCHED 204-61] Pipelining loop 'POOL_CHANNEL_POOL_ROW_POOL_COL'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 8, loop 'POOL_CHANNEL_POOL_ROW_POOL_COL'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.696 seconds; current allocated memory: 838.438 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.376 seconds; current allocated memory: 838.461 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lenet_w6a6_top_Pipeline_IN_CHANNEL_KERNEL_ROW_VITIS_LOOP_50_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_3) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'IN_CHANNEL_KERNEL_ROW_VITIS_LOOP_50_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 7, loop 'IN_CHANNEL_KERNEL_ROW_VITIS_LOOP_50_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.689 seconds; current allocated memory: 838.742 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.177 seconds; current allocated memory: 838.855 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lenet_w6a6_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'conv2_acc_V'. Use bind_storage pragma to override this type.
+INFO: [SCHED 204-61] Pipelining loop 'POOL_CHANNEL_POOL_ROW_POOL_COL'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 9, loop 'POOL_CHANNEL_POOL_ROW_POOL_COL'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.451 seconds; current allocated memory: 840.180 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.349 seconds; current allocated memory: 840.180 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lenet_w6a6_top_Pipeline_IN_CHANNEL_KERNEL_ROW_VITIS_LOOP_50_12' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_2) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'IN_CHANNEL_KERNEL_ROW_VITIS_LOOP_50_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 7, loop 'IN_CHANNEL_KERNEL_ROW_VITIS_LOOP_50_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.628 seconds; current allocated memory: 840.695 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.148 seconds; current allocated memory: 840.719 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lenet_w6a6_top_Pipeline_REQUANT_VECTOR' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'REQUANT_VECTOR'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 6, loop 'REQUANT_VECTOR'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.257 seconds; current allocated memory: 840.855 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.102 seconds; current allocated memory: 840.988 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lenet_w6a6_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_1) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'DENSE_OUTPUT_DENSE_INPUT'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 6, loop 'DENSE_OUTPUT_DENSE_INPUT'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.18 seconds; current allocated memory: 841.148 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.121 seconds; current allocated memory: 841.211 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lenet_w6a6_top_Pipeline_REQUANT_VECTOR3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'REQUANT_VECTOR'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 6, loop 'REQUANT_VECTOR'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.152 seconds; current allocated memory: 841.363 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.105 seconds; current allocated memory: 841.562 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lenet_w6a6_top_Pipeline_DENSE_INPUT' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln840_4) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'DENSE_INPUT'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 6, loop 'DENSE_INPUT'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.159 seconds; current allocated memory: 841.855 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.104 seconds; current allocated memory: 841.906 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lenet_w6a6_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln38) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'conv2_acc_V'. Use bind_storage pragma to override this type.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.257 seconds; current allocated memory: 842.922 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 0.86 seconds; current allocated memory: 843.742 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lenet_w6a6_top_Pipeline_OUT_CHANNEL_OUT_ROW_OUT_COL' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'lenet_w6a6_top_Pipeline_OUT_CHANNEL_OUT_ROW_OUT_COL' pipeline 'OUT_CHANNEL_OUT_ROW_OUT_COL' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_6s_6s_12s_13_4_1': 9 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_6s_6s_13s_13_4_1': 7 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_3ns_6ns_8_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_6s_6s_12_1_1': 9 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lenet_w6a6_top_Pipeline_OUT_CHANNEL_OUT_ROW_OUT_COL'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.726 seconds; current allocated memory: 849.527 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lenet_w6a6_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'lenet_w6a6_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL' pipeline 'POOL_CHANNEL_POOL_ROW_POOL_COL' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_32ns_34ns_64_2_1': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lenet_w6a6_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 2.189 seconds; current allocated memory: 856.875 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lenet_w6a6_top_Pipeline_IN_CHANNEL_KERNEL_ROW_VITIS_LOOP_50_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'lenet_w6a6_top_Pipeline_IN_CHANNEL_KERNEL_ROW_VITIS_LOOP_50_1' pipeline 'IN_CHANNEL_KERNEL_ROW_VITIS_LOOP_50_1' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w6a6_top_Pipeline_IN_CHANNEL_KERNEL_ROW_VITIS_LOOP_50_1/m_axi_gmem1_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w6a6_top_Pipeline_IN_CHANNEL_KERNEL_ROW_VITIS_LOOP_50_1/m_axi_gmem1_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w6a6_top_Pipeline_IN_CHANNEL_KERNEL_ROW_VITIS_LOOP_50_1/m_axi_gmem1_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w6a6_top_Pipeline_IN_CHANNEL_KERNEL_ROW_VITIS_LOOP_50_1/m_axi_gmem1_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w6a6_top_Pipeline_IN_CHANNEL_KERNEL_ROW_VITIS_LOOP_50_1/m_axi_gmem1_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w6a6_top_Pipeline_IN_CHANNEL_KERNEL_ROW_VITIS_LOOP_50_1/m_axi_gmem1_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w6a6_top_Pipeline_IN_CHANNEL_KERNEL_ROW_VITIS_LOOP_50_1/m_axi_gmem1_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w6a6_top_Pipeline_IN_CHANNEL_KERNEL_ROW_VITIS_LOOP_50_1/m_axi_gmem1_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w6a6_top_Pipeline_IN_CHANNEL_KERNEL_ROW_VITIS_LOOP_50_1/m_axi_gmem1_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w6a6_top_Pipeline_IN_CHANNEL_KERNEL_ROW_VITIS_LOOP_50_1/m_axi_gmem1_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w6a6_top_Pipeline_IN_CHANNEL_KERNEL_ROW_VITIS_LOOP_50_1/m_axi_gmem1_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w6a6_top_Pipeline_IN_CHANNEL_KERNEL_ROW_VITIS_LOOP_50_1/m_axi_gmem1_ARUSER' to 0.
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_6s_6s_19s_19_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lenet_w6a6_top_Pipeline_IN_CHANNEL_KERNEL_ROW_VITIS_LOOP_50_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 1.931 seconds; current allocated memory: 861.402 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lenet_w6a6_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'lenet_w6a6_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL1' pipeline 'POOL_CHANNEL_POOL_ROW_POOL_COL' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_32ns_35ns_64_2_1': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lenet_w6a6_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.854 seconds; current allocated memory: 865.086 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lenet_w6a6_top_Pipeline_IN_CHANNEL_KERNEL_ROW_VITIS_LOOP_50_12' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'lenet_w6a6_top_Pipeline_IN_CHANNEL_KERNEL_ROW_VITIS_LOOP_50_12' pipeline 'IN_CHANNEL_KERNEL_ROW_VITIS_LOOP_50_1' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w6a6_top_Pipeline_IN_CHANNEL_KERNEL_ROW_VITIS_LOOP_50_12/m_axi_gmem1_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w6a6_top_Pipeline_IN_CHANNEL_KERNEL_ROW_VITIS_LOOP_50_12/m_axi_gmem1_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w6a6_top_Pipeline_IN_CHANNEL_KERNEL_ROW_VITIS_LOOP_50_12/m_axi_gmem1_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w6a6_top_Pipeline_IN_CHANNEL_KERNEL_ROW_VITIS_LOOP_50_12/m_axi_gmem1_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w6a6_top_Pipeline_IN_CHANNEL_KERNEL_ROW_VITIS_LOOP_50_12/m_axi_gmem1_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w6a6_top_Pipeline_IN_CHANNEL_KERNEL_ROW_VITIS_LOOP_50_12/m_axi_gmem1_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w6a6_top_Pipeline_IN_CHANNEL_KERNEL_ROW_VITIS_LOOP_50_12/m_axi_gmem1_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w6a6_top_Pipeline_IN_CHANNEL_KERNEL_ROW_VITIS_LOOP_50_12/m_axi_gmem1_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w6a6_top_Pipeline_IN_CHANNEL_KERNEL_ROW_VITIS_LOOP_50_12/m_axi_gmem1_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w6a6_top_Pipeline_IN_CHANNEL_KERNEL_ROW_VITIS_LOOP_50_12/m_axi_gmem1_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w6a6_top_Pipeline_IN_CHANNEL_KERNEL_ROW_VITIS_LOOP_50_12/m_axi_gmem1_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w6a6_top_Pipeline_IN_CHANNEL_KERNEL_ROW_VITIS_LOOP_50_12/m_axi_gmem1_ARUSER' to 0.
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_6s_6s_20s_20_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lenet_w6a6_top_Pipeline_IN_CHANNEL_KERNEL_ROW_VITIS_LOOP_50_12'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 1.861 seconds; current allocated memory: 869.305 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lenet_w6a6_top_Pipeline_REQUANT_VECTOR' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'lenet_w6a6_top_Pipeline_REQUANT_VECTOR' pipeline 'REQUANT_VECTOR' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_32ns_35ns_64_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lenet_w6a6_top_Pipeline_REQUANT_VECTOR'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.653 seconds; current allocated memory: 871.488 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lenet_w6a6_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'lenet_w6a6_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT' pipeline 'DENSE_OUTPUT_DENSE_INPUT' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w6a6_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT/m_axi_gmem1_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w6a6_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT/m_axi_gmem1_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w6a6_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT/m_axi_gmem1_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w6a6_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT/m_axi_gmem1_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w6a6_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT/m_axi_gmem1_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w6a6_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT/m_axi_gmem1_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w6a6_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT/m_axi_gmem1_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w6a6_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT/m_axi_gmem1_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w6a6_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT/m_axi_gmem1_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w6a6_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT/m_axi_gmem1_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w6a6_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT/m_axi_gmem1_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w6a6_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT/m_axi_gmem1_ARUSER' to 0.
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_6s_6s_18s_18_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lenet_w6a6_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.495 seconds; current allocated memory: 872.559 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lenet_w6a6_top_Pipeline_REQUANT_VECTOR3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'lenet_w6a6_top_Pipeline_REQUANT_VECTOR3' pipeline 'REQUANT_VECTOR' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_32ns_36ns_64_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lenet_w6a6_top_Pipeline_REQUANT_VECTOR3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.39 seconds; current allocated memory: 874.008 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lenet_w6a6_top_Pipeline_DENSE_INPUT' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'lenet_w6a6_top_Pipeline_DENSE_INPUT' pipeline 'DENSE_INPUT' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w6a6_top_Pipeline_DENSE_INPUT/m_axi_gmem1_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w6a6_top_Pipeline_DENSE_INPUT/m_axi_gmem1_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w6a6_top_Pipeline_DENSE_INPUT/m_axi_gmem1_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w6a6_top_Pipeline_DENSE_INPUT/m_axi_gmem1_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w6a6_top_Pipeline_DENSE_INPUT/m_axi_gmem1_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w6a6_top_Pipeline_DENSE_INPUT/m_axi_gmem1_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w6a6_top_Pipeline_DENSE_INPUT/m_axi_gmem1_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w6a6_top_Pipeline_DENSE_INPUT/m_axi_gmem1_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w6a6_top_Pipeline_DENSE_INPUT/m_axi_gmem1_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w6a6_top_Pipeline_DENSE_INPUT/m_axi_gmem1_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w6a6_top_Pipeline_DENSE_INPUT/m_axi_gmem1_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lenet_w6a6_top_Pipeline_DENSE_INPUT/m_axi_gmem1_ARUSER' to 0.
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_6s_6s_18s_18_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lenet_w6a6_top_Pipeline_DENSE_INPUT'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.516 seconds; current allocated memory: 875.023 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lenet_w6a6_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_w6a6_top/gmem0' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_w6a6_top/gmem1' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_w6a6_top/gmem2' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_w6a6_top/feature_in' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_w6a6_top/weight' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lenet_w6a6_top/logits' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'lenet_w6a6_top' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'feature_in', 'weight', 'logits' and 'return' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_5ns_8ns_8ns_12_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32ns_35ns_64_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lenet_w6a6_top'.
+INFO: [RTMG 210-278] Implementing memory 'lenet_w6a6_top_conv1_acc_V_RAM_1WNR_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_w6a6_top_pool1_V_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_w6a6_top_conv2_acc_V_RAM_1WNR_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_w6a6_top_pool2_V_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_w6a6_top_conv3_acc_V_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_w6a6_top_conv3_relu_V_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_w6a6_top_fc1_acc_V_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_w6a6_top_fc1_relu_V_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.539 seconds; current allocated memory: 879.848 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 3 seconds. CPU system time: 1 seconds. Elapsed time: 4.905 seconds; current allocated memory: 887.254 MB.
+INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 2 seconds. CPU system time: 1 seconds. Elapsed time: 2.392 seconds; current allocated memory: 896.508 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for lenet_w6a6_top.
+INFO: [VLOG 209-307] Generating Verilog RTL for lenet_w6a6_top.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 136.99 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 29 seconds. CPU system time: 7 seconds. Elapsed time: 49.993 seconds; current allocated memory: 222.109 MB.
+INFO: [HLS 200-1510] Running: close_project 
+LEVEL3_PE5_SYNTH_PASS tag=W6A6 report=D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/final_delivery/reports/level3_pe5/lenet_w6a6_top_pe5_csynth.rpt
+INFO: [HLS 200-112] Total CPU user time: 33 seconds. Total CPU system time: 9 seconds. Total elapsed time: 65.561 seconds; peak allocated memory: 896.613 MB.
+INFO: [Common 17-206] Exiting vitis_hls at Mon Sep 14 14:54:16 2026...

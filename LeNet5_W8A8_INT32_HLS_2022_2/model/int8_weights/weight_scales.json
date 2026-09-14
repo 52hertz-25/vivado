@@ -1,0 +1,93 @@
+{
+    "conv1": {
+        "bits": 8,
+        "dtype": "int8",
+        "qmin": -127,
+        "qmax": 127,
+        "zero_point": 0,
+        "scale": 0.0035972416870237336,
+        "shape": [
+            6,
+            1,
+            5,
+            5
+        ],
+        "number_of_values": 150,
+        "max_abs_fp32": 0.45684969425201416,
+        "max_abs_error": 0.001795995980501175,
+        "mean_abs_error": 0.0008458866504952312,
+        "rmse": 0.001002072123810649
+    },
+    "conv2": {
+        "bits": 8,
+        "dtype": "int8",
+        "qmin": -127,
+        "qmax": 127,
+        "zero_point": 0,
+        "scale": 0.004071016480603556,
+        "shape": [
+            16,
+            6,
+            5,
+            5
+        ],
+        "number_of_values": 2400,
+        "max_abs_fp32": 0.5170190930366516,
+        "max_abs_error": 0.002035081386566162,
+        "mean_abs_error": 0.0010199088137596846,
+        "rmse": 0.0011815099278464913
+    },
+    "conv3": {
+        "bits": 8,
+        "dtype": "int8",
+        "qmin": -127,
+        "qmax": 127,
+        "zero_point": 0,
+        "scale": 0.00393507565100362,
+        "shape": [
+            120,
+            16,
+            5,
+            5
+        ],
+        "number_of_values": 48000,
+        "max_abs_fp32": 0.4997546076774597,
+        "max_abs_error": 0.0019675269722938538,
+        "mean_abs_error": 0.0009802355198189616,
+        "rmse": 0.0011336643947288394
+    },
+    "fc1": {
+        "bits": 8,
+        "dtype": "int8",
+        "qmin": -127,
+        "qmax": 127,
+        "zero_point": 0,
+        "scale": 0.003372023190100362,
+        "shape": [
+            84,
+            120
+        ],
+        "number_of_values": 10080,
+        "max_abs_fp32": 0.42824694514274597,
+        "max_abs_error": 0.001685798168182373,
+        "mean_abs_error": 0.0008440581732429564,
+        "rmse": 0.0009745329734869301
+    },
+    "fc2": {
+        "bits": 8,
+        "dtype": "int8",
+        "qmin": -127,
+        "qmax": 127,
+        "zero_point": 0,
+        "scale": 0.0029305785190402054,
+        "shape": [
+            10,
+            84
+        ],
+        "number_of_values": 840,
+        "max_abs_fp32": 0.3721834719181061,
+        "max_abs_error": 0.001463077962398529,
+        "mean_abs_error": 0.0007274529198184609,
+        "rmse": 0.000842934416141361
+    }
+}

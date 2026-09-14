@@ -1,0 +1,94 @@
+Running W4A4 MNIST C-simulation, samples=100
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+  **** SW Build 3670227 on Oct 13 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source D:/Xilinx/Vitis_HLS/2022.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user '时澄' on host 'benedicta' (Windows NT_amd64 version 6.2) on Mon Sep 14 12:24:13 +0800 2026
+INFO: [HLS 200-10] In directory 'D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4'
+Sourcing Tcl script 'D:\GitHub\vivado\vivado\F_Quantization_W8A8\hls_w4a4\scripts\run_w4a4_mnist_csim.tcl'
+INFO: [HLS 200-1510] Running: open_project -reset w4a4_mnist_hls 
+INFO: [HLS 200-10] Creating and opening project 'D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/work/w4a4_mnist_hls'.
+INFO: [HLS 200-1510] Running: set_top lenet_w4a4_top 
+INFO: [HLS 200-1510] Running: add_files D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4.cpp -cflags -ID:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/include -std=c++11 
+INFO: [HLS 200-10] Adding design file 'D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/tb/tb_lenet_w4a4_mnist.cpp -cflags -ID:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/include -std=c++11 
+INFO: [HLS 200-10] Adding test bench file 'D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/tb/tb_lenet_w4a4_mnist.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution -reset solution1 -flow_target vivado 
+INFO: [HLS 200-10] Creating and opening solution 'D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/work/w4a4_mnist_hls/solution1'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vivado' configuration: config_interface -m_axi_latency=0
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1510] Running: create_clock -period 10.0 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+W4A4_MNIST_CSIM_START limit=100
+INFO: [HLS 200-1510] Running: csim_design -argv D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w8a8/data/mnist_w8a8 D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/model/int4_weights 100 D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/reports/mnist/w4a4_mnist_100_results.csv 
+Running Dispatch Server on port: 55396
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../../tb/tb_lenet_w4a4_mnist.cpp in debug mode
+   Compiling ../../../../../src/lenet_w4a4.cpp in debug mode
+   Generating csim.exe
+In file included from D:/Xilinx/Vitis_HLS/2022.2/include/floating_point_v7_1_bitacc_cmodel.h:149:0,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/hls_fpo.h:143,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/hls_half_fpo.h:18,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/hls_half.h:25,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/etc/ap_private.h:52,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/ap_common.h:666,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/ap_int.h:10,
+                 from D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/include/lenet_w4a4.h:4,
+                 from ../../../../../tb/tb_lenet_w4a4_mnist.cpp:1:
+D:/Xilinx/Vitis_HLS/2022.2/include/gmp.h:58:0: warning: "__GMP_LIBGMP_DLL" redefined
+ #define __GMP_LIBGMP_DLL  0
+ 
+In file included from D:/Xilinx/Vitis_HLS/2022.2/include/hls_fpo.h:143:0,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/hls_half_fpo.h:18,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/hls_half.h:25,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/etc/ap_private.h:52,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/ap_common.h:666,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/ap_int.h:10,
+                 from D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/include/lenet_w4a4.h:4,
+                 from ../../../../../tb/tb_lenet_w4a4_mnist.cpp:1:
+D:/Xilinx/Vitis_HLS/2022.2/include/floating_point_v7_1_bitacc_cmodel.h:141:0: note: this is the location of the previous definition
+ #define __GMP_LIBGMP_DLL 1
+ 
+In file included from D:/Xilinx/Vitis_HLS/2022.2/include/floating_point_v7_1_bitacc_cmodel.h:149:0,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/hls_fpo.h:143,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/hls_half_fpo.h:18,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/hls_half.h:25,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/etc/ap_private.h:52,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/ap_common.h:666,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/ap_int.h:10,
+                 from D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/include/lenet_w4a4.h:4,
+                 from ../../../../../src/lenet_w4a4.cpp:1:
+D:/Xilinx/Vitis_HLS/2022.2/include/gmp.h:58:0: warning: "__GMP_LIBGMP_DLL" redefined
+ #define __GMP_LIBGMP_DLL  0
+ 
+In file included from D:/Xilinx/Vitis_HLS/2022.2/include/hls_fpo.h:143:0,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/hls_half_fpo.h:18,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/hls_half.h:25,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/etc/ap_private.h:52,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/ap_common.h:666,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/ap_int.h:10,
+                 from D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/include/lenet_w4a4.h:4,
+                 from ../../../../../src/lenet_w4a4.cpp:1:
+D:/Xilinx/Vitis_HLS/2022.2/include/floating_point_v7_1_bitacc_cmodel.h:141:0: note: this is the location of the previous definition
+ #define __GMP_LIBGMP_DLL 1
+ 
+W4A4_MNIST_BEGIN samples=100
+PROGRESS 100/100 correct=98 accuracy=98.00%
+W4A4_MNIST_SUMMARY samples=100 correct=98 accuracy=98.0000% threshold=90.0000% [PASS]
+W4A4_MNIST_RESULT_FILE=D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/reports/mnist/w4a4_mnist_100_results.csv
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 41.486 seconds; current allocated memory: 0.699 MB.
+INFO: [HLS 200-1510] Running: close_project 
+W4A4_MNIST_CSIM_PASS
+INFO: [HLS 200-112] Total CPU user time: 5 seconds. Total CPU system time: 2 seconds. Total elapsed time: 57.169 seconds; peak allocated memory: 674.801 MB.
+INFO: [Common 17-206] Exiting vitis_hls at Mon Sep 14 12:25:09 2026...

@@ -1,0 +1,4 @@
+IC2_VARIANT_READY=D:\GitHub\vivado\vivado\F_Quantization_W8A8\hls_w8a8\src\lenet_w8a8_ic2.cpp
+IC2_VARIANT_READY=D:\GitHub\vivado\vivado\F_Quantization_W8A8\hls_w6a6\src\lenet_w6a6_ic2.cpp
+IC2_VARIANT_READY=D:\GitHub\vivado\vivado\F_Quantization_W8A8\hls_w4a4\src\lenet_w4a4_ic2.cpp
+LEVEL3_IC2_VARIANT_PREPARATION_PASS

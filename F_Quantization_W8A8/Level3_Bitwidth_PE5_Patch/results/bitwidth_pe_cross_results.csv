@@ -1,0 +1,7 @@
+﻿configuration,pe_mac,estimated_clock_ns,latency_cycles,lut,ff,bram_18k,dsp,source
+W8A8,1,7.3,453296,12781,8543,43,48,D:\GitHub\vivado\vivado\F_Quantization_W8A8\hls_w8a8\work\w8a8_hls\solution1\syn\report\lenet_w8a8_top_csynth.rpt
+W8A8,5,7.3,453296,12781,8543,43,48,D:\GitHub\vivado\vivado\F_Quantization_W8A8\hls_w8a8\final_delivery\reports\level3_pe5\lenet_w8a8_top_pe5_csynth.rpt
+W6A6,1,7.3,453294,12661,8682,37,49,D:\GitHub\vivado\vivado\F_Quantization_W8A8\hls_w6a6\work\w6a6_hls\solution1\syn\report\lenet_w6a6_top_csynth.rpt
+W6A6,5,7.3,453294,12661,8682,37,49,D:\GitHub\vivado\vivado\F_Quantization_W8A8\hls_w6a6\final_delivery\reports\level3_pe5\lenet_w6a6_top_pe5_csynth.rpt
+W4A4,1,7.3,452148,17398,11837,29,57,D:\GitHub\vivado\vivado\F_Quantization_W8A8\hls_w4a4\work\w4a4_hls\solution1\syn\report\lenet_w4a4_top_csynth.rpt
+W4A4,5,7.3,452148,17398,11837,29,57,D:\GitHub\vivado\vivado\F_Quantization_W8A8\hls_w4a4\final_delivery\reports\level3_pe5\lenet_w4a4_top_pe5_csynth.rpt

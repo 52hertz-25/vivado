@@ -1,0 +1,29 @@
+============================================================
+Running W4A4 RTL Co-simulation...
+Project root: D:\GitHub\vivado\vivado\F_Quantization_W8A8\hls_w4a4
+Model root:   D:\GitHub\vivado\vivado\F_Quantization_W8A8\hls_w4a4\..\..\lenet_project\handoff\LeNet_DSE_Framework_2022_2\model
+Weight root:  D:\GitHub\vivado\vivado\F_Quantization_W8A8\hls_w4a4\model\int4_weights
+============================================================
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+  **** SW Build 3670227 on Oct 13 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source D:/Xilinx/Vitis_HLS/2022.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user '时澄' on host 'benedicta' (Windows NT_amd64 version 6.2) on Sun Sep 13 14:58:55 +0800 2026
+INFO: [HLS 200-10] In directory 'D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4'
+Sourcing Tcl script 'D:\GitHub\vivado\vivado\F_Quantization_W8A8\hls_w4a4\scripts\run_w4a4_cosim_clean.tcl'
+invalid command name "锘¿#"
+    while executing
+"锘¿# Vitis HLS 2022.2 runner. The last four argv items are used because some"
+    (file "D:\GitHub\vivado\vivado\F_Quantization_W8A8\hls_w4a4\scripts\run_w4a4_cosim_clean.tcl" line 1)
+    invoked from within
+"source {D:\GitHub\vivado\vivado\F_Quantization_W8A8\hls_w4a4\scripts\run_w4a4_cosim_clean.tcl}"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel \#0 [list source $arg] "
+
+INFO: [HLS 200-112] Total CPU user time: 0 seconds. Total CPU system time: 0 seconds. Total elapsed time: 0.479 seconds; peak allocated memory: 7.738 MB.
+INFO: [Common 17-206] Exiting vitis_hls at Sun Sep 13 14:58:55 2026...

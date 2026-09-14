@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="lenet_w4a4_top.wdb" id="1">
+         <top_modules>
+            <top_module name="apa_lenet_w4a4_top_top" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0ns"></ZoomStartTime>
+      <ZoomEndTime time="2000ns"></ZoomEndTime>
+      <Cursor1Time time="0ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="257"></NameColumnWidth>
+      <ValueColumnWidth column_width="84"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="2" />
+   <wvobject type="group" fp_name="HLS Process Summary Group">
+      <obj_property name="label">HLS Process Summary</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="group" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top//AESL_inst_lenet_w4a4_top_activity">
+         <obj_property name="label">AESL_inst_lenet_w4a4_top_activity</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="UseFullPath">true</obj_property>
+         <obj_property name="ElementShortName">AESL_inst_lenet_w4a4_top_activity</obj_property>
+         <obj_property name="ObjectShortName">AESL_inst_lenet_w4a4_top_activity</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+         <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">turquoise</obj_property>
+         <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+         <obj_property name="Render_Data">/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top//AESL_inst_lenet_w4a4_top_activity.dataflowTxWaveData.Cycles</obj_property>
+         <obj_property name="Value_Data">/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top//AESL_inst_lenet_w4a4_top_activity.dataflowTxWaveData.OutStanding</obj_property>
+         <obj_property name="Detail_Data">/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top//AESL_inst_lenet_w4a4_top_activity.dataflowTxTooltipData</obj_property>
+         <wvobject type="group" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_UNPACK_INPUT_fu_566/grp_lenet_w4a4_top_Pipeline_UNPACK_INPUT_fu_566_activity">
+            <obj_property name="label">grp_lenet_w4a4_top_Pipeline_UNPACK_INPUT_fu_566_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_lenet_w4a4_top_Pipeline_UNPACK_INPUT_fu_566_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_lenet_w4a4_top_Pipeline_UNPACK_INPUT_fu_566_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_UNPACK_INPUT_fu_566/grp_lenet_w4a4_top_Pipeline_UNPACK_INPUT_fu_566_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_UNPACK_INPUT_fu_566/grp_lenet_w4a4_top_Pipeline_UNPACK_INPUT_fu_566_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_UNPACK_INPUT_fu_566/grp_lenet_w4a4_top_Pipeline_UNPACK_INPUT_fu_566_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT_fu_576/grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT_fu_576_activity">
+            <obj_property name="label">grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT_fu_576_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT_fu_576_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT_fu_576_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT_fu_576/grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT_fu_576_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT_fu_576/grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT_fu_576_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT_fu_576/grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT_fu_576_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL_fu_586/grp_lenet_w4a4_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL_fu_586_activity">
+            <obj_property name="label">grp_lenet_w4a4_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL_fu_586_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_lenet_w4a4_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL_fu_586_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_lenet_w4a4_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL_fu_586_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL_fu_586/grp_lenet_w4a4_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL_fu_586_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL_fu_586/grp_lenet_w4a4_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL_fu_586_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL_fu_586/grp_lenet_w4a4_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL_fu_586_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_OUT_ROW_OUT_COL_fu_592/grp_lenet_w4a4_top_Pipeline_OUT_ROW_OUT_COL_fu_592_activity">
+            <obj_property name="label">grp_lenet_w4a4_top_Pipeline_OUT_ROW_OUT_COL_fu_592_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_lenet_w4a4_top_Pipeline_OUT_ROW_OUT_COL_fu_592_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_lenet_w4a4_top_Pipeline_OUT_ROW_OUT_COL_fu_592_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_OUT_ROW_OUT_COL_fu_592/grp_lenet_w4a4_top_Pipeline_OUT_ROW_OUT_COL_fu_592_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_OUT_ROW_OUT_COL_fu_592/grp_lenet_w4a4_top_Pipeline_OUT_ROW_OUT_COL_fu_592_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_OUT_ROW_OUT_COL_fu_592/grp_lenet_w4a4_top_Pipeline_OUT_ROW_OUT_COL_fu_592_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL2_fu_628/grp_lenet_w4a4_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL2_fu_628_activity">
+            <obj_property name="label">grp_lenet_w4a4_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL2_fu_628_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_lenet_w4a4_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL2_fu_628_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_lenet_w4a4_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL2_fu_628_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL2_fu_628/grp_lenet_w4a4_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL2_fu_628_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL2_fu_628/grp_lenet_w4a4_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL2_fu_628_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL2_fu_628/grp_lenet_w4a4_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL2_fu_628_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT1_fu_634/grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT1_fu_634_activity">
+            <obj_property name="label">grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT1_fu_634_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT1_fu_634_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT1_fu_634_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT1_fu_634/grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT1_fu_634_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT1_fu_634/grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT1_fu_634_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT1_fu_634/grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT1_fu_634_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_VITIS_LOOP_147_1_KERNEL_ROW_KERNEL_COL_fu_644/grp_lenet_w4a4_top_Pipeline_VITIS_LOOP_147_1_KERNEL_ROW_KERNEL_COL_fu_644_activity">
+            <obj_property name="label">grp_lenet_w4a4_top_Pipeline_VITIS_LOOP_147_1_KERNEL_ROW_KERNEL_COL_fu_644_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_lenet_w4a4_top_Pipeline_VITIS_LOOP_147_1_KERNEL_ROW_KERNEL_COL_fu_644_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_lenet_w4a4_top_Pipeline_VITIS_LOOP_147_1_KERNEL_ROW_KERNEL_COL_fu_644_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_VITIS_LOOP_147_1_KERNEL_ROW_KERNEL_COL_fu_644/grp_lenet_w4a4_top_Pipeline_VITIS_LOOP_147_1_KERNEL_ROW_KERNEL_COL_fu_644_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_VITIS_LOOP_147_1_KERNEL_ROW_KERNEL_COL_fu_644/grp_lenet_w4a4_top_Pipeline_VITIS_LOOP_147_1_KERNEL_ROW_KERNEL_COL_fu_644_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_VITIS_LOOP_147_1_KERNEL_ROW_KERNEL_COL_fu_644/grp_lenet_w4a4_top_Pipeline_VITIS_LOOP_147_1_KERNEL_ROW_KERNEL_COL_fu_644_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT3_fu_655/grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT3_fu_655_activity">
+            <obj_property name="label">grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT3_fu_655_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT3_fu_655_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT3_fu_655_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT3_fu_655/grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT3_fu_655_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT3_fu_655/grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT3_fu_655_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT3_fu_655/grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT3_fu_655_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR_fu_665/grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR_fu_665_activity">
+            <obj_property name="label">grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR_fu_665_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR_fu_665_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR_fu_665_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR_fu_665/grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR_fu_665_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR_fu_665/grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR_fu_665_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR_fu_665/grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR_fu_665_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_VITIS_LOOP_147_1_KERNEL_ROW_KERNEL_COL4_fu_671/grp_lenet_w4a4_top_Pipeline_VITIS_LOOP_147_1_KERNEL_ROW_KERNEL_COL4_fu_671_activity">
+            <obj_property name="label">grp_lenet_w4a4_top_Pipeline_VITIS_LOOP_147_1_KERNEL_ROW_KERNEL_COL4_fu_671_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_lenet_w4a4_top_Pipeline_VITIS_LOOP_147_1_KERNEL_ROW_KERNEL_COL4_fu_671_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_lenet_w4a4_top_Pipeline_VITIS_LOOP_147_1_KERNEL_ROW_KERNEL_COL4_fu_671_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_VITIS_LOOP_147_1_KERNEL_ROW_KERNEL_COL4_fu_671/grp_lenet_w4a4_top_Pipeline_VITIS_LOOP_147_1_KERNEL_ROW_KERNEL_COL4_fu_671_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_VITIS_LOOP_147_1_KERNEL_ROW_KERNEL_COL4_fu_671/grp_lenet_w4a4_top_Pipeline_VITIS_LOOP_147_1_KERNEL_ROW_KERNEL_COL4_fu_671_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_VITIS_LOOP_147_1_KERNEL_ROW_KERNEL_COL4_fu_671/grp_lenet_w4a4_top_Pipeline_VITIS_LOOP_147_1_KERNEL_ROW_KERNEL_COL4_fu_671_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT_fu_679/grp_lenet_w4a4_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT_fu_679_activity">
+            <obj_property name="label">grp_lenet_w4a4_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT_fu_679_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_lenet_w4a4_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT_fu_679_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_lenet_w4a4_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT_fu_679_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT_fu_679/grp_lenet_w4a4_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT_fu_679_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT_fu_679/grp_lenet_w4a4_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT_fu_679_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT_fu_679/grp_lenet_w4a4_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT_fu_679_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR5_fu_688/grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR5_fu_688_activity">
+            <obj_property name="label">grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR5_fu_688_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR5_fu_688_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR5_fu_688_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR5_fu_688/grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR5_fu_688_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR5_fu_688/grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR5_fu_688_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR5_fu_688/grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR5_fu_688_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT6_fu_694/grp_lenet_w4a4_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT6_fu_694_activity">
+            <obj_property name="label">grp_lenet_w4a4_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT6_fu_694_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_lenet_w4a4_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT6_fu_694_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_lenet_w4a4_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT6_fu_694_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT6_fu_694/grp_lenet_w4a4_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT6_fu_694_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT6_fu_694/grp_lenet_w4a4_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT6_fu_694_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT6_fu_694/grp_lenet_w4a4_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT6_fu_694_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR7_fu_703/grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR7_fu_703_activity">
+            <obj_property name="label">grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR7_fu_703_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR7_fu_703_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR7_fu_703_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR7_fu_703/grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR7_fu_703_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR7_fu_703/grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR7_fu_703_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR7_fu_703/grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR7_fu_703_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_WRITE_LOGITS_fu_709/grp_lenet_w4a4_top_Pipeline_WRITE_LOGITS_fu_709_activity">
+            <obj_property name="label">grp_lenet_w4a4_top_Pipeline_WRITE_LOGITS_fu_709_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_lenet_w4a4_top_Pipeline_WRITE_LOGITS_fu_709_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_lenet_w4a4_top_Pipeline_WRITE_LOGITS_fu_709_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_WRITE_LOGITS_fu_709/grp_lenet_w4a4_top_Pipeline_WRITE_LOGITS_fu_709_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_WRITE_LOGITS_fu_709/grp_lenet_w4a4_top_Pipeline_WRITE_LOGITS_fu_709_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_WRITE_LOGITS_fu_709/grp_lenet_w4a4_top_Pipeline_WRITE_LOGITS_fu_709_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject type="protoinst" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top//AESL_inst_lenet_w4a4_top_activity">
+      <obj_property name="ElementShortName">AESL_inst_lenet_w4a4_top_activity</obj_property>
+      <obj_property name="ObjectShortName">AESL_inst_lenet_w4a4_top_activity</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="AESL_inst_lenet_w4a4_top_group">
+      <obj_property name="label">AESL_inst_lenet_w4a4_top</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="protoinst" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_UNPACK_INPUT_fu_566/grp_lenet_w4a4_top_Pipeline_UNPACK_INPUT_fu_566_activity">
+         <obj_property name="ElementShortName">grp_lenet_w4a4_top_Pipeline_UNPACK_INPUT_fu_566_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_lenet_w4a4_top_Pipeline_UNPACK_INPUT_fu_566_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT_fu_576/grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT_fu_576_activity">
+         <obj_property name="ElementShortName">grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT_fu_576_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT_fu_576_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL_fu_586/grp_lenet_w4a4_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL_fu_586_activity">
+         <obj_property name="ElementShortName">grp_lenet_w4a4_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL_fu_586_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_lenet_w4a4_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL_fu_586_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_OUT_ROW_OUT_COL_fu_592/grp_lenet_w4a4_top_Pipeline_OUT_ROW_OUT_COL_fu_592_activity">
+         <obj_property name="ElementShortName">grp_lenet_w4a4_top_Pipeline_OUT_ROW_OUT_COL_fu_592_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_lenet_w4a4_top_Pipeline_OUT_ROW_OUT_COL_fu_592_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL2_fu_628/grp_lenet_w4a4_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL2_fu_628_activity">
+         <obj_property name="ElementShortName">grp_lenet_w4a4_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL2_fu_628_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_lenet_w4a4_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL2_fu_628_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT1_fu_634/grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT1_fu_634_activity">
+         <obj_property name="ElementShortName">grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT1_fu_634_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT1_fu_634_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_VITIS_LOOP_147_1_KERNEL_ROW_KERNEL_COL_fu_644/grp_lenet_w4a4_top_Pipeline_VITIS_LOOP_147_1_KERNEL_ROW_KERNEL_COL_fu_644_activity">
+         <obj_property name="ElementShortName">grp_lenet_w4a4_top_Pipeline_VITIS_LOOP_147_1_KERNEL_ROW_KERNEL_COL_fu_644_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_lenet_w4a4_top_Pipeline_VITIS_LOOP_147_1_KERNEL_ROW_KERNEL_COL_fu_644_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT3_fu_655/grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT3_fu_655_activity">
+         <obj_property name="ElementShortName">grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT3_fu_655_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT3_fu_655_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR_fu_665/grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR_fu_665_activity">
+         <obj_property name="ElementShortName">grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR_fu_665_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR_fu_665_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_VITIS_LOOP_147_1_KERNEL_ROW_KERNEL_COL4_fu_671/grp_lenet_w4a4_top_Pipeline_VITIS_LOOP_147_1_KERNEL_ROW_KERNEL_COL4_fu_671_activity">
+         <obj_property name="ElementShortName">grp_lenet_w4a4_top_Pipeline_VITIS_LOOP_147_1_KERNEL_ROW_KERNEL_COL4_fu_671_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_lenet_w4a4_top_Pipeline_VITIS_LOOP_147_1_KERNEL_ROW_KERNEL_COL4_fu_671_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT_fu_679/grp_lenet_w4a4_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT_fu_679_activity">
+         <obj_property name="ElementShortName">grp_lenet_w4a4_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT_fu_679_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_lenet_w4a4_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT_fu_679_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR5_fu_688/grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR5_fu_688_activity">
+         <obj_property name="ElementShortName">grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR5_fu_688_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR5_fu_688_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT6_fu_694/grp_lenet_w4a4_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT6_fu_694_activity">
+         <obj_property name="ElementShortName">grp_lenet_w4a4_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT6_fu_694_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_lenet_w4a4_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT6_fu_694_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR7_fu_703/grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR7_fu_703_activity">
+         <obj_property name="ElementShortName">grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR7_fu_703_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR7_fu_703_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_WRITE_LOGITS_fu_709/grp_lenet_w4a4_top_Pipeline_WRITE_LOGITS_fu_709_activity">
+         <obj_property name="ElementShortName">grp_lenet_w4a4_top_Pipeline_WRITE_LOGITS_fu_709_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_lenet_w4a4_top_Pipeline_WRITE_LOGITS_fu_709_activity</obj_property>
+      </wvobject>
+      <wvobject type="group" fp_name="AESL_inst_lenet_w4a4_top_Handshake_group">
+         <obj_property name="label">Block-level handshake</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="logic" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/ap_start">
+            <obj_property name="ElementShortName">ap_start</obj_property>
+            <obj_property name="ObjectShortName">ap_start</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/ap_ready">
+            <obj_property name="ElementShortName">ap_ready</obj_property>
+            <obj_property name="ObjectShortName">ap_ready</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/ap_done">
+            <obj_property name="ElementShortName">ap_done</obj_property>
+            <obj_property name="ObjectShortName">ap_done</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_lenet_w4a4_top_Pipeline_UNPACK_INPUT_fu_566_group">
+         <obj_property name="label">grp_lenet_w4a4_top_Pipeline_UNPACK_INPUT_fu_566</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_lenet_w4a4_top_Pipeline_UNPACK_INPUT_fu_566_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_UNPACK_INPUT_fu_566/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_UNPACK_INPUT_fu_566/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_UNPACK_INPUT_fu_566/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT_fu_576_group">
+         <obj_property name="label">grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT_fu_576</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT_fu_576_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT_fu_576/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT_fu_576/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT_fu_576/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_lenet_w4a4_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL_fu_586_group">
+         <obj_property name="label">grp_lenet_w4a4_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL_fu_586</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_lenet_w4a4_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL_fu_586_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL_fu_586/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL_fu_586/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL_fu_586/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_lenet_w4a4_top_Pipeline_OUT_ROW_OUT_COL_fu_592_group">
+         <obj_property name="label">grp_lenet_w4a4_top_Pipeline_OUT_ROW_OUT_COL_fu_592</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_lenet_w4a4_top_Pipeline_OUT_ROW_OUT_COL_fu_592_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_OUT_ROW_OUT_COL_fu_592/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_OUT_ROW_OUT_COL_fu_592/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_OUT_ROW_OUT_COL_fu_592/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_lenet_w4a4_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL2_fu_628_group">
+         <obj_property name="label">grp_lenet_w4a4_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL2_fu_628</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_lenet_w4a4_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL2_fu_628_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL2_fu_628/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL2_fu_628/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_POOL_CHANNEL_POOL_ROW_POOL_COL2_fu_628/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT1_fu_634_group">
+         <obj_property name="label">grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT1_fu_634</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT1_fu_634_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT1_fu_634/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT1_fu_634/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT1_fu_634/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_lenet_w4a4_top_Pipeline_VITIS_LOOP_147_1_KERNEL_ROW_KERNEL_COL_fu_644_group">
+         <obj_property name="label">grp_lenet_w4a4_top_Pipeline_VITIS_LOOP_147_1_KERNEL_ROW_KERNEL_COL_fu_644</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_lenet_w4a4_top_Pipeline_VITIS_LOOP_147_1_KERNEL_ROW_KERNEL_COL_fu_644_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_VITIS_LOOP_147_1_KERNEL_ROW_KERNEL_COL_fu_644/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_VITIS_LOOP_147_1_KERNEL_ROW_KERNEL_COL_fu_644/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_VITIS_LOOP_147_1_KERNEL_ROW_KERNEL_COL_fu_644/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT3_fu_655_group">
+         <obj_property name="label">grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT3_fu_655</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT3_fu_655_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT3_fu_655/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT3_fu_655/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_LOAD_LOCAL_WEIGHT3_fu_655/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR_fu_665_group">
+         <obj_property name="label">grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR_fu_665</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR_fu_665_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR_fu_665/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR_fu_665/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR_fu_665/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_lenet_w4a4_top_Pipeline_VITIS_LOOP_147_1_KERNEL_ROW_KERNEL_COL4_fu_671_group">
+         <obj_property name="label">grp_lenet_w4a4_top_Pipeline_VITIS_LOOP_147_1_KERNEL_ROW_KERNEL_COL4_fu_671</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_lenet_w4a4_top_Pipeline_VITIS_LOOP_147_1_KERNEL_ROW_KERNEL_COL4_fu_671_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_VITIS_LOOP_147_1_KERNEL_ROW_KERNEL_COL4_fu_671/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_VITIS_LOOP_147_1_KERNEL_ROW_KERNEL_COL4_fu_671/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_VITIS_LOOP_147_1_KERNEL_ROW_KERNEL_COL4_fu_671/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_lenet_w4a4_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT_fu_679_group">
+         <obj_property name="label">grp_lenet_w4a4_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT_fu_679</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_lenet_w4a4_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT_fu_679_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT_fu_679/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT_fu_679/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT_fu_679/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR5_fu_688_group">
+         <obj_property name="label">grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR5_fu_688</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR5_fu_688_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR5_fu_688/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR5_fu_688/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR5_fu_688/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_lenet_w4a4_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT6_fu_694_group">
+         <obj_property name="label">grp_lenet_w4a4_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT6_fu_694</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_lenet_w4a4_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT6_fu_694_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT6_fu_694/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT6_fu_694/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_DENSE_OUTPUT_DENSE_INPUT6_fu_694/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR7_fu_703_group">
+         <obj_property name="label">grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR7_fu_703</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR7_fu_703_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR7_fu_703/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR7_fu_703/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_REQUANT_VECTOR7_fu_703/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_lenet_w4a4_top_Pipeline_WRITE_LOGITS_fu_709_group">
+         <obj_property name="label">grp_lenet_w4a4_top_Pipeline_WRITE_LOGITS_fu_709</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_lenet_w4a4_top_Pipeline_WRITE_LOGITS_fu_709_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_WRITE_LOGITS_fu_709/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_WRITE_LOGITS_fu_709/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_lenet_w4a4_top_top/AESL_inst_lenet_w4a4_top/grp_lenet_w4a4_top_Pipeline_WRITE_LOGITS_fu_709/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+</wave_config>

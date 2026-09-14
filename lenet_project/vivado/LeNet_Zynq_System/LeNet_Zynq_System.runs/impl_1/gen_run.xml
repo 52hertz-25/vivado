@@ -1,81 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1788686341">
-  <File Type="OPT-HWDEF" Name="lenet_system_wrapper.hwdef"/>
-  <File Type="ROUTE-BUS-SKEW" Name="lenet_system_wrapper_bus_skew_routed.rpt"/>
-  <File Type="PA-DCP" Name="lenet_system_wrapper.dcp"/>
   <File Type="ROUTE-PWR" Name="lenet_system_wrapper_power_routed.rpt"/>
   <File Type="PA-TCL" Name="lenet_system_wrapper.tcl"/>
-  <File Type="BITSTR-MMI" Name="lenet_system_wrapper.mmi"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="lenet_system_wrapper_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="lenet_system_wrapper_timing_summary_init.rpt"/>
   <File Type="ROUTE-PWR-SUM" Name="lenet_system_wrapper_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="lenet_system_wrapper_reports.tcl"/>
-  <File Type="OPT-TIMING" Name="lenet_system_wrapper_timing_summary_opted.rpt"/>
-  <File Type="OPT-DCP" Name="lenet_system_wrapper_opt.dcp"/>
+  <File Type="BITSTR-MSK" Name="lenet_system_wrapper.msk"/>
+  <File Type="ROUTE-CLK" Name="lenet_system_wrapper_clock_utilization_routed.rpt"/>
+  <File Type="RDI-RDI" Name="lenet_system_wrapper.vdi"/>
+  <File Type="ROUTE-BUS-SKEW" Name="lenet_system_wrapper_bus_skew_routed.rpt"/>
+  <File Type="PA-DCP" Name="lenet_system_wrapper.dcp"/>
+  <File Type="BG-BIT" Name="lenet_system_wrapper.bit"/>
+  <File Type="BG-DRC" Name="lenet_system_wrapper.drc"/>
+  <File Type="BG-BGN" Name="lenet_system_wrapper.bgn"/>
+  <File Type="BG-BIN" Name="lenet_system_wrapper.bin"/>
+  <File Type="BITSTR-RBT" Name="lenet_system_wrapper.rbt"/>
+  <File Type="BITSTR-NKY" Name="lenet_system_wrapper.nky"/>
+  <File Type="BITSTR-BMM" Name="lenet_system_wrapper_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="lenet_system_wrapper.mmi"/>
+  <File Type="BITSTR-SYSDEF" Name="lenet_system_wrapper.sysdef"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="lenet_system_wrapper.ltx"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="OPT-DRC" Name="lenet_system_wrapper_drc_opted.rpt"/>
-  <File Type="PWROPT-DCP" Name="lenet_system_wrapper_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="lenet_system_wrapper_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="lenet_system_wrapper_timing_summary_pwropted.rpt"/>
-  <File Type="PLACE-DCP" Name="lenet_system_wrapper_placed.dcp"/>
+  <File Type="OPT-HWDEF" Name="lenet_system_wrapper.hwdef"/>
   <File Type="PLACE-IO" Name="lenet_system_wrapper_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="lenet_system_wrapper_clock_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL" Name="lenet_system_wrapper_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL-PB" Name="lenet_system_wrapper_utilization_placed.pb"/>
   <File Type="PLACE-CTRL" Name="lenet_system_wrapper_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="lenet_system_wrapper_incremental_reuse_placed.rpt"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="lenet_system_wrapper_incremental_reuse_pre_placed.rpt"/>
-  <File Type="BG-BIN" Name="lenet_system_wrapper.bin"/>
-  <File Type="PLACE-TIMING" Name="lenet_system_wrapper_timing_summary_placed.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="lenet_system_wrapper_postplace_pwropt.dcp"/>
-  <File Type="BITSTR-MSK" Name="lenet_system_wrapper.msk"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="lenet_system_wrapper_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="lenet_system_wrapper_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="lenet_system_wrapper_drc_physopted.rpt"/>
-  <File Type="BITSTR-RBT" Name="lenet_system_wrapper.rbt"/>
-  <File Type="PHYSOPT-TIMING" Name="lenet_system_wrapper_timing_summary_physopted.rpt"/>
-  <File Type="ROUTE-ERROR-DCP" Name="lenet_system_wrapper_routed_error.dcp"/>
-  <File Type="ROUTE-DCP" Name="lenet_system_wrapper_routed.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="lenet_system_wrapper_routed_bb.dcp"/>
   <File Type="ROUTE-DRC" Name="lenet_system_wrapper_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="lenet_system_wrapper_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="lenet_system_wrapper_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="lenet_system_wrapper_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="lenet_system_wrapper_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="lenet_system_wrapper_methodology_drc_routed.pb"/>
   <File Type="ROUTE-PWR-RPX" Name="lenet_system_wrapper_power_routed.rpx"/>
   <File Type="ROUTE-STATUS" Name="lenet_system_wrapper_route_status.rpt"/>
   <File Type="ROUTE-STATUS-PB" Name="lenet_system_wrapper_route_status.pb"/>
+  <File Type="ROUTE-DCP" Name="lenet_system_wrapper_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="lenet_system_wrapper_routed_error.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="lenet_system_wrapper_routed_bb.dcp"/>
   <File Type="ROUTE-TIMINGSUMMARY" Name="lenet_system_wrapper_timing_summary_routed.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="lenet_system_wrapper_timing_summary_routed.pb"/>
   <File Type="ROUTE-TIMING-RPX" Name="lenet_system_wrapper_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="lenet_system_wrapper_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="lenet_system_wrapper_clock_utilization_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="lenet_system_wrapper_bus_skew_routed.pb"/>
   <File Type="ROUTE-BUS-SKEW-RPX" Name="lenet_system_wrapper_bus_skew_routed.rpx"/>
+  <File Type="OPT-DCP" Name="lenet_system_wrapper_opt.dcp"/>
+  <File Type="PLACE-DCP" Name="lenet_system_wrapper_placed.dcp"/>
+  <File Type="PWROPT-DCP" Name="lenet_system_wrapper_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="lenet_system_wrapper_postplace_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="lenet_system_wrapper_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="lenet_system_wrapper_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="lenet_system_wrapper_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="lenet_system_wrapper_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="lenet_system_wrapper_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="lenet_system_wrapper_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="lenet_system_wrapper_bus_skew_postroute_physopted.rpt"/>
-  <File Type="BG-BIT" Name="lenet_system_wrapper.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="lenet_system_wrapper_bus_skew_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="lenet_system_wrapper_bus_skew_postroute_physopted.rpx"/>
-  <File Type="BITSTR-NKY" Name="lenet_system_wrapper.nky"/>
-  <File Type="BITSTR-BMM" Name="lenet_system_wrapper_bd.bmm"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="lenet_system_wrapper_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="lenet_system_wrapper_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="lenet_system_wrapper_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="lenet_system_wrapper_methodology_drc_routed.rpx"/>
   <File Type="PDI-FILE" Name="lenet_system_wrapper.pdi"/>
   <File Type="RCFI_FILE" Name="lenet_system_wrapper.rcfi"/>
   <File Type="CFI_FILE" Name="lenet_system_wrapper.cfi"/>
   <File Type="RNPI_FILE" Name="lenet_system_wrapper.rnpi"/>
   <File Type="NPI_FILE" Name="lenet_system_wrapper.npi"/>
   <File Type="RBD_FILE" Name="lenet_system_wrapper.rbd"/>
-  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="lenet_system_wrapper.ltx"/>
-  <File Type="BITSTR-SYSDEF" Name="lenet_system_wrapper.sysdef"/>
-  <File Type="BG-BGN" Name="lenet_system_wrapper.bgn"/>
-  <File Type="BG-DRC" Name="lenet_system_wrapper.drc"/>
-  <File Type="RDI-RDI" Name="lenet_system_wrapper.vdi"/>
-  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="ROUTE-RQS" Name="lenet_system_wrapper_routed.rqs"/>
   <File Type="POSTROUTE-PHYSOPT-RQS" Name="lenet_system_wrapper_postroute_physopted.rqs"/>
   <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
@@ -125,11 +107,12 @@
     <Step Id="route_design"/>
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
+    <Step Id="write_device_image"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="lenet_system_proc_sys_reset_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="lenet_system_processing_system7_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="lenet_system_proc_sys_reset_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="lenet_system_util_vector_logic_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="lenet_system_auto_pc_0"/>
   <BlockFileSet Type="BlockSrcs" Name="lenet_system_lenet_full_top_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="lenet_system_auto_pc_0"/>
   <BlockFileSet Type="BlockSrcs" Name="lenet_system_smartconnect_0_0"/>
 </GenRun>

@@ -1,0 +1,10 @@
+D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:146:9: warning: Only for/while loops support the 'Unroll ' [-Wignored-hls-attributes]
+#pragma HLS UNROLL factor=2
+        ^~~~
+D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:146:9: warning: Only for/while loops support the 'Unroll ' [-Wignored-hls-attributes]
+#pragma HLS UNROLL factor=2
+        ^~~~
+D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:146:9: warning: Only for/while loops support the 'Unroll ' [-Wignored-hls-attributes]
+#pragma HLS UNROLL factor=2
+        ^~~~
+3 warnings generated.

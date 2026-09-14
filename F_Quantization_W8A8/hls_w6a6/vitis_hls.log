@@ -1,0 +1,192 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+  **** SW Build 3670227 on Oct 13 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source D:/Xilinx/Vitis_HLS/2022.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running 'D:/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user '时澄' on host 'benedicta' (Windows NT_amd64 version 6.2) on Mon Sep 14 12:26:54 +0800 2026
+INFO: [HLS 200-10] In directory 'D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6'
+Sourcing Tcl script 'D:\GitHub\vivado\vivado\F_Quantization_W8A8\hls_w6a6\scripts\run_w6a6_mnist_csim.tcl'
+INFO: [HLS 200-1510] Running: open_project -reset w6a6_mnist_hls 
+INFO: [HLS 200-10] Opening and resetting project 'D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/work/w6a6_mnist_hls'.
+INFO: [HLS 200-1510] Running: set_top lenet_w6a6_top 
+INFO: [HLS 200-1510] Running: add_files D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6.cpp -cflags -ID:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/include -std=c++11 
+INFO: [HLS 200-10] Adding design file 'D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/src/lenet_w6a6.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/tb/tb_lenet_w6a6_mnist.cpp -cflags -ID:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/include -std=c++11 
+INFO: [HLS 200-10] Adding test bench file 'D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/tb/tb_lenet_w6a6_mnist.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution -reset solution1 -flow_target vivado 
+INFO: [HLS 200-10] Creating and opening solution 'D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/work/w6a6_mnist_hls/solution1'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vivado' configuration: config_interface -m_axi_latency=0
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1510] Running: create_clock -period 10.0 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+W6A6_MNIST_CSIM_START limit=10000
+INFO: [HLS 200-1510] Running: csim_design -argv D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w8a8/data/mnist_w8a8 D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/model/int6_weights 10000 D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/reports/mnist/w6a6_mnist_10000_results.csv 
+Running Dispatch Server on port: 64453
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../../tb/tb_lenet_w6a6_mnist.cpp in debug mode
+   Compiling ../../../../../src/lenet_w6a6.cpp in debug mode
+   Generating csim.exe
+In file included from D:/Xilinx/Vitis_HLS/2022.2/include/floating_point_v7_1_bitacc_cmodel.h:149:0,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/hls_fpo.h:143,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/hls_half_fpo.h:18,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/hls_half.h:25,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/etc/ap_private.h:52,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/ap_common.h:666,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/ap_int.h:10,
+                 from D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/include/lenet_w6a6.h:4,
+                 from ../../../../../tb/tb_lenet_w6a6_mnist.cpp:1:
+D:/Xilinx/Vitis_HLS/2022.2/include/gmp.h:58:0: warning: "__GMP_LIBGMP_DLL" redefined
+ #define __GMP_LIBGMP_DLL  0
+ 
+In file included from D:/Xilinx/Vitis_HLS/2022.2/include/hls_fpo.h:143:0,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/hls_half_fpo.h:18,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/hls_half.h:25,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/etc/ap_private.h:52,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/ap_common.h:666,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/ap_int.h:10,
+                 from D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/include/lenet_w6a6.h:4,
+                 from ../../../../../tb/tb_lenet_w6a6_mnist.cpp:1:
+D:/Xilinx/Vitis_HLS/2022.2/include/floating_point_v7_1_bitacc_cmodel.h:141:0: note: this is the location of the previous definition
+ #define __GMP_LIBGMP_DLL 1
+ 
+In file included from D:/Xilinx/Vitis_HLS/2022.2/include/floating_point_v7_1_bitacc_cmodel.h:149:0,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/hls_fpo.h:143,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/hls_half_fpo.h:18,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/hls_half.h:25,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/etc/ap_private.h:52,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/ap_common.h:666,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/ap_int.h:10,
+                 from D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/include/lenet_w6a6.h:4,
+                 from ../../../../../src/lenet_w6a6.cpp:1:
+D:/Xilinx/Vitis_HLS/2022.2/include/gmp.h:58:0: warning: "__GMP_LIBGMP_DLL" redefined
+ #define __GMP_LIBGMP_DLL  0
+ 
+In file included from D:/Xilinx/Vitis_HLS/2022.2/include/hls_fpo.h:143:0,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/hls_half_fpo.h:18,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/hls_half.h:25,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/etc/ap_private.h:52,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/ap_common.h:666,
+                 from D:/Xilinx/Vitis_HLS/2022.2/include/ap_int.h:10,
+                 from D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/include/lenet_w6a6.h:4,
+                 from ../../../../../src/lenet_w6a6.cpp:1:
+D:/Xilinx/Vitis_HLS/2022.2/include/floating_point_v7_1_bitacc_cmodel.h:141:0: note: this is the location of the previous definition
+ #define __GMP_LIBGMP_DLL 1
+ 
+W6A6_MNIST_BEGIN samples=10000
+PROGRESS 100/10000 correct=100 accuracy=100.00%
+PROGRESS 200/10000 correct=200 accuracy=100.00%
+PROGRESS 300/10000 correct=299 accuracy=99.67%
+PROGRESS 400/10000 correct=398 accuracy=99.50%
+PROGRESS 500/10000 correct=496 accuracy=99.20%
+PROGRESS 600/10000 correct=596 accuracy=99.33%
+PROGRESS 700/10000 correct=693 accuracy=99.00%
+PROGRESS 800/10000 correct=793 accuracy=99.12%
+PROGRESS 900/10000 correct=893 accuracy=99.22%
+PROGRESS 1000/10000 correct=992 accuracy=99.20%
+PROGRESS 1100/10000 correct=1090 accuracy=99.09%
+PROGRESS 1200/10000 correct=1190 accuracy=99.17%
+PROGRESS 1300/10000 correct=1286 accuracy=98.92%
+PROGRESS 1400/10000 correct=1385 accuracy=98.93%
+PROGRESS 1500/10000 correct=1485 accuracy=99.00%
+PROGRESS 1600/10000 correct=1583 accuracy=98.94%
+PROGRESS 1700/10000 correct=1681 accuracy=98.88%
+PROGRESS 1800/10000 correct=1779 accuracy=98.83%
+PROGRESS 1900/10000 correct=1879 accuracy=98.89%
+PROGRESS 2000/10000 correct=1977 accuracy=98.85%
+PROGRESS 2100/10000 correct=2076 accuracy=98.86%
+PROGRESS 2200/10000 correct=2172 accuracy=98.73%
+PROGRESS 2300/10000 correct=2272 accuracy=98.78%
+PROGRESS 2400/10000 correct=2372 accuracy=98.83%
+PROGRESS 2500/10000 correct=2472 accuracy=98.88%
+PROGRESS 2600/10000 correct=2571 accuracy=98.88%
+PROGRESS 2700/10000 correct=2670 accuracy=98.89%
+PROGRESS 2800/10000 correct=2770 accuracy=98.93%
+PROGRESS 2900/10000 correct=2870 accuracy=98.97%
+PROGRESS 3000/10000 correct=2967 accuracy=98.90%
+PROGRESS 3100/10000 correct=3066 accuracy=98.90%
+PROGRESS 3200/10000 correct=3166 accuracy=98.94%
+PROGRESS 3300/10000 correct=3266 accuracy=98.97%
+PROGRESS 3400/10000 correct=3366 accuracy=99.00%
+PROGRESS 3500/10000 correct=3465 accuracy=99.00%
+PROGRESS 3600/10000 correct=3563 accuracy=98.97%
+PROGRESS 3700/10000 correct=3663 accuracy=99.00%
+PROGRESS 3800/10000 correct=3761 accuracy=98.97%
+PROGRESS 3900/10000 correct=3860 accuracy=98.97%
+PROGRESS 4000/10000 correct=3959 accuracy=98.97%
+PROGRESS 4100/10000 correct=4058 accuracy=98.98%
+PROGRESS 4200/10000 correct=4157 accuracy=98.98%
+PROGRESS 4300/10000 correct=4253 accuracy=98.91%
+PROGRESS 4400/10000 correct=4353 accuracy=98.93%
+PROGRESS 4500/10000 correct=4451 accuracy=98.91%
+PROGRESS 4600/10000 correct=4550 accuracy=98.91%
+PROGRESS 4700/10000 correct=4649 accuracy=98.91%
+PROGRESS 4800/10000 correct=4749 accuracy=98.94%
+PROGRESS 4900/10000 correct=4847 accuracy=98.92%
+PROGRESS 5000/10000 correct=4947 accuracy=98.94%
+PROGRESS 5100/10000 correct=5047 accuracy=98.96%
+PROGRESS 5200/10000 correct=5147 accuracy=98.98%
+PROGRESS 5300/10000 correct=5246 accuracy=98.98%
+PROGRESS 5400/10000 correct=5346 accuracy=99.00%
+PROGRESS 5500/10000 correct=5446 accuracy=99.02%
+PROGRESS 5600/10000 correct=5546 accuracy=99.04%
+PROGRESS 5700/10000 correct=5646 accuracy=99.05%
+PROGRESS 5800/10000 correct=5746 accuracy=99.07%
+PROGRESS 5900/10000 correct=5846 accuracy=99.08%
+PROGRESS 6000/10000 correct=5942 accuracy=99.03%
+PROGRESS 6100/10000 correct=6042 accuracy=99.05%
+PROGRESS 6200/10000 correct=6142 accuracy=99.06%
+PROGRESS 6300/10000 correct=6242 accuracy=99.08%
+PROGRESS 6400/10000 correct=6342 accuracy=99.09%
+PROGRESS 6500/10000 correct=6442 accuracy=99.11%
+PROGRESS 6600/10000 correct=6540 accuracy=99.09%
+PROGRESS 6700/10000 correct=6639 accuracy=99.09%
+PROGRESS 6800/10000 correct=6738 accuracy=99.09%
+PROGRESS 6900/10000 correct=6838 accuracy=99.10%
+PROGRESS 7000/10000 correct=6938 accuracy=99.11%
+PROGRESS 7100/10000 correct=7038 accuracy=99.13%
+PROGRESS 7200/10000 correct=7138 accuracy=99.14%
+PROGRESS 7300/10000 correct=7237 accuracy=99.14%
+PROGRESS 7400/10000 correct=7337 accuracy=99.15%
+PROGRESS 7500/10000 correct=7436 accuracy=99.15%
+PROGRESS 7600/10000 correct=7536 accuracy=99.16%
+PROGRESS 7700/10000 correct=7636 accuracy=99.17%
+PROGRESS 7800/10000 correct=7736 accuracy=99.18%
+PROGRESS 7900/10000 correct=7836 accuracy=99.19%
+PROGRESS 8000/10000 correct=7936 accuracy=99.20%
+PROGRESS 8100/10000 correct=8036 accuracy=99.21%
+PROGRESS 8200/10000 correct=8136 accuracy=99.22%
+PROGRESS 8300/10000 correct=8236 accuracy=99.23%
+PROGRESS 8400/10000 correct=8336 accuracy=99.24%
+PROGRESS 8500/10000 correct=8436 accuracy=99.25%
+PROGRESS 8600/10000 correct=8536 accuracy=99.26%
+PROGRESS 8700/10000 correct=8636 accuracy=99.26%
+PROGRESS 8800/10000 correct=8736 accuracy=99.27%
+PROGRESS 8900/10000 correct=8836 accuracy=99.28%
+PROGRESS 9000/10000 correct=8936 accuracy=99.29%
+PROGRESS 9100/10000 correct=9032 accuracy=99.25%
+PROGRESS 9200/10000 correct=9132 accuracy=99.26%
+PROGRESS 9300/10000 correct=9232 accuracy=99.27%
+PROGRESS 9400/10000 correct=9332 accuracy=99.28%
+PROGRESS 9500/10000 correct=9432 accuracy=99.28%
+PROGRESS 9600/10000 correct=9532 accuracy=99.29%
+PROGRESS 9700/10000 correct=9631 accuracy=99.29%
+PROGRESS 9800/10000 correct=9730 accuracy=99.29%
+PROGRESS 9900/10000 correct=9830 accuracy=99.29%
+PROGRESS 10000/10000 correct=9930 accuracy=99.30%
+W6A6_MNIST_SUMMARY samples=10000 correct=9930 accuracy=99.3000% threshold=90.0000% [PASS]
+W6A6_MNIST_RESULT_FILE=D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w6a6/reports/mnist/w6a6_mnist_10000_results.csv
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1689.79 seconds; current allocated memory: 0.477 MB.
+INFO: [HLS 200-1510] Running: close_project 
+W6A6_MNIST_CSIM_PASS
+INFO: [HLS 200-112] Total CPU user time: 4 seconds. Total CPU system time: 2 seconds. Total elapsed time: 1705.18 seconds; peak allocated memory: 674.809 MB.
+INFO: [Common 17-206] Exiting vitis_hls at Mon Sep 14 12:55:18 2026...

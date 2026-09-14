@@ -1,0 +1,218 @@
+
+
+================================================================
+== Vitis HLS Report for 'lenet_w4a4_top_Pipeline_REQUANT_VECTOR7'
+================================================================
+* Date:           Tue Sep 15 00:31:06 2026
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        g_w4a4_lc2_validation
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.912 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       17|       17|  0.170 us|  0.170 us|   17|   17|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                  |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name    |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- REQUANT_VECTOR  |       15|       15|         7|          1|          1|    10|       yes|
+        +------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 7
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 7
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 7, States = { 1 2 3 4 5 6 7 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.32>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%index = alloca i32 1"   --->   Operation 10 'alloca' 'index' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (1.58ns)   --->   "%store_ln0 = store i4 0, i4 %index"   --->   Operation 11 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%br_ln0 = br void %if.end.i.i320"   --->   Operation 12 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%index_3 = load i4 %index" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:300]   --->   Operation 13 'load' 'index_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 14 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (1.30ns)   --->   "%icmp_ln299 = icmp_eq  i4 %index_3, i4 10" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:299]   --->   Operation 15 'icmp' 'icmp_ln299' <Predicate = true> <Delay = 1.30> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.30> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 10, i64 10, i64 10"   --->   Operation 16 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (1.73ns)   --->   "%add_ln300 = add i4 %index_3, i4 1" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:300]   --->   Operation 17 'add' 'add_ln300' <Predicate = true> <Delay = 1.73> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%br_ln298 = br i1 %icmp_ln299, void %if.end.i.i320.split_ifconv, void %_ZN10lenet_w4a412_GLOBAL__N_114requant_vectorILi10EEEvPK6ap_intILi32EEPS2_ILi4EEyb.exit.exitStub" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:298]   --->   Operation 18 'br' 'br_ln298' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%index_3_cast = zext i4 %index_3" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:300]   --->   Operation 19 'zext' 'index_3_cast' <Predicate = (!icmp_ln299)> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%fc2_acc_V_addr = getelementptr i14 %fc2_acc_V, i64 0, i64 %index_3_cast" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:304]   --->   Operation 20 'getelementptr' 'fc2_acc_V_addr' <Predicate = (!icmp_ln299)> <Delay = 0.00>
+ST_1 : Operation 21 [2/2] (2.32ns)   --->   "%value_V = load i4 %fc2_acc_V_addr" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:304]   --->   Operation 21 'load' 'value_V' <Predicate = (!icmp_ln299)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 14> <Depth = 10> <RAM>
+ST_1 : Operation 22 [1/1] (1.58ns)   --->   "%store_ln298 = store i4 %add_ln300, i4 %index" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:298]   --->   Operation 22 'store' 'store_ln298' <Predicate = (!icmp_ln299)> <Delay = 1.58>
+
+State 2 <SV = 1> <Delay = 4.88>
+ST_2 : Operation 23 [1/2] (2.32ns)   --->   "%value_V = load i4 %fc2_acc_V_addr" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:304]   --->   Operation 23 'load' 'value_V' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 14> <Depth = 10> <RAM>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%sext_ln23 = sext i14 %value_V" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:23]   --->   Operation 24 'sext' 'sext_ln23' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%negative = bitselect i1 @_ssdm_op_BitSelect.i1.i14.i32, i14 %value_V, i32 13"   --->   Operation 25 'bitselect' 'negative' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (1.81ns)   --->   "%magnitude_V = sub i15 0, i15 %sext_ln23"   --->   Operation 26 'sub' 'magnitude_V' <Predicate = true> <Delay = 1.81> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.81> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 27 [1/1] (0.75ns)   --->   "%magnitude_V_1 = select i1 %negative, i15 %magnitude_V, i15 %sext_ln23" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:37]   --->   Operation 27 'select' 'magnitude_V_1' <Predicate = true> <Delay = 0.75> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.75> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 6.91>
+ST_3 : Operation 28 [1/1] (0.00ns)   --->   "%sext_ln186 = sext i15 %magnitude_V_1"   --->   Operation 28 'sext' 'sext_ln186' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 29 [1/1] (0.00ns)   --->   "%zext_ln186 = zext i32 %sext_ln186"   --->   Operation 29 'zext' 'zext_ln186' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 30 [2/2] (6.91ns)   --->   "%product_V = mul i68 %zext_ln186, i68 44572774922"   --->   Operation 30 'mul' 'product_V' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 6.91>
+ST_4 : Operation 31 [1/2] (6.91ns)   --->   "%product_V = mul i68 %zext_ln186, i68 44572774922"   --->   Operation 31 'mul' 'product_V' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 32 [1/1] (0.00ns)   --->   "%ret_V = trunc i68 %product_V" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:44]   --->   Operation 32 'trunc' 'ret_V' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 33 [1/1] (0.00ns)   --->   "%quotient_V_2 = partselect i28 @_ssdm_op_PartSelect.i28.i68.i32.i32, i68 %product_V, i32 40, i32 67"   --->   Operation 33 'partselect' 'quotient_V_2' <Predicate = true> <Delay = 0.00>
+
+State 5 <SV = 4> <Delay = 3.51>
+ST_5 : Operation 34 [1/1] (0.00ns) (grouped into LUT with out node quotient_V_3)   --->   "%p_Result_s = bitselect i1 @_ssdm_op_BitSelect.i1.i68.i32, i68 %product_V, i32 40" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:48]   --->   Operation 34 'bitselect' 'p_Result_s' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 35 [1/1] (2.53ns)   --->   "%icmp_ln1035 = icmp_ugt  i40 %ret_V, i40 549755813888"   --->   Operation 35 'icmp' 'icmp_ln1035' <Predicate = true> <Delay = 2.53> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.53> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 36 [1/1] (2.43ns)   --->   "%quotient_V = add i28 %quotient_V_2, i28 1"   --->   Operation 36 'add' 'quotient_V' <Predicate = true> <Delay = 2.43> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.43> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 37 [1/1] (2.53ns)   --->   "%icmp_ln1019 = icmp_eq  i40 %ret_V, i40 549755813888"   --->   Operation 37 'icmp' 'icmp_ln1019' <Predicate = true> <Delay = 2.53> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.53> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 38 [1/1] (0.00ns) (grouped into LUT with out node quotient_V_3)   --->   "%and_ln64 = and i1 %icmp_ln1019, i1 %p_Result_s" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:64]   --->   Operation 38 'and' 'and_ln64' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 39 [1/1] (0.00ns) (grouped into LUT with out node quotient_V_3)   --->   "%or_ln64 = or i1 %icmp_ln1035, i1 %and_ln64" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:64]   --->   Operation 39 'or' 'or_ln64' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 40 [1/1] (0.97ns) (out node of the LUT)   --->   "%quotient_V_3 = select i1 %or_ln64, i28 %quotient_V, i28 %quotient_V_2" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:64]   --->   Operation 40 'select' 'quotient_V_3' <Predicate = true> <Delay = 0.97> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.83> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 5.69>
+ST_6 : Operation 41 [1/1] (0.00ns)   --->   "%zext_ln72 = zext i28 %quotient_V_3" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:72]   --->   Operation 41 'zext' 'zext_ln72' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 42 [1/1] (2.43ns)   --->   "%rounded_V_1 = sub i29 0, i29 %zext_ln72" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:76]   --->   Operation 42 'sub' 'rounded_V_1' <Predicate = (negative)> <Delay = 2.43> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.43> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 43 [1/1] (0.80ns)   --->   "%rounded_V_2 = select i1 %negative, i29 %rounded_V_1, i29 %zext_ln72" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:75]   --->   Operation 43 'select' 'rounded_V_2' <Predicate = true> <Delay = 0.80> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_6 : Operation 44 [1/1] (0.00ns)   --->   "%tmp = partselect i26 @_ssdm_op_PartSelect.i26.i29.i32.i32, i29 %rounded_V_2, i32 3, i32 28"   --->   Operation 44 'partselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 45 [1/1] (2.45ns)   --->   "%icmp_ln1035_1 = icmp_sgt  i26 %tmp, i26 0"   --->   Operation 45 'icmp' 'icmp_ln1035_1' <Predicate = true> <Delay = 2.45> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.45> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 54 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 54 'ret' 'ret_ln0' <Predicate = (icmp_ln299)> <Delay = 0.00>
+
+State 7 <SV = 6> <Delay = 6.61>
+ST_7 : Operation 46 [1/1] (0.00ns)   --->   "%specloopname_ln298 = specloopname void @_ssdm_op_SpecLoopName, void @empty_14" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:298]   --->   Operation 46 'specloopname' 'specloopname_ln298' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 47 [1/1] (0.80ns)   --->   "%rounded_V_3 = select i1 %icmp_ln1035_1, i29 7, i29 %rounded_V_2" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:83]   --->   Operation 47 'select' 'rounded_V_3' <Predicate = true> <Delay = 0.80> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_7 : Operation 48 [1/1] (2.46ns)   --->   "%icmp_ln1027 = icmp_slt  i29 %rounded_V_3, i29 536870905"   --->   Operation 48 'icmp' 'icmp_ln1027' <Predicate = true> <Delay = 2.46> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.46> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 49 [1/1] (0.00ns)   --->   "%trunc_ln91 = trunc i29 %rounded_V_3" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:91]   --->   Operation 49 'trunc' 'trunc_ln91' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 50 [1/1] (1.02ns)   --->   "%select_ln91 = select i1 %icmp_ln1027, i4 9, i4 %trunc_ln91" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:91]   --->   Operation 50 'select' 'select_ln91' <Predicate = true> <Delay = 1.02> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_7 : Operation 51 [1/1] (0.00ns)   --->   "%fc2_quant_V_addr = getelementptr i4 %fc2_quant_V, i64 0, i64 %index_3_cast" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:302]   --->   Operation 51 'getelementptr' 'fc2_quant_V_addr' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 52 [1/1] (2.32ns)   --->   "%store_ln302 = store i4 %select_ln91, i4 %fc2_quant_V_addr" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:302]   --->   Operation 52 'store' 'store_ln302' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 10> <RAM>
+ST_7 : Operation 53 [1/1] (0.00ns)   --->   "%br_ln298 = br void %if.end.i.i320" [D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:298]   --->   Operation 53 'br' 'br_ln298' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 3.32ns
+The critical path consists of the following:
+	'alloca' operation ('index') [3]  (0 ns)
+	'load' operation ('index', D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:300) on local variable 'index' [7]  (0 ns)
+	'add' operation ('add_ln300', D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:300) [11]  (1.74 ns)
+	'store' operation ('store_ln298', D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:298) of variable 'add_ln300', D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:300 on local variable 'index' [45]  (1.59 ns)
+
+ <State 2>: 4.89ns
+The critical path consists of the following:
+	'load' operation ('value.V', D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:304) on array 'fc2_acc_V' [17]  (2.32 ns)
+	'sub' operation ('magnitude.V') [20]  (1.81 ns)
+	'select' operation ('magnitude.V', D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:37) [21]  (0.754 ns)
+
+ <State 3>: 6.91ns
+The critical path consists of the following:
+	'mul' operation ('product.V') [24]  (6.91 ns)
+
+ <State 4>: 6.91ns
+The critical path consists of the following:
+	'mul' operation ('product.V') [24]  (6.91 ns)
+
+ <State 5>: 3.51ns
+The critical path consists of the following:
+	'icmp' operation ('icmp_ln1035') [28]  (2.53 ns)
+	'or' operation ('or_ln64', D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:64) [32]  (0 ns)
+	'select' operation ('quotient.V', D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:64) [33]  (0.978 ns)
+
+ <State 6>: 5.69ns
+The critical path consists of the following:
+	'sub' operation ('rounded.V', D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:76) [35]  (2.43 ns)
+	'select' operation ('rounded.V', D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:75) [36]  (0.804 ns)
+	'icmp' operation ('icmp_ln1035_1') [38]  (2.46 ns)
+
+ <State 7>: 6.61ns
+The critical path consists of the following:
+	'select' operation ('rounded.V', D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:83) [39]  (0.804 ns)
+	'icmp' operation ('icmp_ln1027') [40]  (2.46 ns)
+	'select' operation ('select_ln91', D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:91) [42]  (1.02 ns)
+	'store' operation ('store_ln302', D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:302) of variable 'select_ln91', D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/src/lenet_w4a4_lc2.cpp:91 on array 'fc2_quant_V' [44]  (2.32 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
