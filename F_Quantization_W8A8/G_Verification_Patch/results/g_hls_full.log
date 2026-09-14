@@ -1106,3 +1106,5 @@ source lenet_w4a4_top.tcl
 // RTL Simulation : 8 / 20 [0.00%] @ "34512025000"
 // RTL Simulation : 9 / 20 [0.00%] @ "38825985000"
 // RTL Simulation : 10 / 20 [0.00%] @ "43139945000"
+// RTL Simulation : 11 / 20 [0.00%] @ "47453905000"
+// RTL Simulation : 12 / 20 [0.00%] @ "51767865000"
