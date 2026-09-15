@@ -32,3 +32,19 @@ source lenet_w4a4_top.tcl
 // RTL Simulation : 8 / 20 [0.00%] @ "34512025000"
 // RTL Simulation : 9 / 20 [0.00%] @ "38825985000"
 // RTL Simulation : 10 / 20 [0.00%] @ "43139945000"
+// RTL Simulation : 11 / 20 [0.00%] @ "47453905000"
+// RTL Simulation : 12 / 20 [0.00%] @ "51767865000"
+// RTL Simulation : 13 / 20 [0.00%] @ "56081825000"
+// RTL Simulation : 14 / 20 [0.00%] @ "60395785000"
+// RTL Simulation : 15 / 20 [0.00%] @ "64709745000"
+// RTL Simulation : 16 / 20 [0.00%] @ "69023705000"
+// RTL Simulation : 17 / 20 [0.00%] @ "73337665000"
+// RTL Simulation : 18 / 20 [0.00%] @ "77651625000"
+// RTL Simulation : 19 / 20 [0.00%] @ "81965585000"
+// RTL Simulation : 20 / 20 [100.00%] @ "86279545000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 86279605 ns : File "D:/GitHub/vivado/vivado/F_Quantization_W8A8/G_Verification_Patch/work/g_w4a4_lc2_validation/solution1/sim/verilog/lenet_w4a4_top.autotb.v" Line 731
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:24:57 . Memory (MB): peak = 246.000 ; gain = 13.289
+## quit
+INFO: xsimkernel Simulation Memory Usage: 283124 KB (Peak: 283124 KB), Simulation CPU Usage: 1463202 ms
+INFO: [Common 17-206] Exiting xsim at Tue Sep 15 00:57:48 2026...

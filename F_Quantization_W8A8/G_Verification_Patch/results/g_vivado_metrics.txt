@@ -1,0 +1,5 @@
+DCP=D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/final_delivery/hardware/lenet_w4a4_system_routed.dcp
+ROUTE_STATUS=Fully Routed
+WNS_NS=0.138
+TNS_NS=0.0
+DRC_CRITICAL_COUNT=0

@@ -1912,3 +1912,15 @@ Execute       source .run_sim.tcl
 Execute         source check_sim.tcl 
 Execute         source dataflow_monitor_API.tcl 
 Execute         source .sim.status.tcl 
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+Command       ap_source done; 1554.64 sec.
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+Command     cosim_design done; 1581.61 sec.
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 3 seconds. CPU system time: 1 seconds. Elapsed time: 1581.61 seconds; current allocated memory: 10.168 MB.
+Execute     close_project 
+INFO: [HLS 200-1510] Running: close_project 
+Execute       close_solution 
+Execute         cleanup_all 
+Execute         cleanup_all 

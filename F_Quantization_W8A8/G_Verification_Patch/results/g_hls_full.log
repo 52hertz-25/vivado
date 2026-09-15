@@ -1108,3 +1108,45 @@ source lenet_w4a4_top.tcl
 // RTL Simulation : 10 / 20 [0.00%] @ "43139945000"
 // RTL Simulation : 11 / 20 [0.00%] @ "47453905000"
 // RTL Simulation : 12 / 20 [0.00%] @ "51767865000"
+// RTL Simulation : 13 / 20 [0.00%] @ "56081825000"
+// RTL Simulation : 14 / 20 [0.00%] @ "60395785000"
+// RTL Simulation : 15 / 20 [0.00%] @ "64709745000"
+// RTL Simulation : 16 / 20 [0.00%] @ "69023705000"
+// RTL Simulation : 17 / 20 [0.00%] @ "73337665000"
+// RTL Simulation : 18 / 20 [0.00%] @ "77651625000"
+// RTL Simulation : 19 / 20 [0.00%] @ "81965585000"
+// RTL Simulation : 20 / 20 [100.00%] @ "86279545000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 86279605 ns : File "D:/GitHub/vivado/vivado/F_Quantization_W8A8/G_Verification_Patch/work/g_w4a4_lc2_validation/solution1/sim/verilog/lenet_w4a4_top.autotb.v" Line 731
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:24:57 . Memory (MB): peak = 246.000 ; gain = 13.289
+## quit
+INFO: xsimkernel Simulation Memory Usage: 283124 KB (Peak: 283124 KB), Simulation CPU Usage: 1463202 ms
+INFO: [Common 17-206] Exiting xsim at Tue Sep 15 00:57:48 2026...
+INFO: [COSIM 212-316] Starting C post checking ...
+G_SAMPLE order=0 index=0 expected=7 predicted=7 PASS
+G_SAMPLE order=1 index=1 expected=2 predicted=2 PASS
+G_SAMPLE order=2 index=2 expected=1 predicted=1 PASS
+G_SAMPLE order=3 index=3 expected=0 predicted=0 PASS
+G_SAMPLE order=4 index=4 expected=4 predicted=4 PASS
+G_SAMPLE order=5 index=5 expected=1 predicted=1 PASS
+G_SAMPLE order=6 index=6 expected=4 predicted=4 PASS
+G_SAMPLE order=7 index=7 expected=9 predicted=9 PASS
+G_SAMPLE order=8 index=8 expected=5 predicted=5 PASS
+G_SAMPLE order=9 index=9 expected=9 predicted=9 PASS
+G_SAMPLE order=10 index=10 expected=0 predicted=0 PASS
+G_SAMPLE order=11 index=11 expected=6 predicted=6 PASS
+G_SAMPLE order=12 index=15 expected=5 predicted=5 PASS
+G_SAMPLE order=13 index=17 expected=7 predicted=7 PASS
+G_SAMPLE order=14 index=18 expected=3 predicted=3 PASS
+G_SAMPLE order=15 index=21 expected=6 predicted=6 PASS
+G_SAMPLE order=16 index=30 expected=3 predicted=3 PASS
+G_SAMPLE order=17 index=35 expected=2 predicted=2 PASS
+G_SAMPLE order=18 index=61 expected=8 predicted=8 PASS
+G_SAMPLE order=19 index=84 expected=8 predicted=8 PASS
+G_BALANCED20_SUMMARY samples=20 correct=20
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 3 seconds. CPU system time: 1 seconds. Elapsed time: 1581.61 seconds; current allocated memory: 10.168 MB.
+G_COSIM_PASS
+INFO: [HLS 200-1510] Running: close_project 
+INFO: [HLS 200-112] Total CPU user time: 48 seconds. Total CPU system time: 12 seconds. Total elapsed time: 1673.89 seconds; peak allocated memory: 986.246 MB.
+INFO: [Common 17-206] Exiting vitis_hls at Tue Sep 15 00:57:52 2026...

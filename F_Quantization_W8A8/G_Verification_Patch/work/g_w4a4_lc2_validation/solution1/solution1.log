@@ -623,4 +623,39 @@ INFO: [RTGEN 206-100] Generating core module 'mul_4ns_9ns_12_1_1': 1 instance(s)
 INFO: [RTGEN 206-100] Finished creating RTL model for 'lenet_w4a4_top'.
 INFO: [RTMG 210-278] Implementing memory 'lenet_w4a4_top_local_weight_V_RAM_AUTO_1R1W' using auto RAMs.
 INFO: [RTMG 210-278] Implementing memory 'lenet_w4a4_top_local_weight_V_2_RAM_AUTO_1R1W' using auto RAMs.
-INFO: [RTMG 210-278] Implementing memory 'lenet_w4
+INFO: [RTMG 210-278] Implementing memory 'lenet_w4a4_top_local_weight_V_4_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_w4a4_top_input_V_RAM_1WNR_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_w4a4_top_conv1_acc_V_RAM_1WNR_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_w4a4_top_pool1_V_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_w4a4_top_conv2_acc_V_RAM_1WNR_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_w4a4_top_pool2_V_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_w4a4_top_conv3_acc_V_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_w4a4_top_conv3_relu_V_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_w4a4_top_fc1_acc_V_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_w4a4_top_fc1_relu_V_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_w4a4_top_fc2_acc_V_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'lenet_w4a4_top_fc2_quant_V_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.676 seconds; current allocated memory: 956.754 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 4 seconds. CPU system time: 1 seconds. Elapsed time: 5.53 seconds; current allocated memory: 965.402 MB.
+INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 2 seconds. CPU system time: 1 seconds. Elapsed time: 2.737 seconds; current allocated memory: 975.879 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for lenet_w4a4_top.
+INFO: [VLOG 209-307] Generating Verilog RTL for lenet_w4a4_top.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 136.99 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 41 seconds. CPU system time: 9 seconds. Elapsed time: 65.549 seconds; current allocated memory: 301.160 MB.
+INFO: [HLS 200-1510] Running: cosim_design -rtl verilog -tool xsim -trace_level none -argv D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w8a8/data/mnist_w8a8 D:/GitHub/vivado/vivado/F_Quantization_W8A8/hls_w4a4/model/int4_weights D:/GitHub/vivado/vivado/F_Quantization_W8A8/G_Verification_Patch/results/g_balanced20_cosim.csv 
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 3 seconds. CPU system time: 1 seconds. Elapsed time: 1581.61 seconds; current allocated memory: 10.168 MB.
+INFO: [HLS 200-1510] Running: close_project 
+INFO: [HLS 200-112] Total CPU user time: 48 seconds. Total CPU system time: 12 seconds. Total elapsed time: 1673.89 seconds; peak allocated memory: 986.246 MB.
+INFO: [Common 17-206] Exiting vitis_hls at Tue Sep 15 00:57:52 2026...

@@ -11,3 +11,9 @@
 09/15/26 00:30:14: SESSION_MGR: creating session with session uuid: 'bb8b94ad-1cd3-49ae-8148-08c7893fc2b3' and name 'vitis_hls'
 09/15/26 00:30:14: KERNEL_SVC: creating session with uuid: 'bb8b94ad-1cd3-49ae-8148-08c7893fc2b3' and name 'vitis_hls'
 09/15/26 00:30:14: GUIDANCE_SMGR: creating guidance session with uuid: 'bb8b94ad-1cd3-49ae-8148-08c7893fc2b3' and name 'vitis_hls'
+09/15/26 00:57:53: STOP_SERVER received, server token: 05d93d2b-fbad-4e41-8536-82316db17966, passed token: 05d93d2b-fbad-4e41-8536-82316db17966
+09/15/26 00:57:53: Socket received request to stop server.
+09/15/26 00:57:53: Dispatch Server: do_await_stop
+09/15/26 00:57:53: SERVER: destructor for server bound to port 60539
+09/15/26 00:57:53: Server exiting with status 0.
+09/15/26 00:57:53: Closing log file.
