@@ -1,0 +1,6 @@
+transition,sample_count,percent
+both_correct,9675,96.75
+both_wrong_changed,23,0.23
+both_wrong_same_prediction,95,0.95
+pad_only_correct,71,0.71
+resize_only_correct,136,1.36

@@ -1,0 +1,21 @@
+{
+  "configuration": "W4A4-INT32",
+  "weight_bits": 4,
+  "activation_bits": 4,
+  "accumulator_bits": 32,
+  "test_samples": 10000,
+  "fp32_correct": 9882,
+  "w4a4_correct": 9746,
+  "fp32_accuracy_percent": 98.82,
+  "w4a4_accuracy_percent": 97.46,
+  "accuracy_drop_percentage_points": 1.3599999999999994,
+  "prediction_agreement_percent": 97.99,
+  "accumulator_max_abs": {
+    "conv1": 300,
+    "conv2": 349,
+    "conv3": 379,
+    "fc1": 131,
+    "fc2": 210
+  },
+  "int32_overflow_check": "PASS"
+}

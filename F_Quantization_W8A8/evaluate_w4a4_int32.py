@@ -1,826 +1,588 @@
-from pathlib import Path
+#!/usr/bin/env python3
+"""Evaluate LeNet-5 W4A4 on MNIST and retain per-sample evidence.
+
+The model was trained and calibrated with bilinear Resize((32, 32)), so that
+pipeline is the default. Pad(2) remains available as a preprocessing ablation.
+"""
+
+from __future__ import annotations
+
+import argparse
 import csv
 import json
+import platform
+from pathlib import Path
+from typing import Callable
 
 import numpy as np
 import torch
 import torch.nn.functional as F
 from torch.utils.data import DataLoader
 from torchvision import datasets, transforms
+from torchvision.transforms import InterpolationMode
 
-
-# ============================================================
-# 1. 路径设置
-# ============================================================
 
 BASE_DIR = Path(__file__).resolve().parent
-
 FP32_MODEL_PATH = BASE_DIR / "lenet5_fp32_from_hls.pth"
-
-INT4_WEIGHT_DIR = (
-    BASE_DIR /
-    "exported_weights" /
-    "int4"
+INT4_WEIGHT_DIR = BASE_DIR / "exported_weights" / "int4"
+WEIGHT_SCALE_PATH = INT4_WEIGHT_DIR / "weight_scales.json"
+ACTIVATION_SCALE_PATH = BASE_DIR / "activation_calibration.json"
+DEFAULT_DATA_DIR = BASE_DIR / "data"
+HLS_DATA_DIR = BASE_DIR / "hls_w8a8" / "data" / "mnist_w8a8"
+HLS_RESULT_PATH = (
+    BASE_DIR
+    / "hls_w4a4"
+    / "reports"
+    / "mnist"
+    / "w4a4_mnist_10000_results.csv"
 )
-
-WEIGHT_SCALE_PATH = (
-    INT4_WEIGHT_DIR /
-    "weight_scales.json"
-)
-
-ACTIVATION_SCALE_PATH = (
-    BASE_DIR /
-    "activation_calibration.json"
-)
-
-DATA_DIR = BASE_DIR / "data"
-
-JSON_RESULT_PATH = (
-    BASE_DIR /
-    "w4a4_int32_results.json"
-)
-
-CSV_RESULT_PATH = (
-    BASE_DIR /
-    "w4a4_accuracy_results.csv"
-)
-
-
-# ============================================================
-# 2. 运行设备
-# ============================================================
-
-if torch.backends.mps.is_available():
-    DEVICE = torch.device("mps")
-else:
-    DEVICE = torch.device("cpu")
-
-print(f"运行设备：{DEVICE}")
-
-
-# ============================================================
-# 3. W4A4量化参数
-# ============================================================
 
 QMIN = -7
 QMAX = 7
-
-INT32_MIN = -(2 ** 31)
-INT32_MAX = 2 ** 31 - 1
-
-LAYER_NAMES = [
-    "conv1",
-    "conv2",
-    "conv3",
-    "fc1",
-    "fc2",
-]
-
-
-# ============================================================
-# 4. 读取JSON
-# ============================================================
-
-def load_json(path):
-    if not path.exists():
-        raise FileNotFoundError(
-            f"找不到文件：\n{path}"
-        )
-
-    with open(
-        path,
-        "r",
-        encoding="utf-8"
-    ) as file:
-        return json.load(file)
-
-
-weight_scale_data = load_json(
-    WEIGHT_SCALE_PATH
-)
-
-activation_scale_data = load_json(
-    ACTIVATION_SCALE_PATH
-)
-
-
-# ============================================================
-# 5. 提取权重缩放系数
-# ============================================================
-
-def get_weight_scale(layer_name):
-    item = weight_scale_data[layer_name]
-
-    if isinstance(item, dict):
-        return float(item["scale"])
-
-    return float(item)
-
-
-# ============================================================
-# 6. 计算W4A4激活值缩放系数
-# ============================================================
-
-def get_activation_scale(name):
-    if name not in activation_scale_data:
-        raise KeyError(
-            f"激活值校准文件中找不到：{name}"
-        )
-
-    item = activation_scale_data[name]
-
-    if isinstance(item, dict):
-        if "max_abs" in item:
-            max_abs = float(item["max_abs"])
-            return max_abs / QMAX if max_abs > 0 else 1.0
-
-        if "scale" in item:
-            # 原校准文件是按照INT8的127计算的
-            int8_scale = float(item["scale"])
-            max_abs = int8_scale * 127.0
-            return max_abs / QMAX if max_abs > 0 else 1.0
-
-    # 如果JSON中直接存的是数字，默认它是INT8 scale
-    int8_scale = float(item)
-    max_abs = int8_scale * 127.0
-
-    return max_abs / QMAX if max_abs > 0 else 1.0
-
-
-# 兼容校准文件中pool2可能写成pool12的情况
-def find_activation_scale(*names):
-    for name in names:
-        if name in activation_scale_data:
-            return get_activation_scale(name)
-
-    raise KeyError(
-        f"找不到激活缩放系数，尝试过：{names}"
-    )
-
-
-activation_scales = {
-    "input": find_activation_scale("input"),
-
-    "conv1_relu": find_activation_scale(
-        "conv1_relu"
-    ),
-
-    "pool1": find_activation_scale(
-        "pool1"
-    ),
-
-    "conv2_relu": find_activation_scale(
-        "conv2_relu"
-    ),
-
-    "pool2": find_activation_scale(
-        "pool2",
-        "pool12"
-    ),
-
-    "conv3_relu": find_activation_scale(
-        "conv3_relu"
-    ),
-
-    "fc1_relu": find_activation_scale(
-        "fc1_relu"
-    ),
-
-    "fc2_output": find_activation_scale(
-        "fc2_output"
-    ),
+INT32_MAX = 2**31 - 1
+LAYER_NAMES = ("conv1", "conv2", "conv3", "fc1", "fc2")
+Q40_SHIFT = 40
+Q40_MULTIPLIERS = {
+    "conv1": 32113559987,
+    "conv2": 41310957922,
+    "conv3": 44103899460,
+    "fc1": 78194388213,
+    "fc2": 44572774922,
 }
 
 
-# ============================================================
-# 7. 加载INT4权重
-# ============================================================
-
-def load_int4_weight(layer_name):
-    path = (
-        INT4_WEIGHT_DIR /
-        f"{layer_name}.weight.int4.npy"
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--preprocess",
+        choices=("resize", "pad"),
+        default="resize",
+        help="resize is the trained/HLS pipeline; pad is the ablation",
     )
-
-    if not path.exists():
-        raise FileNotFoundError(
-            f"找不到{layer_name}的INT4权重：\n{path}"
-        )
-
-    array = np.load(path)
-
-    if array.dtype != np.int8:
-        array = array.astype(np.int8)
-
-    if array.min() < QMIN or array.max() > QMAX:
-        raise ValueError(
-            f"{layer_name}权重超出INT4范围："
-            f"[{array.min()}, {array.max()}]"
-        )
-
-    return torch.from_numpy(array).to(
-        DEVICE
-    ).to(torch.float32)
-
-
-int4_weights = {}
-
-for layer_name in LAYER_NAMES:
-    int4_weights[layer_name] = load_int4_weight(
-        layer_name
+    parser.add_argument(
+        "--device",
+        choices=("cpu", "mps", "auto"),
+        default="cpu",
+        help="CPU is the default for deterministic reference evidence",
     )
-
-
-# ============================================================
-# 8. 加载FP32权重
-# ============================================================
-
-if not FP32_MODEL_PATH.exists():
-    raise FileNotFoundError(
-        f"找不到FP32模型文件：\n{FP32_MODEL_PATH}"
+    parser.add_argument("--batch-size", type=int, default=256)
+    parser.add_argument("--data-dir", type=Path, default=DEFAULT_DATA_DIR)
+    parser.add_argument(
+        "--output-dir",
+        type=Path,
+        help="default: results/w4a4_preprocessing_ablation/<pipeline>",
     )
+    parser.add_argument(
+        "--compare-hls-q40",
+        action="store_true",
+        help="compare every Resize prediction with the HLS Q40 reference",
+    )
+    return parser.parse_args()
 
-checkpoint = torch.load(
-    FP32_MODEL_PATH,
-    map_location="cpu",
-    weights_only=False
-)
 
-if isinstance(checkpoint, torch.nn.Module):
-    fp32_state_dict = checkpoint.state_dict()
+def select_device(requested: str) -> torch.device:
+    if requested == "cpu":
+        return torch.device("cpu")
+    if requested == "mps":
+        if not torch.backends.mps.is_available():
+            raise RuntimeError("MPS was requested but is not available")
+        return torch.device("mps")
+    return torch.device("mps" if torch.backends.mps.is_available() else "cpu")
 
-elif isinstance(checkpoint, dict):
-    if "state_dict" in checkpoint:
-        fp32_state_dict = checkpoint["state_dict"]
 
-    elif "model_state_dict" in checkpoint:
-        fp32_state_dict = checkpoint["model_state_dict"]
+def load_json(path: Path) -> dict:
+    if not path.is_file():
+        raise FileNotFoundError(path)
+    return json.loads(path.read_text(encoding="utf-8"))
 
+
+def activation_scale(calibration: dict, name: str) -> float:
+    item = calibration[name]
+    if isinstance(item, dict) and "max_abs" in item:
+        maximum = float(item["max_abs"])
+    elif isinstance(item, dict) and "scale" in item:
+        maximum = float(item["scale"]) * 127.0
     else:
-        fp32_state_dict = checkpoint
-
-else:
-    raise TypeError(
-        "无法识别FP32模型文件格式。"
-    )
-
-clean_state_dict = {}
-
-for key, value in fp32_state_dict.items():
-    clean_key = key
-
-    if clean_key.startswith("module."):
-        clean_key = clean_key[len("module."):]
-
-    clean_state_dict[clean_key] = value
+        maximum = float(item) * 127.0
+    return maximum / QMAX if maximum > 0 else 1.0
 
 
-def get_fp32_parameter(name):
-    if name not in clean_state_dict:
-        return None
-
-    value = clean_state_dict[name]
-
-    if not isinstance(value, torch.Tensor):
-        value = torch.tensor(value)
-
-    return value.detach().to(
-        DEVICE
-    ).to(torch.float32)
+def weight_scale(scales: dict, name: str) -> float:
+    item = scales[name]
+    return float(item["scale"] if isinstance(item, dict) else item)
 
 
-fp32_weights = {}
-fp32_biases = {}
+def clean_state_dict(checkpoint: object) -> dict[str, torch.Tensor]:
+    if isinstance(checkpoint, torch.nn.Module):
+        state = checkpoint.state_dict()
+    elif isinstance(checkpoint, dict) and "state_dict" in checkpoint:
+        state = checkpoint["state_dict"]
+    elif isinstance(checkpoint, dict) and "model_state_dict" in checkpoint:
+        state = checkpoint["model_state_dict"]
+    elif isinstance(checkpoint, dict):
+        state = checkpoint
+    else:
+        raise TypeError("Unsupported FP32 checkpoint format")
+    return {key.removeprefix("module."): value for key, value in state.items()}
 
-for layer_name in LAYER_NAMES:
-    weight_name = f"{layer_name}.weight"
-    bias_name = f"{layer_name}.bias"
 
-    fp32_weights[layer_name] = get_fp32_parameter(
-        weight_name
-    )
-
-    fp32_biases[layer_name] = get_fp32_parameter(
-        bias_name
-    )
-
-    if fp32_weights[layer_name] is None:
-        raise KeyError(
-            f"FP32模型中找不到：{weight_name}"
+class W4A4Model:
+    def __init__(self, device: torch.device):
+        self.device = device
+        self.weight_scales = load_json(WEIGHT_SCALE_PATH)
+        calibration = load_json(ACTIVATION_SCALE_PATH)
+        self.activation_scales = {
+            name: activation_scale(calibration, name)
+            for name in (
+                "input",
+                "conv1_relu",
+                "pool1",
+                "conv2_relu",
+                "pool2",
+                "conv3_relu",
+                "fc1_relu",
+                "fc2_output",
+            )
+        }
+        self.int4_weights = {
+            name: self._load_int4_weight(name) for name in LAYER_NAMES
+        }
+        checkpoint = torch.load(
+            FP32_MODEL_PATH,
+            map_location="cpu",
+            weights_only=False,
         )
+        state = clean_state_dict(checkpoint)
+        self.fp32_weights = {
+            name: state[f"{name}.weight"].detach().to(device, torch.float32)
+            for name in LAYER_NAMES
+        }
+        self.fp32_biases = {
+            name: (
+                state[f"{name}.bias"].detach().to(device, torch.float32)
+                if f"{name}.bias" in state
+                else None
+            )
+            for name in LAYER_NAMES
+        }
 
+    def _load_int4_weight(self, name: str) -> torch.Tensor:
+        path = INT4_WEIGHT_DIR / f"{name}.weight.int4.npy"
+        array = np.load(path).astype(np.int8, copy=False)
+        if array.min() < QMIN or array.max() > QMAX:
+            raise ValueError(f"{name} contains values outside [-7, 7]")
+        return torch.from_numpy(array).to(self.device, torch.float32)
 
-# ============================================================
-# 9. 量化与反量化函数
-# ============================================================
+    @staticmethod
+    def quantize_activation(value: torch.Tensor, scale: float) -> torch.Tensor:
+        return torch.round(value / scale).clamp(QMIN, QMAX)
 
-def quantize_activation(value, scale):
-    quantized = torch.round(value / scale)
+    def requantize_float(
+        self,
+        accumulator: torch.Tensor,
+        layer: str,
+        input_scale_name: str,
+        output_scale_name: str,
+    ) -> torch.Tensor:
+        ratio = (
+            self.activation_scales[input_scale_name]
+            * weight_scale(self.weight_scales, layer)
+            / self.activation_scales[output_scale_name]
+        )
+        return torch.round(accumulator * ratio).clamp(QMIN, QMAX)
 
-    quantized = torch.clamp(
-        quantized,
-        QMIN,
-        QMAX
-    )
+    @staticmethod
+    def requantize_q40(accumulator: torch.Tensor, layer: str) -> torch.Tensor:
+        # FP32 is only an efficient container for exact integer MACs here.
+        integer_accumulator = torch.round(accumulator).to(torch.int64)
+        product = integer_accumulator * Q40_MULTIPLIERS[layer]
+        magnitude = product.abs()
+        quotient = magnitude >> Q40_SHIFT
+        remainder = magnitude & ((1 << Q40_SHIFT) - 1)
+        half = 1 << (Q40_SHIFT - 1)
+        increment = (
+            (remainder > half)
+            | ((remainder == half) & ((quotient & 1) == 1))
+        ).to(torch.int64)
+        rounded = quotient + increment
+        signed = torch.where(product < 0, -rounded, rounded)
+        return signed.clamp(QMIN, QMAX).to(torch.float32)
 
-    return quantized
+    def fp32_forward(self, images: torch.Tensor) -> torch.Tensor:
+        x = F.relu(
+            F.conv2d(
+                images,
+                self.fp32_weights["conv1"],
+                self.fp32_biases["conv1"],
+            )
+        )
+        x = F.max_pool2d(x, 2)
+        x = F.relu(
+            F.conv2d(x, self.fp32_weights["conv2"], self.fp32_biases["conv2"])
+        )
+        x = F.max_pool2d(x, 2)
+        x = F.relu(
+            F.conv2d(x, self.fp32_weights["conv3"], self.fp32_biases["conv3"])
+        )
+        x = F.relu(
+            F.linear(
+                x.flatten(1),
+                self.fp32_weights["fc1"],
+                self.fp32_biases["fc1"],
+            )
+        )
+        return F.linear(x, self.fp32_weights["fc2"], self.fp32_biases["fc2"])
 
+    def w4a4_forward(
+        self,
+        images: torch.Tensor | None = None,
+        *,
+        quantized_input: torch.Tensor | None = None,
+        q40: bool = False,
+    ) -> tuple[torch.Tensor, dict[str, int]]:
+        if quantized_input is None:
+            if images is None:
+                raise ValueError("images or quantized_input is required")
+            x = self.quantize_activation(images, self.activation_scales["input"])
+        else:
+            x = quantized_input.to(self.device, torch.float32)
 
-def requantize_accumulator(
-    accumulator,
-    input_scale,
-    weight_scale,
-    output_scale,
-    bias=None
-):
-    value = (
-        accumulator *
-        input_scale *
-        weight_scale
-    )
-
-    if bias is not None:
-        if value.ndim == 4:
-            value = value + bias.view(
-                1,
-                -1,
-                1,
-                1
+        if q40:
+            requantize: Callable[[torch.Tensor, str, str, str], torch.Tensor] = (
+                lambda value, layer, _input, _output: self.requantize_q40(
+                    value, layer
+                )
             )
         else:
-            value = value + bias.view(
-                1,
-                -1
-            )
+            requantize = self.requantize_float
 
-    quantized = torch.round(
-        value / output_scale
-    )
+        maxima: dict[str, int] = {}
 
-    quantized = torch.clamp(
-        quantized,
-        QMIN,
-        QMAX
-    )
+        accumulator = F.conv2d(x, self.int4_weights["conv1"])
+        maxima["conv1"] = int(round(accumulator.abs().max().item()))
+        x = requantize(accumulator, "conv1", "input", "conv1_relu").clamp_min(0)
+        x = F.max_pool2d(x, 2)
 
-    return quantized
+        accumulator = F.conv2d(x, self.int4_weights["conv2"])
+        maxima["conv2"] = int(round(accumulator.abs().max().item()))
+        x = requantize(accumulator, "conv2", "pool1", "conv2_relu").clamp_min(0)
+        x = F.max_pool2d(x, 2)
 
+        accumulator = F.conv2d(x, self.int4_weights["conv3"])
+        maxima["conv3"] = int(round(accumulator.abs().max().item()))
+        x = requantize(accumulator, "conv3", "pool2", "conv3_relu").clamp_min(0)
 
-# ============================================================
-# 10. FP32前向推理
-# ============================================================
+        accumulator = F.linear(x.flatten(1), self.int4_weights["fc1"])
+        maxima["fc1"] = int(round(accumulator.abs().max().item()))
+        x = requantize(accumulator, "fc1", "conv3_relu", "fc1_relu").clamp_min(0)
 
-def fp32_forward(images):
-    x = F.conv2d(
-        images,
-        fp32_weights["conv1"],
-        fp32_biases["conv1"]
-    )
-
-    x = F.relu(x)
-    x = F.max_pool2d(x, 2)
-
-    x = F.conv2d(
-        x,
-        fp32_weights["conv2"],
-        fp32_biases["conv2"]
-    )
-
-    x = F.relu(x)
-    x = F.max_pool2d(x, 2)
-
-    x = F.conv2d(
-        x,
-        fp32_weights["conv3"],
-        fp32_biases["conv3"]
-    )
-
-    x = F.relu(x)
-
-    x = torch.flatten(x, 1)
-
-    x = F.linear(
-        x,
-        fp32_weights["fc1"],
-        fp32_biases["fc1"]
-    )
-
-    x = F.relu(x)
-
-    x = F.linear(
-        x,
-        fp32_weights["fc2"],
-        fp32_biases["fc2"]
-    )
-
-    return x
+        accumulator = F.linear(x, self.int4_weights["fc2"])
+        maxima["fc2"] = int(round(accumulator.abs().max().item()))
+        logits = requantize(accumulator, "fc2", "fc1_relu", "fc2_output")
+        return logits, maxima
 
 
-# ============================================================
-# 11. W4A4–INT32前向推理
-# ============================================================
-
-def w4a4_forward(images):
-    accumulator_maximum = {}
-
-    # 输入量化为4位
-    input_scale = activation_scales["input"]
-
-    x = quantize_activation(
-        images,
-        input_scale
-    )
-
-    # --------------------------------------------------------
-    # Conv1
-    # --------------------------------------------------------
-
-    accumulator = F.conv2d(
-        x,
-        int4_weights["conv1"],
-        bias=None
-    )
-
-    accumulator_maximum["conv1"] = int(
-        accumulator.abs().max().item()
-    )
-
-    x = requantize_accumulator(
-        accumulator,
-        input_scale,
-        get_weight_scale("conv1"),
-        activation_scales["conv1_relu"],
-        fp32_biases["conv1"]
-    )
-
-    x = torch.clamp(x, min=0)
-    x = F.max_pool2d(x, 2)
-
-    # --------------------------------------------------------
-    # Conv2
-    # --------------------------------------------------------
-
-    accumulator = F.conv2d(
-        x,
-        int4_weights["conv2"],
-        bias=None
-    )
-
-    accumulator_maximum["conv2"] = int(
-        accumulator.abs().max().item()
-    )
-
-    x = requantize_accumulator(
-        accumulator,
-        activation_scales["pool1"],
-        get_weight_scale("conv2"),
-        activation_scales["conv2_relu"],
-        fp32_biases["conv2"]
-    )
-
-    x = torch.clamp(x, min=0)
-    x = F.max_pool2d(x, 2)
-
-    # --------------------------------------------------------
-    # Conv3
-    # --------------------------------------------------------
-
-    accumulator = F.conv2d(
-        x,
-        int4_weights["conv3"],
-        bias=None
-    )
-
-    accumulator_maximum["conv3"] = int(
-        accumulator.abs().max().item()
-    )
-
-    x = requantize_accumulator(
-        accumulator,
-        activation_scales["pool2"],
-        get_weight_scale("conv3"),
-        activation_scales["conv3_relu"],
-        fp32_biases["conv3"]
-    )
-
-    x = torch.clamp(x, min=0)
-    x = torch.flatten(x, 1)
-
-    # --------------------------------------------------------
-    # FC1
-    # --------------------------------------------------------
-
-    accumulator = F.linear(
-        x,
-        int4_weights["fc1"],
-        bias=None
-    )
-
-    accumulator_maximum["fc1"] = int(
-        accumulator.abs().max().item()
-    )
-
-    x = requantize_accumulator(
-        accumulator,
-        activation_scales["conv3_relu"],
-        get_weight_scale("fc1"),
-        activation_scales["fc1_relu"],
-        fp32_biases["fc1"]
-    )
-
-    x = torch.clamp(x, min=0)
-
-    # --------------------------------------------------------
-    # FC2
-    # --------------------------------------------------------
-
-    accumulator = F.linear(
-        x,
-        int4_weights["fc2"],
-        bias=None
-    )
-
-    accumulator_maximum["fc2"] = int(
-        accumulator.abs().max().item()
-    )
-
-    x = requantize_accumulator(
-        accumulator,
-        activation_scales["fc1_relu"],
-        get_weight_scale("fc2"),
-        activation_scales["fc2_output"],
-        fp32_biases["fc2"]
-    )
-
-    return x, accumulator_maximum
-
-
-# ============================================================
-# 12. 准备MNIST测试集
-# ============================================================
-
-print("正在准备MNIST测试集……")
-
-transform = transforms.Compose([
-    transforms.Pad(2),
-    transforms.ToTensor(),
-    transforms.Normalize(
-        (0.1307,),
-        (0.3081,)
-    ),
-])
-
-test_dataset = datasets.MNIST(
-    root=DATA_DIR,
-    train=False,
-    download=True,
-    transform=transform
-)
-
-test_loader = DataLoader(
-    test_dataset,
-    batch_size=256,
-    shuffle=False,
-    num_workers=0
-)
-
-print(f"测试图片数量：{len(test_dataset)}")
-
-
-# ============================================================
-# 13. 运行完整测试
-# ============================================================
-
-fp32_correct = 0
-w4a4_correct = 0
-prediction_same = 0
-total = 0
-
-global_accumulator_maximum = {
-    "conv1": 0,
-    "conv2": 0,
-    "conv3": 0,
-    "fc1": 0,
-    "fc2": 0,
-}
-
-print("开始进行FP32与W4A4–INT32对比测试……")
-
-with torch.no_grad():
-    for batch_index, (images, labels) in enumerate(
-        test_loader
-    ):
-        images = images.to(DEVICE)
-        labels = labels.to(DEVICE)
-
-        fp32_logits = fp32_forward(images)
-
-        w4a4_logits, current_maximum = (
-            w4a4_forward(images)
+def build_transform(mode: str) -> transforms.Compose:
+    first_step = (
+        transforms.Resize(
+            (32, 32),
+            interpolation=InterpolationMode.BILINEAR,
+            antialias=True,
         )
+        if mode == "resize"
+        else transforms.Pad(2)
+    )
+    return transforms.Compose(
+        [
+            first_step,
+            transforms.ToTensor(),
+            transforms.Normalize((0.1307,), (0.3081,)),
+        ]
+    )
 
-        fp32_prediction = torch.argmax(
-            fp32_logits,
-            dim=1
+
+def load_hls_inputs() -> tuple[np.ndarray, np.ndarray]:
+    images = np.fromfile(
+        HLS_DATA_DIR / "mnist_test_32x32.bin", dtype=np.uint8
+    ).reshape(-1, 1, 32, 32)
+    labels = np.fromfile(HLS_DATA_DIR / "mnist_test_labels.bin", dtype=np.uint8)
+    if len(images) != len(labels):
+        raise ValueError("HLS image and label counts differ")
+    return images, labels
+
+
+def quantize_hls_pixels(pixels: np.ndarray, input_scale: float) -> np.ndarray:
+    normalized = (pixels.astype(np.float64) / 255.0 - 0.1307) / 0.3081
+    return np.clip(np.rint(normalized / input_scale), QMIN, QMAX).astype(np.int8)
+
+
+def confusion_matrix(labels: list[int], predictions: list[int]) -> np.ndarray:
+    matrix = np.zeros((10, 10), dtype=np.int64)
+    for expected, predicted in zip(labels, predictions):
+        matrix[expected, predicted] += 1
+    return matrix
+
+
+def read_hls_confusion(path: Path) -> np.ndarray:
+    rows = list(csv.reader(path.open(encoding="utf-8-sig")))
+    start = next(
+        i for i, row in enumerate(rows) if row and row[0].startswith("expected")
+    )
+    matrix = np.zeros((10, 10), dtype=np.int64)
+    for row in rows[start + 1 : start + 11]:
+        matrix[int(row[0])] = [int(value) for value in row[1:11]]
+    return matrix
+
+
+def write_confusion(path: Path, matrix: np.ndarray) -> None:
+    with path.open("w", newline="", encoding="utf-8") as stream:
+        writer = csv.writer(stream, lineterminator="\n")
+        writer.writerow(["expected\\predicted", *range(10)])
+        for expected in range(10):
+            writer.writerow([expected, *matrix[expected].tolist()])
+
+
+def main() -> None:
+    args = parse_args()
+    if args.batch_size <= 0:
+        raise ValueError("--batch-size must be positive")
+    if args.compare_hls_q40 and args.preprocess != "resize":
+        raise ValueError("--compare-hls-q40 requires --preprocess resize")
+    if args.compare_hls_q40 and args.device != "cpu":
+        raise ValueError("--compare-hls-q40 requires --device cpu")
+
+    device = select_device(args.device)
+    output_dir = args.output_dir or (
+        BASE_DIR / "results" / "w4a4_preprocessing_ablation" / args.preprocess
+    )
+    if not output_dir.is_absolute():
+        output_dir = BASE_DIR / output_dir
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    dataset = datasets.MNIST(
+        root=args.data_dir,
+        train=False,
+        download=True,
+        transform=build_transform(args.preprocess),
+    )
+    loader = DataLoader(
+        dataset,
+        batch_size=args.batch_size,
+        shuffle=False,
+        num_workers=0,
+    )
+    model = W4A4Model(device)
+
+    hls_images: np.ndarray | None = None
+    hls_labels: np.ndarray | None = None
+    if args.compare_hls_q40:
+        hls_images, hls_labels = load_hls_inputs()
+        if len(hls_images) != len(dataset):
+            raise ValueError("HLS and torchvision datasets have different lengths")
+
+    records: list[dict] = []
+    labels_all: list[int] = []
+    fp32_predictions: list[int] = []
+    w4a4_predictions: list[int] = []
+    hls_predictions: list[int] = []
+    maxima = {name: 0 for name in LAYER_NAMES}
+    hls_input_mismatches = 0
+    hls_logit_element_mismatches = 0
+    hls_logit_vector_mismatches = 0
+    offset = 0
+
+    print(f"Device: {device}; preprocessing: {args.preprocess}; samples: {len(dataset)}")
+    with torch.no_grad():
+        for images, labels in loader:
+            batch_size = len(labels)
+            images = images.to(device)
+            labels = labels.to(device)
+            fp32_logits = model.fp32_forward(images)
+            w4a4_logits, batch_maxima = model.w4a4_forward(images)
+            fp32_pred = fp32_logits.argmax(dim=1)
+            w4a4_pred = w4a4_logits.argmax(dim=1)
+
+            hls_pred: torch.Tensor | None = None
+            hls_logits: torch.Tensor | None = None
+            if hls_images is not None and hls_labels is not None:
+                expected_labels = hls_labels[offset : offset + batch_size]
+                if not np.array_equal(expected_labels, labels.cpu().numpy()):
+                    raise ValueError(f"Label mismatch at sample {offset}")
+                hls_input = quantize_hls_pixels(
+                    hls_images[offset : offset + batch_size],
+                    model.activation_scales["input"],
+                )
+                software_input = model.quantize_activation(
+                    images,
+                    model.activation_scales["input"],
+                ).cpu().numpy().astype(np.int8)
+                hls_input_mismatches += int(
+                    np.count_nonzero(hls_input != software_input)
+                )
+                hls_logits, hls_maxima = model.w4a4_forward(
+                    quantized_input=torch.from_numpy(hls_input),
+                    q40=True,
+                )
+                hls_pred = hls_logits.argmax(dim=1)
+                logit_mismatch = w4a4_logits != hls_logits
+                hls_logit_element_mismatches += int(logit_mismatch.sum().item())
+                hls_logit_vector_mismatches += int(
+                    logit_mismatch.any(dim=1).sum().item()
+                )
+                for name in LAYER_NAMES:
+                    maxima[name] = max(maxima[name], hls_maxima[name])
+
+            for name in LAYER_NAMES:
+                maxima[name] = max(maxima[name], batch_maxima[name])
+
+            labels_cpu = labels.cpu().tolist()
+            fp32_cpu = fp32_pred.cpu().tolist()
+            w4a4_cpu = w4a4_pred.cpu().tolist()
+            w4a4_logits_cpu = w4a4_logits.cpu().tolist()
+            hls_cpu = hls_pred.cpu().tolist() if hls_pred is not None else None
+            hls_logits_cpu = hls_logits.cpu().tolist() if hls_logits is not None else None
+
+            for local_index, expected in enumerate(labels_cpu):
+                row = {
+                    "sample_index": offset + local_index,
+                    "preprocessing": args.preprocess,
+                    "true_label": expected,
+                    "fp32_prediction": fp32_cpu[local_index],
+                    "w4a4_prediction": w4a4_cpu[local_index],
+                    "fp32_correct": int(fp32_cpu[local_index] == expected),
+                    "w4a4_correct": int(w4a4_cpu[local_index] == expected),
+                    "fp32_w4a4_same": int(
+                        fp32_cpu[local_index] == w4a4_cpu[local_index]
+                    ),
+                }
+                for class_index, value in enumerate(w4a4_logits_cpu[local_index]):
+                    row[f"w4a4_logit_{class_index}"] = int(round(value))
+                if hls_cpu is not None and hls_logits_cpu is not None:
+                    row["hls_q40_prediction"] = hls_cpu[local_index]
+                    row["software_hls_same"] = int(
+                        w4a4_cpu[local_index] == hls_cpu[local_index]
+                    )
+                    for class_index, value in enumerate(
+                        hls_logits_cpu[local_index]
+                    ):
+                        row[f"hls_q40_logit_{class_index}"] = int(round(value))
+                records.append(row)
+
+            labels_all.extend(labels_cpu)
+            fp32_predictions.extend(fp32_cpu)
+            w4a4_predictions.extend(w4a4_cpu)
+            if hls_cpu is not None:
+                hls_predictions.extend(hls_cpu)
+            offset += batch_size
+            if offset % 2560 == 0 or offset == len(dataset):
+                print(f"Evaluated {offset}/{len(dataset)}")
+
+    total = len(labels_all)
+    fp32_correct = sum(a == b for a, b in zip(labels_all, fp32_predictions))
+    w4a4_correct = sum(a == b for a, b in zip(labels_all, w4a4_predictions))
+    agreement = sum(a == b for a, b in zip(fp32_predictions, w4a4_predictions))
+    overflow_passed = all(value <= INT32_MAX for value in maxima.values())
+    fp32_accuracy = 100.0 * fp32_correct / total
+    w4a4_accuracy = 100.0 * w4a4_correct / total
+
+    result = {
+        "configuration": "W4A4-INT32",
+        "preprocessing": args.preprocess,
+        "preprocessing_description": (
+            "bilinear Resize((32, 32)), antialias=True"
+            if args.preprocess == "resize"
+            else "Pad(2) around the original 28x28 image"
+        ),
+        "device": str(device),
+        "python_version": platform.python_version(),
+        "torch_version": torch.__version__,
+        "weight_bits": 4,
+        "activation_bits": 4,
+        "accumulator_bits": 32,
+        "test_samples": total,
+        "fp32_correct": fp32_correct,
+        "w4a4_correct": w4a4_correct,
+        "fp32_accuracy_percent": fp32_accuracy,
+        "w4a4_accuracy_percent": w4a4_accuracy,
+        "accuracy_drop_percentage_points": fp32_accuracy - w4a4_accuracy,
+        "prediction_agreement_percent": 100.0 * agreement / total,
+        "accumulator_max_abs": maxima,
+        "int32_overflow_check": "PASS" if overflow_passed else "FAIL",
+    }
+
+    with (output_dir / "w4a4_predictions.csv").open(
+        "w", newline="", encoding="utf-8"
+    ) as stream:
+        writer = csv.DictWriter(
+            stream,
+            fieldnames=list(records[0]),
+            lineterminator="\n",
         )
+        writer.writeheader()
+        writer.writerows(records)
 
-        w4a4_prediction = torch.argmax(
-            w4a4_logits,
-            dim=1
+    matrix = confusion_matrix(labels_all, w4a4_predictions)
+    write_confusion(output_dir / "w4a4_confusion_matrix.csv", matrix)
+
+    if hls_predictions:
+        hls_matrix = confusion_matrix(labels_all, hls_predictions)
+        hls_disagreements = sum(
+            a != b for a, b in zip(w4a4_predictions, hls_predictions)
         )
+        stored_hls_matrix = read_hls_confusion(HLS_RESULT_PATH)
+        comparison = {
+            "samples": total,
+            "software_hls_prediction_disagreements": hls_disagreements,
+            "software_hls_prediction_agreement_percent": (
+                100.0 * (total - hls_disagreements) / total
+            ),
+            "software_hls_input_element_mismatches": hls_input_mismatches,
+            "software_hls_logit_element_mismatches": (
+                hls_logit_element_mismatches
+            ),
+            "software_hls_logit_vector_mismatches": (
+                hls_logit_vector_mismatches
+            ),
+            "software_hls_confusion_matrix_equal": bool(
+                np.array_equal(matrix, hls_matrix)
+            ),
+            "q40_stored_hls_confusion_matrix_equal": bool(
+                np.array_equal(hls_matrix, stored_hls_matrix)
+            ),
+            "stored_hls_result": str(HLS_RESULT_PATH.relative_to(BASE_DIR)),
+        }
+        (output_dir / "hls_comparison.json").write_text(
+            json.dumps(comparison, indent=2, ensure_ascii=False) + "\n",
+            encoding="utf-8",
+        )
+        result["hls_q40_comparison"] = comparison
 
-        fp32_correct += (
-            fp32_prediction == labels
-        ).sum().item()
-
-        w4a4_correct += (
-            w4a4_prediction == labels
-        ).sum().item()
-
-        prediction_same += (
-            fp32_prediction == w4a4_prediction
-        ).sum().item()
-
-        total += labels.size(0)
-
-        for layer_name in LAYER_NAMES:
-            global_accumulator_maximum[layer_name] = max(
-                global_accumulator_maximum[layer_name],
-                current_maximum[layer_name]
-            )
-
-        if total % 2560 == 0:
-            print(f"已测试：{total}/{len(test_dataset)}")
-
-
-# ============================================================
-# 14. 计算最终结果
-# ============================================================
-
-fp32_accuracy = (
-    100.0 *
-    fp32_correct /
-    total
-)
-
-w4a4_accuracy = (
-    100.0 *
-    w4a4_correct /
-    total
-)
-
-accuracy_drop = (
-    fp32_accuracy -
-    w4a4_accuracy
-)
-
-agreement = (
-    100.0 *
-    prediction_same /
-    total
-)
-
-overflow_passed = all(
-    value <= INT32_MAX
-    for value in global_accumulator_maximum.values()
-)
-
-
-# ============================================================
-# 15. 显示测试结果
-# ============================================================
-
-print("=" * 70)
-print("W4A4–INT32测试结果")
-print("=" * 70)
-
-print(f"测试图片数量：       {total}")
-print(f"FP32正确数量：       {fp32_correct}")
-print(f"W4A4正确数量：       {w4a4_correct}")
-print(f"FP32准确率：         {fp32_accuracy:.2f}%")
-print(f"W4A4–INT32准确率：   {w4a4_accuracy:.2f}%")
-print(f"准确率下降：         {accuracy_drop:.2f}个百分点")
-print(f"与FP32预测一致率：   {agreement:.2f}%")
-
-print("-" * 70)
-print("各层INT32累加器最大绝对值：")
-
-for layer_name in LAYER_NAMES:
-    print(
-        f"{layer_name:<6} "
-        f"{global_accumulator_maximum[layer_name]}"
+    (output_dir / "w4a4_int32_results.json").write_text(
+        json.dumps(result, indent=2, ensure_ascii=False) + "\n",
+        encoding="utf-8",
     )
+    flat_result = {
+        key: json.dumps(value, ensure_ascii=False) if isinstance(value, dict) else value
+        for key, value in result.items()
+    }
+    with (output_dir / "w4a4_accuracy_results.csv").open(
+        "w", newline="", encoding="utf-8"
+    ) as stream:
+        writer = csv.DictWriter(
+            stream,
+            fieldnames=list(flat_result),
+            lineterminator="\n",
+        )
+        writer.writeheader()
+        writer.writerow(flat_result)
 
-print(
-    "INT32溢出检查：     "
-    f"{'PASS' if overflow_passed else 'FAIL'}"
-)
-
-print("=" * 70)
-
-
-# ============================================================
-# 16. 保存JSON结果
-# ============================================================
-result = {
-    "configuration": "W4A4-INT32",
-    "weight_bits": 4,
-    "activation_bits": 4,
-    "accumulator_bits": 32,
-    "test_samples": int(total),
-    "fp32_correct": int(fp32_correct),
-    "w4a4_correct": int(w4a4_correct),
-    "fp32_accuracy_percent": float(fp32_accuracy),
-    "w4a4_accuracy_percent": float(w4a4_accuracy),
-    "accuracy_drop_percentage_points": float(
-        accuracy_drop
-    ),
-    "prediction_agreement_percent": float(
-        agreement
-    ),
-    "accumulator_max_abs": {
-        name: int(value)
-        for name, value
-        in global_accumulator_maximum.items()
-    },
-    "int32_overflow_check": (
-        "PASS" if overflow_passed else "FAIL"
-    ),
-}
-
-with open(
-    JSON_RESULT_PATH,
-    "w",
-    encoding="utf-8"
-) as file:
-    json.dump(
-        result,
-        file,
-        indent=2,
-        ensure_ascii=False
-    )
+    print(f"FP32: {fp32_correct}/{total} = {fp32_accuracy:.4f}%")
+    print(f"W4A4: {w4a4_correct}/{total} = {w4a4_accuracy:.4f}%")
+    print(f"Prediction agreement with FP32: {100.0 * agreement / total:.4f}%")
+    if hls_predictions:
+        print(f"W4A4 vs HLS Q40 disagreements: {hls_disagreements}/{total}")
+    print(f"Results: {output_dir}")
 
 
-# ============================================================
-# 17. 保存CSV结果
-# ============================================================
-
-fieldnames = [
-    "Configuration",
-    "WeightBits",
-    "ActivationBits",
-    "AccumulatorBits",
-    "Total",
-    "FP32Correct",
-    "QuantizedCorrect",
-    "FP32Accuracy",
-    "QuantizedAccuracy",
-    "AccuracyDrop",
-    "PredictionAgreement",
-    "INT32OverflowCheck",
-]
-
-csv_row = {
-    "Configuration": "W4A4-INT32",
-    "WeightBits": 4,
-    "ActivationBits": 4,
-    "AccumulatorBits": 32,
-    "Total": int(total),
-    "FP32Correct": int(fp32_correct),
-    "QuantizedCorrect": int(w4a4_correct),
-    "FP32Accuracy": float(fp32_accuracy),
-    "QuantizedAccuracy": float(w4a4_accuracy),
-    "AccuracyDrop": float(accuracy_drop),
-    "PredictionAgreement": float(agreement),
-    "INT32OverflowCheck": (
-        "PASS" if overflow_passed else "FAIL"
-    ),
-}
-
-with open(
-    CSV_RESULT_PATH,
-    "w",
-    newline="",
-    encoding="utf-8"
-) as file:
-    writer = csv.DictWriter(
-        file,
-        fieldnames=fieldnames
-    )
-
-    writer.writeheader()
-    writer.writerow(csv_row)
-
-
-# ============================================================
-# 18. 完成
-# ============================================================
-
-print("结果已经保存到：")
-print(JSON_RESULT_PATH)
-print(CSV_RESULT_PATH)
-
-if overflow_passed:
-    print("W4A4–INT32推理评估完成。[PASS]")
-else:
-    print("W4A4–INT32推理评估完成，但存在溢出。[FAIL]")
+if __name__ == "__main__":
+    main()
