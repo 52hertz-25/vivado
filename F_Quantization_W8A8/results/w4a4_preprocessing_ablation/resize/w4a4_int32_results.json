@@ -1,0 +1,37 @@
+{
+  "configuration": "W4A4-INT32",
+  "preprocessing": "resize",
+  "preprocessing_description": "bilinear Resize((32, 32)), antialias=True",
+  "device": "cpu",
+  "python_version": "3.12.2",
+  "torch_version": "2.8.0",
+  "weight_bits": 4,
+  "activation_bits": 4,
+  "accumulator_bits": 32,
+  "test_samples": 10000,
+  "fp32_correct": 9930,
+  "w4a4_correct": 9811,
+  "fp32_accuracy_percent": 99.3,
+  "w4a4_accuracy_percent": 98.11,
+  "accuracy_drop_percentage_points": 1.1899999999999977,
+  "prediction_agreement_percent": 98.53,
+  "accumulator_max_abs": {
+    "conv1": 280,
+    "conv2": 318,
+    "conv3": 366,
+    "fc1": 132,
+    "fc2": 214
+  },
+  "int32_overflow_check": "PASS",
+  "hls_q40_comparison": {
+    "samples": 10000,
+    "software_hls_prediction_disagreements": 0,
+    "software_hls_prediction_agreement_percent": 100.0,
+    "software_hls_input_element_mismatches": 0,
+    "software_hls_logit_element_mismatches": 0,
+    "software_hls_logit_vector_mismatches": 0,
+    "software_hls_confusion_matrix_equal": true,
+    "q40_stored_hls_confusion_matrix_equal": true,
+    "stored_hls_result": "hls_w4a4/reports/mnist/w4a4_mnist_10000_results.csv"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "samples": 10000,
+  "pad_correct": 9746,
+  "pad_accuracy_percent": 97.46,
+  "resize_correct": 9811,
+  "resize_accuracy_percent": 98.11,
+  "resize_minus_pad_accuracy_points": 0.65,
+  "prediction_changed": 230,
+  "prediction_changed_percent": 2.3,
+  "transitions": {
+    "both_correct": 9675,
+    "both_wrong_changed": 23,
+    "both_wrong_same_prediction": 95,
+    "pad_only_correct": 71,
+    "resize_only_correct": 136
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "samples": 10000,
+  "software_hls_prediction_disagreements": 0,
+  "software_hls_prediction_agreement_percent": 100.0,
+  "software_hls_input_element_mismatches": 0,
+  "software_hls_logit_element_mismatches": 0,
+  "software_hls_logit_vector_mismatches": 0,
+  "software_hls_confusion_matrix_equal": true,
+  "q40_stored_hls_confusion_matrix_equal": true,
+  "stored_hls_result": "hls_w4a4/reports/mnist/w4a4_mnist_10000_results.csv"
+}

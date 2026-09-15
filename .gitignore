@@ -15,6 +15,11 @@ lenet_project/member_e_deliverables/slides/rendered/
 ~$*
 *.tmp
 
+# torchvision may download the MNIST training split while checking the local
+# test set used by the W4A4 evaluator. Keep those cache files out of commits.
+/F_Quantization_W8A8/data/MNIST/raw/*.gz
+/F_Quantization_W8A8/data/MNIST/raw/train-*-ubyte
+
 # Tool logs accidentally emitted at the repository root.
 /vivado*.log
 /vivado*.jou
